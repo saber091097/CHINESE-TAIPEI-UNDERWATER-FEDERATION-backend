@@ -179,7 +179,7 @@
             <div class="marquee">
                 <div class="marquee w-full">
                     <p data-scroll data-scroll-speed="30" data-scroll-direction="horizontal">
-                        WINDSURFING DIVING SUP WINDSURFING DIVING SUP WINDSURFING DIVING SUP WINDSURFING DIVING SUP
+                        WINDSURFING&emsp;DIVING&emsp;SUP&emsp;WINDSURFING&emsp;DIVING&emsp;SUP&emsp;WINDSURFING&emsp;DIVING&emsp;SUP&emsp;WINDSURFING&emsp;DIVING&emsp;SUP
                     </p>
                 </div>
             </div>
