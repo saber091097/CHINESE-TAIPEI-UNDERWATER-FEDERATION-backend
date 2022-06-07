@@ -9,6 +9,8 @@ class PresidentsController extends Controller
 {
     //
     public function index(){
-        return view('president.index');
+        $header='president管理頁';
+        $slot='';
+        return view('president.index',compact('header','slot'));
     }
 }

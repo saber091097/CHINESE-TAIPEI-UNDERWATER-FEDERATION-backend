@@ -20,17 +20,19 @@ Route::get('/index', [IndexController::class,'index']);
 
 Route::get('/Past-presidents', [HtmlController::class,'Pastpresidents']);
 
-Route::prefix('/presidents')->group(function () {
-    Route::get('/', [PresidentsController::class,'index']);
+Route::get('/presidents', [PresidentsController::class,'index']);
 
-    Route::get('/create', [PresidentsController::class,'create']);
-    Route::post('/store', [PresidentsController::class,'store']);
+// Route::prefix('/presidents')->group(function () {
+//     Route::get('/', [PresidentsController::class,'index']);
 
-    Route::get('/edit/{id}', [PresidentsController::class,'edit']);
-    Route::post('/update/{id}', [PresidentsController::class,'update']);
+//     Route::get('/create', [PresidentsController::class,'create']);
+//     Route::post('/store', [PresidentsController::class,'store']);
 
-    Route::post('/del/{id}', [PresidentsController::class,'del']);
-});
+//     Route::get('/edit/{id}', [PresidentsController::class,'edit']);
+//     Route::post('/update/{id}', [PresidentsController::class,'update']);
+
+//     Route::post('/del/{id}', [PresidentsController::class,'del']);
+// });
 
 Route::get('/', function () {
     return view('welcome');
