@@ -20,19 +20,17 @@ Route::get('/index', [IndexController::class,'index']);
 
 Route::get('/Past-presidents', [HtmlController::class,'Pastpresidents']);
 
-Route::get('/presidents', [PresidentsController::class,'index']);
+Route::prefix('/presidents')->group(function () {
+    Route::get('/', [PresidentsController::class,'index']);
 
-// Route::prefix('/presidents')->group(function () {
-//     Route::get('/', [PresidentsController::class,'index']);
+    Route::get('/create', [PresidentsController::class,'create']);
+    Route::post('/store', [PresidentsController::class,'store']);
 
-//     Route::get('/create', [PresidentsController::class,'create']);
-//     Route::post('/store', [PresidentsController::class,'store']);
+    Route::get('/edit/{id}', [PresidentsController::class,'edit']);
+    Route::post('/update/{id}', [PresidentsController::class,'update']);
 
-//     Route::get('/edit/{id}', [PresidentsController::class,'edit']);
-//     Route::post('/update/{id}', [PresidentsController::class,'update']);
-
-//     Route::post('/del/{id}', [PresidentsController::class,'del']);
-// });
+    Route::post('/del/{id}', [PresidentsController::class,'del']);
+});
 
 Route::get('/', function () {
     return view('welcome');
@@ -40,6 +38,6 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->middleware(['auth','power'])->name('dashboard');
 
 require __DIR__.'/auth.php';
