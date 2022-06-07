@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\IndexController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [bootstrap::class,'bootstrap']);
+Route::get('/index', [IndexController::class,'index']);
 
 Route::get('/', function () {
     return view('welcome');
