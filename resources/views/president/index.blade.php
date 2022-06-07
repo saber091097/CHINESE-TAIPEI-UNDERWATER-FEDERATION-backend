@@ -1,8 +1,9 @@
-@extends('template.template')
+
+@extends('layouts.app')
 
     @section('css')
     <link rel="stylesheet" href="{{asset('css/Past-presidents.css')}}">
-    <title>歷屆理事長</title>
+
     @endsection
 
         @section('main')
@@ -72,5 +73,3 @@
             </div>
         </div>
         @endsection
-
-   

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{asset('css/index.css')}}">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +22,7 @@
                 <a href="./index.html">
                     <div class="logo flex">
                         <img src="./img/logo/only_logo.svg" alt="">
-                        <div class="name flex flex-col hidden lg:block">
+                        <div class="name flex flex-col  lg:block">
                             <div class="zh-name">
                                 <span>台中市水中運動協會</span>
                             </div>
@@ -37,7 +38,7 @@
                     <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" />
                 </svg>
             </div>
-            <div class="left flex justify-end ml-auto lg:block hidden">
+            <div class="left flex justify-end ml-auto lg:block ">
                 <ul class="flex items-center">
                     <li><a href="./news.html">最新消息</a></li>
                     <li>
@@ -116,7 +117,7 @@
                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">關於我們</a>
                 </li>
                 <li>
-                    <a href="./past-presidents.html"
+                    <a href="Past-presidents"
                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">歷屆會長</a>
                 </li>
                 <li>
@@ -178,6 +179,8 @@
         </footer>
     </div>
     @yield('js')
+
+    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
 </body>
 
 </html>

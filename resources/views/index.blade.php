@@ -2,7 +2,7 @@
 
     @section('css')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="{{asset('css/index.css')}}">
     <link rel="stylesheet" href="{{asset('css/locomotive-scroll.css')}}" />
     <title>台中市水中運動協會</title>
     @endsection
@@ -22,7 +22,7 @@
         </div>
         <div id="CMASModal" tabindex="-1" aria-hidden="true"
             class="hidden fixed overflow-y-auto overflow-x-hidden w-full top-0 right-0 left-0 z-50 h-full justify-center items-center CMASModal h-modal">
-            <div class="relative w-full h-full h-auto CMAS">
+            <div class="relative w-full h-full  CMAS">
                 <div class="relative bg-white CMAS-bg">
                     <div class="flex justify-between items-start CMAS-close">
                         <button type="button" class="absolute top-3 CMAS-botton" data-modal-toggle="CMASModal">
@@ -66,7 +66,7 @@
         </div>
         <div id="PADIModal" tabindex="-1" aria-hidden="true"
             class="hidden fixed overflow-y-auto overflow-x-hidden w-full top-0 right-0 left-0 z-50 h-full justify-center items-center PADIModal h-modal">
-            <div class="relative w-full h-full h-auto PADI">
+            <div class="relative w-full h-full  PADI">
                 <div class="relative bg-white PADI-bg">
                     <div class="flex justify-between items-start PADI-close">
                         <button type="button" class="absolute top-3 PADI-botton" data-modal-toggle="PADIModal">
@@ -110,7 +110,7 @@
         </div>
         <div id="SUPTUFModal" tabindex="-1" aria-hidden="true"
             class="hidden fixed overflow-y-auto overflow-x-hidden w-full top-0 right-0 left-0 z-50 h-full justify-center items-center SUPTUFModal h-modal">
-            <div class="relative w-full h-full h-auto SUPTUF">
+            <div class="relative w-full h-full  SUPTUF">
                 <div class="relative bg-white SUPTUF-bg">
                     <div class="flex justify-between items-start SUPTUF-close">
                         <button type="button" class="absolute top-3 SUPTUF-botton" data-modal-toggle="SUPTUFModal">
@@ -470,7 +470,6 @@
         @endsection
 
     @section('js')
-    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
     <script>
         count1 = 0
         count2 = 0

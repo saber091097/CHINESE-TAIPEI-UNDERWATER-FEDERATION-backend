@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\HtmlController;
+use App\Http\Controllers\PresidentsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +17,20 @@ use App\Http\Controllers\IndexController;
 */
 
 Route::get('/index', [IndexController::class,'index']);
+
+Route::get('/Past-presidents', [HtmlController::class,'Pastpresidents']);
+
+Route::prefix('/presidents')->group(function () {
+    Route::get('/', [PresidentsController::class,'index']);
+
+    Route::get('/create', [PresidentsController::class,'create']);
+    Route::post('/store', [PresidentsController::class,'store']);
+
+    Route::get('/edit/{id}', [PresidentsController::class,'edit']);
+    Route::post('/update/{id}', [PresidentsController::class,'update']);
+
+    Route::post('/del/{id}', [PresidentsController::class,'del']);
+});
 
 Route::get('/', function () {
     return view('welcome');
