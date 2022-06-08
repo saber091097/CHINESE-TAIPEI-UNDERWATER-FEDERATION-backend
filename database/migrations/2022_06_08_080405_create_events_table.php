@@ -17,12 +17,12 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('event_type')->nullable();
-            $table->string('event')->nullable();
+            $table->longText('event')->nullable();
             $table->integer('anno_type')->nullable();
-            $table->string('event_intr')->nullable();
-            $table->string('event_proc')->nullable();
-            $table->string('event_dire')->nullable();
-            $table->string('event_notice')->nullable();
+            $table->longText('event_intr')->nullable();
+            $table->longText('event_proc')->nullable();
+            $table->longText('event_dire')->nullable();
+            $table->longText('event_notice')->nullable();
             $table->string('name')->nullable();
         });
     }

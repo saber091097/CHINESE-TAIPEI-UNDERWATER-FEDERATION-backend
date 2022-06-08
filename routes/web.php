@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\HtmlController;
 use App\Http\Controllers\PresidentsController;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,16 +46,16 @@ Route::prefix('/presidents')->group(function () {
     Route::post('/del/{id}', [PresidentsController::class,'del']);
 });
 
-Route::prefix('/news')->group(function () {
-    Route::get('/', [newsController::class,'index']);
+Route::prefix('/event')->group(function () {
+    Route::get('/', [EventController::class,'index']);
 
-    Route::get('/create', [newsController::class,'create']);
-    Route::post('/store', [newsController::class,'store']);
+    Route::get('/create', [EventController::class,'create']);
+    Route::post('/store', [EventController::class,'store']);
 
-    Route::get('/edit/{id}', [newsController::class,'edit']);
-    Route::post('/update/{id}', [newsController::class,'update']);
+    Route::get('/edit/{id}', [EventController::class,'edit']);
+    Route::post('/update/{id}', [EventController::class,'update']);
 
-    Route::post('/del/{id}', [newsController::class,'del']);
+    Route::post('/del/{id}', [EventController::class,'del']);
 });
 
 

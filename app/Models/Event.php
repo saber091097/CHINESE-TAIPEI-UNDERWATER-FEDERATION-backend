@@ -21,7 +21,7 @@ class Event extends Model
 {
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'integer';
@@ -30,4 +30,10 @@ class Event extends Model
      * @var array
      */
     protected $fillable = ['created_at', 'updated_at', 'event_type', 'event', 'anno_type', 'event_intr', 'event_proc', 'event_dire', 'event_notice', 'name'];
+
+    public function imgs(){
+
+        return $this->hasMany(EventImg::class,'event_id','id');
+
+    }
 }
