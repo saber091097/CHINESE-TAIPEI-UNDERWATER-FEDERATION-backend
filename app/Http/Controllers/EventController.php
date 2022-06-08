@@ -15,8 +15,8 @@ class EventController extends Controller
     public function index(){
         $header='活動管理頁';
         $slot='';
-
-        return view('event.index',compact('header','slot'));
+        $data= Event::get();
+        return view('event.index',compact('data','header','slot'));
     }
 
     public function create(){
@@ -50,5 +50,29 @@ class EventController extends Controller
         }
 
         return redirect('/event');
+    }
+
+    public function edit($id){
+        $header='活動新增頁';
+        $slot='';
+        $data = Event::where('id',$id)->first();
+
+        return view('event.edit',compact('data','header','slot'));
+    }
+
+    public function update(Request $request,$id){
+        $date = Event::where('id',$id)->first();
+
+        return redirect('event');
+    }
+
+    public function delete_img($img_id){
+        $img = EventImg::find($img_id);
+        FilesController::deleteUpload($img->img_path);
+        $event_id = $img->event_id;
+        $img->delete();
+
+        return redirect('/event/edit/'.$event_id);
+
     }
 }

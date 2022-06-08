@@ -31,6 +31,7 @@
                             <option value="3">潛水</option>
                             <option value="4">游泳</option>
                             <option value="5">救生</option>
+                            <option value="6">其他</option>
                         </select>
                     </div>
                     <div class="anno_type" style="margin: 10px 0;">
@@ -42,9 +43,9 @@
                     </div>
                     <div class="event">
                         活動名稱：
-                        <input type="text" name="event" id="event" style="border-radius: 5px;">
+                        <input type="text" name="event" id="event" style="border-radius: 5px; width:50%;">
                     </div>
-                    <div class="event_img">
+                    <div class="event_img" style="margin: 10px 0;">
                         活動介紹照片：
                         <input type="file" name="event_img[]" id="event_img" class="border-0" multiple accept="image/*">
                     </div>

@@ -56,6 +56,7 @@ Route::prefix('/event')->group(function () {
     Route::post('/update/{id}', [EventController::class,'update']);
 
     Route::post('/del/{id}', [EventController::class,'del']);
+    Route::delete('/delete_img/{img_id}', [EventController::class, 'delete_img']);
 });
 
 

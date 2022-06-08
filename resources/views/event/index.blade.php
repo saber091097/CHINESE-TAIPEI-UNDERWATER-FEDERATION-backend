@@ -33,23 +33,45 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="flex justify-between" style="border-bottom:1px solid blackk;">
-                            <td class="flex  "style="width:10%;">風浪板</td>
-                            <td class="flex  "style="width:10%;">好消息</td>
-                            <td class="flex  "style="width:50%;"> 夏季班 自由潛水開課</td>
-                            <td class="flex  "style="width:10%;">pennon</td>
-                            <td class="flex justify-center"style="width:20%;">
-                                <a href="/event/edit/">
-                                    <button style="padding: 10px;background-color:green; color:white;border-radius:5px; margin-right:10px;">編輯</button></a>
+                        @foreach ($data as $i)
+                            <tr class="flex justify-between" style="border-bottom:1px solid blackk;">
+                                <td class="flex "style="width:10%;">
+                                    @if ($i->event_type == 1)
+                                        風浪板
+                                    @elseif ($i->event_type == 2)
+                                        SUP立式浪板
+                                    @elseif ($i->event_type == 3)
+                                        潛水
+                                    @elseif ($i->event_type == 4)
+                                        游泳
+                                    @elseif ($i->event_type == 5)
+                                        救生
+                                    @else
+                                        其他
+                                    @endif
+                                </td>
+                                <td class="flex "style="width:10%;">
+                                    @if ($i->anno_type ==1)
+                                        公告
+                                    @else
+                                        好消息
+                                    @endif
+                                    </td>
+                                <td class="flex "style="width:50%;"> {{$i->event}}</td>
+                                <td class="flex "style="width:10%;">{{$i->name}}</td>
+                                <td class="flex justify-center"style="width:20%;">
+                                    <a href="/event/edit/{{$i->id}}">
+                                        <button style="padding: 10px;background-color:green; color:white;border-radius:5px; margin-right:10px;">編輯</button></a>
 
-                                    <button onclick="document.querySelector('#deleteForm id').submit()"
-                                         style="padding: 10px;background-color:red; color:white;border-radius:5px;">刪除</button>
-                                    <form action="/event/del/" id="deleteForm id" method="POST"
-                                        hidden>
-                                        @csrf
-                                    </form>
-                            </td>
-                        </tr>
+                                        <button onclick="document.querySelector('#deleteForm{{$i->id}}').submit()"
+                                            style="padding: 10px;background-color:red; color:white;border-radius:5px;">刪除</button>
+                                        <form action="/event/del/{{$i->id}}" id="deleteForm{{$i->id}}" method="POST"
+                                            hidden>
+                                            @csrf
+                                        </form>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
