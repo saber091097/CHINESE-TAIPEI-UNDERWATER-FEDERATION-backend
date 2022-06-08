@@ -16,6 +16,19 @@ use App\Http\Controllers\PresidentsController;
 |
 */
 
+//先不要動
+Route::get('/', function () {
+    return view('welcome');
+});
+// ------------------------------
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth','power'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+
+
 Route::get('/index', [IndexController::class,'index']);
 
 Route::get('/Past-presidents', [HtmlController::class,'Pastpresidents']);
@@ -32,12 +45,16 @@ Route::prefix('/presidents')->group(function () {
     Route::post('/del/{id}', [PresidentsController::class,'del']);
 });
 
-Route::get('/', function () {
-    return view('welcome');
+Route::prefix('/news')->group(function () {
+    Route::get('/', [newsController::class,'index']);
+
+    Route::get('/create', [newsController::class,'create']);
+    Route::post('/store', [newsController::class,'store']);
+
+    Route::get('/edit/{id}', [newsController::class,'edit']);
+    Route::post('/update/{id}', [newsController::class,'update']);
+
+    Route::post('/del/{id}', [newsController::class,'del']);
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth','power'])->name('dashboard');
 
-require __DIR__.'/auth.php';

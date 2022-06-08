@@ -19,14 +19,14 @@
         <div class=" bg-white" style="width:80%; margin:32px 0;border-radius:10px;">
             <div class="shopbox" style="padding: 0 10%;">
                 <div class="top flex items-center" style="margin-top:40px; margin-bottom:25px;">
-                    <h3 style="font-size:32px;">理事長管理</h3>
+                    <h3 style="font-size:32px;">最新消息發布</h3>
                     <a href="presidents/create" style="margin-left: auto;"><button style="padding: 10px;background-color:green; color:white;border-radius:5px;">新增理事長</button></a>
                 </div>
                 <table id="example" class="display" style="width:100%;">
                     <thead>
                         <tr class="flex justify-between" style="border-bottom:1px solid blackk;">
-                            <td class="flex items-center "style="width:25%;">年份</td>
-                            <td class="flex items-center "style="width:25%;">姓名</td>
+                            <td class="flex items-center "style="width:25%;">活動名稱</td>
+                            <td class="flex items-center "style="width:25%;">活動</td>
                             <td class="flex items-center "style="width:25%;">職稱</td>
                             <td class="flex items-center "style="width:25%;">功能</td>
                         </tr>
