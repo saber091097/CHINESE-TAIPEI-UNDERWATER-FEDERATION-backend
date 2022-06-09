@@ -20,7 +20,7 @@
             <div class="shopbox" style="padding: 0 10%;">
                 <div class="top flex items-center" style="margin-top:40px; margin-bottom:25px;">
                     <h3 style="font-size:32px;">最新消息發布</h3>
-                    <a href="event/create" style="margin-left: auto;"><button style="padding: 10px;background-color:green; color:white;border-radius:5px;">新增消息</button></a>
+                    <a href="new/create" style="margin-left: auto;"><button style="padding: 10px;background-color:green; color:white;border-radius:5px;">新增消息</button></a>
                 </div>
                 <table id="example" class="display" style="width:100%;">
                     <thead>
@@ -60,12 +60,12 @@
                                 <td class="flex "style="width:50%;"> {{$i->event}}</td>
                                 <td class="flex "style="width:10%;">{{$i->name}}</td>
                                 <td class="flex justify-center"style="width:20%;">
-                                    <a href="/event/edit/{{$i->id}}">
+                                    <a href="/new/edit/{{$i->id}}">
                                         <button style="padding: 10px;background-color:green; color:white;border-radius:5px; margin-right:10px;">編輯</button></a>
 
                                         <button onclick="document.querySelector('#deleteForm{{$i->id}}').submit()"
                                             style="padding: 10px;background-color:red; color:white;border-radius:5px;">刪除</button>
-                                        <form action="/event/del/{{$i->id}}" id="deleteForm{{$i->id}}" method="POST"
+                                        <form action="/new/del/{{$i->id}}" id="deleteForm{{$i->id}}" method="POST"
                                             hidden>
                                             @csrf
                                         </form>

@@ -9,17 +9,10 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_at
  * @property string $updated_at
  * @property string $img_path
- * @property string $event_id
+ * @property string $new_id
  */
-class EventImg extends Model
+class New_img extends Model
 {
-    /**
-     * The table associated with the model.
-     *
-     * @var string
-     */
-    protected $table = 'img_paths';
-
     /**
      * The "type" of the auto-incrementing ID.
      *
@@ -30,10 +23,9 @@ class EventImg extends Model
     /**
      * @var array
      */
-    protected $fillable = ['created_at', 'updated_at', 'img_path', 'event_id'];
+    protected $fillable = ['created_at', 'updated_at', 'img_path', 'new_id'];
 
-    public function event(){
-        return $this->belongto(EventImg::class,'id','event_id');
+    public function new(){
+        return $this->belongto(Event::class,'id','new_id');
     }
-
 }

@@ -21,7 +21,7 @@
                 <div class="top flex items-center" style="margin-top:40px; margin-bottom:25px;">
                     <h3 style="font-size:32px;">最新消息發布</h3>
                 </div>
-                <form action="/new/update/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                <form action="/event/update/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="event_type">
                         活動種類：
@@ -98,7 +98,7 @@
             let formData = new FormData();
             formData.append('_method', 'DELETE');
             formData.append('_token', '  {{ csrf_token() }}');
-            fetch("/new/delete_img/"+id, {
+            fetch("/event/delete_img/"+id, {
                 method: "POST",
                 body: formData
             }).then(function(response) {

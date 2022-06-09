@@ -11,19 +11,24 @@
                 </div>
 
                 <!-- Navigation Links -->
-                {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                </div> --}}
+                </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="'/presidents'" :active="request()->Is('presidents*')">
                        新增理事長
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="'/event'" :active="request()->Is('event*')">
-                       最新消息
+                    <x-nav-link :href="'/new'" :active="request()->Is('new*')">
+                       發布消息
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="'/eventimg'" :active="request()->Is('eventimg')">
+                       活動照片
                     </x-nav-link>
                 </div>
             </div>

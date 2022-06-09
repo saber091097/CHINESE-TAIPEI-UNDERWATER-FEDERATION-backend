@@ -32,8 +32,6 @@ class Event extends Model
     protected $fillable = ['created_at', 'updated_at', 'event_type', 'event', 'anno_type', 'event_intr', 'event_proc', 'event_dire', 'event_notice', 'name'];
 
     public function imgs(){
-
-        return $this->hasMany(EventImg::class,'event_id','id');
-
+        return $this->hasMany(New_img::class,'new_id','id');
     }
 }
