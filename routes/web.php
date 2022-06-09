@@ -75,13 +75,33 @@ Route::prefix('/eventimg')->group(function () {
     Route::post('/diving/update/{id}', [EventimgController::class,'divingupdate']);
     Route::post('/diving/del/{id}', [EventimgController::class,'divingdel']);
 
+    Route::get('/sup', [EventimgController::class,'sup']);
+    Route::get('/sup/{id}', [EventimgController::class,'supevent']);
+    Route::get('/sup/edit/{id}', [EventimgController::class,'supedit']);
+    Route::post('/sup/update/{id}', [EventimgController::class,'supupdate']);
+    Route::post('/sup/del/{id}', [EventimgController::class,'supdel']);
+
+    Route::get('/swimming', [EventimgController::class,'swimming']);
+    Route::get('/swimming/{id}', [EventimgController::class,'swimmingevent']);
+    Route::get('/swimming/edit/{id}', [EventimgController::class,'swimmingedit']);
+    Route::post('/swimming/update/{id}', [EventimgController::class,'swimmingupdate']);
+    Route::post('/swimming/del/{id}', [EventimgController::class,'swimmingdel']);
+
+    Route::get('/lifesaving', [EventimgController::class,'lifesaving']);
+    Route::get('/lifesaving/{id}', [EventimgController::class,'lifesavingevent']);
+    Route::get('/lifesaving/edit/{id}', [EventimgController::class,'lifesavingedit']);
+    Route::post('/lifesaving/update/{id}', [EventimgController::class,'lifesavingupdate']);
+    Route::post('/lifesaving/del/{id}', [EventimgController::class,'lifesavingdel']);
+
+    Route::get('/other', [EventimgController::class,'other']);
+    Route::get('/other/{id}', [EventimgController::class,'otherevent']);
+    Route::get('/other/edit/{id}', [EventimgController::class,'otheredit']);
+    Route::post('/other/update/{id}', [EventimgController::class,'otherupdate']);
+    Route::post('/other/del/{id}', [EventimgController::class,'otherdel']);
+
     Route::get('/create', [EventimgController::class,'create']);
     Route::post('/store', [EventimgController::class,'store']);
 
-    Route::get('/edit/{id}', [EventimgController::class,'edit']);
-    Route::post('/update/{id}', [EventimgController::class,'update']);
-
-    Route::post('/del/{id}', [EventimgController::class,'del']);
     Route::delete('/delete_img/{img_id}', [EventimgController::class, 'delete_img']);
 });
 

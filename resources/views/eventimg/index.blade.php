@@ -42,7 +42,7 @@
 
                             <td class="flex  "style="width:100%;">
                                 <a href="eventimg/diving" class="flex w-full">
-                                <img src="{{asset('img/popular courses-03.jpg')}}" alt="" style="width: 150px;height:150px;border-radius:5px;">
+                                <img src="{{asset('img/S__14082097.jpg')}}" alt="" style="width: 150px;height:150px;border-radius:5px;">
                                 <div class="flex justify-center items-center ml-12" style="font-size:24px;">
                                     潛水
                                 </div>
@@ -51,8 +51,8 @@
 
 
                             <td class="flex  "style="width:100%;">
-                                <a href="eventimg/diving" class="flex w-full">
-                                <img src="{{asset('img/popular courses-03.jpg')}}" alt="" style="width: 150px;height:150px;border-radius:5px;">
+                                <a href="eventimg/sup" class="flex w-full">
+                                <img src="{{asset('img/sup-2.png')}}" alt="" style="width: 150px;height:150px;border-radius:5px;">
                                 <div class="flex justify-center items-center ml-12" style="font-size:24px;">
                                     SUP立式划槳
                                 </div>
@@ -62,7 +62,7 @@
 
                             <td class="flex  "style="width:100%;">
                                 <a href="eventimg/swimming" class="flex w-full">
-                                <img src="{{asset('img/popular courses-03.jpg')}}" alt="" style="width: 150px;height:150px;border-radius:5px;">
+                                <img src="{{asset('img/pexels-mali-maeder-1415810.jpg')}}" alt="" style="width: 150px;height:150px;border-radius:5px;">
                                 <div class="flex justify-center items-center ml-12" style="font-size:24px;">
                                     游泳
                                 </div>
@@ -72,7 +72,7 @@
 
                             <td class="flex  "style="width:100%; margin-bottom:15px;">
                                 <a href="eventimg/lifesaving" class="flex w-full">
-                                <img src="{{asset('img/popular courses-03.jpg')}}" alt="" style="width: 150px;height:150px;border-radius:5px;">
+                                <img src="{{asset('img/lifebuoy-g7352a0456_1920.jpg')}}" alt="" style="width: 150px;height:150px;border-radius:5px;">
                                 <div class="flex justify-center items-center ml-12" style="font-size:24px;">
                                     救生
                                 </div>
@@ -80,7 +80,7 @@
                             </td>
                             <td class="flex  "style="width:100%; margin-bottom:15px;">
                                 <a href="eventimg/other" class="flex w-full">
-                                <img src="{{asset('img/popular courses-03.jpg')}}" alt="" style="width: 150px;height:150px;border-radius:5px;">
+                                <img src="{{asset('img/Rectangle78.png')}}" alt="" style="width: 150px;height:150px;border-radius:5px;">
                                 <div class="flex justify-center items-center ml-12" style="font-size:24px;">
                                     其他
                                 </div>
