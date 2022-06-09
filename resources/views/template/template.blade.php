@@ -17,14 +17,14 @@
         .nameblack:hover {
             color: black;
             opacity: .6;
-            cursor:auto;
+            cursor: auto;
         }
     </style>
 </head>
 
 <body>
     <div class="container flex justify-center max-w-full flex-wrap " data-scroll-container>
-        <div class="nav flex md:items-center justify-between " data-scroll-section>
+        <nav class="nav flex md:items-center justify-between " data-scroll-section>
             <div class="left ">
                 <a href="index">
                     <div class="logo flex">
@@ -45,7 +45,7 @@
                     <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" />
                 </svg>
             </div>
-            <div class="left flex justify-end ml-auto lg:block ">
+            <div class="left flex justify-end ml-auto lg:block hidden">
                 <ul class="flex items-center">
                     <li><a href="./news.html">最新消息</a></li>
                     <li>
@@ -76,7 +76,7 @@
                     @endguest
                 </ul>
             </div>
-        </div>
+        </nav>
         <div id="authentication-modal" tabindex="-1" aria-hidden="true"
             class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full authentication">
             <div class="relative p-4 w-full max-w-md h-full md:h-auto">
@@ -174,46 +174,51 @@
         @yield('main')
         <footer class="w-full" data-scroll-section id="footer">
             <div class="container max-w-full ">
-                <div class="footer flex flex-wrap justify-between ">
-                    <div class="left flex flex-col ">
-                        <img src="./img/logo/CHINESE TAIPEI UNDERWATER FEDERATION-white logo.png" alt="">
-                        <span>台中市北區天祥街10號</span>
-                        <span>04-22312698</span>
-                    </div>
-                    <div class="right flex text-white">
-                        <ul class="page">
-                            <li class="flex justify-between">首頁
-                                <svg xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                                </svg>
-                            </li>
-                            <li class="flex justify-between">關於我們
-                                <svg xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                                </svg>
-                            </li>
-                            <li class="flex justify-between">課程
-                                <svg xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                                </svg>
-                            </li>
-                            <li class="flex justify-between">活動照片
-                                <svg xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                                </svg>
-                            </li>
-                        </ul>
-                        <ul class="link">
-                            <li>Facebook</li>
-                            <li>instagram</li>
-                        </ul>
-                    </div>
-                    <div class="copyright text-white opacity-50 w-full flex justify-end">
-                        <span>© COPYRIGHT 2022 台中水中運動協會 All Rights Reserved.</span>
+                <div class="footer flex justify-center">
+                    <div class="footer_container">
+                        <div class="footer_logo_menu flex-col sm:flex sm:flex-row sm:justify-between">
+                            <div class="left flex flex-col ">
+                                <img src="./img/logo/CHINESE TAIPEI UNDERWATER FEDERATION-white logo.png"
+                                    alt="台中市水中運動協會">
+                                <span>台中市北區天祥街10號</span>
+                                <span>04-22312698</span>
+                            </div>
+                            <div class="right text-white sm:flex ">
+                                <ul class="page flex flex-col justify-between">
+                                    <li class="flex justify-between">首頁
+                                        <svg xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                        </svg>
+                                    </li>
+                                    <li class="flex justify-between">關於我們
+                                        <svg xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                        </svg>
+                                    </li>
+                                    <li class="flex justify-between">課程
+                                        <svg xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                        </svg>
+                                    </li>
+                                    <li class="flex justify-between">活動照片
+                                        <svg xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                        </svg>
+                                    </li>
+                                </ul>
+                                <ul class="link">
+                                    <li>Facebook</li>
+                                    <li>instagram</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="copyright text-white opacity-50 w-full flex sm:justify-start md:justify-end">
+                            <span>© COPYRIGHT 2022 台中水中運動協會 All Rights Reserved.</span>
+                        </div>
                     </div>
                 </div>
             </div>
