@@ -6,6 +6,7 @@ use App\Http\Controllers\HtmlController;
 use App\Http\Controllers\PresidentsController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\EventimgController;
+use App\Http\Controllers\AccountController;
 
 /*
 |--------------------------------------------------------------------------
@@ -105,4 +106,14 @@ Route::prefix('/eventimg')->group(function () {
     Route::delete('/delete_img/{img_id}', [EventimgController::class, 'delete_img']);
 });
 
+Route::prefix('/account')->group(function () {
+    Route::get('/', [AccountController::class,'index']);
 
+    Route::get('/create', [AccountController::class,'create']);
+    Route::post('/store', [AccountController::class,'store']);
+
+    Route::get('/edit/{id}', [AccountController::class,'edit']);
+    Route::post('/update/{id}', [AccountController::class,'update']);
+
+    Route::delete('/del/{id}', [AccountController::class,'del']);
+});

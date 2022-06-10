@@ -96,18 +96,18 @@
                     </button>
 
                     <div class="py-6 px-6 lg:px-8">
-                        <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">登入</h3>
+                        <h3 class="mb-4 text-xl font-medium text-gray-900 ">登入</h3>
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div>
                                 <label for="email"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">電子信箱</label>
+                                    class="block mb-2 text-sm font-medium text-gray-900 ">電子信箱</label>
                                 <input type="email" name="email" id="email"
                                     class="text-gray-900 text-sm block w-full p-2.5" placeholder="name@company.com">
                             </div>
                             <div>
                                 <label for="password"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">密碼</label>
+                                    class="block mb-2 text-sm font-medium text-gray-900 ">密碼</label>
                                 <input type="password" name="password" id="password" placeholder="••••••••"
                                     class="text-gray-900 text-sm block w-full p-2.5">
                             </div>
@@ -128,9 +128,9 @@
                                 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
                                 登入
                             </button>
-                            <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
+                            <div class="text-sm font-medium text-gray-500 ">
                                 Not registered? <a href="/register"
-                                    class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
+                                    class="text-blue-700 hover:underline ">Create account</a>
                             </div>
                         </form>
                     </div>
