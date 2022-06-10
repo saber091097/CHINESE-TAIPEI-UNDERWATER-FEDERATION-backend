@@ -4,6 +4,7 @@
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/Pastpresidents.css') }}">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/ckeditor.js"></script>
     <style>
         .past-presidents {
             background-color: #3B54F3;
@@ -77,4 +78,17 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('js')
+<script>
+    ClassicEditor
+            .create( document.querySelector( '#event_proc' ) )
+            .then( editor => {
+                    console.log( editor );
+            } )
+            .catch( error => {
+                    console.error( error );
+            } );
+</script>
 @endsection

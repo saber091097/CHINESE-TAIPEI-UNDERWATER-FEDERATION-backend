@@ -27,7 +27,6 @@ class EventController extends Controller
     }
 
     public function store(Request $request){
-
         $data=Event::create([
             'event_type'=> $request->event_type,
             'anno_type'=> $request->anno_type,
