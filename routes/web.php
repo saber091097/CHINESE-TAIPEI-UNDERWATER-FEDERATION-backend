@@ -7,7 +7,7 @@ use App\Http\Controllers\PresidentsController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\EventimgController;
 use App\Http\Controllers\AccountController;
-
+use App\Http\Controllers\SignupController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -117,3 +117,9 @@ Route::prefix('/account')->group(function () {
 
     Route::delete('/del/{id}', [AccountController::class,'del']);
 });
+
+
+Route::get('/signup1', [SignupController::class,'signup1']);
+Route::post('/signup2', [SignupController::class,'signup2']);
+Route::post('/signup3', [SignupController::class,'signup3']);
+Route::post('/signup4', [SignupController::class,'signup4']);

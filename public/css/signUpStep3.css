@@ -1,0 +1,485 @@
+main .container .title .h3m {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+main .container .content-class .table thead th, main .container .content-class .table-ts .td-t, main .container .content-class .account .ts {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+main .container .content-class .table tbody td, main .container .content-class .table-ts .td-c, main .container .content .content-data .tm, main .container .content .content-photo .tm, main .container .content .innerbox-btn .btn {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+main .container .content .content-data .tl {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+main .container .content-class .table tfoot td, main .container .content-class .table-ts tfoot td {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans TC',sans-serif;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #F9FAFB;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  z-index: 50;
+}
+
+footer {
+  width: 100%;
+  height: 527px;
+  z-index: 50;
+  background-color: #3B54F3;
+}
+
+main {
+  padding: 80px 0px;
+  position: relative;
+}
+
+@media (max-width: 640px) {
+  main {
+    padding: 24px 16px;
+  }
+}
+
+@-webkit-keyframes move_wave {
+  0% {
+    -webkit-transform: translateX(0) translateZ(0) scaleY(1);
+            transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    -webkit-transform: translateX(-25%) translateZ(0) scaleY(0.55);
+            transform: translateX(-25%) translateZ(0) scaleY(0.55);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateZ(0) scaleY(1);
+            transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+
+@keyframes move_wave {
+  0% {
+    -webkit-transform: translateX(0) translateZ(0) scaleY(1);
+            transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    -webkit-transform: translateX(-25%) translateZ(0) scaleY(0.55);
+            transform: translateX(-25%) translateZ(0) scaleY(0.55);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateZ(0) scaleY(1);
+            transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+
+main .underWaveWrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40%;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(20%, #3B54F3), color-stop(80%, #6a7cec));
+  background-image: linear-gradient(to top, #3B54F3 20%, #6a7cec 80%);
+}
+
+main .waveWrapper {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 80%;
+  top: 0;
+  margin: auto;
+  height: 100%;
+}
+
+main .waveWrapperInner {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  bottom: -1px;
+}
+
+main .bgTop {
+  z-index: 15;
+  opacity: 0.5;
+}
+
+main .bgMiddle {
+  z-index: 10;
+  opacity: 0.75;
+}
+
+main .bgBottom {
+  z-index: 5;
+}
+
+main .wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
+}
+
+main .waveTop {
+  background-image: url("/img/banner/img_sea-01.png");
+  background-size: 50% 90px;
+}
+
+main .waveAnimation .waveTop {
+  animation: move-wave 3s;
+  -webkit-animation: move-wave 3s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+main .waveMiddle {
+  background-image: url("/img/banner/img_sea-02.png");
+  background-size: 50% 120px;
+}
+
+main .waveAnimation .waveMiddle {
+  -webkit-animation: move_wave 10s linear infinite;
+          animation: move_wave 10s linear infinite;
+}
+
+main .waveBottom {
+  background-image: url("/img/banner/img_sea-03.png");
+  background-size: 50% 100px;
+}
+
+main .waveAnimation .waveBottom {
+  -webkit-animation: move_wave 15s linear infinite;
+          animation: move_wave 15s linear infinite;
+}
+
+main .progress {
+  width: 256px;
+  height: 32px;
+  margin-bottom: 40px;
+  z-index: 50;
+}
+
+@media (max-width: 640px) {
+  main .progress {
+    margin-bottom: 24px;
+  }
+}
+
+main .progress .c {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid rgba(20, 20, 20, 0.5);
+}
+
+main .progress .c .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #3B54F3;
+  border-radius: 50%;
+}
+
+main .progress .line {
+  width: 80px;
+  height: 2px;
+  background-color: #3B54F3;
+}
+
+main .progress .c1, main .progress .c2 {
+  border: 2px solid #3B54F3;
+  background-color: #3B54F3;
+  padding: 6px;
+}
+
+main .progress .c1 .fa-check, main .progress .c2 .fa-check {
+  color: #FFFFFF;
+}
+
+main .progress .c3 {
+  border: 2px solid #3B54F3;
+}
+
+main .container {
+  width: 630px;
+  height: 1448px;
+  padding: 40px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
+  border-radius: 24px;
+  z-index: 50;
+}
+
+@media (max-width: 640px) {
+  main .container {
+    width: 500px;
+    height: 1850px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 550px) {
+  main .container {
+    width: 288px;
+  }
+}
+
+main .container .title {
+  height: 40px;
+  border-bottom: 1px solid #E5E7EB;
+  margin-bottom: 24px;
+}
+
+main .container .title .h3m {
+  font-weight: 600;
+}
+
+main .container .content-class {
+  height: 356px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 640px) {
+  main .container .content-class {
+    height: 400px;
+  }
+}
+
+main .container .content-class .table {
+  height: 128px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 640px) {
+  main .container .content-class .table {
+    display: none;
+  }
+}
+
+main .container .content-class .table thead {
+  height: 48px;
+  background-color: #F3F6F9;
+  margin-bottom: 24px;
+}
+
+main .container .content-class .table thead th {
+  color: #141414;
+  opacity: 0.6;
+  padding: 11.5px 16px;
+}
+
+main .container .content-class .table tbody td {
+  color: #141414;
+  padding: 16px;
+}
+
+main .container .content-class .table tbody .price {
+  color: #3B54F3;
+  font-weight: 600;
+}
+
+main .container .content-class .table .t-name {
+  width: 325px;
+}
+
+main .container .content-class .table .t-type {
+  width: 112px;
+}
+
+main .container .content-class .table .t-price {
+  width: 113px;
+}
+
+main .container .content-class .table tfoot td {
+  color: #C1C4CA;
+}
+
+main .container .content-class .table-ts {
+  display: none;
+  height: 196px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 640px) {
+  main .container .content-class .table-ts {
+    display: block;
+  }
+}
+
+main .container .content-class .table-ts .td-t {
+  width: 88px;
+  height: 56px;
+  background-color: #F3F6F9;
+  padding: 18px 16px;
+  color: #141414;
+  opacity: 0.6;
+}
+
+main .container .content-class .table-ts .td-c {
+  width: 168px;
+  height: 56px;
+  color: #141414;
+  font-weight: 500;
+  padding: 16px;
+}
+
+main .container .content-class .table-ts tfoot td {
+  color: #C1C4CA;
+}
+
+main .container .content-class .account {
+  height: 140px;
+  padding: 16px;
+  background-color: #F9FAFB;
+  border-radius: 8px;
+}
+
+@media (max-width: 640px) {
+  main .container .content-class .account {
+    height: 120px;
+  }
+}
+
+main .container .content-class .account .ts {
+  color: #141414;
+  line-height: 25px;
+}
+
+@media (max-width: 640px) {
+  main .container .content-class .account .ts {
+    line-height: 20px;
+  }
+}
+
+main .container .content-class .account .tsg {
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
+
+main .container .content .content-data {
+  height: 440px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 640px) {
+  main .container .content .content-data {
+    height: 696px;
+  }
+}
+
+main .container .content .content-data .data div:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+main .container .content .content-data .tm {
+  color: #141414;
+  opacity: 0.6;
+  line-height: 28px;
+}
+
+main .container .content .content-data .tl {
+  color: #141414;
+  line-height: 28px;
+}
+
+main .container .content .content-photo {
+  height: 362px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 640px) {
+  main .container .content .content-photo {
+    height: 549px;
+  }
+}
+
+main .container .content .content-photo .tm {
+  color: #141414;
+  opacity: 0.6;
+  line-height: 28px;
+  margin-bottom: 4px;
+}
+
+main .container .content .content-photo .headshot {
+  height: 82px;
+  margin-bottom: 25px;
+}
+
+main .container .content .content-photo .headshot .img-headshot {
+  width: 50px;
+  height: 50px;
+}
+
+main .container .content .content-photo .idCard {
+  height: 191px;
+}
+
+main .container .content .content-photo .idCard .box-idCard {
+  height: 159px;
+}
+
+main .container .content .content-photo .idCard .box-idCard .img-idCard {
+  width: 259px;
+}
+
+main .container .content .content-photo .idCard .box-idCard .img-idCard1 {
+  margin-right: 32px;
+}
+
+@media (max-width: 640px) {
+  main .container .content .content-photo .idCard .box-idCard .img-idCard1 {
+    margin-right: 0px;
+    margin-bottom: 32px;
+  }
+}
+
+main .container .content .innerbox-btn .btn {
+  width: 114px;
+  height: 50px;
+  padding: 25px 13px;
+}
+
+main .container .content .innerbox-btn .btn-cancel {
+  color: #141414;
+  border: 1px solid #C1C4CA;
+}
+
+main .container .content .innerbox-btn .btn-cancel:hover {
+  background-color: #C1C4CA;
+}
+
+main .container .content .innerbox-btn .btn-next {
+  color: #FFFFFF;
+  background-color: #3B54F3;
+}
+
+main .container .content .innerbox-btn .btn-next:hover {
+  background-color: #233394;
+}
+/*# sourceMappingURL=signUpStep3.css.map */
