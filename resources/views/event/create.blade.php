@@ -48,7 +48,11 @@
                     </div>
                     <div class="event_img" style="margin: 10px 0;">
                         活動介紹照片：
-                        <input type="file" name="event_img[]" id="event_img" class="border-0" multiple accept="image/*">
+                        <input type="file" name="event_img[]" accept="image/*" id="event_img" class="border-0" multiple accept="image/*">
+                    </div>
+                    <div class="event_video" style="margin: 10px 0;">
+                        活動介紹影片：
+                        <input type="file" name="event_video[]" accept="video/*" id="event_video" class="border-0" multiple accept="image/*">
                     </div>
                     <div class="event_intr flex" style="margin: 10px 0;">
                         <div>活動介紹：</div>
