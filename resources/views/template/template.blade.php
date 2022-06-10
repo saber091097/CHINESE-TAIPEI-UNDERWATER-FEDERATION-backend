@@ -145,11 +145,14 @@
                         @csrf
                         <button type="submit">登出</button>
                     </form>
-                    {{-- <a class="logout block px-4 py-2 hover:bg-gray-100 rounded-lg" href="" onclick="document.querySelector('#logout').submit()">登出</a> --}}
+                </li>
+                <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
+                    <a href="">個人中心</a>
                 </li>
             </ul>
-
         </div>
+
+
 
         <div id="dropdownNavbar" class="hidden z-10 dropdownNavbar">
             <ul class="bg-white">
