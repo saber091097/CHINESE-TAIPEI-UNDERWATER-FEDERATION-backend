@@ -1,17 +1,13 @@
 @extends('template.template')
 
 @section('css')
-
-<link
-rel="stylesheet"
-href="https://unpkg.com/swiper/swiper-bundle.min.css"
-/>
-<title>課程總覽</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-<link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
-<link rel="stylesheet" href="{{asset('css/classes.css')}}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="{{asset('css/classes.css')}}">
+<link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+<title>課程總覽</title>
 <style>
     body{
         width: 100%;
@@ -21,6 +17,9 @@ href="https://unpkg.com/swiper/swiper-bundle.min.css"
     }
     body main{
         top: 0;
+    }
+    body main .section{
+        animation: 1s ease 0s 1 normal none running moveToTop;
     }
     footer{
         width: 100%;
@@ -153,13 +152,13 @@ href="https://unpkg.com/swiper/swiper-bundle.min.css"
                                     </div>
                                 </div>
                             </div>
-                            <div class="fixed-ts-box w-full flex flex-col">
+                            <!-- <div class="fixed-ts-box w-full flex flex-col">
                                 <div class="select-box flex flex-col w-full">
-                                    <label class="ts" for="class-select">選擇課程</label>
-                                    <select name="class" id="class-select">
-                                        {{-- <option value="1">6/18-19 日月潭SUP三合一</option>
+                                    <label class="ts" for="class-select1">選擇課程</label>
+                                    <select name="class1" id="class-select1">
+                                        <option value="1">1231231</option>
                                         <option value="2">6/18-19 日月潭SUP三合一</option>
-                                        <option value="3">6/18-19 日月潭SUP三合一</option> --}}
+                                        <option value="3">6/18-19 日月潭SUP三合一</option>
                                     </select>
                                 </div>
                                 <div class="price-box">
@@ -168,7 +167,7 @@ href="https://unpkg.com/swiper/swiper-bundle.min.css"
                                 </div>
                                 <button class="w-full singUp-btn flex justify-center items-center">線上報名</button>
                                 <span class="phone">電洽報名 04-22312698</span>
-                            </div>
+                            </div> -->
                             <div class="tab w-full">
                                 <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 items-center" id="s1-tabs-tab"
                                     role="tablist">
@@ -414,11 +413,12 @@ href="https://unpkg.com/swiper/swiper-bundle.min.css"
                         <div class="in-in-innerbox-left w-4/12 flex justify-end">
                             <div class="fixed-box sticky top-10 flex flex-col">
                                 <div class="select-box flex flex-col w-full">
-                                    <label class="ts" for="class-select">選擇課程</label>
-                                    <select name="class" id="class-select">
-                                        <option value="1">6/18-19 日月潭SUP三合一</option>
-                                        <option value="2">6/18-19 日月潭SUP三合一</option>
-                                        <option value="3">6/18-19 日月潭SUP三合一</option>
+                                    <label class="ts" for="class-select1">選擇課程</label>
+                                    <select name="class1" id="class-select">
+                                        @foreach ($windsurf as $data)
+                                            <option value="{{$data->id}}">{{$data->event}}</option>
+
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="price-box">
@@ -522,11 +522,11 @@ href="https://unpkg.com/swiper/swiper-bundle.min.css"
                             </div>
                             <div class="fixed-ts-box w-full flex flex-col">
                                 <div class="select-box flex flex-col w-full">
-                                    <label class="ts" for="class-select">選擇課程</label>
-                                    <select name="class" id="class-select">
-                                        {{-- <option value="1">6/18-19 日月潭SUP三合一</option>
+                                    <label class="ts" for="class-select3">選擇課程</label>
+                                    <select name="class3" id="class-select3">
+                                        <option value="1">2000000</option>
                                         <option value="2">6/18-19 日月潭SUP三合一</option>
-                                        <option value="3">6/18-19 日月潭SUP三合一</option> --}}
+                                        <option value="3">6/18-19 日月潭SUP三合一</option>
                                     </select>
                                 </div>
                                 <div class="price-box">
@@ -777,9 +777,9 @@ href="https://unpkg.com/swiper/swiper-bundle.min.css"
                         <div class="in-in-innerbox-left w-4/12 flex justify-end">
                             <div class="fixed-box sticky top-10 flex flex-col">
                                 <div class="select-box flex flex-col w-full">
-                                    <label class="ts" for="class-select">選擇課程</label>
-                                    <select name="class" id="class-select">
-                                        <option value="1">6/18-19 日月潭SUP三合一</option>
+                                    <label class="ts" for="class-select4">選擇課程</label>
+                                    <select name="class" id="class-select4">
+                                        <option value="1">20000000</option>
                                         <option value="2">6/18-19 日月潭SUP三合一</option>
                                         <option value="3">6/18-19 日月潭SUP三合一</option>
                                     </select>
@@ -885,11 +885,11 @@ href="https://unpkg.com/swiper/swiper-bundle.min.css"
                             </div>
                             <div class="fixed-ts-box w-full flex flex-col">
                                 <div class="select-box flex flex-col w-full">
-                                    <label class="ts" for="class-select">選擇課程</label>
-                                    <select name="class" id="class-select">
-                                        @foreach ($windsurf as $data)
-                                            <option value="{{$data->id}}">{{$data->event}}</option>
-                                        @endforeach
+                                    <label class="ts" for="class-select5">選擇課程</label>
+                                    <select name="class" id="class-select5">
+                                        <option value="1">2000000</option>
+                                        <option value="2">6/18-19 日月潭SUP三合一</option>
+                                        <option value="3">6/18-19 日月潭SUP三合一</option>
                                     </select>
                                 </div>
                                 <div class="price-box">
@@ -1250,9 +1250,9 @@ href="https://unpkg.com/swiper/swiper-bundle.min.css"
                                 <div class="select-box flex flex-col w-full">
                                     <label class="ts" for="class-select">選擇課程</label>
                                     <select name="class" id="class-select">
-                                        {{-- <option value="1">6/18-19 日月潭SUP三合一</option>
+                                        <option value="1">6/18-19 日月潭SUP三合一</option>
                                         <option value="2">6/18-19 日月潭SUP三合一</option>
-                                        <option value="3">6/18-19 日月潭SUP三合一</option> --}}
+                                        <option value="3">6/18-19 日月潭SUP三合一</option>
                                     </select>
                                 </div>
                                 <div class="price-box">
@@ -1581,12 +1581,10 @@ href="https://unpkg.com/swiper/swiper-bundle.min.css"
                                                     <img src="/img/S__14082117.jpg" />
                                                 </div>
                                             </div>
-                                            <div id="s5_swiper_button_next" class="swiper-button-next">
-                                            </div>
-                                            <div id="s5_swiper_button_prev" class="swiper-button-prev">
+                                            <div id="s5_swiper_button_next" class="swiper-button-next"></div>
+                                            <div id="s5_swiper_button_prev" class="swiper-button-prev"></div>
                                             </div>
                                             <div id="s5_mySwiper" thumbsSlider="" class="swiper mySwiper">
-                                            </div>
                                             <div class="swiper-wrapper swiper-btm">
                                                 <div class="swiper-slide">
                                                     <img src="/img/S__14082119.jpg" />
@@ -1616,9 +1614,9 @@ href="https://unpkg.com/swiper/swiper-bundle.min.css"
                                         <div class="select-box flex flex-col w-full">
                                             <label class="ts" for="class-select">選擇課程</label>
                                             <select name="class" id="class-select">
-                                                {{-- <option value="1">6/18-19 日月潭SUP三合一</option>
+                                                <option value="1">6/18-19 日月潭SUP三合一</option>
                                                 <option value="2">6/18-19 日月潭SUP三合一</option>
-                                                <option value="3">6/18-19 日月潭SUP三合一</option> --}}
+                                                <option value="3">6/18-19 日月潭SUP三合一</option>
                                             </select>
                                         </div>
                                         <div class="price-box">
@@ -1645,7 +1643,7 @@ href="https://unpkg.com/swiper/swiper-bundle.min.css"
                                                 " id="s5-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#s5-tabs-1" role="tab" aria-controls="s5-tabs-1"
                                                 aria-selected="true">
                                                 <span class="tab-span tab-span1">活動介紹</span>
-                                                </a>
+                                            </a>
                                             </li>
                                             <li class="nav-item">
                                                 <a href="#s5-tabs-2" class="
@@ -1689,8 +1687,8 @@ href="https://unpkg.com/swiper/swiper-bundle.min.css"
                                                     leading-tight
                                                     uppercase
                                                     border-x-0 border-t-0 border-b-2 border-transparent
-                                                    focus:border-transparent"
-                                                     id="s5-tabs-4-tab" data-bs-toggle="pill" data-bs-target="#s5-tabs-4" role="tab"
+                                                    focus:border-transparent
+                                                " id="s5-tabs-4-tab" data-bs-toggle="pill" data-bs-target="#s5-tabs-4" role="tab"
                                                     aria-controls="s5-tabs-4" aria-selected="false">
                                                     <span class="tab-span tab-span4">注意事項</span>
                                                 </a>
@@ -1827,8 +1825,8 @@ href="https://unpkg.com/swiper/swiper-bundle.min.css"
                                                             <span class="time">17:00</span>
                                                             <p class="tm">結束</p>
                                                         </div>
-                                                    </div>
                                                 </div>
+                                            </div>
                                             </div>
                                             <div class="tabs-3 tab-pane fade flex flex-col" id="s5-tabs-3" role="tabpanel" aria-labelledby="s5-tabs-3-tab">
                                                 <div class="flex flex-col box">
