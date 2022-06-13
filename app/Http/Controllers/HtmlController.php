@@ -12,5 +12,14 @@ class HtmlController extends Controller
         return view('about_us.Past-presidents');
     }
 
+<<<<<<< Updated upstream
+=======
+    public function about(){
+        return view('about_us.index');
+    }
+    public function photo(){
+        return view('eventimg.index_front');
+    }
+>>>>>>> Stashed changes
 
 }

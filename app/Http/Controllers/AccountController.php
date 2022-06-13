@@ -17,7 +17,7 @@ class AccountController extends Controller
     }
 
     public function create(){
-        $header='帳號新稱頁';
+        $header='帳號新增頁';
         $slot='';
         return view('account.create',compact('header','slot'));
     }

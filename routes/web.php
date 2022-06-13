@@ -8,7 +8,11 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\EventimgController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\SignupController;
+<<<<<<< Updated upstream
 use App\Http\Controllers\ClassesController;
+=======
+use App\Http\Controllers\PersonalCenterController;
+>>>>>>> Stashed changes
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,6 +38,10 @@ require __DIR__.'/auth.php';
 
 
 Route::get('/index', [IndexController::class,'index']);
+
+// 不確定是否正確
+Route::get('/about',[HtmlController::class,'about']);
+Route::get('/personal-center',[PersonalCenterController::class,'index']);
 
 Route::get('/Past-presidents', [HtmlController::class,'Pastpresidents']);
 
@@ -62,6 +70,15 @@ Route::prefix('/new')->group(function () {
     Route::delete('/delete_img/{img_id}', [EventController::class, 'delete_img']);
     Route::delete('/delete_video/{video_id}', [EventController::class, 'delete_img']);
 });
+
+// 前台活動照片
+Route::get('/photo',[HtmlController::class,'photo']);
+// 活動照片內頁
+Route::get('/photo_diving', [EventimgController::class,'photo_diving']);
+Route::get('/photo_swimming', [EventimgController::class,'photo_swimming']);
+Route::get('/photo_windsurfboard', [EventimgController::class,'photo_windsurfboard']);
+Route::get('/photo_lifesaving', [EventimgController::class,'photo_lifesaving']);
+Route::get('/photo_sup', [EventimgController::class,'photo_sup']);
 
 Route::prefix('/eventimg')->group(function () {
     Route::get('/', [EventimgController::class,'index']);

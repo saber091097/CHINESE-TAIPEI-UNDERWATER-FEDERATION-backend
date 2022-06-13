@@ -9,7 +9,25 @@ use App\Models\EventImg;
 
 class EventimgController extends Controller
 {
+
+    //活動照片前台
+    public function photo_sup(){
+        return view('eventimg.photo_Sup');
+    }
+    public function photo_diving(){
+        return view('eventimg.photo_Diving');
+    }
+    public function photo_windsurfboard(){
+        return view('eventimg.photo_Windsurfboard');
+    }
+    public function photo_swimming(){
+        return view('eventimg.photo_Swimming');
+    }
+    public function photo_lifesaving(){
+        return view('eventimg.photo_Lifesaving');
+    }
     //
+
     public function index(){
         $header='活動照片管理頁';
         $slot='';

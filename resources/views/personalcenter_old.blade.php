@@ -1,19 +1,6 @@
-{{-- <!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/personalcenter.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet"> --}}
 @extends('template.template')
 @section('css')
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
@@ -25,7 +12,7 @@
 @endsection
 
 
-@section('main')
+    @section('main')
     <div class="container flex justify-between max-w-full" id="page">
         <!-- 顯示個人資料區 -->
         <div id="infocard" class="infocard">
@@ -37,24 +24,23 @@
             <button id="edit">編輯</button>
         </div>
         <!-- 編輯個人資料區 -->
-        <form id="infocard_edit" class="infocard" name="infocard_edit">
+        <div id="infocard_edit" class="infocard">
             <div id="avator" class="avator mt-6"><img src="./img/icon/Avatar.png" alt=""></div>
             <div id="namebox" class="flex flex-col">
                 <span id="name" class="name">姓名</span>
                 <!-- 編輯 -->
-                <input id="editname" class="" name="edit_name" value="" type="text">
+                <input id="editname" class="" type="text">
             </div>
             <div id="emailbox" class="flex flex-col">
                 <span id="email" class="email">Email</span>
                 <!-- 編輯 -->
-                <input id="editemail" name="edit_email" value="" type="email">
-                <div class="mail-warning"></div>
+                <input id="editemail" type="text">
             </div>
             <div class="buttonsection flex flex-row justify-between">
                 <button id="cancel_button">取消</button>
-                <button id="edityes_button" type="button" onclick="check_data()">確定修改</button>
+                <button id="edityes_button">確定修改</button>
             </div>
-        </form>
+        </div>
 
         <div id="tab" class="">
             <div id="tablist" class="">
@@ -196,9 +182,10 @@
             </nav>
         </div>
     </div>
-@endsection
+    @endsection
+    
 
-@section('js')
+    @section('js')
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 
     <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
@@ -217,59 +204,8 @@
             infocard_edit.style.display = "none"
         })
 
-
-
     </script>
-    <script>
-        const editNname = document.querySelector("#editname");
-        const namebox = document.querySelector("#namebox");
-        const emailbox = document.querySelector("#emailbox");
-        const editEmail = document.querySelector("#editemail");
+    @endsection
+{{-- </body>
 
-
-        function check_data() {
-            if (infocard_edit.edit_name.value == "") {
-
-                namebox.innerHTML = "";
-                namebox.innerHTML = `
-                <span id="name" class="name">姓名</span>
-                <input id="editname" class="mb-1" name="edit_name" value="" type="text">
-                <span class="ts ts-red">姓名不能為空!</span>
-                `;
-            } else if (infocard_edit.edit_email.value == "") {
-
-                emailbox.innerHTML = "";
-                emailbox.innerHTML = `
-                <span id="email" class="email">Email</span>
-                <input id="editemail" class="mb-1" name="edit_email" value="" type="email">
-                <span class="ts ts-red">請輸入有效信箱!</span>
-                `;
-            } else
-                infocard_edit.submit();
-
-
-            if (infocard_edit.edit_name.value != "") {
-                var namevalue =infocard_edit.edit_name.value;
-                namebox.innerHTML = "";
-                namebox.innerHTML = `
-                <span id="name" class="name">姓名</span>
-                <input id="editname" class="mb-1" name="edit_name" value="${namevalue}" type="text">
-                `;
-            }
-            if (infocard_edit.edit_email.value != "") {
-                var emailvalue =infocard_edit.edit_email.value
-                emailbox.innerHTML = "";
-                emailbox.innerHTML = `
-                <span id="email" class="email">Email</span>
-                <input id="editemail" class="mb-1" name="edit_email" value="${emailvalue}" type="email">
-                `;
-            }
-
-        };
-
-
-    </script>
-@endsection
-</body>
-
-</html>
+</html> --}}

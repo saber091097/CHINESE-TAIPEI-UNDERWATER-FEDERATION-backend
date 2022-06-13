@@ -55,8 +55,13 @@
                             <img src="./img/icon/ic_arrow-down.svg" alt="">
                         </button>
                     </li>
+<<<<<<< Updated upstream
                     <li><a href="/classes">課程</a></li>
                     <li><a href="#">活動照片</a></li>
+=======
+                    <li><a href="./classes.html">課程</a></li>
+                    <li><a href="photo">活動照片</a></li>
+>>>>>>> Stashed changes
                     @auth
                         @if (Auth::user()->power == 1)
                             <li><a href="/dashboard">後台</a></li>
@@ -141,7 +146,7 @@
         <div id="dropdownleft" class="hidden z-10 dropdownleft">
             <ul class="bg-white rounded-lg">
                 <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
-                    <a href="">個人中心</a>
+                    <a href="/personal-center">個人中心</a>
                 </li>
                 <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
                     <form action="logout" method="POST" class="d-flex m-0" id="logout">
@@ -155,7 +160,7 @@
         <div id="dropdownNavbar" class="hidden z-10 dropdownNavbar">
             <ul class="bg-white">
                 <li>
-                    <a href="./about.html"
+                    <a href="about"
                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">關於我們</a>
                 </li>
                 <li>
