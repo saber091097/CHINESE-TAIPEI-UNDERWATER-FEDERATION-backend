@@ -1649,10 +1649,9 @@ footer {
 }
 .left > img{
     width: 313px;
+    cursor: pointer;
 }
-/* @media (max-width:786px) {
-    .left > img{
-        width: 288px;
-    }
-} */
+.footer li{
+    cursor: pointer;
+}
 /*# sourceMappingURL=index.css.map */
