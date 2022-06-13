@@ -12,10 +12,10 @@ class SignupController extends Controller
 {
     //
 
-    public function signup1(){
+    public function signup1($id){
 
-
-        return view('signup.signUpStep1');
+        $event = Event::where('id',$id)->first();
+        return view('signup.signUpStep1',compact('event'));
     }
 
     public function signup2(Request $request){

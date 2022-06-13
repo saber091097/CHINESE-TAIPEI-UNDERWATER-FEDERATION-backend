@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-    {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{{asset('css/createAccount.css')}}">
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
@@ -24,7 +25,7 @@
 
 <body>
     <div class="container flex justify-center max-w-full flex-wrap " data-scroll-container>
-        <nav class="nav flex md:items-center justify-between items-center" data-scroll-section>
+        <nav class="nav flex md:items-center justify-between " data-scroll-section>
             <div class="left ">
                 <a href="index">
                     <div class="logo flex">
@@ -40,12 +41,12 @@
                     </div>
                 </a>
             </div>
-            <div class="burger mr-4 hidden">
+            <div class="burger mr-4 lg:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" />
                 </svg>
             </div>
-            <div class="right flex justify-end ml-auto lg:block ">
+            <div class="left flex justify-end ml-auto lg:block">
                 <ul class="flex items-center">
                     <li><a href="./news.html">最新消息</a></li>
                     <li>
@@ -113,10 +114,10 @@
                             <div class="flex justify-between my-3">
                                 <div class="flex items-start">
                                     <div class="flex items-center h-5">
-                                        <input id="remember_me" type="checkbox" value="" class="w-4 h-4"
+                                        <input id="remember" type="checkbox" value="" class="w-4 h-4"
                                             name="remember">
                                     </div>
-                                    <label for="remember_me"
+                                    <label for="remember"
                                         class="ml-2 text-sm font-medium text-gray-900">{{ __('記住我') }}</label>
                                 </div>
                                 <a href="{{ route('password.request') }}"
@@ -128,8 +129,8 @@
                                 登入
                             </button>
                             <div class="text-sm font-medium text-gray-500 ">
-                                Not registered? <a href="/register"
-                                    class="text-blue-700 hover:underline ">Create account</a>
+                                Not registered? <a href="#"
+                                    class="text-blue-700 hover:underline " onclick="closeup()" data-modal-toggle="create-modal">Create account</a>
                             </div>
                         </form>
                     </div>
@@ -150,8 +151,6 @@
                 </li>
             </ul>
         </div>
-
-
 
         <div id="dropdownNavbar" class="hidden z-10 dropdownNavbar">
             <ul class="bg-white">
@@ -227,7 +226,6 @@
         </footer>
     </div>
     @yield('js')
-
     <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
 </body>
 

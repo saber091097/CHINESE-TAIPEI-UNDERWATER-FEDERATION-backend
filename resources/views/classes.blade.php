@@ -417,7 +417,6 @@
                                     <select name="class1" id="class-select">
                                         @foreach ($windsurf as $data)
                                             <option value="{{$data->id}}">{{$data->event}}</option>
-
                                         @endforeach
                                     </select>
                                 </div>

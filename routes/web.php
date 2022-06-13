@@ -121,9 +121,12 @@ Route::prefix('/account')->group(function () {
 });
 
 
-Route::get('/signup1', [SignupController::class,'signup1']);
-Route::post('/signup2', [SignupController::class,'signup2']);
+Route::get('/signup1/{id}', [SignupController::class,'signup1']);
+Route::post('/signup2/{id}', [SignupController::class,'signup2']);
 Route::post('/signup3', [SignupController::class,'signup3']);
 Route::post('/signup4', [SignupController::class,'signup4']);
 
 Route::get('/classes', [ClassesController::class,'classes']);
+
+Route::get('/createAccount', [ClientController::class,'createAccount']);
+Route::post('/createAccount/store', [ClientController::class,'store']);
