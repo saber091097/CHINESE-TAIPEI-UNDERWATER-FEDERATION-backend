@@ -4,6 +4,7 @@
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/Pastpresidents.css') }}">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/ckeditor.js"></script>
     <style>
         .past-presidents {
             background-color: #3B54F3;
@@ -45,9 +46,17 @@
                         活動名稱：
                         <input type="text" name="event" id="event" style="border-radius: 5px; width:50%;">
                     </div>
+                    <div class="price">
+                        活動價格：
+                        <input type="text" name="price" id="price" style="border-radius: 5px; width:50%;margin-top:10px;">
+                    </div>
                     <div class="event_img" style="margin: 10px 0;">
                         活動介紹照片：
-                        <input type="file" name="event_img[]" id="event_img" class="border-0" multiple accept="image/*">
+                        <input type="file" name="event_img[]" accept="image/*" id="event_img" class="border-0" multiple accept="image/*">
+                    </div>
+                    <div class="event_video" style="margin: 10px 0;">
+                        活動介紹影片：
+                        <input type="file" name="event_video[]" accept="video/*" id="event_video" class="border-0" multiple accept="image/*">
                     </div>
                     <div class="event_intr flex" style="margin: 10px 0;">
                         <div>活動介紹：</div>
@@ -77,4 +86,17 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('js')
+<script>
+    ClassicEditor
+            .create( document.querySelector( '#event_proc' ) )
+            .then( editor => {
+                    console.log( editor );
+            } )
+            .catch( error => {
+                    console.error( error );
+            } );
+</script>
 @endsection

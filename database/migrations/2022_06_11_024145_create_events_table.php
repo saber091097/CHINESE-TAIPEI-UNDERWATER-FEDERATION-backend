@@ -24,6 +24,7 @@ return new class extends Migration
             $table->longText('event_dire')->nullable();
             $table->longText('event_notice')->nullable();
             $table->string('name')->nullable();
+            $table->integer('price')->nullable();
         });
     }
 

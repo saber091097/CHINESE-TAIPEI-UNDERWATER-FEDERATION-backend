@@ -1,0 +1,343 @@
+main .container .content-success .h2m, main .container .content-price .h2m {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+main .container .title .h3m {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+main .container .content-price .ps, main .container .content-price .account .ts {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+main .container .content-data .tm, main .container .innerbox-btn .btn-next {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+main .container .content-data .tl {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans TC',sans-serif;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #F9FAFB;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  z-index: 50;
+}
+
+footer {
+  width: 100%;
+  height: 527px;
+  z-index: 50;
+  background-color: #3B54F3;
+}
+
+main {
+  padding: 80px 0px;
+  position: relative;
+}
+
+@media (max-width: 640px) {
+  main {
+    padding: 24px 16px;
+  }
+}
+
+@-webkit-keyframes move_wave {
+  0% {
+    -webkit-transform: translateX(0) translateZ(0) scaleY(1);
+            transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    -webkit-transform: translateX(-25%) translateZ(0) scaleY(0.55);
+            transform: translateX(-25%) translateZ(0) scaleY(0.55);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateZ(0) scaleY(1);
+            transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+
+@keyframes move_wave {
+  0% {
+    -webkit-transform: translateX(0) translateZ(0) scaleY(1);
+            transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    -webkit-transform: translateX(-25%) translateZ(0) scaleY(0.55);
+            transform: translateX(-25%) translateZ(0) scaleY(0.55);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateZ(0) scaleY(1);
+            transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+
+main .underWaveWrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40%;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(20%, #3B54F3), color-stop(80%, #6a7cec));
+  background-image: linear-gradient(to top, #3B54F3 20%, #6a7cec 80%);
+}
+
+main .waveWrapper {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 80%;
+  top: 0;
+  margin: auto;
+  height: 100%;
+}
+
+main .waveWrapperInner {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  bottom: -1px;
+}
+
+main .bgTop {
+  z-index: 15;
+  opacity: 0.5;
+}
+
+main .bgMiddle {
+  z-index: 10;
+  opacity: 0.75;
+}
+
+main .bgBottom {
+  z-index: 5;
+}
+
+main .wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
+}
+
+main .waveTop {
+  background-image: url("/img/banner/img_sea-01.png");
+  background-size: 50% 90px;
+}
+
+main .waveAnimation .waveTop {
+  animation: move-wave 3s;
+  -webkit-animation: move-wave 3s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+main .waveMiddle {
+  background-image: url("/img/banner/img_sea-02.png");
+  background-size: 50% 120px;
+}
+
+main .waveAnimation .waveMiddle {
+  -webkit-animation: move_wave 10s linear infinite;
+          animation: move_wave 10s linear infinite;
+}
+
+main .waveBottom {
+  background-image: url("/img/banner/img_sea-03.png");
+  background-size: 50% 100px;
+}
+
+main .waveAnimation .waveBottom {
+  -webkit-animation: move_wave 15s linear infinite;
+          animation: move_wave 15s linear infinite;
+}
+
+main .container {
+  width: 630px;
+  height: 1068px;
+  padding: 40px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
+  border-radius: 24px;
+  z-index: 50;
+}
+
+@media (max-width: 640px) {
+  main .container {
+    width: 500px;
+    height: 1187px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 550px) {
+  main .container {
+    width: 288px;
+  }
+}
+
+main .container .title {
+  height: 40px;
+  border-bottom: 1px solid #E5E7EB;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+main .container .title .h3m {
+  font-weight: 600;
+}
+
+main .container .content-success {
+  height: 150px;
+}
+
+main .container .content-success .icon-success {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 16px;
+}
+
+main .container .content-success .h2m {
+  font-weight: 600;
+}
+
+main .container .content-data {
+  height: 384px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 640px) {
+  main .container .content-data {
+    height: 569px;
+  }
+}
+
+main .container .content-data .data div:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+main .container .content-data .tm {
+  color: #141414;
+  opacity: 0.6;
+  line-height: 28px;
+}
+
+main .container .content-data .tl {
+  color: #141414;
+  line-height: 28px;
+}
+
+main .container .content-price {
+  height: 324px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 640px) {
+  main .container .content-price {
+    height: 332px;
+    margin-bottom: 40px;
+  }
+}
+
+main .container .content-price .h2m {
+  width: 117px;
+  height: 38px;
+  color: #141414;
+  line-height: 38px;
+  margin: 16px 0px;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  main .container .content-price .h2m {
+    height: 36px;
+    line-height: 36px;
+  }
+}
+
+main .container .content-price .ps {
+  line-height: 25px;
+  margin-bottom: 24px;
+}
+
+main .container .content-price .ps .ts {
+  color: #141414;
+  opacity: 0.6;
+}
+
+main .container .content-price .ps .tsr {
+  color: #FC3434;
+}
+
+main .container .content-price .ps .tsb {
+  color: #3B54F3;
+}
+
+main .container .content-price .account {
+  height: 140px;
+  padding: 16px;
+  background-color: #F9FAFB;
+  border-radius: 8px;
+}
+
+@media (max-width: 640px) {
+  main .container .content-price .account {
+    height: 120px;
+  }
+}
+
+main .container .content-price .account .ts {
+  color: #141414;
+  line-height: 25px;
+}
+
+@media (max-width: 640px) {
+  main .container .content-price .account .ts {
+    line-height: 20px;
+  }
+}
+
+main .container .content-price .account .tsg {
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
+
+main .container .innerbox-btn .btn-next {
+  width: 114px;
+  height: 50px;
+  padding: 25px 13px;
+  color: #FFFFFF;
+  background-color: #3B54F3;
+}
+
+main .container .innerbox-btn .btn-next:hover {
+  background-color: #233394;
+}
+/*# sourceMappingURL=signUpStep4.css.map */

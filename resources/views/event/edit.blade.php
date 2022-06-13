@@ -4,6 +4,7 @@
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/Pastpresidents.css') }}">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/ckeditor.js"></script>
     <style>
         .past-presidents {
             background-color: #3B54F3;
@@ -66,6 +67,22 @@
                             @endforeach
                         </div>
                     </div>
+                    <div class="event_img">
+                        目前活動介紹影片：
+                        <div class="flex flex-col">
+                            @foreach ($data->videos as $i)
+                                <div class="flex "  id="sup_video{{$i->id}}">
+                                    <div class="flex  justify-between" style="width:150px; height:auto; margin-top:10px;">
+                                        <img src="{{ $i->video }}" alt="">
+                                    </div>
+                                    <div class="ml-4 flex items-center">
+                                        <button type="button" onclick="delete_video({{ $i->id }})"
+                                            style="padding: 4px 8px;background-color:red;color:white;border-radius:5px;">刪除圖片</button>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
                     <div class="event_intr flex" style="margin: 10px 0;">
                         <div>活動介紹：</div>
                         <textarea name="event_intr" id="event_intr" cols="90" rows="10" style="border-radius:5px;">{{ $data->event_intr }}</textarea>
@@ -106,5 +123,29 @@
                 element.parentNode.removeChild(element);
             })
         }
+    </script>
+    <script>
+        function delete_video(id){
+            let formData = new FormData();
+            formData.append('_method', 'DELETE');
+            formData.append('_token', '  {{ csrf_token() }}');
+            fetch("/new/delete_video/"+id, {
+                method: "POST",
+                body: formData
+            }).then(function(response) {
+                let element = document.querySelector('#sup_video'+id)
+                element.parentNode.removeChild(element);
+            })
+        }
+    </script>
+    <script>
+        ClassicEditor
+                .create( document.querySelector( '#event_proc' ) )
+                .then( editor => {
+                        console.log( editor );
+                } )
+                .catch( error => {
+                        console.error( error );
+                } );
     </script>
 @endsection

@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $event_dire
  * @property string $event_notice
  * @property string $name
+ * @property integer $price
  */
 class Event extends Model
 {
@@ -29,9 +30,13 @@ class Event extends Model
     /**
      * @var array
      */
-    protected $fillable = ['created_at', 'updated_at', 'event_type', 'event', 'anno_type', 'event_intr', 'event_proc', 'event_dire', 'event_notice', 'name'];
+    protected $fillable = ['created_at', 'updated_at', 'event_type', 'event', 'anno_type', 'event_intr', 'event_proc', 'event_dire', 'event_notice', 'name', 'price'];
 
     public function imgs(){
         return $this->hasMany(New_img::class,'new_id','id');
+    }
+
+    public function videos(){
+        return $this->hasMany(Video::class,'event_id','id');
     }
 }

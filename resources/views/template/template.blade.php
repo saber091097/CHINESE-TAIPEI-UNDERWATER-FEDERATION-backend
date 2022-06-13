@@ -54,9 +54,8 @@
                             <img src="./img/icon/ic_arrow-down.svg" alt="">
                         </button>
                     </li>
-                    <li><a href="./classes.html">課程</a></li>
+                    <li><a href="/classes">課程</a></li>
                     <li><a href="#">活動照片</a></li>
-                    <li><a href="#footer">聯繫我們</a></li>
                     @auth
                         @if (Auth::user()->power == 1)
                             <li><a href="/dashboard">後台</a></li>
@@ -141,13 +140,13 @@
         <div id="dropdownleft" class="hidden z-10 dropdownleft">
             <ul class="bg-white rounded-lg">
                 <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
-                    <form action="logout" method="POST" class="d-flex m-0" id="logout">
-                        @csrf
-                        <button type="submit">登出</button>
-                    </form>
+                    <a href="">個人中心</a>
                 </li>
                 <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
-                    <a href="">個人中心</a>
+                    <form action="logout" method="POST" class="d-flex m-0" id="logout">
+                        @csrf
+                        <button type="submit" style="color: red;width:100%;left:0;">登出</button>
+                    </form>
                 </li>
             </ul>
         </div>
