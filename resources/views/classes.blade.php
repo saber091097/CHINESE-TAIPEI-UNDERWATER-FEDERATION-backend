@@ -82,7 +82,7 @@
                                         <path d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
                                     </svg>
                                 </li>
-                                <li><a href="classes.html">課程</a></li>
+                                <li><a href="classes">課程</a></li>
                                 <li>
                                     <svg xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
@@ -449,7 +449,7 @@
                                         <path d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
                                     </svg>
                                 </li>
-                                <li><a href="classes.html">課程</a></li>
+                                <li><a href="classes">課程</a></li>
                                 <li>
                                     <svg xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
@@ -812,7 +812,7 @@
                                         <path d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
                                     </svg>
                                 </li>
-                                <li><a href="classes.html">課程</a></li>
+                                <li><a href="classes">課程</a></li>
                                 <li>
                                     <svg xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
@@ -1175,7 +1175,7 @@
                                         <path d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
                                     </svg>
                                 </li>
-                                <li><a href="classes.html">課程</a></li>
+                                <li><a href="classes">課程</a></li>
                                 <li>
                                     <svg xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
@@ -1539,7 +1539,7 @@
                                                 <path d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
                                             </svg>
                                         </li>
-                                        <li><a href="classes.html">課程</a></li>
+                                        <li><a href="classes">課程</a></li>
                                         <li>
                                             <svg xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
@@ -1895,7 +1895,6 @@
 
 <script src="{{asset('js/classes.js')}}"></script>
 
-<script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 
 @endsection
