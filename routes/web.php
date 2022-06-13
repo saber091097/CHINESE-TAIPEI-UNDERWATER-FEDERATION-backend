@@ -8,11 +8,8 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\EventimgController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\SignupController;
-<<<<<<< Updated upstream
 use App\Http\Controllers\ClassesController;
-=======
 use App\Http\Controllers\PersonalCenterController;
->>>>>>> Stashed changes
 /*
 |--------------------------------------------------------------------------
 | Web Routes
