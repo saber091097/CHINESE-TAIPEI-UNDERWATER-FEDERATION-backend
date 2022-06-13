@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-    <script src="https://cdn.tailwindcss.com"></script>
+    {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -24,7 +24,7 @@
 
 <body>
     <div class="container flex justify-center max-w-full flex-wrap " data-scroll-container>
-        <nav class="nav flex md:items-center justify-between " data-scroll-section>
+        <nav class="nav flex md:items-center justify-between items-center" data-scroll-section>
             <div class="left ">
                 <a href="index">
                     <div class="logo flex">
@@ -40,12 +40,12 @@
                     </div>
                 </a>
             </div>
-            <div class="burger mr-4 lg:hidden">
+            <div class="burger mr-4 hidden">
                 <svg xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" />
                 </svg>
             </div>
-            <div class="left flex justify-end ml-auto lg:block">
+            <div class="right flex justify-end ml-auto lg:block ">
                 <ul class="flex items-center">
                     <li><a href="./news.html">最新消息</a></li>
                     <li>
@@ -113,10 +113,10 @@
                             <div class="flex justify-between my-3">
                                 <div class="flex items-start">
                                     <div class="flex items-center h-5">
-                                        <input id="remember" type="checkbox" value="" class="w-4 h-4"
+                                        <input id="remember_me" type="checkbox" value="" class="w-4 h-4"
                                             name="remember">
                                     </div>
-                                    <label for="remember"
+                                    <label for="remember_me"
                                         class="ml-2 text-sm font-medium text-gray-900">{{ __('記住我') }}</label>
                                 </div>
                                 <a href="{{ route('password.request') }}"
