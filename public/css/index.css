@@ -575,7 +575,7 @@
 * body .container .backgroundimg {
     height: auto;
     background-image: url("/img/banner/bg_A1-index-1440px.png");
-    background-size: cover;
+    /* background-size: cover; */
     background-repeat: no-repeat;
     width: 100%;
 }
@@ -583,7 +583,7 @@
 @media (max-width: 864px) {
     * body .container .backgroundimg {
         background-image: url("/img/banner/index_bg-834px.png");
-        background-size: cover;
+        /* background-size: cover; */
         background-repeat: no-repeat;
     }
 }
@@ -591,7 +591,7 @@
 @media (max-width: 320px) {
     * body .container .backgroundimg {
         background-image: url("/img/banner/index_bg-320px.png");
-        background-size: cover;
+        /* background-size: cover; */
         background-repeat: no-repeat;
     }
 }
@@ -858,11 +858,11 @@
 }
 
 * body .container .backgroundimg .popular-courses .popular-courses-top .zh-aboutus {
-    color: white;
+    color: #141414;
 }
 
 * body .container .backgroundimg .popular-courses .popular-courses-top .en-aboutus {
-    color: white;
+    color: #141414;
 }
 
 * body .container .backgroundimg .popular-courses .popular-courses-imgs {
@@ -1743,8 +1743,8 @@ footer {
 
 @media screen and (max-width: 1024px) {
   .cd-header {
-    /* position: fixed; */
-    /* width: 100%; */
+    /* position: fixed;
+    width: 100%; */
     top: 0;
     left: 0;
     z-index: 100;
@@ -1764,10 +1764,10 @@ footer {
   .nav-but-wrap {
     position: relative;
     display: inline-block;
-    float: right;
+    /* float: right; */
     padding-left: 15px;
-    padding-top: 15px;
-    margin-top: 70px;
+    /* padding-top: 15px; */
+    /* margin-top: 70px; */
     transition: all 0.3s ease-out;
   }
 }
