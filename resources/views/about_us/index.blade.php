@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="{{ asset('css/nav&footer.css') }}">
 
 
-    <title>關於我們後端版</title>
+    <title>關於我們</title>
     <style>
         body {
             font-family: 'Noto Sans TC', sans-serif;
