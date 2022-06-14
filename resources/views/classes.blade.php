@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <title>課程總覽</title>
-    <style>
-
-    </style>
 @endsection
 
 @section('main')
@@ -127,30 +124,30 @@
                                     <div id="s1_mySwiper" thumbsSlider="" class="swiper mySwiper">
                                         <div class="swiper-wrapper swiper-btm">
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082119.jpg" />
+                                                <img src="{{ asset('img/S__14082119.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082097.jpg" />
+                                                <img src="{{ asset('img/S__14082097.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082099.jpg" />
+                                                <img src="{{ asset('img/S__14082099.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082100.jpg" />
+                                                <img src="{{ asset('img/S__14082100.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082109.jpg" />
+                                                <img src="{{ asset('img/S__14082109.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082111.jpg" />
+                                                <img src="{{ asset('img/S__14082111.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082117.jpg" />
+                                                <img src="{{ asset('img/S__14082117.jpg') }}" />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="fixed-ts-box w-full flex flex-col">
+                                <div class="fixed-ts-box w-full flex flex-col">
                                     <div class="select-box flex flex-col w-full">
                                         <label class="ts" for="class-select1">選擇課程</label>
                                         <select name="class1" id="class-select1">
@@ -163,9 +160,9 @@
                                         <h1> NT4,500</h1>
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
-                                    <button class="w-full singUp-btn flex justify-center items-center">線上報名</button>
+                                    <a role="button" href="/signup1/{id}" class="w-full singUp-btn flex justify-center items-center">線上報名</a>
                                     <span class="phone">電洽報名 04-22312698</span>
-                                </div> -->
+                                </div>
                                 <div class="tab w-full">
                                     <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 items-center"
                                         id="s1-tabs-tab" role="tablist">
@@ -380,7 +377,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- <div class="tab-2-btm"></div> -->
                                         </div>
                                         <div class="tabs-3 tab-pane fade flex flex-col" id="s1-tabs-3" role="tabpanel"
                                             aria-labelledby="tabs-3-tab">
@@ -395,7 +391,6 @@
                                                 <p class="tm">地址： 南投縣日月村中正路102號</p>
                                                 <p class="tm">停車場資訊： Google地圖收尋（帖泊喀露營區）</p>
                                             </div>
-                                            <!-- <div class="tab-btm"></div> -->
                                         </div>
                                         <div class="tabs-4 tab-pane fade flex flex-col" id="s1-tabs-4" role="tabpanel"
                                             aria-labelledby="tabs-4-tab">
@@ -419,7 +414,6 @@
                                                 <p class="tm">ATM兆豐國際商銀台中分行(017)</p>
                                                 <p class="tm">帳號:00410765400</p>
                                             </div>
-                                            <!-- <div class="tab-btm"></div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -438,7 +432,7 @@
                                         <h1> NT4,500</h1>
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
-                                    <button class="w-full singUp-btn flex justify-center items-center">線上報名</button>
+                                    <a role="button" href="/signup1/{id}" class="w-full singUp-btn flex justify-center items-center">線上報名</a>
                                     <span class="phone">電洽報名 04-22312698</span>
                                 </div>
                             </div>
@@ -488,25 +482,25 @@
                                         class="swiper mySwiper2">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082119.jpg" />
+                                                <img src="{{ asset('img/S__14082119.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082097.jpg" />
+                                                <img src="{{ asset('img/S__14082097.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082099.jpg" />
+                                                <img src="{{ asset('img/S__14082099.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082100.jpg" />
+                                                <img src="{{ asset('img/S__14082100.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082109.jpg" />
+                                                <img src="{{ asset('img/S__14082109.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082111.jpg" />
+                                                <img src="{{ asset('img/S__14082111.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082117.jpg" />
+                                                <img src="{{ asset('img/S__14082117.jpg') }}" />
                                             </div>
                                         </div>
                                         <div id="s2_swiper_button_next" class="swiper-button-next"></div>
@@ -515,25 +509,25 @@
                                     <div id="s2_mySwiper" thumbsSlider="" class="swiper mySwiper">
                                         <div class="swiper-wrapper swiper-btm">
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082119.jpg" />
+                                                <img src="{{ asset('img/S__14082119.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082097.jpg" />
+                                                <img src="{{ asset('img/S__14082097.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082099.jpg" />
+                                                <img src="{{ asset('img/S__14082099.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082100.jpg" />
+                                                <img src="{{ asset('img/S__14082100.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082109.jpg" />
+                                                <img src="{{ asset('img/S__14082109.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082111.jpg" />
+                                                <img src="{{ asset('img/S__14082111.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082117.jpg" />
+                                                <img src="{{ asset('img/S__14082117.jpg') }}" />
                                             </div>
                                         </div>
                                     </div>
@@ -551,7 +545,7 @@
                                         <h1> NT4,500</h1>
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
-                                    <button class="w-full singUp-btn flex justify-center items-center">線上報名</button>
+                                    <a role="button" href="/signup1/{id}" class="w-full singUp-btn flex justify-center items-center">線上報名</a>
                                     <span class="phone">電洽報名 04-22312698</span>
                                 </div>
                                 <div class="tab w-full">
@@ -823,7 +817,7 @@
                                         <h1> NT4,500</h1>
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
-                                    <button class="w-full singUp-btn flex justify-center items-center">線上報名</button>
+                                    <a role="button" href="/signup1/{id}" class="w-full singUp-btn flex justify-center items-center">線上報名</a>
                                     <span class="phone">電洽報名 04-22312698</span>
                                 </div>
                             </div>
@@ -873,25 +867,25 @@
                                         class="swiper mySwiper2">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082119.jpg" />
+                                                <img src="{{ asset('img/S__14082119.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082097.jpg" />
+                                                <img src="{{ asset('img/S__14082097.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082099.jpg" />
+                                                <img src="{{ asset('img/S__14082099.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082100.jpg" />
+                                                <img src="{{ asset('img/S__14082100.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082109.jpg" />
+                                                <img src="{{ asset('img/S__14082109.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082111.jpg" />
+                                                <img src="{{ asset('img/S__14082111.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082117.jpg" />
+                                                <img src="{{ asset('img/S__14082117.jpg') }}" />
                                             </div>
                                         </div>
                                         <div id="s3_swiper_button_next" class="swiper-button-next"></div>
@@ -900,25 +894,25 @@
                                     <div id="s3_mySwiper" thumbsSlider="" class="swiper mySwiper">
                                         <div class="swiper-wrapper swiper-btm">
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082119.jpg" />
+                                                <img src="{{ asset('img/S__14082119.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082097.jpg" />
+                                                <img src="{{ asset('img/S__14082097.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082099.jpg" />
+                                                <img src="{{ asset('img/S__14082099.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082100.jpg" />
+                                                <img src="{{ asset('img/S__14082100.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082109.jpg" />
+                                                <img src="{{ asset('img/S__14082109.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082111.jpg" />
+                                                <img src="{{ asset('img/S__14082111.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082117.jpg" />
+                                                <img src="{{ asset('img/S__14082117.jpg') }}" />
                                             </div>
                                         </div>
                                     </div>
@@ -936,7 +930,7 @@
                                         <h1> NT4,500</h1>
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
-                                    <button class="w-full singUp-btn flex justify-center items-center">線上報名</button>
+                                    <a role="button" href="/signup1/{id}" class="w-full singUp-btn flex justify-center items-center">線上報名</a>
                                     <span class="phone">電洽報名 04-22312698</span>
                                 </div>
                                 <div class="tab w-full">
@@ -1209,7 +1203,7 @@
                                         <h1> NT4,500</h1>
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
-                                    <button class="w-full singUp-btn flex justify-center items-center">線上報名</button>
+                                    <a role="button" href="/signup1/{id}" class="w-full singUp-btn flex justify-center items-center">線上報名</a>
                                     <span class="phone">電洽報名 04-22312698</span>
                                 </div>
                             </div>
@@ -1259,25 +1253,25 @@
                                         class="swiper mySwiper2">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082119.jpg" />
+                                                <img src="{{ asset('img/S__14082119.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082097.jpg" />
+                                                <img src="{{ asset('img/S__14082097.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082099.jpg" />
+                                                <img src="{{ asset('img/S__14082099.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082100.jpg" />
+                                                <img src="{{ asset('img/S__14082100.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082109.jpg" />
+                                                <img src="{{ asset('img/S__14082109.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082111.jpg" />
+                                                <img src="{{ asset('img/S__14082111.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082117.jpg" />
+                                                <img src="{{ asset('img/S__14082117.jpg') }}" />
                                             </div>
                                         </div>
                                         <div id="s4_swiper_button_next" class="swiper-button-next"></div>
@@ -1286,25 +1280,25 @@
                                     <div id="s4_mySwiper" thumbsSlider="" class="swiper mySwiper">
                                         <div class="swiper-wrapper swiper-btm">
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082119.jpg" />
+                                                <img src="{{ asset('img/S__14082119.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082097.jpg" />
+                                                <img src="{{ asset('img/S__14082097.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082099.jpg" />
+                                                <img src="{{ asset('img/S__14082099.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082100.jpg" />
+                                                <img src="{{ asset('img/S__14082100.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082109.jpg" />
+                                                <img src="{{ asset('img/S__14082109.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082111.jpg" />
+                                                <img src="{{ asset('img/S__14082111.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082117.jpg" />
+                                                <img src="{{ asset('img/S__14082117.jpg') }}" />
                                             </div>
                                         </div>
                                     </div>
@@ -1322,7 +1316,7 @@
                                         <h1> NT4,500</h1>
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
-                                    <button class="w-full singUp-btn flex justify-center items-center">線上報名</button>
+                                    <a role="button" href="/signup1/{id}" class="w-full singUp-btn flex justify-center items-center">線上報名</a>
                                     <span class="phone">電洽報名 04-22312698</span>
                                 </div>
                                 <div class="tab w-full">
@@ -1595,7 +1589,7 @@
                                         <h1> NT4,500</h1>
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
-                                    <button class="w-full singUp-btn flex justify-center items-center">線上報名</button>
+                                    <a role="button" href="/signup1/{id}" class="w-full singUp-btn flex justify-center items-center">線上報名</a>
                                     <span class="phone">電洽報名 04-22312698</span>
                                 </div>
                             </div>
@@ -1695,7 +1689,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                {{-- <div class="fixed-ts-box w-full flex flex-col">
+                                <div class="fixed-ts-box w-full flex flex-col">
                                     <div class="select-box flex flex-col w-full">
                                         <label class="ts" for="class-select">選擇課程</label>
                                         <select name="class" id="class-select">
@@ -1708,9 +1702,9 @@
                                         <h1> NT4,500</h1>
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
-                                    <button class="w-full singUp-btn flex justify-center items-center">線上報名</button>
+                                    <a role="button" href="/signup1/{id}" class="w-full singUp-btn flex justify-center items-center">線上報名</a>
                                     <span class="phone">電洽報名 04-22312698</span>
-                                </div> --}}
+                                </div>
                                 <div class="tab w-full">
                                     <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 items-center"
                                         id="s5-tabs-tab" role="tablist">
@@ -1983,7 +1977,7 @@
                                         <h1> NT4,500</h1>
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
-                                    <button class="w-full singUp-btn flex justify-center items-center">線上報名</button>
+                                    <a role="button" href="/signup1/{id}" class="w-full singUp-btn flex justify-center items-center">線上報名</a>
                                     <span class="phone">電洽報名 04-22312698</span>
                                 </div>
                             </div>

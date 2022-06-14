@@ -42,6 +42,118 @@ body main .section .s-container .s-innerbox .s-innerbox-btm .class-content .in-i
     color: #EBEEFE;
   }
 
+  * body .container {
+    width: 100%;
+}
+
+* body .container .nav {
+    width: 100%;
+    height: 80px;
+    -webkit-box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+    box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+}
+
+* body .container .nav .left {
+    padding-left: 63px;
+}
+
+@media (max-width: 1024px) {
+    * body .container .nav .left {
+        padding-left: 16px;
+    }
+}
+
+@media (max-width:863px){
+    * body .container .nav .right {
+        display: none;
+    }
+}
+
+* body .container .nav .left .logo {
+    height: 48;
+}
+
+* body .container .nav .left .logo img {
+    width: 48px;
+    height: 48px;
+}
+
+* body .container .nav .left .logo .name {
+    padding-left: 12px;
+    height: 44px;
+}
+
+* body .container .nav .left .logo .name .en-name span {
+    color: #c1c4ca;
+}
+
+* body .container .nav .right ul {
+    height: 30px;
+}
+
+* body .container .nav .right ul li {
+    opacity: .6;
+}
+
+* body .container .nav .right ul li:hover {
+    color: #3B54F3;
+    opacity: 1;
+    cursor: pointer;
+}
+
+* body .container .nav .right ul li:not(:last-child) {
+    padding-right: 25px;
+}
+
+* body .container .nav .right ul li:last-child {
+    padding: 0 0 0 5px;
+    margin-right: 67px;
+}
+
+
+  * body .container .dropdownNavbar ul {
+    width: 155px;
+    height: auto;
+    border-radius: 6px;
+}
+
+* body .container .dropdownNavbar ul li {
+    height: 44px;
+}
+
+* body .container .dropdownNavbar ul li:first-child {
+    margin-top: 4px;
+}
+
+* body .container .dropdownNavbar ul li a {
+    color: #141414;
+}
+
+* body .container .dropdownNavbar ul li a:hover {
+    color: #3B54F3;
+}
+
+* body .container .dropdownNavbar ul li:hover {
+    background-color: #EBEEFE;
+    border-radius: 6px;
+}
+
+* body .container .authentication #password {
+    outline-color: #3B54F3;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d6dadf;
+    border-radius: 10px;
+}
+
+* body .container .authentication #email {
+    outline-color: #3B54F3;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d6dadf;
+    border-radius: 10px;
+}
+
   * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
