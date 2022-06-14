@@ -55,13 +55,8 @@
                             <img src="./img/icon/ic_arrow-down.svg" alt="">
                         </button>
                     </li>
-<<<<<<< Updated upstream
-                    <li><a href="/classes">課程</a></li>
-                    <li><a href="#">活動照片</a></li>
-=======
-                    <li><a href="./classes.html">課程</a></li>
+                    <li><a href="./classes">課程</a></li>
                     <li><a href="photo">活動照片</a></li>
->>>>>>> Stashed changes
                     @auth
                         @if (Auth::user()->power == 1)
                             <li><a href="/dashboard">後台</a></li>
