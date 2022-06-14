@@ -10,6 +10,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\ClassesController;
 use App\Http\Controllers\PersonalCenterController;
+use App\Http\Controllers\ClientController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -69,13 +70,13 @@ Route::prefix('/new')->group(function () {
 });
 
 // 前台活動照片
-Route::get('/photo',[HtmlController::class,'photo']);
+Route::get('/album',[EventimgController::class,'album']);
 // 活動照片內頁
-Route::get('/photo_diving', [EventimgController::class,'photo_diving']);
-Route::get('/photo_swimming', [EventimgController::class,'photo_swimming']);
-Route::get('/photo_windsurfboard', [EventimgController::class,'photo_windsurfboard']);
-Route::get('/photo_lifesaving', [EventimgController::class,'photo_lifesaving']);
-Route::get('/photo_sup', [EventimgController::class,'photo_sup']);
+Route::get('/photo/{id}', [EventimgController::class,'photo']);
+// Route::get('/photo_swimming', [EventimgController::class,'photo_swimming']);
+// Route::get('/photo_windsurfboard', [EventimgController::class,'photo_windsurfboard']);
+// Route::get('/photo_lifesaving', [EventimgController::class,'photo_lifesaving']);
+// Route::get('/photo_sup', [EventimgController::class,'photo_sup']);
 
 Route::prefix('/eventimg')->group(function () {
     Route::get('/', [EventimgController::class,'index']);

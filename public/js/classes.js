@@ -1,16 +1,16 @@
 
-const body = document.querySelector("#body");
+// const body = document.querySelector("#body");
 const callS1 = document.querySelector("#callS1");
 const callS2 = document.querySelector("#callS2");
 const callS3 = document.querySelector("#callS3");
 const callS4 = document.querySelector("#callS4");
 const callS5 = document.querySelector("#callS5");
 
-const section1 = document.querySelector("#s1");
-const section2 = document.querySelector("#s2");
-const section3 = document.querySelector("#s3");
-const section4 = document.querySelector("#s4");
-const section5 = document.querySelector("#s5");
+const section1 = document.querySelector("#modal01");
+const section2 = document.querySelector("#modal02");
+const section3 = document.querySelector("#modal03");
+const section4 = document.querySelector("#modal04");
+const section5 = document.querySelector("#modal05");
 
 const close_btn1 = document.querySelector("#btn-close1");
 const close_btn2 = document.querySelector("#btn-close2");
@@ -39,17 +39,17 @@ section1.addEventListener("scroll", event => {
     close_btn1.addEventListener('click' ,function(){
         section1.classList.remove('wfull1');
         close_btn1.classList.remove('appear1');
-        body.classList.add('bodyToTop');
+        // body.classList.add('bodyToTop');
     })
 
-    callS1.addEventListener('click' ,function(){
-        body.classList.remove('bodyToTop');
-        // section1.scrollTop = 0;
+    // callS1.addEventListener('click' ,function(){
+    //     body.classList.remove('bodyToTop');
+    //     // section1.scrollTop = 0;
 
-        // section1.scrollTo(0,-1);
+    //     // section1.scrollTo(0,-1);
 
-        // section1.classList.add('w975-1');
-    })
+    //     // section1.classList.add('w975-1');
+    // })
 
 });
 
@@ -70,7 +70,7 @@ section2.addEventListener("scroll", event => {
     close_btn2.addEventListener('click' ,function(){
         section2.classList.remove('wfull2');
         close_btn2.classList.remove('appear2');
-        body.classList.add('bodyToTop')
+        // body.classList.add('bodyToTop')
     })
 
     callS2.addEventListener('click' ,function(){
@@ -96,13 +96,13 @@ section3.addEventListener("scroll", event => {
     close_btn3.addEventListener('click' ,function(){
         section3.classList.remove('wfull3');
         close_btn3.classList.remove('appear3');
-        body.classList.add('bodyToTop')
+        // body.classList.add('bodyToTop');
     })
 
-    callS3.addEventListener('click' ,function(){
-        body.classList.remove('bodyToTop');
-        // section3.scrollTop = 0;
-    })
+    // callS3.addEventListener('click' ,function(){
+    //     // body.classList.remove('bodyToTop');
+    //     // section3.scrollTop = 0;
+    // })
 });
 
 section4.addEventListener("scroll", event => {
@@ -125,10 +125,10 @@ section4.addEventListener("scroll", event => {
         body.classList.add('bodyToTop')
     })
 
-    callS4.addEventListener('click' ,function(){
-        body.classList.remove('bodyToTop');
-        // section4.scrollTop = 0;
-    })
+    // callS4.addEventListener('click' ,function(){
+    //     body.classList.remove('bodyToTop');
+    //     // section4.scrollTop = 0;
+    // })
 });
 
 section5.addEventListener("scroll", event => {
@@ -151,25 +151,25 @@ section5.addEventListener("scroll", event => {
         body.classList.add('bodyToTop')
     })
 
-    callS5.addEventListener('click' ,function(){
-        body.classList.remove('bodyToTop');
-        // section5.scrollTop = 0;
-    })
+    // callS5.addEventListener('click' ,function(){
+    //     body.classList.remove('bodyToTop');
+    //     // section5.scrollTop = 0;
+    // })
 });
+
+
 
 
 
 
 
 var s1_swiper = new Swiper("#s1_mySwiper", {
-    loop: true,
     spaceBetween: 10,
     slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true,
 });
 var s1_swiper2 = new Swiper("#s1_mySwiper2", {
-    loop: true,
     spaceBetween: 10,
     navigation: {
         nextEl: "#s1_swiper_button_next",
@@ -181,14 +181,12 @@ var s1_swiper2 = new Swiper("#s1_mySwiper2", {
 });
 
 var s2_swiper = new Swiper("#s2_mySwiper", {
-    loop: true,
     spaceBetween: 10,
     slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true,
 });
 var s2_swiper2 = new Swiper("#s2_mySwiper2", {
-    loop: true,
     spaceBetween: 10,
     navigation: {
         nextEl: "#s2_swiper_button_next",
@@ -200,14 +198,12 @@ var s2_swiper2 = new Swiper("#s2_mySwiper2", {
 });
 
 var s3_swiper = new Swiper("#s3_mySwiper", {
-    loop: true,
     spaceBetween: 10,
     slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true,
 });
 var s3_swiper2 = new Swiper("#s3_mySwiper2", {
-    loop: true,
     spaceBetween: 10,
     navigation: {
         nextEl: "#s3_swiper_button_next",
@@ -219,14 +215,12 @@ var s3_swiper2 = new Swiper("#s3_mySwiper2", {
 });
 
 var s4_swiper = new Swiper("#s4_mySwiper", {
-    loop: true,
     spaceBetween: 10,
     slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true,
 });
 var s4_swiper2 = new Swiper("#s4_mySwiper2", {
-    loop: true,
     spaceBetween: 10,
     navigation: {
         nextEl: "#s4_swiper_button_next",
@@ -238,14 +232,12 @@ var s4_swiper2 = new Swiper("#s4_mySwiper2", {
 });
 
 var s5_swiper = new Swiper("#s5_mySwiper", {
-    loop: true,
     spaceBetween: 10,
     slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true,
 });
 var s5_swiper2 = new Swiper("#s5_mySwiper2", {
-    loop: true,
     spaceBetween: 10,
     navigation: {
         nextEl: "#s5_swiper_button_next",

@@ -36,220 +36,84 @@
 }
 
 * body #page {
-  width: 100%;
-  padding: 80px 155px 120px 154px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-@media (max-width: 1024px) {
-  * body #page {
-    padding: 40px 180px 80px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    width: 100%;
+    padding: 80px 155px 120px 154px;
   }
-}
 
-@media (max-width: 768px) {
-  * body #page {
-    padding: 40px 64px 80px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  @media (max-width: 1024px) {
+    * body #page {
+      padding: 40px 75px 80px;
+    }
   }
-}
 
-@media (max-width: 320px) {
-  * body #page {
-    padding: 40px 16px 80px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  @media (max-width: 834px) {
+    * body #page {
+      padding: 40px 90px 80px;
+    }
   }
-}
 
-@media (min-width: 1024px) {
-  * body #page div:not(:nth-child(3n)) {
+  @media (max-width: 560px) {
+    * body #page {
+      padding: 40px 45px 80px;
+    }
+  }
+
+  @media (max-width: 320px) {
+    * body #page {
+      padding: 40px 16px 80px;
+    }
+  }
+
+  * body #page .album_section {
+    width: 100%;
+  }
+
+  * body #page .album_section .album {
+    width: calc((100% - 60px)*1/3);
+    height: auto;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 834px) {
+    * body #page .album_section .album {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  * body #page .album_section .album .album_img {
+    width: 100%;
+    height: 324px;
+    border-radius: 16px;
+    /* background-image: url("/img/img_swimming.png"); */
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+  }
+
+  @media (max-width: 834px) {
+    * body #page .album_section .album .album_img {
+      height: 262px;
+    }
+  }
+
+  * body #page .album_section .album .date {
+    color: #3B54F3;
+  }
+
+  * body #page .album_section .album .title {
+    cursor: pointer;
+  }
+
+  * body #page .album_section div:not(:nth-child(3n)) {
     margin-right: 30px;
   }
-}
 
-* body #page div {
-  width: calc((100% - 60px)*1/3);
-  height: 406px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 40px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@media (max-width: 1024px) {
-  * body #page div {
-    width: 100%;
-    height: auto;
-    margin-bottom: 30px;
+  @media (max-width: 834px) {
+    * body #page .album_section div:not(:nth-child(3n)) {
+      margin-right: unset;
+    }
   }
-}
-
-@media (max-width: 768px) {
-  * body #page div {
-    width: 100%;
-    height: auto;
-    margin-bottom: 30px;
-  }
-}
-
-@media (max-width: 320px) {
-  * body #page div {
-    width: 100%;
-    height: 341px;
-    margin-bottom: 30px;
-  }
-}
-
-* body #page div .img_sup {
-  background-image: url("/img/img_sup.png");
-  width: 100%;
-  height: 324px;
-  max-width: 100%;
-  max-height: 100%;
-  margin-bottom: 24px;
-  background-position: center;
-  background-size: cover;
-  cursor: pointer;
-  border-radius: 16px;
-}
-
-@media (max-width: 1024px) {
-  * body #page div .img_sup {
-    height: 480px;
-  }
-}
-
-@media (max-width: 768px) {
-  * body #page div .img_sup {
-    height: 394px;
-  }
-}
-
-* body #page div .img_diving {
-  background-image: url("/img/img_diving.png");
-  width: 100%;
-  height: 324px;
-  margin-bottom: 24px;
-  background-position: center;
-  background-size: cover;
-  cursor: pointer;
-  border-radius: 16px;
-}
-
-@media (max-width: 1024px) {
-  * body #page div .img_diving {
-    height: 480px;
-  }
-}
-
-@media (max-width: 768px) {
-  * body #page div .img_diving {
-    height: 394px;
-  }
-}
-
-* body #page div .img_windsurf {
-  background-image: url("/img/img_windsurfBoard.png");
-  width: 100%;
-  height: 324px;
-  margin-bottom: 24px;
-  background-position: center;
-  background-size: cover;
-  cursor: pointer;
-  border-radius: 16px;
-}
-
-@media (max-width: 1024px) {
-  * body #page div .img_windsurf {
-    height: 480px;
-  }
-}
-
-@media (max-width: 768px) {
-  * body #page div .img_windsurf {
-    height: 394px;
-  }
-}
-
-* body #page div .img_swimming {
-  background-image: url("/img/img_swimming.png");
-  width: 100%;
-  height: 324px;
-  margin-bottom: 24px;
-  background-position: center;
-  background-size: cover;
-  cursor: pointer;
-  border-radius: 16px;
-}
-
-@media (max-width: 1024px) {
-  * body #page div .img_swimming {
-    height: 480px;
-  }
-}
-
-@media (max-width: 768px) {
-  * body #page div .img_swimming {
-    height: 394px;
-  }
-}
-
-* body #page div .img_saving {
-  background-image: url("/img/img_lifeSaving.png");
-  width: 100%;
-  height: 324px;
-  margin-bottom: 24px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  cursor: pointer;
-  border-radius: 16px;
-}
-
-@media (max-width: 1024px) {
-  * body #page div .img_saving {
-    height: 480px;
-  }
-}
-
-@media (max-width: 768px) {
-  * body #page div .img_saving {
-    height: 394px;
-  }
-}
-
-* body #page div #date {
-  color: #3B54F3;
-}
-
-* body #page div #title {
-  cursor: pointer;
-}
 
 * body .container {
   width: 100%;

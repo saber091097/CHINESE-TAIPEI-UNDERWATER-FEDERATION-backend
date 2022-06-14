@@ -30,7 +30,7 @@ class EventImg extends Model
     /**
      * @var array
      */
-    protected $fillable = ['created_at', 'updated_at', 'img_path', 'event_id'];
+    protected $fillable = ['created_at', 'updated_at', 'img_path', 'event_id','event_type'];
 
     public function event(){
         return $this->belongto(EventImg::class,'id','event_id');
