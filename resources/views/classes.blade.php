@@ -37,6 +37,9 @@
                 transform: translateY(0%);
             }
         }
+        td{
+            border:1px solid black;
+        }
     </style>
 @endsection
 
@@ -1815,10 +1818,12 @@
                                             </a>
                                         </li>
                                     </ul>
+                                    @foreach ($data as $item)
                                     <div class="tab-content" id="s5-tabs-tabContent">
                                         <div class="tabs-1 tab-pane fade show active flex flex-col" id="s5-tabs-1"
                                             role="tabpanel" aria-labelledby="s5-tabs-1-tab">
-                                            <div class="intro">
+                                            {{$item->event_intr}}
+                                            {{-- <div class="intro">
                                                 <h3 class="h3m">立式划槳</h3>
                                                 <p class="tm">SUP立式划槳浪板風潮隨著海島人民生活運動休閒日新月異，最大的動力在於你可以選哲你想要的生活，
                                                     而不是被生活選擇，發展SUP立式划槳浪板運動人數倍增，推動水上運動觀光及帶動地方觀光和繁榮提升SUP運動風氣及培訓專業教練人才。</p>
@@ -1861,11 +1866,12 @@
                                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                         allowfullscreen></iframe>
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                         <div class="tabs-2 tab-pane fade flex flex-col" id="s5-tabs-2" role="tabpanel"
                                             aria-labelledby="s5-tabs-2-tab">
-                                            <div class="flex flex-col day1">
+                                            {!! $item->event_proc !!}
+                                            {{-- <div class="flex flex-col day1">
                                                 <h3>第一天</h3>
                                                 <div class="flex flex-col">
                                                     <div class="flex day-time-title day-time">
@@ -1952,11 +1958,12 @@
                                                         <p class="tm">結束</p>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                         <div class="tabs-3 tab-pane fade flex flex-col" id="s5-tabs-3" role="tabpanel"
                                             aria-labelledby="s5-tabs-3-tab">
-                                            <div class="flex flex-col box">
+                                            {{$item->event_dire}}
+                                            {{-- <div class="flex flex-col box">
                                                 <h3 class="h3m">指導單位</h3>
                                                 <p class="tm">主辦單位：台中市水中運動協會,SUP風浪板/獨木舟委員會</p>
                                                 <p class="tm">協辦單位: 日月磐石水上活動中心</p>
@@ -1966,11 +1973,12 @@
                                                 <p class="tm">聯絡電話： 李小姐0989-360077</p>
                                                 <p class="tm">地址： 南投縣日月村中正路102號</p>
                                                 <p class="tm">停車場資訊： Google地圖收尋（帖泊喀露營區）</p>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                         <div class="tabs-4 tab-pane fade flex flex-col" id="s5-tabs-4" role="tabpanel"
                                             aria-labelledby="s5-tabs-4-tab">
-                                            <div class="flex flex-col box">
+                                            {{$item->event_notice}}
+                                            {{-- <div class="flex flex-col box">
                                                 <h3 class="h3m">注意事項</h3>
                                                 <p class="tm">活動含保險、器材、救生衣，繳交後非本會或天然災害因素恕不退還。</p>
                                                 <p class="tm">報名電話：水中運動協會報名專線 04-22312698 台中市總教練 詹寓崵 0930975535
@@ -1989,9 +1997,11 @@
                                                 <h3 class="h3m">匯款資訊</h3>
                                                 <p class="tm">ATM兆豐國際商銀台中分行(017)</p>
                                                 <p class="tm">帳號:00410765400</p>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                     </div>
+
+                                    @endforeach
                                 </div>
                             </div>
                             <div class="in-in-innerbox-left w-4/12 flex justify-end">
@@ -2000,7 +2010,7 @@
                                         <label class="ts" for="class-select">選擇課程</label>
                                         <select name="class" id="class-select">
                                             @foreach ($sup as $item)
-                                                <option onchange="changeclass()">{{$item->event}}</option>
+                                                <option onchange="changeclass({{$item->id}})">{{$item->event}}</option>
 
                                             @endforeach
                                             {{-- <option value="2">6/18-19 日月潭SUP三合一</option>
@@ -2008,11 +2018,20 @@
                                         </select>
                                     </div>
                                     <div class="price-box">
-                                        <h1> NT4,500</h1>
+                                        @foreach ($data as $item)
+                                        <h1> NT{{$item->price}}</h1>
+
+                                        @endforeach
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
-                                    <button class="w-full singUp-btn flex justify-center items-center">線上報名</button>
-                                    <span class="phone">電洽報名 04-22312698</span>
+                                    @foreach ($data as $item)
+
+                                    <form action="/signup1/{{$item->id}}" method="POST">
+                                        @csrf
+                                        <button class="w-full singUp-btn flex justify-center items-center" type="submit">線上報名</button>
+                                        <span class="phone">電洽報名 04-22312698</span>
+                                    </form>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -2030,23 +2049,16 @@
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 
 <script>
-    function changeclass(){
-
-        fetch('/sup/'+id{
+    function changeclass(id){
+        let formData = new FormData();
+            formData.append('_method', 'POST');
+            formData.append('_token', '  {{ csrf_token() }}');
+        fetch('/changeclasses/'+id{
             method: "POST",
             body: formData
-        }).then(function(response){
-            
         })
     }
-function delete_img(id){
-    fetch("/event/delete_img/"+id, {
-        method: "POST",
-        body: formData
-    }).then(function(response) {
-        let element = document.querySelector('#sup_img'+id)
-        element.parentNode.removeChild(element);
-    })
-}
+
 </script>
+
 @endsection

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\FilesController;
 use App\Models\SignUp;
 use App\Models\User;
+use App\Models\Event;
 use Illuminate\Support\Facades\Hash;
 
 class SignupController extends Controller

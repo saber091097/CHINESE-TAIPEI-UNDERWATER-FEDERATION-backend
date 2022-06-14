@@ -27,4 +27,8 @@ class HtmlController extends Controller
     public function rescue(){
         return view('about_us.Surf-Rescue');
     }
+
+    public function news(){
+        return view('news');
+    }
 }
