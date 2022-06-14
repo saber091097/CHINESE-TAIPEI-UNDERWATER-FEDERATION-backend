@@ -32,7 +32,7 @@
                     <div class="logo flex">
                         <img src="./img/logo/only_logo.svg" alt="">
                         <div class="name flex flex-col  lg:block">
-                            <div class="zh-name" data-scroll-section-inview>
+                            <div class="zh-name">
                                 <span>台中市水中運動協會</span>
                             </div>
                             <div class="en-name">
@@ -48,7 +48,7 @@
                     <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" />
                 </svg> --}}
                 <!-- hamburger menu  -->
-                <div class="cd-header lg:hidden"data-scroll-section-inview>
+                <div class="cd-header lg:hidden">
                     <div class="header-wrapper">
                         <div class="nav-but-wrap">
                             <div class="menu-icon hover-target">
@@ -60,7 +60,7 @@
                     </div>
                 </div>
                 <!-- hamburger menu 展開 -->
-                <div class="hamburger"data-scroll-section-inview>
+                <div class="hamburger">
                     <div class="hamburger__content">
                         <ul class="hamburger__list">
                             <li class="hamburger__list-item nav-active flex"><a href="#" class="hover-target">最新消息
@@ -80,7 +80,7 @@
             <!-- 手機版的menu 結束-->
 
             <!-- 桌機版的menu -->
-            <div class="left flex justify-end ml-auto hidden lg:block"data-scroll-section-inview>
+            <div class="left flex justify-end ml-auto hidden lg:block">
                 <ul class="flex items-center">
                     <li><a href="news">最新消息</a></li>
                     <li>

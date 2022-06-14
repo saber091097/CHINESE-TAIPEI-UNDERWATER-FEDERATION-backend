@@ -3,7 +3,7 @@
     @section('css')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <link rel="stylesheet" href="{{asset('css/index.css')}}">
-    {{-- <link rel="stylesheet" href="{{asset('css/locomotive-scroll.css')}}" /> --}}
+    <link rel="stylesheet" href="{{asset('css/locomotive-scroll.css')}}" />
     <title>台中市水中運動協會</title>
     @endsection
 
@@ -167,7 +167,7 @@
                     培訓優良水中運動選手及提供水中活動愛好者完整且安全的休閒管道。本會成立後下設有：游泳、水上救生、風浪板、SUP、潛水，可充分協助本市推展各種水中競賽、休閒、救生活動及水上安全事宜。
                 </div>
                 <div class="about_us-bottom">
-                    <a href="./about.html" class="flex">了解更多
+                    <a href="about" class="flex">了解更多
                         <svg xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
@@ -524,7 +524,7 @@
             }
         }
     </script>
-    {{-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="{{asset('js/script.js')}}"></script>
     @endsection
 
