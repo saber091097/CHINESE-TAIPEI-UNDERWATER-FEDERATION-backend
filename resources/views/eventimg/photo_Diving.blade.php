@@ -59,17 +59,11 @@
         </div>
         <div class="photo_section flex flex-row  flex-wrap">
             {{-- 套資料庫 --}}
-            <div data-modal-toggle="popup-modal"></div>
-            <div data-modal-toggle="popup-modal"></div>
-            <div data-modal-toggle="popup-modal"></div>
-            <div data-modal-toggle="popup-modal"></div>
-            <div data-modal-toggle="popup-modal"></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            @foreach ($photo as $item)
+
+                <div data-modal-toggle="popup-modal" style="background-image: url({{$item->img_path}})">
+                </div>
+            @endforeach
         </div>
 
 

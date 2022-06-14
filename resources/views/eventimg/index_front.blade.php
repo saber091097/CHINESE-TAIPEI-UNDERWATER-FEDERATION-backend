@@ -14,14 +14,13 @@
 @extends('template.template')
 @section('css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <!-- flowbite CDN 彈出式視窗 -->
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{asset('css/photo.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/photo.css') }}">
     <title>活動照片</title>
     <style>
 
@@ -134,15 +133,66 @@
 
 @section('main')
     <div class="container flex flex-row  flex-wrap justify-between max-w-full" id="page">
-        <div class="" id="sup_section">
+        <div class="album_section  flex flex-row  flex-wrap">
+            @foreach ($album as $item)
+            <div class="album flex flex-col">
+
+                <div class="album_img mb-6" onclick="location.href='/photo/{{$item->id}}'" style="background-image:url({{asset('img/jeremy-bishop-7KLUhedmR2c-unsplash.jpeg')}})"></div>
+                <span class="date">
+                    @if($item->eventimg_type==1)
+                    Windsurf board
+                    @elseif ($item->eventimg_type==2)
+                    SUP
+                    @elseif ($item->eventimg_type==3)
+                    Diving
+                    @elseif ($item->eventimg_type==4)
+                    Swimming
+                    @else
+                    Life Saving
+                    @endif
+                    · {{$item->updated_at}} </span>
+                <span class="title" onclick="location.href='/photo/{{$item->id}}'">{{$item->eventimg_name}}</span>
+            </div>
+        @endforeach
+            {{-- <div class="album flex flex-col" >
+                <div class="album_img  mb-6"></div>
+                <span class="date">SUP·20 Jan 2022</span>
+                <span class="title">立式划槳</span>
+            </div>
+            <div class="album flex flex-col" >
+                <div class="album_img  mb-6"></div>
+                <span class="date">Diving·20 Jan 2022</span>
+                <span class="title">潛水</span>
+            </div>
+            <div class="album flex flex-col">
+                <div class="album_img  mb-6"></div>
+                <span class="date">Windsurf board·20 Jan 2022</span>
+                <span class="title">風浪板</span>
+            </div>
+            <div class="album flex flex-col">
+                <div class="album_img  mb-6"></div>
+                <span class="date">Swimming·20 Jan 2022</span>
+                <span class="title">游泳</span>
+            </div>
+            <div class="album flex flex-col">
+                <div class="album_img  mb-6"></div>
+                <span class="date">Life Saving·20 Jan 2022</span>
+                <span class="title">水上救生</span>
+            </div> --}}
+        </div>
+        {{-- <div class="" id="sup_section">
 
             <div class="img_sup" onclick="location.href='photo_sup'">
 
             </div>
-            <span id="date">SUP·20 Jan 2022</span>
+            <span id="date">
+                if($item->eventimg_type==1){
+                Windsurf board
+                }
+                SUP·20 Jan 2022</span>
             <span id="title" onclick="location.href='photo_sup'">立式划槳</span>
         </div>
-        <div id="dive_section" >
+        <div id="dive_section">
             <div class="img_diving" onclick="location.href='photo_diving'">
 
             </div>
@@ -170,11 +220,11 @@
             <!-- <img src="./img/img_lifeSaving.png" alt=""> -->
             <span id="date">Life Saving·20 Jan 2022</span>
             <span id="title" onclick="location.href='photo_lifesaving'">水上救生</span>
-        </div>
+        </div> --}}
     </div>
 @endsection
 
-    {{-- <footer>
+{{-- <footer>
         <div class="container max-w-full">
             <div class="footer flex flex-wrap justify-between">
                 <div class="left flex flex-col ">
@@ -221,16 +271,12 @@
         </div>
     </footer> --}}
 
-    @section('js')
+@section('js')
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 
     <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
-    <script>
-
-
-    </script>
-
-    @endsection
+    <script></script>
+@endsection
 {{-- </body>
 
 </html> --}}
