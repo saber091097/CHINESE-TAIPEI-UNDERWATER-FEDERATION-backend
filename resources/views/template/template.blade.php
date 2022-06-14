@@ -161,11 +161,11 @@
                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">歷屆會長</a>
                 </li>
                 <li>
-                    <a href="./organization .html"
+                    <a href="/organization"
                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">協會組織架構</a>
                 </li>
                 <li>
-                    <a href="./surf-Rescue.html"
+                    <a href="/Surf-Rescue"
                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">救生員資格檢定</a>
                 </li>
             </ul>

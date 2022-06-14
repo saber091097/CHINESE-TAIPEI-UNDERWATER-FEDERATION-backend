@@ -144,3 +144,6 @@ Route::get('/classes', [ClassesController::class,'classes']);
 
 Route::get('/createAccount', [ClientController::class,'createAccount']);
 Route::post('/createAccount/store', [ClientController::class,'store']);
+
+Route::get('/organization', [HtmlController::class,'organ']);
+Route::get('/Surf-Rescue', [HtmlController::class,'rescue']);
