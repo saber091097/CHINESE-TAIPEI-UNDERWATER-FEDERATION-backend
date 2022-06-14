@@ -1873,7 +1873,7 @@ footer {
   .hamburger__content {
     position: fixed;
     visibility: hidden;
-    top: 5%;
+    top: 50%;
     margin-top: 20px;
     transform: translate(0%, -50%);
     width: 100%;
@@ -2141,6 +2141,10 @@ footer {
   body.nav-active .hamburger__list-item:nth-child(10) {
     transition-delay: 1.7s;
   }
+}
+
+nav{
+    z-index: 99;
 }
 
 /*# sourceMappingURL=amenu.css.map */

@@ -3,7 +3,7 @@
     @section('css')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <link rel="stylesheet" href="{{asset('css/index.css')}}">
-    <link rel="stylesheet" href="{{asset('css/locomotive-scroll.css')}}" />
+    {{-- <link rel="stylesheet" href="{{asset('css/locomotive-scroll.css')}}" /> --}}
     <title>台中市水中運動協會</title>
     @endsection
 
@@ -524,7 +524,7 @@
             }
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> --}}
     <script src="{{asset('js/script.js')}}"></script>
     @endsection
 
