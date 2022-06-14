@@ -25,8 +25,8 @@
 </head>
 
 <body>
-    <div class="container flex justify-center max-w-full flex-wrap " data-scroll-container>
-        <nav class="nav flex md:items-center justify-between " data-scroll-section>
+    <div class="container flex justify-center max-w-full flex-wrap" data-scroll-container>
+        <nav class="nav flex md:items-center justify-between" data-scroll-section>
             <div class="left ">
                 <a href="index">
                     <div class="logo flex">
@@ -42,12 +42,45 @@
                     </div>
                 </a>
             </div>
-            <div class="burger mr-4 lg:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg">
+            <!-- 手機版的menu 開始 -->
+            {{-- <div class="burger mr-4 lg:hidden"> --}}
+                {{-- <svg xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" />
-                </svg>
-            </div>
-            <div class="left flex justify-end ml-auto lg:block">
+                </svg> --}}
+                <!-- hamburger menu  -->
+                <div class="cd-header lg:hidden">
+                    <div class="header-wrapper">
+                        <div class="nav-but-wrap">
+                            <div class="menu-icon hover-target">
+                                <span class="menu-icon__line menu-icon__line-left"></span>
+                                <span class="menu-icon__line"></span>
+                                <span class="menu-icon__line menu-icon__line-right"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- hamburger menu 展開 -->
+                <div class="hamburger">
+                    <div class="hamburger__content">
+                        <ul class="hamburger__list">
+                            <li class="hamburger__list-item nav-active flex"><a href="#" class="hover-target">最新消息
+                                </a>
+                                <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#141414"/></svg>
+                                </li>
+                            <li class="hamburger__list-item"><a href="#s1" class="hover-target">關於我們</a></li>
+                            <li class="hamburger__list-item"><a href="#s3" class="hover-target">課程 </a></li>
+                            <li class="hamburger__list-item"><a href="#s4" class="hover-target">活動照片 </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='cursor' id="cursor"></div>
+                <div class='cursor2' id="cursor2"></div>
+                <div class='cursor3' id="cursor3"></div>
+            {{-- </div> --}}
+            <!-- 手機版的menu 結束-->
+
+            <!-- 桌機版的menu -->
+            <div class="left flex justify-end ml-auto hidden lg:block">
                 <ul class="flex items-center">
                     <li><a href="./news.html">最新消息</a></li>
                     <li>
@@ -128,7 +161,12 @@
                                 登入
                             </button>
                             <div class="text-sm font-medium text-gray-500 ">
+<<<<<<< Updated upstream
                                 Not registered? <a href="#" class="text-blue-700 hover:underline " onclick="closeup()">Create account</a>
+=======
+                                Not registered? <a href="#" class="text-blue-700 hover:underline " onclick="closeup()"
+                                    data-modal-toggle="create-modal">Create account</a>
+>>>>>>> Stashed changes
                             </div>
                         </form>
                     </div>
@@ -225,8 +263,14 @@
     </div>
 
     <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+<<<<<<< Updated upstream
     <script src="https://cdn.tailwindcss.com"></script>
     @yield('js')
+=======
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ asset('js/hamburgerMenu.js') }}"></script>
+>>>>>>> Stashed changes
 </body>
 
 </html>
