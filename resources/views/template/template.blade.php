@@ -13,7 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-
+    <link rel="icon" href="{{asset('img/img_logo.png')}}">
     <style>
         .nameblack:hover {
             color: black;
@@ -63,13 +63,21 @@
                 <div class="hamburger">
                     <div class="hamburger__content">
                         <ul class="hamburger__list">
-                            <li class="hamburger__list-item nav-active flex"><a href="#" class="hover-target">最新消息
-                                </a>
+                            <li class="hamburger__list-item nav-active flex"><a href="#" class="hover-target">最新消息</a>
                                 <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#141414"/></svg>
-                                </li>
-                            <li class="hamburger__list-item"><a href="#s1" class="hover-target">關於我們</a></li>
-                            <li class="hamburger__list-item"><a href="#s3" class="hover-target">課程 </a></li>
-                            <li class="hamburger__list-item"><a href="#s4" class="hover-target">活動照片 </a></li>
+                            </li>
+
+                            <li class="hamburger__list-item flex"><a href="#s1" class="hover-target">關於我們</a>
+                                <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#141414"/></svg>
+                            </li>
+
+                            <li class="hamburger__list-item flex"><a href="#s3" class="hover-target">課程 </a>
+                                <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#141414"/></svg>
+                            </li>
+
+                            <li class="hamburger__list-item flex"><a href="#s4" class="hover-target">活動照片 </a>
+                                <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#141414"/></svg>
+                            </li>
                         </ul>
                     </div>
                 </div>
