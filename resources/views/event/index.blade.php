@@ -25,9 +25,9 @@
                 <table id="example" class="display" style="width:100%;">
                     <thead>
                         <tr class="flex justify-between" style="border-bottom:1px solid blackk;">
-                            <td class="flex  "style="width:10%;">活動種類</td>
+                            <td class="flex  "style="width:20%;">活動種類</td>
                             <td class="flex  "style="width:10%;">公告種類</td>
-                            <td class="flex  "style="width:50%;">活動名稱</td>
+                            <td class="flex  "style="width:40%;">活動名稱</td>
                             <td class="flex  "style="width:10%;">發布人</td>
                             <td class="flex justify-center "style="width:20%;">功能</td>
                         </tr>
@@ -35,7 +35,7 @@
                     <tbody>
                         @foreach ($data as $i)
                             <tr class="flex justify-between" style="border-bottom:1px solid blackk;">
-                                <td class="flex "style="width:10%;">
+                                <td class="flex "style="width:20%;">
                                     @if ($i->event_type == 1)
                                         風浪板
                                     @elseif ($i->event_type == 2)
@@ -57,7 +57,7 @@
                                         好消息
                                     @endif
                                     </td>
-                                <td class="flex "style="width:50%;"> {{$i->event}}</td>
+                                <td class="flex "style="width:40%;"> {{$i->event}}</td>
                                 <td class="flex "style="width:10%;">{{$i->name}}</td>
                                 <td class="flex justify-center"style="width:20%;">
                                     <a href="/new/edit/{{$i->id}}">
