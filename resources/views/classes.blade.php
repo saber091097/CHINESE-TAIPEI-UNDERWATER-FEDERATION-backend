@@ -9,34 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <title>課程總覽</title>
     <style>
-        body {
-            width: 100%;
-            height: 100vh;
-            padding: 0;
-            margin: 0;
-        }
 
-        body main {
-            top: 0;
-        }
-
-        body main .section {
-            animation: moveToTop 1s;
-        }
-
-        footer {
-            width: 100%;
-        }
-
-        @keyframes moveToTop {
-            from {
-                transform: translateY(100%);
-            }
-
-            to {
-                transform: translateY(0%);
-            }
-        }
     </style>
 @endsection
 
@@ -316,7 +289,6 @@
                                                         allowfullscreen></iframe>
                                                 </div>
                                             </div>
-                                            <!-- <div class="tab-1-btm"></div> -->
                                         </div>
                                         <div class="tabs-2 tab-pane fade flex flex-col" id="s1-tabs-2" role="tabpanel"
                                             aria-labelledby="tabs-2-tab">
@@ -1673,25 +1645,25 @@
                                         class="swiper mySwiper2">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082119.jpg" />
+                                                <img src="{{ asset('img/S__14082119.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082097.jpg" />
+                                                <img src="{{ asset('img/S__14082097.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082099.jpg" />
+                                                <img src="{{ asset('img/S__14082099.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082100.jpg" />
+                                                <img src="{{ asset('img/S__14082100.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082109.jpg" />
+                                                <img src="{{ asset('img/S__14082109.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082111.jpg" />
+                                                <img src="{{ asset('img/S__14082111.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082117.jpg" />
+                                                <img src="{{ asset('img/S__14082117.jpg') }}" />
                                             </div>
                                         </div>
                                         <div id="s5_swiper_button_next" class="swiper-button-next"></div>
@@ -1700,25 +1672,25 @@
                                     <div id="s5_mySwiper" thumbsSlider="" class="swiper mySwiper">
                                         <div class="swiper-wrapper swiper-btm">
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082119.jpg" />
+                                                <img src="{{ asset('img/S__14082119.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082097.jpg" />
+                                                <img src="{{ asset('img/S__14082097.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082099.jpg" />
+                                                <img src="{{ asset('img/S__14082099.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082100.jpg" />
+                                                <img src="{{ asset('img/S__14082100.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082109.jpg" />
+                                                <img src="{{ asset('img/S__14082109.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082111.jpg" />
+                                                <img src="{{ asset('img/S__14082111.jpg') }}" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="/img/S__14082117.jpg" />
+                                                <img src="{{ asset('img/S__14082117.jpg') }}" />
                                             </div>
                                         </div>
                                     </div>
@@ -2036,7 +2008,7 @@
             method: "POST",
             body: formData
         }).then(function(response){
-            
+
         })
     }
 function delete_img(id){

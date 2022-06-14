@@ -258,14 +258,8 @@
     </div>
 
     <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
-<<<<<<< Updated upstream
     <script src="https://cdn.tailwindcss.com"></script>
     @yield('js')
-=======
-    <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="{{ asset('js/hamburgerMenu.js') }}"></script>
->>>>>>> Stashed changes
 </body>
 
 </html>
