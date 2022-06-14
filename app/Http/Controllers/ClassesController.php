@@ -12,7 +12,8 @@ class ClassesController extends Controller
     public function classes(){
 
         $windsurf=Event::where('event_type',1)->get();
-
-        return view('classes',compact('windsurf'));
+        $sup=Event::where('event_type',2)->get();
+        
+        return view('classes',compact('windsurf','sup'));
     }
 }
