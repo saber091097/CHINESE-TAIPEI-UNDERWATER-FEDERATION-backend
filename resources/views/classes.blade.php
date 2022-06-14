@@ -32,45 +32,45 @@
     <div class="box box-left w-full md:w-1/2 h-full flex flex-col-reverse md:flex-col">
         <div class="innerbox innerbox-top w-full h-1/2 flex flex-col-reverse md:flex-row">
             <div class="in-innerbox in-innerbox-left w-full md:w-1/2 h-full flex flex-col-reverse md:flex-col">
-                <div id="callS1" data-modal-toggle="s1" class="in-in-innerbox in-innerbox-top w-full h-1/2 flex justify-center items-center bg-center bg-cover cursor-pointer">
+                <div id="callS1" data-modal-toggle="modal01" class="in-in-innerbox in-innerbox-top w-full h-1/2 flex justify-center items-center bg-center bg-cover cursor-pointer">
                     <div class="title flex flex-col justify-between items-center">
                         <h2 class="h2m">水上救生</h2>
                         <h5 class="h5">Life Saving</h5>
                     </div>
                 </div>
-                <div id="callS2" data-modal-toggle="s2" class="in-in-innerbox in-innerbox-btm w-full h-1/2 flex justify-center items-center bg-center bg-cover cursor-pointer">
+                <div id="callS2" data-modal-toggle="modal02" class="in-in-innerbox in-innerbox-btm w-full h-1/2 flex justify-center items-center bg-center bg-cover cursor-pointer">
                     <div class="title flex flex-col justify-between items-center">
                         <h2 class="h2m">游泳</h2>
                         <h5 class="h5">Swimming</h5>
                     </div>
                 </div>
             </div>
-            <div id="callS3" data-modal-toggle="s3" class="in-innerbox in-innerbox-right w-full md:w-1/2 h-full flex  justify-center items-center bg-center bg-cover cursor-pointer">
+            <div id="callS3" data-modal-toggle="modal03" class="in-innerbox in-innerbox-right w-full md:w-1/2 h-full flex  justify-center items-center bg-center bg-cover cursor-pointer">
                 <div class="title flex flex-col justify-between items-center">
                     <h2 class="h2m">風浪板</h2>
                     <h5 class="h5">Windsurf Board</h5>
                 </div>
             </div>
         </div>
-        <div id="callS4" data-modal-toggle="s4" class="innerbox innerbox-btm w-full h-1/2 flex justify-center items-center bg-center bg-cover cursor-pointer">
+        <div id="callS4" data-modal-toggle="modal04" class="innerbox innerbox-btm w-full h-1/2 flex justify-center items-center bg-center bg-cover cursor-pointer">
             <div class="title flex flex-col justify-between items-center">
                 <h2 class="h2m">潛水</h2>
                 <h5 class="h5">Diving</h5>
             </div>
         </div>
     </div>
-    <div id="callS5" data-modal-toggle="s5" class="box box-right w-full md:w-1/2 h-full flex justify-center items-center bg-center bg-cover cursor-pointer">
+    <div id="callS5" data-modal-toggle="modal05" class="box box-right w-full md:w-1/2 h-full flex justify-center items-center bg-center bg-cover cursor-pointer">
         <div class="title flex flex-col justify-between items-center">
             <h2 class="h2m">立式划槳</h2>
             <h5 class="h5">SUP</h5>
         </div>
     </div>
-<!------------------------------ s1 ---------------------------------->
-    <section id="s1" tabindex="-1" aria-hidden="true" class="section hidden overflow-y-auto overflow-x-hidden bg-white flex flex-col justify-between items-center">
+    <!------------------------------ model01 ---------------------------------->
+    <section id="modal01" tabindex="-1" aria-hidden="true" class="section hidden overflow-y-auto overflow-x-hidden bg-white flex flex-col justify-between items-center">
         <div id="s1-container" class="s1-container s-container w-full h-full bg-white flex flex-col justify-between items-center">
             <div class="w-full h-full s1-innerbox s-innerbox flex flex-col items-center">
                 <div class="w-full s1-innerbox-top s-innerbox-top flex justify-end">
-                    <button id="btn-close1" data-modal-toggle="s1" class="btn-close fixed rounded-full"></button>
+                    <button id="btn-close1" data-modal-toggle="modal01" class="btn-close block fixed rounded-full"></button>
                 </div>
                 <div class="s1-innerbox-btm s-innerbox-btm w-4/5 flex flex-col">
                     <div id="list1" class="list w-full flex justify-between">
@@ -102,25 +102,25 @@
                                 <div id="s1_mySwiper2" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <img src="/img/S__14082119.jpg" />
+                                            <img src="{{asset('img/S__14082119.jpg')}}" />
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="/img/S__14082097.jpg" />
+                                            <img src="{{asset('img/S__14082097.jpg')}}" />
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="/img/S__14082099.jpg" />
+                                            <img src="{{asset('img/S__14082099.jpg')}}" />
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="/img/S__14082100.jpg" />
+                                            <img src="{{asset('img/S__14082100.jpg')}}" />
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="/img/S__14082109.jpg" />
+                                            <img src="{{asset('img/S__14082109.jpg')}}" />
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="/img/S__14082111.jpg" />
+                                            <img src="{{asset('img/S__14082111.jpg')}}" />
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="/img/S__14082117.jpg" />
+                                            <img src="{{asset('img/S__14082117.jpg')}}" />
                                         </div>
                                     </div>
                                     <div id="s1_swiper_button_next" class="swiper-button-next"></div>
@@ -432,12 +432,12 @@
             </div>
         </div>
     </section>
-<!------------------------------ s2 ---------------------------------->
-    <section id="s2" tabindex="-1" aria-hidden="true" class="section hidden overflow-y-auto overflow-x-hidden bg-white flex flex-col justify-between items-center">
+    <!------------------------------ s2 ---------------------------------->
+    <section id="modal02" tabindex="-1" aria-hidden="true" class="section hidden overflow-y-auto overflow-x-hidden bg-white flex flex-col justify-between items-center">
         <div class="s2-container s-container w-full h-full bg-white flex flex-col justify-between items-center">
             <div class="w-full h-full s2-innerbox s-innerbox flex flex-col items-center">
                 <div class="w-full s2-innerbox-top s-innerbox-top flex justify-end">
-                    <button id="btn-close2" data-modal-toggle="s2" class="btn-close fixed rounded-full"></button>
+                    <button id="btn-close2" data-modal-toggle="modal02" class="btn-close fixed rounded-full"></button>
                 </div>
                 <div class="s2-innerbox-btm s-innerbox-btm w-4/5 flex flex-col">
                     <div class="list w-full flex justify-between">
@@ -795,12 +795,12 @@
             </div>
         </div>
     </section>
-<!------------------------------ s3 ---------------------------------->
-    <section id="s3" tabindex="-1" aria-hidden="true" class="section hidden overflow-y-auto overflow-x-hidden bg-white flex flex-col justify-between items-center">
+    <!------------------------------ s3 ---------------------------------->
+    <section id="modal03" tabindex="-1" aria-hidden="true" class="section hidden overflow-y-auto overflow-x-hidden bg-white flex flex-col justify-between items-center">
         <div class="s3-container s-container w-full h-full bg-white flex flex-col justify-between items-center">
             <div class="w-full h-full s3-innerbox s-innerbox flex flex-col items-center">
                 <div class="w-full s3-innerbox-top s-innerbox-top flex justify-end">
-                    <button id="btn-close3" data-modal-toggle="s3" class="btn-close fixed rounded-full"></button>
+                    <button id="btn-close3" data-modal-toggle="modal03" class="btn-close fixed rounded-full"></button>
                 </div>
                 <div class="s3-innerbox-btm s-innerbox-btm w-4/5 flex flex-col">
                     <div class="list w-full flex justify-between">
@@ -1158,12 +1158,12 @@
             </div>
         </div>
     </section>
-<!------------------------------ s4 ---------------------------------->
-    <section id="s4" tabindex="-1" aria-hidden="true" class="section hidden overflow-y-auto overflow-x-hidden bg-white flex flex-col justify-between items-center">
+    <!------------------------------ s4 ---------------------------------->
+    <section id="modal04" tabindex="-1" aria-hidden="true" class="section hidden overflow-y-auto overflow-x-hidden bg-white flex flex-col justify-between items-center">
         <div class="s4-container s-container w-full h-full bg-white flex flex-col justify-between items-center">
             <div class="w-full h-full s4-innerbox s-innerbox flex flex-col items-center">
                 <div class="w-full s4-innerbox-top s-innerbox-top flex justify-end">
-                    <button id="btn-close4" data-modal-toggle="s4" class="btn-close fixed rounded-full"></button>
+                    <button id="btn-close4" data-modal-toggle="modal04" class="btn-close fixed rounded-full"></button>
                 </div>
                 <div class="s4-innerbox-btm s-innerbox-btm w-4/5 flex flex-col">
                     <div class="list w-full flex justify-between">
@@ -1522,12 +1522,12 @@
             </div>
         </div>
     </section>
-<!------------------------------ s5 ---------------------------------->
-    <section id="s5" tabindex="-1" aria-hidden="true" class="section hidden overflow-y-auto overflow-x-hidden bg-white flex flex-col justify-between items-center">
+    <!------------------------------ s5 ---------------------------------->
+    <section id="modal05" tabindex="-1" aria-hidden="true" class="section hidden overflow-y-auto overflow-x-hidden bg-white flex flex-col justify-between items-center">
         <div class="s5-container s-container w-full h-full bg-white flex flex-col justify-between items-center">
             <div class="w-full h-full s5-innerbox s-innerbox flex flex-col items-center">
                 <div class="w-full s5-innerbox-top s-innerbox-top flex justify-end">
-                    <button id="btn-close5" data-modal-toggle="s5" class="btn-close fixed rounded-full"></button>
+                    <button id="btn-close5" data-modal-toggle="modal05" class="btn-close fixed rounded-full"></button>
                 </div>
                 <div class="s5-innerbox-btm s-innerbox-btm w-4/5 flex flex-col">
                             <div class="list w-full flex justify-between">
@@ -1892,9 +1892,7 @@
 
 @section('js')
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
 <script src="{{asset('js/classes.js')}}"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 
 @endsection

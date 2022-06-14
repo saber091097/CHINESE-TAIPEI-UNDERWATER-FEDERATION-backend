@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-    <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="{{asset('css/createAccount.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/createAccount.css') }}">
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    @yield('css')
+
     <style>
         .nameblack:hover {
             color: black;
@@ -21,6 +21,7 @@
             cursor: auto;
         }
     </style>
+    @yield('css')
 </head>
 
 <body>
@@ -100,14 +101,12 @@
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div>
-                                <label for="email"
-                                    class="block mb-2 text-sm font-medium text-gray-900 ">電子信箱</label>
+                                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">電子信箱</label>
                                 <input type="email" name="email" id="email"
                                     class="text-gray-900 text-sm block w-full p-2.5" placeholder="name@company.com">
                             </div>
                             <div>
-                                <label for="password"
-                                    class="block mb-2 text-sm font-medium text-gray-900 ">密碼</label>
+                                <label for="password" class="block mb-2 text-sm font-medium text-gray-900 ">密碼</label>
                                 <input type="password" name="password" id="password" placeholder="••••••••"
                                     class="text-gray-900 text-sm block w-full p-2.5">
                             </div>
@@ -129,8 +128,7 @@
                                 登入
                             </button>
                             <div class="text-sm font-medium text-gray-500 ">
-                                Not registered? <a href="#"
-                                    class="text-blue-700 hover:underline " onclick="closeup()" data-modal-toggle="create-modal">Create account</a>
+                                Not registered? <a href="#" class="text-blue-700 hover:underline " onclick="closeup()">Create account</a>
                             </div>
                         </form>
                     </div>
@@ -225,8 +223,10 @@
             </div>
         </footer>
     </div>
-    @yield('js')
+
     <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    @yield('js')
 </body>
 
 </html>
