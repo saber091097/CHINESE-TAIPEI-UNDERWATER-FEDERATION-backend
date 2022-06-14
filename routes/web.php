@@ -10,6 +10,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\ClassesController;
 use App\Http\Controllers\PersonalCenterController;
+use App\Http\Controllers\ClientController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes

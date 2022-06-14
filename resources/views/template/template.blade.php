@@ -161,12 +161,7 @@
                                 登入
                             </button>
                             <div class="text-sm font-medium text-gray-500 ">
-<<<<<<< Updated upstream
                                 Not registered? <a href="#" class="text-blue-700 hover:underline " onclick="closeup()">Create account</a>
-=======
-                                Not registered? <a href="#" class="text-blue-700 hover:underline " onclick="closeup()"
-                                    data-modal-toggle="create-modal">Create account</a>
->>>>>>> Stashed changes
                             </div>
                         </form>
                     </div>
