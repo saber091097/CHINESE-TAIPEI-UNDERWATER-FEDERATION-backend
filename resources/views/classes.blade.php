@@ -1889,8 +1889,6 @@
 
     <script>
         function changeclass(getId) {
-
-            // console.log(getId.value);
             var id = getId.value
             let formData = new FormData();
             formData.append('_method', 'POST');
@@ -1915,6 +1913,7 @@
                 sup_proc.innerHTML = data.event_proc
                 sup_dire.innerHTML = data.event_dire
                 sup_notice.innerHTML = data.event_notice
+                formsup.action = "/signup1/"+data.id
             })
         }
     </script>

@@ -9,13 +9,13 @@
         <div class="past-presidents w-full flex-warp flex-col flex">
             <div class="breadcrumb">
                 <ul class="flex items-center justify-start">
-                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="/">首頁</a></li>
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
                         </svg>
                     </li>
-                    <li><a href="about-us.html">關於我們</a></li>
+                    <li><a href="about-us">關於我們</a></li>
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />

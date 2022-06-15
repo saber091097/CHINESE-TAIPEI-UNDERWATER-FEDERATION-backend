@@ -40,6 +40,8 @@ Route::get('/', [IndexController::class,'index']);
 // 不確定是否正確
 Route::get('/about',[HtmlController::class,'about']);
 Route::get('/personal-center',[PersonalCenterController::class,'index']);
+Route::post('/personal-center/update/{id}', [PersonalCenterController::class,'update']);
+
 
 Route::get('/Past-presidents', [HtmlController::class,'Pastpresidents']);
 
@@ -137,7 +139,7 @@ Route::prefix('/account')->group(function () {
 
 
 Route::post('/signup1/{id}', [SignupController::class,'signup1']);
-Route::post('/signup2/{id}', [SignupController::class,'signup2']);
+Route::post('/signup2', [SignupController::class,'signup2']);
 Route::post('/signup3', [SignupController::class,'signup3']);
 Route::post('/signup4', [SignupController::class,'signup4']);
 

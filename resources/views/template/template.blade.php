@@ -31,7 +31,7 @@
     <div class="container flex justify-center max-w-full flex-wrap" data-scroll-container>
         <nav class="nav flex md:items-center justify-between" data-scroll-section >
             <div class="left ">
-                <a href="index">
+                <a href="/">
                     <div class="logo flex">
                         <img src="./img/logo/only_logo.svg" alt="">
                         <div class="name flex flex-col hidden sm:block">

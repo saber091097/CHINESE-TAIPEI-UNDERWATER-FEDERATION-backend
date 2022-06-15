@@ -13,7 +13,7 @@
     <div class="organization w-full flex-warp flex-col flex">
         <div class="breadcrumb">
             <ul class="flex items-center justify-start flex-wrap">
-                <li><a href="index">首頁</a></li>
+                <li><a href="/">首頁</a></li>
                 <li>
                     <svg xmlns="http://www.w3.org/2000/svg">
                         <path d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
