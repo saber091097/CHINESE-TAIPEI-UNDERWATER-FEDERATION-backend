@@ -38,7 +38,7 @@ class SignupController extends Controller
     public function signup3(Request $request){
         $email=session::get('email');
         $DB_email=User::where('email',$email)->value('email');
-
+dd($request->all());
         if ($email != $DB_email) {
             $user=User::create([
                 'name'=>session::get('name'),
