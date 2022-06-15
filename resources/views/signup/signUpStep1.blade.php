@@ -48,9 +48,21 @@
                 </thead>
                 <tbody>
                     <tr class="flex">
-                        <td class="t-name">SUP教練教練班</td>
-                        <td class="t-type flex justify-center">SUP</td>
-                        <td class="t-price price flex justify-end">NT4,500</td>
+                        <td class="t-name">{{$event->event}}</td>
+                        <td class="t-type flex justify-center">
+                            @if ($event->event_type == 1)
+                                風浪板
+                            @elseif ($event->event_type == 2)
+                                SUP
+                            @elseif ($event->event_type == 3)
+                                潛水
+                            @elseif ($event->event_type == 4)
+                                游泳
+                            @else
+                                救生
+                            @endif
+                        </td>
+                        <td class="t-price price flex justify-end">NT{{$event->price}}</td>
                     </tr>
                 </tbody>
                 <tfoot>
@@ -154,7 +166,7 @@
 
             <div class="innerbox-btn w-full flex justify-between">
                 <button class="btn btn-cancel rounded flex justify-center items-center" type="button">取消</button>
-                <button class="btn btn-next rounded flex justify-center items-center" onclick="next()" type="button">下一步</button>
+                <button class="btn btn-next rounded flex justify-center items-center" type="submit">下一步</button>
             </div>
         </form>
     </section>

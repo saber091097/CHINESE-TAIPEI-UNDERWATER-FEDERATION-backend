@@ -26,17 +26,12 @@
 
 <body>
     <div class="container flex justify-center max-w-full flex-wrap" data-scroll-container>
-        <nav class="nav flex md:items-center justify-between" data-scroll-section style="z-index:0;">
+        <nav class="nav flex md:items-center justify-between" data-scroll-section >
             <div class="left ">
-                <a href="/index">
+                <a href="/">
                     <div class="logo flex">
-<<<<<<< Updated upstream
                         <img src="./img/logo/only_logo.svg" alt="">
                         <div class="name flex flex-col hidden sm:block">
-=======
-                        <img src="{{asset('img/logo/only_logo.svg')}}" alt="">
-                        <div class="name flex flex-col  lg:block">
->>>>>>> Stashed changes
                             <div class="zh-name">
                                 <span>台中市水中運動協會</span>
                             </div>
@@ -69,19 +64,11 @@
                             </a></li>
 
                             <li class="hamburger__list-item ">
-<<<<<<< Updated upstream
                                 {{-- <div class="menu about"> --}}
                                     <a href="#s1" class="hover-target full md:w-3/5"><span>關於我們</span>
                                         <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg></a>
                                 {{-- </div> --}}
                                 {{-- <div class="submenu aboutSub">
-=======
-                                <div class="menu about">
-                                    <a href="/about" class="hover-target w-3/5"><span>關於我們</span>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0007 13.172L16.9507 8.22198L18.3647 9.63598L12.0007 16L5.63672 9.63598L7.05072 8.22198L12.0007 13.172Z" fill="#3B54F3"/></svg>
-                                </div>
-                                <div class="submenu aboutSub">
->>>>>>> Stashed changes
                                     <div class="sub_wrap">
                                       <div class="subtitle">
                                         <span title="prev">關於我們</span>
@@ -129,7 +116,6 @@
             <!-- 桌機版的menu -->
             <div class="left flex justify-end ml-auto  lg:block">
                 <ul class="flex items-center">
-<<<<<<< Updated upstream
                     <li class="mr-4"><a href="news">最新消息</a></li>
                     <li class="mr-4">
                         <button class="flex" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
@@ -139,22 +125,10 @@
                     </li>
                     <li class="mr-4"><a href="./classes">課程</a></li>
                     <li class="mr-4"><a href="album">活動照片</a></li>
-=======
-                    <li><a href="/news">最新消息</a></li>
-                    <li>
-                        <button class="flex" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
-                            關於我們
-                            <img src="{{asset('img/icon/ic_arrow-down.svg')}}" alt="">
-                        </button>
-                    </li>
-                    <li><a href="./classes">課程</a></li>
-                    <li><a href="/album">活動照片</a></li>
->>>>>>> Stashed changes
                     @auth
                         @if (Auth::user()->power == 1)
                             <li class="mr-4"><a href="/dashboard">後台</a></li>
                         @endif
-<<<<<<< Updated upstream
                         <li class="mr-4">
                             <button data-dropdown-toggle="dropdownleft">
                                 <img src="{{ asset('img/icon/Avatar.png') }}" alt="">
@@ -162,19 +136,6 @@
                         </li>
                         <li class="mr-4">
                             <div class="p-0 nameblack" style='margin-right:5px; '>{{ Auth::user()->name }}</div>
-=======
-                        <li >
-                            {{-- <button data-dropdown-toggle="dropdownleft"> --}}
-                                <div data-dropdown-toggle="dropdownleft" class="relative" style="width:50px;height:50px;border-radius:50%;background-color: gainsboro">
-                                    <span class="absolute"
-                                        style="top:50%;left:50%;transform:translate(-50%,-50%);font-size:28px;font-weight:500;">{{ substr(Auth::user()->name, 0, 1) }}</span>
-                                </div>
-                                {{-- <img src="{{ asset('img/icon/Avatar.png') }}" alt=""> --}}
-                            {{-- </button> --}}
-                        </li>
-                        <li>
-                            <div class="p-0 nameblack" style='margin-right:5px; '>您好，{{ Auth::user()->name }}</div>
->>>>>>> Stashed changes
                         </li>
 
                     @endauth
@@ -283,8 +244,8 @@
                     <div class="footer_container">
                         <div class="footer_logo_menu flex-col sm:flex sm:flex-row sm:justify-between">
                             <div class="left flex flex-col ">
-                                <img src="{{asset('img/logo/CHINESE TAIPEI UNDERWATER FEDERATION-white logo.png')}}"
-                                    alt="台中市水中運動協會" >
+                                <img src="./img/logo/CHINESE TAIPEI UNDERWATER FEDERATION-white logo.png"
+                                    alt="台中市水中運動協會">
                                 <span>台中市北區天祥街10號</span>
                                 <span>04-22312698</span>
                             </div>
