@@ -38,35 +38,35 @@
 // hamburger 展開的效果 結束
 
 // hamburger 關於我們 dropdown 換頁效果開始
-$(document).ready(function () {
-    // $(".searchBtn").click(function () {
-    //     $(".searchBox").fadeIn();
-    //     $(".bg-blur").fadeIn();
-    //     $("body").addClass("bodyfixed");
-    //     $(".gnb").stop().fadeOut();
-    //     $("header").stop().removeClass("open");
-    //     $(".navBtn").stop().removeClass("openNav");
-    // });
+// $(document).ready(function () {
+//     $(".searchBtn").click(function () {
+//         $(".searchBox").fadeIn();
+//         $(".bg-blur").fadeIn();
+//         $("body").addClass("bodyfixed");
+//         $(".gnb").stop().fadeOut();
+//         $("header").stop().removeClass("open");
+//         $(".navBtn").stop().removeClass("openNav");
+//     });
 
-    // $(".searchClose").click(function () {
-    //     $(".searchBox").fadeOut();
-    //     $(".bg-blur").fadeOut();
-    //     $("body").removeClass("bodyfixed");
-    // });
+//     $(".searchClose").click(function () {
+//         $(".searchBox").fadeOut();
+//         $(".bg-blur").fadeOut();
+//         $("body").removeClass("bodyfixed");
+//     });
 
-    // $(".navBtn").click(function () {
-    //     $(".gnb").fadeToggle();
-    //     $("header").toggleClass("open");
-    //     $("body").toggleClass("bodyfixed");
-    //     $(".navBtn").toggleClass("openNav");
-    // });
+//     $(".navBtn").click(function () {
+//         $(".gnb").fadeToggle();
+//         $("header").toggleClass("open");
+//         $("body").toggleClass("bodyfixed");
+//         $(".navBtn").toggleClass("openNav");
+//     });
 
-    $(".menu").click(function () {
-        $(this).siblings(".submenu").addClass("subOpen");
-    });
+//     $(".menu").click(function () {
+//         $(this).siblings(".submenu").addClass("subOpen");
+//     });
 
-    $(".subtitle").click(function () {
-        $(".submenu").removeClass("subOpen");
-    });
-});
+//     $(".subtitle").click(function () {
+//         $(".submenu").removeClass("subOpen");
+//     });
+// });
 // hamburger 關於我們 dropdown 換頁效果 結束

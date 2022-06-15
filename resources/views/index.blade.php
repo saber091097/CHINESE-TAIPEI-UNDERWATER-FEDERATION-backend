@@ -176,13 +176,13 @@
                 </div>
                 <img class="absolute" src="./img/index-diving01-img.svg" alt="">
             </div>
-            <div class="marquee">
+            {{-- <div class="marquee">
                 <div class="marquee w-full">
                     <p data-scroll data-scroll-speed="30" data-scroll-direction="horizontal">
                         WINDSURFING&emsp;DIVING&emsp;SUP&emsp;WINDSURFING&emsp;DIVING&emsp;SUP&emsp;WINDSURFING&emsp;DIVING&emsp;SUP&emsp;WINDSURFING&emsp;DIVING&emsp;SUP
                     </p>
                 </div>
-            </div>
+            </div> --}}
             <div class="img">
                 <img class="absolute img02" src="./img/index-diving02-img.svg" alt="">
             </div>
