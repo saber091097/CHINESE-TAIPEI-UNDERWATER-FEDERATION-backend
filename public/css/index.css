@@ -1656,9 +1656,6 @@ footer {
 }
 
  /* 手機版的menu 開始 */
-
-
-
 /*# sourceMappingURL=menu.css.map */
 
 
@@ -1992,7 +1989,7 @@ footer {
 
 @media screen and (max-width: 1024px) {
   .hamburger__list-item a:hover {
-    color: rgb(255, 255, 255);
+    color: #3B54F3;
   }
 }
 
@@ -2147,5 +2144,11 @@ nav{
     z-index: 99;
 }
 
+.hamburger__list-item a{
+    display: flex;
+}
+.hamburger__list-item span{
+    width: 60%;
+}
 /*# sourceMappingURL=amenu.css.map */
 /*# sourceMappingURL=index.css.map */
