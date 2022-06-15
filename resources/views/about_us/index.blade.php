@@ -252,7 +252,7 @@
         style="background-color: white; z-index: 999;">
         <div class="nav flex items-center justify-between" style="color: black;">
             <div class="right ">
-                <a href="index">
+                <a href="/">
                     <div class="logo flex">
                         <img src="./img/logo/only_logo.svg" alt="">
                         <div class="name flex flex-col hidden lg:block">

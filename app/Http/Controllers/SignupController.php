@@ -14,8 +14,11 @@ class SignupController extends Controller
     //
 
     public function signup1($id){
-
         $event = Event::where('id',$id)->first();
+        // dd($event->all());
+        session([
+            'event_id'=>$event->id,
+        ]);
         return view('signup.signUpStep1',compact('event'));
     }
 
@@ -80,6 +83,7 @@ class SignupController extends Controller
         }
 
         SignUp::create([
+            'event_id'=>session::get('event_id'),
             'name'=> session::get('name'),
             'id_card'=> session::get('id_card'),
             'gender'=> session::get('gender'),

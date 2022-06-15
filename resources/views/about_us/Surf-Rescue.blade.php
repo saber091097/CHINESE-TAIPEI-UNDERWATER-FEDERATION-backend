@@ -11,7 +11,7 @@
     <main class="Surf-Rescue flex-warp flex-col flex">
         <div class="breadcrumb">
             <ul class="flex items-center justify-start flex-wrap">
-                <li><a href="index">首頁</a></li>
+                <li><a href="/">首頁</a></li>
                 <li>
                     <svg xmlns="http://www.w3.org/2000/svg">
                         <path
