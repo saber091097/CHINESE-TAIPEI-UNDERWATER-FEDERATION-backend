@@ -113,45 +113,6 @@ function checkEmail(mail){
         return (true);
 };
 
-// function checkPw() {
-//     var pw = document.getElementById("password").value;
-//     if (pw.length >= 8) {
-//         return (false);
-//     } else {
-//         return (true);
-//     }
-
-// };
-
-
-// function checkPwck() {
-//     var pwck = document.getElementById("pwCheck").value;
-//     if (pwck.length >= 8) {
-//         return (false);
-//     } else {
-//         return (true);
-//     }
-
-// };
-
-
-// function checkPassword(e) {
-//     var re = /^[A-Za-z0-9]+$/;
-//     if ((e.value.length >= 6)) {
-//         return false;
-//     } else
-//         return true;
-// }
-
-
-// function checkPw(e) {
-//     var pwValue = document.getElementById("password").value;
-//     if (pwValue.length >= 8){
-//         return (false);
-//     } else
-//         return (true);
-// };
-
 
 function checkPw(e) {
 
