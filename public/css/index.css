@@ -207,6 +207,17 @@
 .login{
     cursor: pointer;
 }
+@media (max-width:650px) {
+    .logo .name{
+        display: block;
+    }
+}
+@media (max-width:640px) {
+    .logo .name{
+        display: none;
+    }
+}
+
 
 /* navbar 結束 */
 
