@@ -29,10 +29,12 @@
     <div class="container flex justify-between max-w-full" id="page">
         <!-- 顯示個人資料區 -->
         <div id="infocard" class="infocard">
-            <div id="avator" class="avator mt-6"><img src="./img/icon/Avatar.png" alt=""></div>
+            <div id="avator" class="avator mt-6 relative" style="background-color: gainsboro">
+                <span class="absolute" style="top:50%;left:50%;transform:translate(-50%,-50%);font-size:28px;font-weight:500;">{{ substr(Auth::user()->name, 0, 1) }}</span>
+            </div>
             <div class="flex flex-col">
-                <span id="name" class="name">王小明</span>
-                <span id="email" class="email">test123@gmail.com</span>
+                <span id="name" class="name">{{ Auth::user()->name }}</span>
+                <span id="email" class="email">{{ Auth::user()->email }}</span>
             </div>
             <button id="edit">編輯</button>
         </div>
@@ -152,6 +154,27 @@
                             </tr>
                         </tbody>
                     </table>
+
+                    <div id="popup-modal" tabindex="-1"
+                    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full">
+                    <div id="certiwindow" class="relative w-full  h-full md:h-auto">
+                        <button id="closeButton" type="button" class="absolute top-8 right-8 text-gray-400 bg-transparent"
+                            data-modal-toggle="popup-modal">
+                            
+                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 22C0 9.84974 9.84974 0 22 0C34.1503 0 44 9.84974 44 22C44 34.1503 34.1503 44 22 44C9.84974 44 0 34.1503 0 22Z"
+                                    fill="#F3F6F9" />
+                                <g opacity="0.7">
+                                    <path
+                                        d="M22.0007 20.586L26.9507 15.636L28.3647 17.05L23.4147 22L28.3647 26.95L26.9507 28.364L22.0007 23.414L17.0507 28.364L15.6367 26.95L20.5867 22L15.6367 17.05L17.0507 15.636L22.0007 20.586Z"
+                                        fill="#141414" />
+                                </g>
+                            </svg>
+                        </button>
+                        <div id="certi" class="relative bg-white rounded-lg shadow dark:bg-gray-700"></div>
+                    </div>
+                </div>
                 </div>
             </div>
 

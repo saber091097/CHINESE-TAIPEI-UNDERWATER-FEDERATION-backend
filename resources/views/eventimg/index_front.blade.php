@@ -137,7 +137,7 @@
             @foreach ($album as $item)
             <div class="album flex flex-col">
 
-                <div class="album_img mb-6" onclick="location.href='/photo/{{$item->id}}'" style="background-image:url({{asset('img/jeremy-bishop-7KLUhedmR2c-unsplash.jpeg')}})"></div>
+                <div class="album_img mb-6" onclick="location.href='/photo/{{$item->id}}'" style="background-image:url({{asset("img/jcob-nasyr-hZPYwYR02Yo-unsplash.jpeg")}})"></div>
                 <span class="date">
                     @if($item->eventimg_type==1)
                     Windsurf board

@@ -94,7 +94,7 @@
             @endif
 
         </div>
-        <div class="photo_section flex flex-row  flex-wrap">
+        <div class="photo_section flex flex-row  flex-wrap" thumbsSlider="">
             {{-- 套資料庫 --}}
             @foreach ($photo as $item)
                 <div data-modal-toggle="popup-modal" style="background-image: url({{ $item->img_path }})">
@@ -216,7 +216,7 @@
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mySwiper", {
-            // slidesPerView: "auto",
+            slidesPerView: "auto",
             // spaceBetween: 30,
             navigation: {
                 nextEl: ".swiper-button-next",
@@ -224,6 +224,25 @@
             },
         });
     </script>
+    {{-- <script>
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 10,
+          slidesPerView: 4,
+          freeMode: true,
+          watchSlidesProgress: true,
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+          spaceBetween: 10,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          thumbs: {
+            swiper: swiper,
+          },
+        });
+      </script> --}}
+
 @endsection
 {{-- </body>
 </html> --}}
