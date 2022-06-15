@@ -166,7 +166,10 @@ function check(){
 
     var contactValue = document.getElementById("contact").value;
 
-    var checked = document.querySelector('[name=class]:checked')
+    var checked1 = document.querySelector('[name=class1]:checked');
+    var checked2 = document.querySelector('[name=class2]:checked');
+    var checked3 = document.querySelector('[name=class3]:checked');
+    var checked4 = document.querySelector('[name=class4]:checked');
 
     var img1H = document.querySelector(".img_idCard1");
     var img2H = document.querySelector(".img_idCard2");
@@ -229,7 +232,7 @@ function check(){
         idCard2.classList.add(('input-red2'));
         tC2.classList.add(('red-tsd'));
         sC2.classList.add(('red-star'));
-    }else if (!checked){
+    }else if (!checked1 && !checked2 && !checked3 && !checked4){
         warningClass.innerHTML = `
         <span class="ts ts-red">請選擇選修課程 或 [無]</span>
         `;
@@ -289,7 +292,7 @@ function check(){
         sC2.classList.remove(('red-star'));
 
     }
-    if (checked){
+    if (checked1 || checked2 || checked3 || checked4){
         warningClass.innerHTML =  "";
         tC.classList.remove(('red-tsd'));
         sC.classList.remove(('red-star'));

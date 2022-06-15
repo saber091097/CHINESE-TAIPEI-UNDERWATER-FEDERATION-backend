@@ -130,7 +130,7 @@
                     <p class="ts title-C">選修課程 (可複選)<span class="ts star star-C">*</span></p>
                     <div class="box-class flex flex-col sm:flex-row">
                         <div class="form-check form-check-inline">
-                            <input name="class"
+                            <input name="class1"
                                 class="form-check-input check1 appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white
                         checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1
                         align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
@@ -139,7 +139,7 @@
                                 for="checkbox1">獨木舟</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input name="class"
+                            <input name="class2"
                                 class="form-check-input check2 appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white
                         checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1
                         align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
@@ -148,7 +148,7 @@
                                 for="checkbox2">風浪板</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input name="class"
+                            <input name="class3"
                                 class="form-check-input check3 appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white
                         checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1
                         align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
@@ -157,7 +157,7 @@
                                 for="checkbox3">SUP救生</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input name="class"
+                            <input name="class4"
                                 class="form-check-input check4 appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white
                         checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1
                         align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"

@@ -9,7 +9,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="{{ asset('css/createAccount.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
@@ -31,7 +31,7 @@
                 <a href="/">
                     <div class="logo flex">
                         <img src="./img/logo/only_logo.svg" alt="">
-                        <div class="name flex flex-col  lg:block">
+                        <div class="name flex flex-col hidden sm:block">
                             <div class="zh-name">
                                 <span>台中市水中運動協會</span>
                             </div>
@@ -43,12 +43,6 @@
                 </a>
             </div>
             <!-- 手機版的menu 開始 -->
-
-            {{-- <div class="burger mr-4 lg:hidden"> --}}
-                {{-- <svg xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" />
-                </svg> --}}
-
                 <!-- hamburger menu  -->
                 <div class="cd-header lg:hidden">
                     <div class="header-wrapper">
@@ -65,16 +59,16 @@
                 <div class="hamburger">
                     <div class="hamburger__content">
                         <ul class="hamburger__list">
-                            <li class="hamburger__list-item nav-active "><a href="#" class="hover-target w-3/5"><span>最新消息</span>
+                            <li class="hamburger__list-item nav-active "><a href="#" class="hover-target full md:w-3/5"><span>最新消息</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg>
                             </a></li>
 
                             <li class="hamburger__list-item ">
-                                <div class="menu about">
-                                    <a href="#s1" class="hover-target w-3/5"><span>關於我們</span>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0007 13.172L16.9507 8.22198L18.3647 9.63598L12.0007 16L5.63672 9.63598L7.05072 8.22198L12.0007 13.172Z" fill="#3B54F3"/></svg></a>
-                                </div>
-                                <div class="submenu aboutSub">
+                                {{-- <div class="menu about"> --}}
+                                    <a href="#s1" class="hover-target full md:w-3/5"><span>關於我們</span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg></a>
+                                {{-- </div> --}}
+                                {{-- <div class="submenu aboutSub">
                                     <div class="sub_wrap">
                                       <div class="subtitle">
                                         <span title="prev">關於我們</span>
@@ -88,15 +82,26 @@
                                         <li><a href="#">救生員資格檢定</a></li>
                                       </ul>
                                     </div>
-                                </div>
-
+                                </div> --}}
                             </li>
 
-                            <li class="hamburger__list-item "><a href="#s3" class="hover-target w-3/5"><span>課程</span>
+                            <li class="hamburger__list-item "><a href="#s3" class="hover-target full md:w-3/5"><span>歷屆會長</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg>
                             </a></li>
 
-                            <li class="hamburger__list-item "><a href="#s4" class="hover-target w-3/5"><span>活動照片</span>
+                            <li class="hamburger__list-item "><a href="#s3" class="hover-target full md:w-3/5"><span>協會組織架構</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg>
+                            </a></li>
+
+                            <li class="hamburger__list-item "><a href="#s3" class="hover-target full md:w-3/5"><span>救生員資格檢定</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg>
+                            </a></li>
+
+                            <li class="hamburger__list-item "><a href="#s3" class="hover-target full md:w-3/5"><span>課程</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg>
+                            </a></li>
+
+                            <li class="hamburger__list-item "><a href="#s4" class="hover-target full md:w-3/5"><span>活動照片</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg>
                             </a></li>
                         </ul>
@@ -111,27 +116,25 @@
             <!-- 桌機版的menu -->
             <div class="left flex justify-end ml-auto  lg:block">
                 <ul class="flex items-center">
-                    <li><a href="news">最新消息</a></li>
-                    <li>
+                    <li class="mr-4"><a href="news">最新消息</a></li>
+                    <li class="mr-4">
                         <button class="flex" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
                             關於我們
-                            {{-- <img src="./img/icon/ic_arrow-down.svg" alt=""> --}}
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0007 13.172L16.9507 8.22198L18.3647 9.63598L12.0007 16L5.63672 9.63598L7.05072 8.22198L12.0007 13.172Z" fill="#141414"/></svg>
-
                         </button>
                     </li>
-                    <li><a href="./classes">課程</a></li>
-                    <li><a href="album">活動照片</a></li>
+                    <li class="mr-4"><a href="./classes">課程</a></li>
+                    <li class="mr-4"><a href="album">活動照片</a></li>
                     @auth
                         @if (Auth::user()->power == 1)
-                            <li><a href="/dashboard">後台</a></li>
+                            <li class="mr-4"><a href="/dashboard">後台</a></li>
                         @endif
-                        <li>
+                        <li class="mr-4">
                             <button data-dropdown-toggle="dropdownleft">
                                 <img src="{{ asset('img/icon/Avatar.png') }}" alt="">
                             </button>
                         </li>
-                        <li>
+                        <li class="mr-4">
                             <div class="p-0 nameblack" style='margin-right:5px; '>{{ Auth::user()->name }}</div>
                         </li>
 
@@ -292,6 +295,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- jquery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> --}}
   <script src="{{asset('js/hamburgerMenu.js')}}"></script>
     @yield('js')
 </body>

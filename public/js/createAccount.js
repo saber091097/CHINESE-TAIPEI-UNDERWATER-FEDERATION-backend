@@ -16,9 +16,9 @@ function create(){
 
     var nickNameValue = document.getElementById("nickName").value;
     var mailValue = document.getElementById("mail").value;
-    var pwValue = document.getElementById("password").value;
+    // var pwValue = document.getElementById("password").value;
     // var passwordValue = document.formCreate.password.value;
-    var pwCheckValue = document.getElementById("pwCheck").value;
+    // var pwCheckValue = document.getElementById("pwCheck").value;
     // var passwordCheckValue = document.formCreate.password.value;
 
     if (nickNameValue == "") {
@@ -36,13 +36,13 @@ function create(){
         <span class="ts ts-red">輸入電子郵件地址</span>
         `;
     }else if (!checkEmail(mailValue)){
-        var wrongMailValue = formCreate.mail.value;
+        var wrongMailValue = formCreate.email.value;
         mail.innerHTML = "";
         mail.innerHTML = `
         <label class="" for="mail"><span class="ts ts-red ts75">電子郵件地址</span><span class="ts ts-red star">*</span></label>
         <input class="input-red input-text w-full focus:outline-none" id="mail" type="text" name="email" value="${wrongMailValue}" placeholder="輸入電子郵件地址">
         <span class="ts ts-red">輸入正確的電子郵件地址</span>
-        `;	
+        `;
     }else if (formCreate.password.value == "" || formCreate.password.value.length < 8 || checkPw(formCreate.password.value)) {
         password.innerHTML = "";
         password.innerHTML = `
@@ -57,11 +57,11 @@ function create(){
         <input class="input-red input-text w-full focus:outline-none" id="pwCheck" type="password" name="pwCheck" value="" placeholder="再次輸入密碼">
         <span class="ts ts-red">確認密碼輸入不符</span>
         `;
-    }else 
+    }else
     formCreate.submit();
-    
-        
-    
+
+
+
 
     if (!nickNameValue == "") {
         nickName.innerHTML = "";
@@ -96,8 +96,8 @@ function create(){
         <input class="input-text w-full focus:outline-none" id="pwCheck" type="password" name="pwCheck" value="${newPwCkValue}" placeholder="再次輸入密碼">
         `;
     };
-    
-    
+
+
 
 };
 
@@ -113,48 +113,9 @@ function checkEmail(mail){
         return (true);
 };
 
-// function checkPw() {
-//     var pw = document.getElementById("password").value;
-//     if (pw.length >= 8) {
-//         return (false);
-//     } else {
-//         return (true);
-//     }
-
-// };
-
-
-// function checkPwck() {
-//     var pwck = document.getElementById("pwCheck").value;
-//     if (pwck.length >= 8) {
-//         return (false);
-//     } else {
-//         return (true);
-//     }
-
-// };
-
-
-// function checkPassword(e) {
-//     var re = /^[A-Za-z0-9]+$/;
-//     if ((e.value.length >= 6)) {
-//         return false;
-//     } else 
-//         return true;
-// }
-
-
-// function checkPw(e) {
-//     var pwValue = document.getElementById("password").value;
-//     if (pwValue.length >= 8){
-//         return (false);
-//     } else
-//         return (true);
-// };
-
 
 function checkPw(e) {
-            
+
     if (e.match(/[A-Za-z]/g) && e.match(/[0-9]/g)) {
         return false;
     } else
@@ -192,7 +153,7 @@ function checkPw(e) {
 //     async:false,
 //     success:function(data) {
 //         if(data.msg=="false"){
-            
+
 //         }else{
 //             return (true);
 //         }
