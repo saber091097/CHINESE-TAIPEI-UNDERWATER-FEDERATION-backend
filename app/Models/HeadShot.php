@@ -15,14 +15,14 @@ class HeadShot extends Model
 {
     /**
      * The table associated with the model.
-     * 
+     *
      * @var string
      */
     protected $table = 'headshots';
 
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'integer';
@@ -31,4 +31,8 @@ class HeadShot extends Model
      * @var array
      */
     protected $fillable = ['created_at', 'updated_at', 'headshot', 'user_id'];
+
+    public function signup(){
+        return $this->belongto(SignUp::class,'user_id','user_id');
+    }
 }

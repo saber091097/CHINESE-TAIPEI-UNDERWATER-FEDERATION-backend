@@ -47,5 +47,15 @@ class SignUp extends Model
      */
     protected $fillable = ['created_at', 'updated_at', 'event_id', 'name', 'id_card', 'gender', 'phone', 'email', 'addr', 'line_id', 'emer_name', 'emer_phone',  'plus1', 'plus2', 'plus3', 'plus4','user_id'];
 
-    
+    public function headshot(){
+        return $this->hasone(SignUp::class,'user_id','user_id');
+    }
+
+    public function idcard_front(){
+        return $this->hasone(SignUp::class,'user_id','user_id');
+    }
+
+    public function idcard_reverse(){
+        return $this->hasone(SignUp::class,'user_id','user_id');
+    }
 }

@@ -39,14 +39,11 @@ class SignupController extends Controller
     }
 
     public function signup3(Request $request){
-        // dd($request->headshot);
 
         $email=session::get('email');
         $DB_email=User::where('email',$email)->value('email');
         $DB_id=User::where('email',$email)->value('id');
-        // dd($DB_id);
-        // dd($request->all());
-        // dd(session::get('event_id'));
+
         if ($email != $DB_email) {
             $user=User::create([
                 'name'=>session::get('name'),
@@ -57,37 +54,6 @@ class SignupController extends Controller
         }
 
         $DB_id=User::where('email',$email)->first();
-        // dd($DB_id->id);
-
-        if ($request->hasfile('headshot')){
-            foreach ($request->headshot as $key => $value) {
-                $path = FilesController::imgUpload($value,'headshot');
-                HeadShot::create([
-                    'headshot'=>$path,
-                    'user_id'=>$DB_id->id,
-                ]);
-            }
-        }
-
-        if ($request->hasfile('idCard1')){
-            foreach ($request->idCard2 as $key => $value) {
-                $idcard1_path = FilesController::imgUpload($value,'idcard1');
-                Id_Card_Img_front::create([
-                    'id_card_img_front'=>$idcard1_path,
-                    'user_id'=>$DB_id->id,
-                ]);
-            }
-        }
-
-        if ($request->hasfile('idCard2')){
-            foreach ($request->idCard2 as $key => $value) {
-                $idcard2_path = FilesController::imgUpload($value,'idcard2');
-                Id_Card_Img_Reverse::create([
-                    'id_card_img_reverse'=>$idcard2_path,
-                    'user_id'=>$DB_id->id,
-                ]);
-            }
-        }
 
         if ($request->class1 == 1) {
             $request->class1 = 1;
@@ -131,7 +97,29 @@ class SignupController extends Controller
             'user_id'=>$DB_id->id,
         ]);
 
+        if ($request->hasfile('headshot')){
+            $path = FilesController::imgUpload($request->headshot,'headshot');
+            HeadShot::create([
+                'headshot'=>$path,
+                'user_id'=>$DB_id->id,
+            ]);
+        }
 
+        if ($request->hasfile('idCard1')){
+            $idcard1_path = FilesController::imgUpload($request->idCard1,'idcard1');
+            Id_Card_Img_front::create([
+                'id_card_img_front'=>$idcard1_path,
+                'user_id'=>$DB_id->id,
+            ]);
+        }
+
+        if ($request->hasfile('idCard2')){
+            $idcard2_path = FilesController::imgUpload($request->idCard2,'idcard2');
+            Id_Card_Img_Reverse::create([
+                'id_card_img_reverse'=>$idcard2_path,
+                'user_id'=>$DB_id->id,
+            ]);
+        }
 
         return view('signup.signUpStep3',compact('data'));
     }

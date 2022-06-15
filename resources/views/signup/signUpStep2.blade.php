@@ -77,7 +77,7 @@
                         <div class="box-upload flex justify-center items-center">
                             <div class="div-upload w-full" for="upload">
                                 <span class="tm w-full flex justify-center items-center">上傳照片</span>
-                                <input id="upload" onchange="readURL(this)" targetID="headshot_img" name="headshot"
+                                <input id="upload" onchange="readURL(this)" targetID="headshot_img" name="headshot" id="headshot"
                                     type="file" accept="image/jpeg, image/png" />
                             </div>
                         </div>
