@@ -8,6 +8,8 @@ class PersonalCenterController extends Controller
 {
     //
     public function index(){
+        
+
         return view('personalcenter');
     }
 }
