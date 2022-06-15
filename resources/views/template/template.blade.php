@@ -34,7 +34,8 @@
                 <a href="/">
                     <div class="logo flex">
                         <img src="./img/logo/only_logo.svg" alt="">
-                        <div class="name flex flex-col hidden sm:block">
+                        {{-- hidden sm:block --}}
+                        <div class="name flex flex-col ">
                             <div class="zh-name">
                                 <span>台中市水中運動協會</span>
                             </div>
