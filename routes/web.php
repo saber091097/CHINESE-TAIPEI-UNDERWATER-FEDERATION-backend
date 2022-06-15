@@ -40,6 +40,8 @@ Route::get('/', [IndexController::class,'index']);
 // 不確定是否正確
 Route::get('/about',[HtmlController::class,'about']);
 Route::get('/personal-center',[PersonalCenterController::class,'index']);
+Route::post('/personal-center/update/{id}', [PersonalCenterController::class,'update']);
+
 
 Route::get('/Past-presidents', [HtmlController::class,'Pastpresidents']);
 

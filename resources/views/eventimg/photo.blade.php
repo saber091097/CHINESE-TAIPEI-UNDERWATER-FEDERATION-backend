@@ -33,8 +33,8 @@
             /* max-height: 100%; */
             height: auto;
             /* position: absolute;
-                            top: 50%;
-                            transform: translateY(-50%); */
+                                        top: 50%;
+                                        transform: translateY(-50%); */
         }
     </style>
 @endsection
@@ -43,8 +43,8 @@
 
 @section('main')
     <div class="flex flex-col" id="page">
-        <div class="bread_list flex flex-row">
-            <span style="color:#3B54F3">首頁</span>
+        <div class="bread_list flex flex-row" style="font-size:14px;font-weight:400;line-height:25px">
+            <span style="color:#3B54F3;cursor:pointer;" onclick="location.href='/index'">首頁</span>
             <div class="arrow_r"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -52,7 +52,7 @@
                         fill="#141414" />
                 </svg>
             </div>
-            <span style="color:#3B54F3">活動照片</span>
+            <span style="color:#3B54F3;cursor:pointer;" onclick="location.href='/album'">活動照片</span>
             <div class="arrow_r"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -61,7 +61,11 @@
                 </svg>
             </div>
             <span style="opacity: 0.5;">
-                @if ($photo[0]->event_type == 1)
+                {{-- @php
+                    dd($album)
+                @endphp --}}
+                {{ $album[0]->eventimg_name }}
+                {{-- @if ($photo[0]->event_type == 1)
                     風浪板
                 @elseif ($photo[0]->event_type == 2)
                     立式划槳
@@ -71,28 +75,31 @@
                     游泳
                 @else
                     水上救生
-                @endif
+                @endif --}}
             </span>
         </div>
 
         <div class="title_section flex flex-col">
             @if ($photo[0]->event_type == 1)
-                <span id="en_title">Windsurf board</span>
-                <span id="tw_title">風浪板</span>
+                {{-- 抓活動日期?相簿上傳日期?相簿更新日期? --}}
+                <span id="en_title">Windsurf board ·
+                    {{ substr($album[0]->updated_at, 0, 4) }}-{{ substr($album[0]->eventimg_name, 0, 2) }}-{{ substr($album[0]->eventimg_name, 2, 2) }}</span>
             @elseif ($photo[0]->event_type == 2)
-                <span id="en_title">SUP</span>
-                <span id="tw_title">立式划槳</span>
+                <span id="en_title">SUP ·
+                    {{ substr($album[0]->updated_at, 0, 4) }}-{{ substr($album[0]->eventimg_name, 0, 2) }}-{{ substr($album[0]->eventimg_name, 2, 2) }}</span>
             @elseif ($photo[0]->event_type == 3)
-                <span id="en_title">Diving</span>
-                <span id="tw_title">潛水</span>
+                <span id="en_title">Diving ·
+                    {{ substr($album[0]->updated_at, 0, 4) }}-{{ substr($album[0]->eventimg_name, 0, 2) }}-{{ substr($album[0]->eventimg_name, 2, 2) }}</span>
             @elseif ($photo[0]->event_type == 4)
-                <span id="en_title">Swimming</span>
-                <span id="tw_title">游泳</span>
+                <span id="en_title">Swimming ·
+                    {{ substr($album[0]->updated_at, 0, 4) }}-{{ substr($album[0]->eventimg_name, 0, 2) }}-{{ substr($album[0]->eventimg_name, 2, 2) }}</span>
             @else
-                <span id="en_title">Life Saving</span>
-                <span id="tw_title">水上救生</span>
+                <span id="en_title">Life Saving ·
+                    {{ substr($album[0]->updated_at, 0, 4) }}-{{ substr($album[0]->eventimg_name, 0, 2) }}-{{ substr($album[0]->eventimg_name, 2, 2) }}</span>
             @endif
 
+            {{-- 抓相簿名稱 --}}
+            <span id="tw_title">{{ $album[0]->eventimg_name }}</span>
         </div>
         <div class="photo_section flex flex-row  flex-wrap" thumbsSlider="">
             {{-- 套資料庫 --}}
@@ -123,7 +130,7 @@
                         <div class="swiper-wrapper">
                             @foreach ($photo as $item)
                                 <div class="swiper-slide">
-                                    <img class="slide_img" src="{{$item->img_path}}" alt="">
+                                    <img class="slide_img" src="{{ $item->img_path }}" alt="">
                                 </div>
                             @endforeach
 
@@ -149,9 +156,9 @@
 
                     <!-- Modal footer -->
                     <!-- <div
-                                        class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
+                                                    class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
 
-                                    </div> -->
+                                                </div> -->
                 </div>
             </div>
         </div>
@@ -215,14 +222,31 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
+        // 點選圖片檔名時，迴圈圖片陣列，建立sliders，新增到swiper container，同時獲取點選圖片的索引號；
+        // var photo_array = $album;
+        // console.log(photo_array);
+        // const swiper_wrapper= document.querySelector('.swiper-wrapper');
+        // console.log($album[].length);
+
+
         var swiper = new Swiper(".mySwiper", {
-            slidesPerView: "auto",
-            // spaceBetween: 30,
+            initialSlide: 0,
+            observer: true,
+            observeParents: true,
+            direction: 'horizontal',
+            slidesPerView: 1,
+            loop: false,
+
+
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
+
         });
+        $('.mySwiper').show();
+
+        mySwiper.slideTo(index);
     </script>
     {{-- <script>
         var swiper = new Swiper(".mySwiper", {
@@ -242,7 +266,6 @@
           },
         });
       </script> --}}
-
 @endsection
 {{-- </body>
 </html> --}}

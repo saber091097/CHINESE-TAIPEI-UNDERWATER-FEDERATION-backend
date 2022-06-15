@@ -24,6 +24,7 @@ class EventimgController extends Controller
     }
     public function photo($id)
     {
+        $album = EventImg_List::where('id', $id)->get();
         $photo = EventImg::where('event_id', $id)->get();
 
         // dd($photo);
@@ -38,34 +39,26 @@ class EventimgController extends Controller
         // }else{
         //     return view('eventimg.photo_Lifesaving',compact('photo'));
         // }
-        return view('eventimg.photo_Windsurfboard', compact('photo'));
+        return view('eventimg.photo', compact('album','photo'));
     }
-    public function photo_diving()
-    {
-        // $type_diving = EventImg_List::where('eventimg_type',3) -> get();
-        // dd($type_diving);
-        // $diving_photo = EventImg::where('event_id' , $type_diving->id);
-        return view('eventimg.photo_Diving');
-    }
-    public function photo_windsurfboard()
-    {
-        // $type_windsurfboard = EventImg::where('event_type',1) -> get();
-        // dd($type_windsurfboard);
+    // public function photo_diving()
+    // {
 
-        // foreach($type_windsurfboard as $key=>$value){
-        //     $windsurfboard_photo = EventImg::where('event_type' , $value->id) ->get();
-        // };
-        // dd($windsurfboard_photo);
-        return view('eventimg.photo_Windsurfboard', compact('type_windsurfboard'));
-    }
-    public function photo_swimming()
-    {
-        return view('eventimg.photo_Swimming');
-    }
-    public function photo_lifesaving()
-    {
-        return view('eventimg.photo_Lifesaving');
-    }
+    //     return view('eventimg.photo_Diving');
+    // }
+    // public function photo_windsurfboard()
+    // {
+
+    //     return view('eventimg.photo_Windsurfboard', compact('type_windsurfboard'));
+    // }
+    // public function photo_swimming()
+    // {
+    //     return view('eventimg.photo_Swimming');
+    // }
+    // public function photo_lifesaving()
+    // {
+    //     return view('eventimg.photo_Lifesaving');
+    // }
     //
 
     public function index()

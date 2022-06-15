@@ -135,25 +135,29 @@
     <div class="container flex flex-row  flex-wrap justify-between max-w-full" id="page">
         <div class="album_section  flex flex-row  flex-wrap">
             @foreach ($album as $item)
-            <div class="album flex flex-col">
+                <div class="album flex flex-col">
 
-                <div class="album_img mb-6" onclick="location.href='/photo/{{$item->id}}'" style="background-image:url({{asset("img/jcob-nasyr-hZPYwYR02Yo-unsplash.jpeg")}})"></div>
-                <span class="date">
-                    @if($item->eventimg_type==1)
-                    Windsurf board
-                    @elseif ($item->eventimg_type==2)
-                    SUP
-                    @elseif ($item->eventimg_type==3)
-                    Diving
-                    @elseif ($item->eventimg_type==4)
-                    Swimming
-                    @else
-                    Life Saving
-                    @endif
-                    · {{$item->updated_at}} </span>
-                <span class="title" onclick="location.href='/photo/{{$item->id}}'">{{$item->eventimg_name}}</span>
-            </div>
-        @endforeach
+                    <div class="album_img mb-6" onclick="location.href='/photo/{{ $item->id }}'"
+                        style="background-image:url({{ asset('img/jcob-nasyr-hZPYwYR02Yo-unsplash.jpeg') }})"></div>
+                    <span class="date" style="font-size:14px;font-weight:500;line-height:20px">
+                        @if ($item->eventimg_type == 1)
+                            Windsurf board
+                        @elseif ($item->eventimg_type == 2)
+                            SUP
+                        @elseif ($item->eventimg_type == 3)
+                            Diving
+                        @elseif ($item->eventimg_type == 4)
+                            Swimming
+                        @else
+                            Life Saving
+                        @endif
+                        · {{ substr($item->updated_at, 0, 4) }}-{{ substr($item->eventimg_name, 0, 2) }}-{{ substr($item->eventimg_name, 2, 2) }}
+                    </span>
+                    <span class="title" onclick="location.href='/photo/{{ $item->id }}'"
+                        style="font-size:28px;font-weight:500;line-height:38px">
+                        {{ $item->eventimg_name }}</span>
+                </div>
+            @endforeach
             {{-- <div class="album flex flex-col" >
                 <div class="album_img  mb-6"></div>
                 <span class="date">SUP·20 Jan 2022</span>

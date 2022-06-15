@@ -252,7 +252,7 @@
         style="background-color: white; z-index: 999;">
         <div class="nav flex items-center justify-between" style="color: black;">
             <div class="right ">
-                <a href="index">
+                <a href="/index">
                     <div class="logo flex">
                         <img src="./img/logo/only_logo.svg" alt="">
                         <div class="name flex flex-col hidden lg:block">
@@ -260,7 +260,7 @@
                                 <span>台中市水中運動協會</span>
                             </div>
                             <div class="en-name">
-                                <span style="font-size:16px; font-weight:500;">CHINESE TAIPEI UNDERWATER FEDERATION</span>
+                                <span style="font-size:16px; font-weight:400;">CHINESE TAIPEI UNDERWATER FEDERATION</span>
                             </div>
                         </div>
                     </div>
@@ -271,28 +271,30 @@
                     <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" />
                 </svg>
             </div>
+            {{-- 桌機版menu --}}
             <div class="left flex justify-end ml-auto lg:block hidden">
                 <ul class="flex items-center" style="opacity: 0.6">
-                    <li><a href="./news.html">最新消息</a></li>
+                    <li><a href="./news">最新消息</a></li>
                     <li>
                         <button class="flex" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
                             關於我們
                             <img src="./img/icon/ic_arrow-down.svg" alt="">
                         </button>
                     </li>
-                    <li><a href="./classes.html">課程</a></li>
-                    <li><a href="album">活動照片</a></li>
+                    <li><a href="/classes">課程</a></li>
+                    <li><a href="/album">活動照片</a></li>
                     @auth
                         @if (Auth::user()->power == 1)
                             <li><a href="/dashboard">後台</a></li>
                         @endif
                         <li>
-                            <button data-dropdown-toggle="dropdownleft">
-                                <img src="{{ asset('img/icon/Avatar.png') }}" alt="">
-                            </button>
+                            <div data-dropdown-toggle="dropdownleft" class="relative" style="width:50px;height:50px;border-radius:50%;background-color: gainsboro">
+                                <span class="absolute"
+                                    style="top:50%;left:50%;transform:translate(-50%,-50%);font-size:28px;font-weight:500;">{{ substr(Auth::user()->name, 0, 1) }}</span>
+                            </div>
                         </li>
                         <li>
-                            <div class="p-0 nameblack" style='margin-right:5px; '>{{ Auth::user()->name }}</div>
+                            <div class="p-0 nameblack" style='margin-right:5px; '>您好，{{ Auth::user()->name }}</div>
                         </li>
 
                     @endauth
@@ -303,7 +305,7 @@
             </div>
 
         </div>
-
+        {{-- 登入視窗 --}}
         <!-- Main modal -->
         <div id="authentication-modal" tabindex="-1" aria-hidden="true"
             class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
@@ -538,6 +540,7 @@
         <div class="container max-w-full h-auto">
             <div class="footer flex flex-wrap justify-between w-full">
                 <div class="left flex flex-col ">
+
                     <span>台中市北區天祥街10號</span>
                     <span>04-22312698</span>
                 </div>
