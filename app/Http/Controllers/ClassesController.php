@@ -20,7 +20,7 @@ class ClassesController extends Controller
 
     public function changeclass($id){
         $data = Event::where('id',$id)->first();
-        dd($data);
-        return redirect('classes',compact('data'));
+        
+        return $data;
     }
 }

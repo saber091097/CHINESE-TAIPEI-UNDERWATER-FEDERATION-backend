@@ -114,7 +114,7 @@
             <!-- 手機版的menu 結束-->
 
             <!-- 桌機版的menu -->
-            <div class="left flex justify-end ml-auto hidden lg:block">
+            <div class="left flex justify-end ml-auto  lg:block">
                 <ul class="flex items-center">
                     <li class="mr-4"><a href="news">最新消息</a></li>
                     <li class="mr-4">
@@ -195,7 +195,7 @@
                                 登入
                             </button>
                             <div class="text-sm font-medium text-gray-500 ">
-                                Not registered? <a href="#" class="text-blue-700 hover:underline " >Create account</a>
+                                Not registered? <a href="createAccount" class="text-blue-700 hover:underline " >Create account</a>
                             </div>
                         </form>
                     </div>
@@ -203,7 +203,7 @@
             </div>
         </div>
 
-        <div id="dropdownleft" class="hidden z-10 dropdownleft">
+        <div id="dropdownleft" class="hidden dropdownleft" style="z-index: 100;">
             <ul class="bg-white rounded-lg">
                 <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
                     <a href="/personal-center">個人中心</a>
