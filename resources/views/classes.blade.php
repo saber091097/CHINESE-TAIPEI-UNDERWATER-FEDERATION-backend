@@ -1893,10 +1893,6 @@
             let formData = new FormData();
             formData.append('_method', 'POST');
             formData.append('_token', '{{ csrf_token() }}');
-            for (var pair of formData.entries()) {
-                console.log(pair[0] + ', ' + pair[1]);
-            }
-            console.log('/changeclasses/' + id);
             fetch('/changeclasses/' + id, {
                 method: 'POST',
                 body: formData

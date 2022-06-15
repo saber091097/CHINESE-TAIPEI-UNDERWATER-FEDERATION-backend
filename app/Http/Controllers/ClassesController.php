@@ -15,12 +15,13 @@ class ClassesController extends Controller
         $windsurf=Event::where('event_type',1)->get();
         $sup=Event::where('event_type',2)->get();
         $data=Event::where('event_type',2)->take(1)->first();
+        
         return view('classes',compact('windsurf','sup','data'));
     }
 
     public function changeclass($id){
         $data = Event::where('id',$id)->first();
-        
+
         return $data;
     }
 }

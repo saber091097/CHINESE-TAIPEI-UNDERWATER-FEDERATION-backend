@@ -7,6 +7,9 @@ use App\Http\Controllers\FilesController;
 use App\Models\SignUp;
 use App\Models\User;
 use App\Models\Event;
+use App\Models\HeadShot;
+use App\Models\Id_Card_Img_front;
+use App\Models\Id_Card_Img_Reverse;
 use Illuminate\Support\Facades\Hash;
 
 class SignupController extends Controller
@@ -36,9 +39,14 @@ class SignupController extends Controller
     }
 
     public function signup3(Request $request){
+        // dd($request->headshot);
+
         $email=session::get('email');
         $DB_email=User::where('email',$email)->value('email');
-dd($request->all());
+        $DB_id=User::where('email',$email)->value('id');
+        // dd($DB_id);
+        // dd($request->all());
+        // dd(session::get('event_id'));
         if ($email != $DB_email) {
             $user=User::create([
                 'name'=>session::get('name'),
@@ -47,19 +55,16 @@ dd($request->all());
                 'password'=>Hash::make(session::get('id_card')),
             ]);
         }
-        else{
-            $DB_id=User::where('email',$email)->value('id');
-            SignUp::create([
-                'user_id'=>$DB_id,
-            ]);
-        }
 
+        $DB_id=User::where('email',$email)->first();
+        // dd($DB_id->id);
 
         if ($request->hasfile('headshot')){
             foreach ($request->headshot as $key => $value) {
-                $headshot_path = FilesController::imgUpload($value,'headshot');
-                SignUp::create([
-                    'headshot'=>$headshot_path,
+                $path = FilesController::imgUpload($value,'headshot');
+                HeadShot::create([
+                    'headshot'=>$path,
+                    'user_id'=>$DB_id->id,
                 ]);
             }
         }
@@ -67,8 +72,9 @@ dd($request->all());
         if ($request->hasfile('idCard1')){
             foreach ($request->idCard2 as $key => $value) {
                 $idcard1_path = FilesController::imgUpload($value,'idcard1');
-                SignUp::create([
+                Id_Card_Img_front::create([
                     'id_card_img_front'=>$idcard1_path,
+                    'user_id'=>$DB_id->id,
                 ]);
             }
         }
@@ -76,25 +82,56 @@ dd($request->all());
         if ($request->hasfile('idCard2')){
             foreach ($request->idCard2 as $key => $value) {
                 $idcard2_path = FilesController::imgUpload($value,'idcard2');
-                SignUp::create([
+                Id_Card_Img_Reverse::create([
                     'id_card_img_reverse'=>$idcard2_path,
+                    'user_id'=>$DB_id->id,
                 ]);
             }
         }
 
-        SignUp::create([
+        if ($request->class1 == 1) {
+            $request->class1 = 1;
+        }else{
+            $request->class1 = 0;
+        }
+
+        if ($request->class2 == 2) {
+            $request->class2 = 1;
+        }else{
+            $request->class2 = 0;
+        }
+
+        if ($request->class3 == 3) {
+            $request->class3 = 1;
+        }else{
+            $request->class3 = 0;
+        }
+
+        if ($request->class4 == 4) {
+            $request->class4 = 1;
+        }else{
+            $request->class4 = 0;
+        }
+
+        $data = SignUp::create([
             'event_id'=>session::get('event_id'),
             'name'=> session::get('name'),
             'id_card'=> session::get('id_card'),
             'gender'=> session::get('gender'),
             'phone'=> session::get('phone'),
             'email'=> session::get('email'),
-            'addr'-> session::get('addr'),
+            'addr'=> session::get('addr'),
             'line_id'=>$request->lineId,
-            'contact'=>$request->contact,  //緊急聯絡人
-            'contactPhone'=>$request->contactPhone, //緊急連絡人電話
-            'class'=>$request->class,//額外加課程
+            'emer_name'=>$request->contact,  //緊急聯絡人
+            'emer_phone'=>$request->contactPhone, //緊急連絡人電話
+            'plus1'=>$request->class1,//額外加課程
+            'plus2'=>$request->class2,//額外加課程
+            'plus3'=>$request->class3,//額外加課程
+            'plus4'=>$request->class4,//額外加課程
+            'user_id'=>$DB_id->id,
         ]);
+
+
 
         return view('signup.signUpStep3',compact('data'));
     }
