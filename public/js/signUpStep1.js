@@ -3,13 +3,13 @@ const address = document.querySelector("#address");
 const countyS = document.querySelector(".county");
 const districtS = document.querySelector(".district");
 
-countyS.addEventListener('click',function(){
-    countyS.classList.add('color-change');
-});
+// countyS.addEventListener('click',function(){
+//     countyS.classList.add('color-change');
+// });
 
-districtS.addEventListener('click',function(){
-    districtS.classList.add('color-change1');
-});
+// districtS.addEventListener('click',function(){
+//     districtS.classList.add('color-change1');
+// });
 
 
 const nameBox = document.querySelector(".innerbox-name");
@@ -24,9 +24,17 @@ const select_county = document.querySelector(".select-county");
 const select_district = document.querySelector(".select-district");
 const warning = document.querySelector(".warning");
 const mail_warning = document.querySelector(".mail-warning");
-const county = select_county.children;
 
 function next(){
+
+    var nameValue = document.getElementById("name").value;
+    var idValue = document.getElementById("id").value;
+    var phoneValue = document.getElementById("phone").value;
+    var emailValue = document.getElementById("email").value;
+    var countyValue = document.getElementById("county").value;
+    var districtValue = document.getElementById("district").value;
+    var addressValue = document.getElementById("addressinput").value;
+
     if (formS1.name.value == "") {
         nameBox.innerHTML = "";
         nameBox.innerHTML = `
@@ -34,12 +42,26 @@ function next(){
         <input class="input-text w-full focus:outline-none input-red" id="name" type="text" name="name" value="" placeholder="請輸入姓名">
         <span class="ts ts-red">請輸入真實姓名</span>
         `;
+    }else if (checkName(nameValue)) {
+        nameBox.innerHTML = "";
+        nameBox.innerHTML = `
+        <label class="ts ts-red" for="name">真實姓名<span class="ts ts-red star">*</span></label>
+        <input class="input-text w-full focus:outline-none input-red" id="name" type="text" name="name" value="${nameValue}" placeholder="請輸入姓名">
+        <span class="ts ts-red">真實姓名只能輸入中文或英文</span>
+        `;
     }else if (formS1.id.value == "") {
         idBox.innerHTML = "";
         idBox.innerHTML = `
-        <label class="ts ts-red" for="id">身分證字號 (ID Numbers)<span class="ts star">*</span></label>
+        <label class="ts ts-red" for="id">身分證字號 (ID Numbers)<span class="ts ts-red star">*</span></label>
         <input class="input-text w-full focus:outline-none input-red" id="id" type="text" name="id" value="" placeholder="請輸入身分證字號">
         <span class="ts ts-red">請輸入身分證字號</span>
+        `;
+    }else if (!checkID(idValue)) {
+        idBox.innerHTML = "";
+        idBox.innerHTML = `
+        <label class="ts ts-red" for="id">身分證字號 (ID Numbers)<span class="ts ts-red star">*</span></label>
+        <input class="input-text w-full focus:outline-none input-red" id="id" type="text" name="id" value="${idValue}" placeholder="請輸入身分證字號">
+        <span class="ts ts-red">請確認身分證字號輸入的格式</span>
         `;
     }else if (!formS1.sex[0].checked && !formS1.sex[1].checked){
         sexBox.innerHTML = "";
@@ -47,54 +69,78 @@ function next(){
         <p class="ts ts-red">性別<span class="ts ts-red star">*</span></p>
         <div class="flex">
             <input class="input-red form-check-input h-4 w-4 mt-1
-            appearance-none rounded-full border border-gray-300 bg-white 
-            checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 
+            appearance-none rounded-full border border-gray-300 bg-white
+            checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200
             align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer" id="male" type="radio" name="sex" value="1">
             <label class="ts ts-red label-male form-check-label inline-block text-gray-800 cursor-pointer" for="male">男</label>
-            
+
             <input class="input-red form-check-input h-4 w-4 mt-1
-            appearance-none rounded-full border border-gray-300 bg-white 
-            checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 
+            appearance-none rounded-full border border-gray-300 bg-white
+            checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200
             align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer" id="female" type="radio" name="sex" value="2">
             <label class="ts ts-red form-check-label inline-block text-gray-800 cursor-pointer" for="female">女</label>
         </div>
         <span class="ts ts-red">請選擇性別</span>
         `;
-    }else if (formS1.phone.value == "") {
+    }else if (phoneValue == "") {
         phoneBox.innerHTML = "";
         phoneBox.innerHTML = `
         <label class="ts ts-red" for="phone">聯絡電話<span class="ts ts-red star">*</span></label>
-        <input class="input-red input-text w-full focus:outline-none" id="phone" type="text" name="phone" value="" placeholder="0912345678">
+        <input class="input-red input-text w-full focus:outline-none" id="phone" type="text" name="phone" value="" placeholder="0912345678"
+        onkeyup="value=value.replace(/[^0-9 \-\+\)\(]/g,'')">
         <span class="ts ts-red">請輸入聯絡電話</span>
         `;
-    }else if (formS1.email.value == "") {
+    }else if (formS1.phone.value.length < 7) {
+        phoneBox.innerHTML = "";
+        phoneBox.innerHTML = `
+        <label class="ts ts-red" for="phone">聯絡電話<span class="ts ts-red star">*</span></label>
+        <input class="input-red input-text w-full focus:outline-none" id="phone" type="text" name="phone" value="" placeholder="0912345678"
+        onkeyup="value=value.replace(/[^0-9 \-\+\)\(]/g,'')">
+        <span class="ts ts-red">請確認聯絡電話輸入的格式</span>
+        `;
+    }else if (emailValue == "") {
         mailBox.innerHTML = "";
         mailBox.innerHTML = `
         <label class="ts ts-red" for="mail">Email<span class="ts ts-red star">*</span></label>
-        <input class="input-red input-text w-full focus:outline-none" id="mail" type="text" name="email" value="" placeholder="abc123@google.com">
-        <span class="ts ts-red">請輸入Email!</span>
+        <input class="input-red input-text w-full focus:outline-none" id="email" type="text" name="email" value="" placeholder="abc123@google.com"
+        onkeyup="value=value. replace(/[^\a-\z\A-\Z0-9\@\.]/g,'')">
+        <span class="ts ts-red">請輸入Email</span>
         `;
-    }else if (formS1.county.value == "" || formS1.district.value == "") {
-        
+    }else if (!checkEmail(emailValue)){
+		mailBox.innerHTML = "";
+        mailBox.innerHTML = `
+        <label class="ts ts-red" for="mail">Email<span class="ts ts-red star">*</span></label>
+        <input class="input-red input-text w-full focus:outline-none" id="email" type="text" name="email" value="${emailValue}" placeholder="abc123@google.com"
+        onkeyup="value=value. replace(/[^\a-\z\A-\Z0-9\@\.]/g,'')">
+        <span class="ts ts-red">請確認Email輸入的格式</span>
+        `;
+	}else if (countyValue == "" || districtValue == "") {
+
         warning.innerHTML = `
         <span class="w-full ts ts-red span-red">請選擇完整的縣市與區域</span>
         `;
         countyS.classList.add(('input-red1'));
         districtS.classList.add(('input-red2'));
-        
+
 
     }else if (formS1.address.value == "") {
         addressInput.innerHTML = "";
         addressInput.innerHTML = `
-        <input class="input-red input-text w-full focus:outline-none" id="" type="text" name="address" value="" placeholder="請輸入地址">
+        <input class="input-red input-text w-full focus:outline-none" id="addressinput" type="text" name="address" value="" placeholder="請輸入地址">
         <span class="ts ts-red">請輸入完整地址</span>
+        `;
+    }else if (checkAddress(formS1.address.value)) {
+        var addressValue = formS1.address.value;
+        addressInput.innerHTML = "";
+        addressInput.innerHTML = `
+        <input class="input-red input-text w-full focus:outline-none" id="addressinput" type="text" name="address" value="${addressValue}" placeholder="請輸入地址">
+        <span class="ts ts-red">請確認地址輸入的格式</span>
         `;
     }else
     formS1.submit();
 
 
-    if (!formS1.name.value == "") {
-        var nameValue = formS1.name.value;
+    if (!nameValue == "" && !checkName(nameValue)) {
         nameBox.innerHTML = "";
         nameBox.innerHTML = `
         <label class="ts" for="name">真實姓名<span class="ts star">*</span></label>
@@ -102,13 +148,12 @@ function next(){
         `;
     };
 
-    if (!formS1.id.value == "") {
-        var idValue = formS1.id.value;
+    if (!idValue == "" && checkID(idValue)) {
         idBox.innerHTML = "";
         idBox.innerHTML = `
         <label class="ts" for="id">身分證字號 (ID Numbers)<span class="ts star">*</span></label>
         <input class="input-text w-full focus:outline-none" id="id" type="text" name="id" value="${idValue}" placeholder="請輸入身分證字號">
-        <span class="ts">請輸入身分證字號!</span>
+        <span class="ts">請輸入身分證字號</span>
         `;
     };
 
@@ -118,14 +163,14 @@ function next(){
         <p class="ts">性別<span class="ts star">*</span></p>
         <div class="flex">
             <input checked class="form-check-input h-4 w-4 mt-1
-            appearance-none rounded-full border border-gray-300 bg-white 
-            checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 
+            appearance-none rounded-full border border-gray-300 bg-white
+            checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200
             align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer" id="male" type="radio" name="sex" value="1">
             <label class="ts label-male form-check-label inline-block text-gray-800 cursor-pointer" for="male">男</label>
-            
+
             <input class="form-check-input h-4 w-4 mt-1
-            appearance-none rounded-full border border-gray-300 bg-white 
-            checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 
+            appearance-none rounded-full border border-gray-300 bg-white
+            checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200
             align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer" id="female" type="radio" name="sex" value="2">
             <label class="ts form-check-label inline-block text-gray-800 cursor-pointer" for="female">女</label>
         </div>
@@ -138,82 +183,178 @@ function next(){
         <p class="ts">性別<span class="ts star">*</span></p>
         <div class="flex">
             <input class="form-check-input h-4 w-4 mt-1
-            appearance-none rounded-full border border-gray-300 bg-white 
-            checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 
+            appearance-none rounded-full border border-gray-300 bg-white
+            checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200
             align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer" id="male" type="radio" name="sex" value="1">
             <label class="ts label-male form-check-label inline-block text-gray-800 cursor-pointer" for="male">男</label>
-            
+
             <input checked class="form-check-input h-4 w-4 mt-1
-            appearance-none rounded-full border border-gray-300 bg-white 
-            checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 
+            appearance-none rounded-full border border-gray-300 bg-white
+            checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200
             align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer" id="female" type="radio" name="sex" value="2">
             <label class="ts form-check-label inline-block text-gray-800 cursor-pointer" for="female">女</label>
         </div>
         `;
     };
 
-    if (!formS1.phone.value == "") {
-        var phoneValue = formS1.phone.value;
+    if (!phoneValue == "" && formS1.phone.value.length >= 7) {
         phoneBox.innerHTML = "";
         phoneBox.innerHTML = `
         <label class="ts" for="phone">聯絡電話<span class="ts star">*</span></label>
-        <input class="input-text w-full focus:outline-none" id="phone" type="text" name="phone" value="${phoneValue}" placeholder="0912345678">
+        <input class="input-text w-full focus:outline-none" id="phone" type="text" name="phone" value="${phoneValue}" placeholder="0912345678"
+        onkeyup="value=value.replace(/[^0-9 \-\+\)\(]/g,'')">
         `;
     };
 
-    if (!formS1.email.value == "") {
-        var mailValue = formS1.mail.value;
+    if (!emailValue == "" && checkEmail(emailValue)) {
         mailBox.innerHTML = "";
         mailBox.innerHTML = `
         <label class="ts" for="mail">Email<span class="ts star">*</span></label>
-        <input class="input-text w-full focus:outline-none" id="mail" type="text" name="email" value="${mailValue}" placeholder="abc123@google.com">
+        <input class="input-text w-full focus:outline-none" id="email" type="text" name="email" value="${emailValue}" placeholder="abc123@google.com"
+        onkeyup="value=value. replace(/[^\a-\z\A-\Z0-9\@\.]/g,'')">
         `;
     };
 
-    if (!formS1.county.value == "" && !formS1.district.value == "") {
-        const span_red = document.querySelector(".span-red");
-
-        span_red.classList.add('span-none');
+    if (!countyValue == "" && !districtValue == "") {
+        warning.innerHTML ="";
 
         countyS.classList.add('color-change');
 
         districtS.classList.add('color-change1');
     };
 
-    if (!formS1.address.value == "") {
-        var addressValue = formS1.address.value;
+    // if (!addressValue == "") {
+    if (!addressValue == "" && !checkAddress(formS1.address.value)) {
+        // var addressValue = formS1.address.value;
         addressInput.innerHTML = "";
         addressInput.innerHTML = `
-        <input class="input-text w-full focus:outline-none" type="text" name="address" value="${addressValue}" placeholder="請輸入地址">
+        <input class="input-text w-full focus:outline-none" id="addressinput" type="text" name="address" value="${addressValue}" placeholder="請輸入地址">
         `;
     };
-}
 
-function validateForm(formS1){
-	if (!checkEmail(formS1.email.value)){
-		mail_warning.innerHTML = `
-        <span class="ts ts-red">Email資料有誤，請確認!</span>
-        `;
-		return(false);	
-	}
-	formS1.submit();
-	return(true);
-}
+};
+// ------------------姓名認證-----------------------
+function checkName(strName){
 
-function checkEmail(email){
-	index = email.indexOf ('@', 0);	
-	if (email.length==0) {
-		// alert("請輸入電子郵件地址！");
-		return (false);
-	} else if (index==-1) {
-		// alert("錯誤：必須包含「@」。");
-		return (false);
-	} else if (index==0) {
-		// alert("錯誤：「@」之前不可為空字串。");
-		return (false);
-	} else if (index==email.length-1) {
-		// alert("錯誤：「@」之後不可為空字串。");
-		return (false);
-	} else
-		return (true);
-}
+    var namereg = /^[\u4E00-\u9FA5A-Za-z\s]+(·[\u4E00-\u9FA5A-Za-z]+)*$/;
+
+    if(namereg.test(strName)){
+        return (false);
+    }else
+        return (true);
+
+};
+
+// ------------------身分證認證-----------------------
+
+function checkID(idStr){
+    // 依照字母的編號排列，存入陣列備用。
+    var letters = new Array('A', 'B', 'C', 'D',
+        'E', 'F', 'G', 'H', 'J', 'K', 'L', 'M',
+        'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
+        'X', 'Y', 'W', 'Z', 'I', 'O');
+    // 儲存各個乘數
+    var multiply = new Array(1, 9, 8, 7, 6, 5,
+                             4, 3, 2, 1);
+    var nums = new Array(2);
+    var firstChar;
+    var firstNum;
+    var lastNum;
+    var total = 0;
+    // 撰寫「正規表達式」。第一個字為英文字母，
+    // 第二個字為1或2，後面跟著8個數字，不分大小寫。
+    var regExpID=/^[a-z](1|2)\d{8}$/i;
+    // 使用「正規表達式」檢驗格式
+    if (idStr.search(regExpID)==-1) {
+      // 基本格式錯誤
+     return false;
+    } else {
+      // 取出第一個字元和最後一個數字。
+      firstChar = idStr.charAt(0).toUpperCase();
+      lastNum = idStr.charAt(9);
+    }
+    // 找出第一個字母對應的數字，並轉換成兩位數數字。
+    for (var i=0; i<26; i++) {
+      if (firstChar == letters[i]) {
+        firstNum = i + 10;
+        nums[0] = Math.floor(firstNum / 10);
+        nums[1] = firstNum - (nums[0] * 10);
+        break;
+      }
+    }
+    // 執行加總計算
+    for(var i=0; i<multiply.length; i++){
+      if (i<2) {
+        total += nums[i] * multiply[i];
+      } else {
+        total += parseInt(idStr.charAt(i-1)) *
+                 multiply[i];
+      }
+    }
+    // 和最後一個數字比對
+    if ((10 - (total % 10))!= lastNum) {
+      return false;
+    }
+    return true;
+  }
+// ------------------護照號碼認證-----------------------
+
+// function checkPassport(code){
+//     // var code = formS1.id.value;
+//     if(!code || !/^((1[45]\d{7})|(G\d{8})|(P\d{7})|(S\d{7,8}))?$/.test(code)){
+//         return false;
+//     }else
+//     return true;
+// };
+
+// ------------------email認證-----------------------
+function checkEmail(mail){
+    index = mail.indexOf ('@', 0);
+    if (index==-1) {
+        return (false);
+    } else if (index==0) {
+        return (false);
+    } else if (index==mail.length-1) {;
+        return (false);
+    } else
+        return (true);
+};
+
+// ------------------地址認證-----------------------
+
+function checkAddress(strAddress){
+
+    var addressreg = /^([\u4e00-\u9fa5])+\d|([\u4e00\u4e8c\u4e09\u56db\u4e94\u516d\u4e03\u516b\u4e5d\u5341])/;
+
+    if(addressreg.test(strAddress)){
+        return (false);
+    }else
+        return (true);
+
+};
+
+// ------------------手機認證-----------------------
+// function checkCellhone(phone) {
+//     // re = /1{2}[0-9]{8}$/;
+//     // if (!re.test(phone)){
+//     //     return (false);
+//     // } else
+//     // return (true);
+//     var MobileReg = /^(09)[0-9]{8}$/;
+//     (phone.match(MobileReg)) ? true : false
+// };
+
+// function fucCheckTEL(phone) {
+//     var i,j,strTemp;
+//     strTemp="0123456789-()# ";
+//     for (i=0;i<phone.length;i++)
+//     {
+//     j=strTemp.indexOf(phone.charAt(i));
+//     if (j==-1)
+//     {
+//         return 0;
+//     }
+//     }
+//         return 1;
+// }
+

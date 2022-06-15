@@ -39,17 +39,8 @@ section1.addEventListener("scroll", event => {
     close_btn1.addEventListener('click' ,function(){
         section1.classList.remove('wfull1');
         close_btn1.classList.remove('appear1');
-        // body.classList.add('bodyToTop');
+        window.location.reload();
     })
-
-    // callS1.addEventListener('click' ,function(){
-    //     body.classList.remove('bodyToTop');
-    //     // section1.scrollTop = 0;
-
-    //     // section1.scrollTo(0,-1);
-
-    //     // section1.classList.add('w975-1');
-    // })
 
 });
 
@@ -70,12 +61,7 @@ section2.addEventListener("scroll", event => {
     close_btn2.addEventListener('click' ,function(){
         section2.classList.remove('wfull2');
         close_btn2.classList.remove('appear2');
-        // body.classList.add('bodyToTop')
-    })
-
-    callS2.addEventListener('click' ,function(){
-        body.classList.remove('bodyToTop');
-        // section2.scrollTop = 0;
+        window.location.reload();
     })
 });
 
@@ -96,13 +82,8 @@ section3.addEventListener("scroll", event => {
     close_btn3.addEventListener('click' ,function(){
         section3.classList.remove('wfull3');
         close_btn3.classList.remove('appear3');
-        // body.classList.add('bodyToTop');
+        window.location.reload();
     })
-
-    // callS3.addEventListener('click' ,function(){
-    //     // body.classList.remove('bodyToTop');
-    //     // section3.scrollTop = 0;
-    // })
 });
 
 section4.addEventListener("scroll", event => {
@@ -122,13 +103,8 @@ section4.addEventListener("scroll", event => {
     close_btn4.addEventListener('click' ,function(){
         section4.classList.remove('wfull4');
         close_btn4.classList.remove('appear4');
-        body.classList.add('bodyToTop')
+        window.location.reload();
     })
-
-    // callS4.addEventListener('click' ,function(){
-    //     body.classList.remove('bodyToTop');
-    //     // section4.scrollTop = 0;
-    // })
 });
 
 section5.addEventListener("scroll", event => {
@@ -148,18 +124,9 @@ section5.addEventListener("scroll", event => {
     close_btn5.addEventListener('click' ,function(){
         section5.classList.remove('wfull5');
         close_btn5.classList.remove('appear5');
-        body.classList.add('bodyToTop')
+        window.location.reload();
     })
-
-    // callS5.addEventListener('click' ,function(){
-    //     body.classList.remove('bodyToTop');
-    //     // section5.scrollTop = 0;
-    // })
 });
-
-
-
-
 
 
 
