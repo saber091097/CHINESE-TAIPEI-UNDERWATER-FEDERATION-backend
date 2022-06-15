@@ -37,30 +37,30 @@
 
 * body #page {
     width: 100%;
-    padding: 80px 155px 120px 154px;
+    padding: 160px 155px 120px 154px;
   }
 
   @media (max-width: 1024px) {
     * body #page {
-      padding: 40px 75px 80px;
+      padding: 120px 75px 80px;
     }
   }
 
   @media (max-width: 834px) {
     * body #page {
-      padding: 40px 90px 80px;
+      padding: 120px 90px 80px;
     }
   }
 
   @media (max-width: 560px) {
     * body #page {
-      padding: 40px 45px 80px;
+      padding: 120px 45px 80px;
     }
   }
 
   @media (max-width: 320px) {
     * body #page {
-      padding: 40px 16px 80px;
+      padding: 120px 16px 80px;
     }
   }
 

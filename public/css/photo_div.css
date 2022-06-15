@@ -42,24 +42,24 @@
 
 * body #page {
   width: 100%;
-  padding: 24px 155px 85px 154px;
+  padding: 104px 155px 85px 154px;
 }
 
 @media (max-width: 834px) {
   * body #page {
-    padding: 0px 32px 85px 32px;
+    padding: 80px 32px 85px 32px;
   }
 }
 
 @media (max-width: 480px) {
   * body #page {
-    padding: 0px 16px 85px 16px;
+    padding: 80px 16px 85px 16px;
   }
 }
 
 @media (max-width: 320px) {
   * body #page {
-    padding: 0px 16px 64px 16px;
+    padding: 80px 16px 64px 16px;
   }
 }
 

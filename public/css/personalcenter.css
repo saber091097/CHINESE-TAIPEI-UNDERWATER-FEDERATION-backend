@@ -87,7 +87,8 @@
 
 * body #page {
     width: 90%;
-    margin: 80px auto 0 auto;
+    margin: 160px auto 0 auto;
+    /* padding: 160px 153px 0 154px; */
 }
 
 @media (max-width: 1024px) {
@@ -96,7 +97,9 @@
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        margin: 24px auto 0 auto;
+        margin: 104px auto 0 auto;
+        /* padding: 104px 16px 0 16px; */
+
     }
 }
 
