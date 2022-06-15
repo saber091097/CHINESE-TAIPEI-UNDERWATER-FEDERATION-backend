@@ -525,6 +525,6 @@
         }
     </script>
     {{-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> --}}
-    <script src="{{asset('js/script.js')}}"></script>
+    {{-- <script src="{{asset('js/script.js')}}"></script> --}}
     @endsection
 
