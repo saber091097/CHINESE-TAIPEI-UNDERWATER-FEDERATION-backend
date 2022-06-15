@@ -67,7 +67,10 @@
                                 </a>
                                 <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#141414"/></svg>
                                 </li>
-                            <li class="hamburger__list-item"><a href="#s1" class="hover-target">關於我們</a></li>
+                            <li class="hamburger__list-item">
+                                <a href="#s1" class="hover-target">關於我們</a>
+                                
+                            </li>
                             <li class="hamburger__list-item"><a href="#s3" class="hover-target">課程 </a></li>
                             <li class="hamburger__list-item"><a href="#s4" class="hover-target">活動照片 </a></li>
                         </ul>
