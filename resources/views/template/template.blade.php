@@ -9,7 +9,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    {{-- <link rel="stylesheet" href="{{ asset('css/nav&footer.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+
+
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
@@ -114,7 +117,7 @@
             <!-- 手機版的menu 結束-->
 
             <!-- 桌機版的menu -->
-            <div class="left flex justify-end ml-auto  lg:block">
+            <div class="left flex justify-end ml-auto hidden lg:block">
                 <ul class="flex items-center">
                     <li class="mr-4"><a href="news">最新消息</a></li>
                     <li class="mr-4">
@@ -140,7 +143,7 @@
 
                     @endauth
                     @guest
-                        <li data-modal-toggle="authentication-modal">登入</li>
+                        <li class="login mr-4" data-modal-toggle="authentication-modal">登入</li>
                     @endguest
                 </ul>
             </div>
