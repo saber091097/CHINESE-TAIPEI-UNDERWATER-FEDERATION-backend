@@ -64,7 +64,7 @@
         <div id="tab" class="">
             <div id="tablist" class="">
                 <ul class="nav nav-tabs flex flex-row md:flex-row  list-none border-b-0 pl-0 mb-4" id="tabs-tab"
-                    role="tablist">
+                    role="tablist" style="position: unset;">
                     <li class="nav-item" role="presentation">
                         <a href="#tabs-home"
                             class="

@@ -33,7 +33,7 @@
             <div class="left ">
                 <a href="/">
                     <div class="logo flex">
-                        <img src="./img/logo/only_logo.svg" alt="">
+                        <img src="{{asset('img/logo/only_logo.svg')}}" alt="">
                         {{-- hidden sm:block --}}
                         <div class="name flex flex-col ">
                             <div class="zh-name">
@@ -120,15 +120,15 @@
             <!-- 桌機版的menu -->
             <div class="left flex justify-end ml-auto hidden lg:block">
                 <ul class="flex items-center">
-                    <li class="mr-4"><a href="news">最新消息</a></li>
+                    <li class="mr-4"><a href="/news">最新消息</a></li>
                     <li class="mr-4">
                         <button class="flex" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
                             關於我們
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0007 13.172L16.9507 8.22198L18.3647 9.63598L12.0007 16L5.63672 9.63598L7.05072 8.22198L12.0007 13.172Z" fill="#141414"/></svg>
                         </button>
                     </li>
-                    <li class="mr-4"><a href="./classes">課程</a></li>
-                    <li class="mr-4"><a href="album">活動照片</a></li>
+                    <li class="mr-4"><a href="/classes">課程</a></li>
+                    <li class="mr-4"><a href="/album">活動照片</a></li>
                     @auth
                         @if (Auth::user()->power == 1)
                             <li class="mr-4"><a href="/dashboard">後台</a></li>

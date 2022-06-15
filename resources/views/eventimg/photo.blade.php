@@ -33,8 +33,8 @@
             /* max-height: 100%; */
             height: auto;
             /* position: absolute;
-                                        top: 50%;
-                                        transform: translateY(-50%); */
+                                            top: 50%;
+                                            transform: translateY(-50%); */
         }
     </style>
 @endsection
@@ -103,11 +103,14 @@
         </div>
         <div class="photo_section flex flex-row  flex-wrap" thumbsSlider="">
             {{-- 套資料庫 --}}
-            @foreach ($photo as $item)
+            {{-- @foreach ($photo as $item)
                 <div data-modal-toggle="popup-modal" style="background-image: url({{ $item->img_path }})">
                 </div>
+            @endforeach --}}
+            @foreach ($photo as $item)
+                <div data-modal-toggle="popup-modal" style="background-image: url({{ $item->img_path }})" onclick="myfunc({{$loop->index}})">
+                </div>
             @endforeach
-
         </div>
 
 
@@ -156,9 +159,9 @@
 
                     <!-- Modal footer -->
                     <!-- <div
-                                                    class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
+                                                        class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
 
-                                                </div> -->
+                                                    </div> -->
                 </div>
             </div>
         </div>
@@ -244,9 +247,14 @@
             },
 
         });
+
         $('.mySwiper').show();
 
-        mySwiper.slideTo(index);
+
+
+        function myfunc(num) {
+            swiper.slideTo(num);
+        }
     </script>
     {{-- <script>
         var swiper = new Swiper(".mySwiper", {
