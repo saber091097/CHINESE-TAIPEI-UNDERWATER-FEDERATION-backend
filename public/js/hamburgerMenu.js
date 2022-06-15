@@ -39,27 +39,27 @@
 
 // hamburger 關於我們 dropdown 換頁效果開始
 $(document).ready(function () {
-    $(".searchBtn").click(function () {
-        $(".searchBox").fadeIn();
-        $(".bg-blur").fadeIn();
-        $("body").addClass("bodyfixed");
-        $(".gnb").stop().fadeOut();
-        $("header").stop().removeClass("open");
-        $(".navBtn").stop().removeClass("openNav");
-    });
+    // $(".searchBtn").click(function () {
+    //     $(".searchBox").fadeIn();
+    //     $(".bg-blur").fadeIn();
+    //     $("body").addClass("bodyfixed");
+    //     $(".gnb").stop().fadeOut();
+    //     $("header").stop().removeClass("open");
+    //     $(".navBtn").stop().removeClass("openNav");
+    // });
 
-    $(".searchClose").click(function () {
-        $(".searchBox").fadeOut();
-        $(".bg-blur").fadeOut();
-        $("body").removeClass("bodyfixed");
-    });
+    // $(".searchClose").click(function () {
+    //     $(".searchBox").fadeOut();
+    //     $(".bg-blur").fadeOut();
+    //     $("body").removeClass("bodyfixed");
+    // });
 
-    $(".navBtn").click(function () {
-        $(".gnb").fadeToggle();
-        $("header").toggleClass("open");
-        $("body").toggleClass("bodyfixed");
-        $(".navBtn").toggleClass("openNav");
-    });
+    // $(".navBtn").click(function () {
+    //     $(".gnb").fadeToggle();
+    //     $("header").toggleClass("open");
+    //     $("body").toggleClass("bodyfixed");
+    //     $(".navBtn").toggleClass("openNav");
+    // });
 
     $(".menu").click(function () {
         $(this).siblings(".submenu").addClass("subOpen");

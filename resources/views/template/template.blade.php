@@ -72,7 +72,7 @@
                             <li class="hamburger__list-item ">
                                 <div class="menu about">
                                     <a href="#s1" class="hover-target w-3/5"><span>關於我們</span>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0007 13.172L16.9507 8.22198L18.3647 9.63598L12.0007 16L5.63672 9.63598L7.05072 8.22198L12.0007 13.172Z" fill="#3B54F3"/></svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0007 13.172L16.9507 8.22198L18.3647 9.63598L12.0007 16L5.63672 9.63598L7.05072 8.22198L12.0007 13.172Z" fill="#3B54F3"/></svg></a>
                                 </div>
                                 <div class="submenu aboutSub">
                                     <div class="sub_wrap">
@@ -90,7 +90,7 @@
                                     </div>
                                 </div>
 
-                            </a></li>
+                            </li>
 
                             <li class="hamburger__list-item "><a href="#s3" class="hover-target w-3/5"><span>課程</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg>
@@ -115,7 +115,9 @@
                     <li>
                         <button class="flex" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
                             關於我們
-                            <img src="./img/icon/ic_arrow-down.svg" alt="">
+                            {{-- <img src="./img/icon/ic_arrow-down.svg" alt=""> --}}
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0007 13.172L16.9507 8.22198L18.3647 9.63598L12.0007 16L5.63672 9.63598L7.05072 8.22198L12.0007 13.172Z" fill="#141414"/></svg>
+
                         </button>
                     </li>
                     <li><a href="./classes">課程</a></li>
