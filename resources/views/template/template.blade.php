@@ -26,11 +26,7 @@
 
 <body>
     <div class="container flex justify-center max-w-full flex-wrap" data-scroll-container>
-<<<<<<< Updated upstream
         <nav class="nav flex md:items-center justify-between" data-scroll-section >
-=======
-        <nav class="nav flex md:items-center justify-between" data-scroll-section>
->>>>>>> Stashed changes
             <div class="left ">
                 <a href="index">
                     <div class="logo flex">
@@ -69,26 +65,31 @@
                 <div class="hamburger">
                     <div class="hamburger__content">
                         <ul class="hamburger__list">
-<<<<<<< Updated upstream
-                            <li class="hamburger__list-item nav-active flex"><a href="#" class="hover-target">最新消息
-                                </a>
-                                <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#141414"/></svg>
-                                </li>
-                            <li class="hamburger__list-item">
-                                <a href="#s1" class="hover-target">關於我們</a>
-                                
-                            </li>
-                            <li class="hamburger__list-item"><a href="#s3" class="hover-target">課程 </a></li>
-                            <li class="hamburger__list-item"><a href="#s4" class="hover-target">活動照片 </a></li>
-=======
                             <li class="hamburger__list-item nav-active "><a href="#" class="hover-target w-3/5"><span>最新消息</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg>
                             </a></li>
 
-                            <li class="hamburger__list-item "><a href="#s1" class="hover-target w-3/5"><span>關於我們</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12.0007 13.172L16.9507 8.22198L18.3647 9.63598L12.0007 16L5.63672 9.63598L7.05072 8.22198L12.0007 13.172Z" fill="#3B54F3"/>
-                                    </svg>
+                            <li class="hamburger__list-item ">
+                                <div class="menu about">
+                                    <a href="#s1" class="hover-target w-3/5"><span>關於我們</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0007 13.172L16.9507 8.22198L18.3647 9.63598L12.0007 16L5.63672 9.63598L7.05072 8.22198L12.0007 13.172Z" fill="#3B54F3"/></svg>
+                                </div>
+                                <div class="submenu aboutSub">
+                                    <div class="sub_wrap">
+                                      <div class="subtitle">
+                                        <span title="prev">關於我們</span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg>
+                                      </div>
+
+                                      <ul>
+                                        <li><a href="#">關於我們</a></li>
+                                        <li><a href="#">歷屆會長</a></li>
+                                        <li><a href="#">協會組織架構</a></li>
+                                        <li><a href="#">救生員資格檢定</a></li>
+                                      </ul>
+                                    </div>
+                                </div>
+
                             </a></li>
 
                             <li class="hamburger__list-item "><a href="#s3" class="hover-target w-3/5"><span>課程</span>
@@ -98,7 +99,6 @@
                             <li class="hamburger__list-item "><a href="#s4" class="hover-target w-3/5"><span>活動照片</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg>
                             </a></li>
->>>>>>> Stashed changes
                         </ul>
                     </div>
                 </div>
@@ -119,7 +119,7 @@
                         </button>
                     </li>
                     <li><a href="./classes">課程</a></li>
-                    <li><a href="photo">活動照片</a></li>
+                    <li><a href="album">活動照片</a></li>
                     @auth
                         @if (Auth::user()->power == 1)
                             <li><a href="/dashboard">後台</a></li>
@@ -287,17 +287,11 @@
     </div>
 
     <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
-<<<<<<< Updated upstream
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- jquery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="{{asset('js/hamburgerMenu.js')}}"></script>
     @yield('js')
-=======
-    <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="{{ asset('js/hamburgerMenu.js') }}"></script>
->>>>>>> Stashed changes
 </body>
 
 </html>
