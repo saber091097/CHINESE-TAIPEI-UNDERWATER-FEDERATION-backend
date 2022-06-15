@@ -201,18 +201,18 @@
                                     <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 items-center"
                                         id="s1-tabs-tab" role="tablist">
                                         <li class="nav-item">
-                                            <a href="#s1-tabs-1" class="
-                                                active
-                                                nav-link
-                                                nav-link1
-                                                block
-                                                font-medium
-                                                text-xs
-                                                leading-tight
-                                                uppercase
-                                                border-x-0 border-t-0 border-b-2 border-transparent
-                                                focus:border-transparent
-                                            "
+                                            <a href="#s1-tabs-1"
+                                                class="
+                                            nav-link
+                                            nav-link1
+                                            block
+                                            font-medium
+                                            text-xs
+                                            leading-tight
+                                            uppercase
+                                            border-x-0 border-t-0 border-b-2 border-transparent
+                                            focus:border-transparent
+                                        "
                                                 id="s1-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-1"
                                                 role="tab" aria-controls="s1-tabs-1" aria-selected="true" tabindex="1">
                                                 <span class="tab-span tab-span1">活動介紹</span>
@@ -320,6 +320,7 @@
                                                         allowfullscreen></iframe>
                                                 </div>
                                             </div>
+                                            <!-- <div class="tab-1-btm"></div> -->
                                         </div>
                                         <div class="tabs-2 tab-pane fade flex flex-col" id="s1-tabs-2" role="tabpanel"
                                             aria-labelledby="tabs-2-tab">
@@ -411,6 +412,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!-- <div class="tab-2-btm"></div> -->
                                         </div>
                                         <div class="tabs-3 tab-pane fade flex flex-col" id="s1-tabs-3" role="tabpanel"
                                             aria-labelledby="tabs-3-tab">
@@ -425,6 +427,7 @@
                                                 <p class="tm">地址： 南投縣日月村中正路102號</p>
                                                 <p class="tm">停車場資訊： Google地圖收尋（帖泊喀露營區）</p>
                                             </div>
+                                            <!-- <div class="tab-btm"></div> -->
                                         </div>
                                         <div class="tabs-4 tab-pane fade flex flex-col" id="s1-tabs-4" role="tabpanel"
                                             aria-labelledby="tabs-4-tab">
@@ -443,11 +446,12 @@
                                                 <p class="tm">選修:風浪板教練證,獨木舟教練證Windsupyak
                                                     instructor等專長教練證,相關業務洽協會辦公室)。</p>
                                             </div>
-                                            <div class="flex flex-col box bgGray">
+                                            <div class="flex flex-col box">
                                                 <h3 class="h3m">匯款資訊</h3>
                                                 <p class="tm">ATM兆豐國際商銀台中分行(017)</p>
                                                 <p class="tm">帳號:00410765400</p>
                                             </div>
+                                            <!-- <div class="tab-btm"></div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -586,18 +590,18 @@
                                     <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 items-center"
                                         id="s2-tabs-tab" role="tablist">
                                         <li class="nav-item">
-                                            <a href="#s2-tabs-1" class="
-                                                active
-                                                nav-link
-                                                nav-link1
-                                                block
-                                                font-medium
-                                                text-xs
-                                                leading-tight
-                                                uppercase
-                                                border-x-0 border-t-0 border-b-2 border-transparent
-                                                focus:border-transparent
-                                            "
+                                            <a href="#s2-tabs-1"
+                                                class="
+                                            nav-link
+                                            nav-link1
+                                            block
+                                            font-medium
+                                            text-xs
+                                            leading-tight
+                                            uppercase
+                                            border-x-0 border-t-0 border-b-2 border-transparent
+                                            focus:border-transparent
+                                        "
                                                 id="s2-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#s2-tabs-1"
                                                 role="tab" aria-controls="s2-tabs-1" aria-selected="true">
                                                 <span class="tab-span tab-span1">活動介紹</span>
@@ -828,7 +832,7 @@
                                                 <p class="tm">選修:風浪板教練證,獨木舟教練證Windsupyak
                                                     instructor等專長教練證,相關業務洽協會辦公室)。</p>
                                             </div>
-                                            <div class="flex flex-col box bgGray">
+                                            <div class="flex flex-col box">
                                                 <h3 class="h3m">匯款資訊</h3>
                                                 <p class="tm">ATM兆豐國際商銀台中分行(017)</p>
                                                 <p class="tm">帳號:00410765400</p>
@@ -971,18 +975,18 @@
                                     <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 items-center"
                                         id="s3-tabs-tab" role="tablist">
                                         <li class="nav-item">
-                                            <a href="#s3-tabs-1" class="
-                                                active
-                                                nav-link
-                                                nav-link1
-                                                block
-                                                font-medium
-                                                text-xs
-                                                leading-tight
-                                                uppercase
-                                                border-x-0 border-t-0 border-b-2 border-transparent
-                                                focus:border-transparent
-                                            "
+                                            <a href="#s3-tabs-1"
+                                                class="
+                                            nav-link
+                                            nav-link1
+                                            block
+                                            font-medium
+                                            text-xs
+                                            leading-tight
+                                            uppercase
+                                            border-x-0 border-t-0 border-b-2 border-transparent
+                                            focus:border-transparent
+                                        "
                                                 id="s3-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#s3-tabs-1"
                                                 role="tab" aria-controls="s3-tabs-1" aria-selected="true">
                                                 <span class="tab-span tab-span1">活動介紹</span>
@@ -1214,7 +1218,7 @@
                                                 <p class="tm">選修:風浪板教練證,獨木舟教練證Windsupyak
                                                     instructor等專長教練證,相關業務洽協會辦公室)。</p>
                                             </div>
-                                            <div class="flex flex-col box bgGray">
+                                            <div class="flex flex-col box">
                                                 <h3 class="h3m">匯款資訊</h3>
                                                 <p class="tm">ATM兆豐國際商銀台中分行(017)</p>
                                                 <p class="tm">帳號:00410765400</p>
@@ -1357,18 +1361,18 @@
                                     <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 items-center"
                                         id="s4-tabs-tab" role="tablist">
                                         <li class="nav-item">
-                                            <a href="#s4-tabs-1" class="
-                                                active
-                                                nav-link
-                                                nav-link1
-                                                block
-                                                font-medium
-                                                text-xs
-                                                leading-tight
-                                                uppercase
-                                                border-x-0 border-t-0 border-b-2 border-transparent
-                                                focus:border-transparent
-                                            "
+                                            <a href="#s4-tabs-1"
+                                                class="
+                                            nav-link
+                                            nav-link1
+                                            block
+                                            font-medium
+                                            text-xs
+                                            leading-tight
+                                            uppercase
+                                            border-x-0 border-t-0 border-b-2 border-transparent
+                                            focus:border-transparent
+                                        "
                                                 id="s4-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#s4-tabs-1"
                                                 role="tab" aria-controls="s4-tabs-1" aria-selected="true">
                                                 <span class="tab-span tab-span1">活動介紹</span>
@@ -1600,7 +1604,7 @@
                                                 <p class="tm">選修:風浪板教練證,獨木舟教練證Windsupyak
                                                     instructor等專長教練證,相關業務洽協會辦公室)。</p>
                                             </div>
-                                            <div class="flex flex-col box bgGray">
+                                            <div class="flex flex-col box">
                                                 <h3 class="h3m">匯款資訊</h3>
                                                 <p class="tm">ATM兆豐國際商銀台中分行(017)</p>
                                                 <p class="tm">帳號:00410765400</p>
@@ -1745,7 +1749,6 @@
                                         <li class="nav-item">
                                             <a href="#s5-tabs-1"
                                                 class="
-                                                    active
                                                     nav-link
                                                     nav-link1
                                                     block
@@ -1818,7 +1821,7 @@
                                     </ul>
                                     {{-- @foreach ($data as $item) --}}
                                     <div class="tab-content" id="s5-tabs-tabContent">
-                                        <div class="tabs-1 tab-pane fade show active flex flex-col" id="sup-intr"
+                                        <div class="tabs-1 tab-pane fade show active flex flex-col" id="s5-tabs-1"
                                             role="tabpanel" aria-labelledby="s5-tabs-1-tab">
                                             {{ $data->event_intr }}
 
@@ -1861,7 +1864,7 @@
                                     </div>
                                     {{-- @foreach ($data as $item) --}}
 
-                                    <form action="/signup1/{{ $data->id }}" method="POST">
+                                    <form action="/signup1/{{ $data->id }}" method="POST" id="supform">
                                         @csrf
                                         <button class="w-full singUp-btn flex justify-center items-center"
                                             type="submit">線上報名</button>
@@ -1903,10 +1906,15 @@
             .then(response => {
                 return response.json();
             }).then( data => {
-                console.log(data);
-                const modal5 = document.querySelector('#sup-intr')
-
-                modal5.innerHTML = data.event_intr
+                const sup_intr = document.querySelector('#s5-tabs-1')
+                const sup_proc = document.querySelector('#s5-tabs-2')
+                const sup_dire = document.querySelector('#s5-tabs-3')
+                const sup_notice = document.querySelector('#s5-tabs-4')
+                const formsup = document.querySelector('#supform')
+                sup_intr.innerHTML = data.event_intr
+                sup_proc.innerHTML = data.event_proc
+                sup_dire.innerHTML = data.event_dire
+                sup_notice.innerHTML = data.event_notice
             })
         }
     </script>
