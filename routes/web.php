@@ -23,9 +23,9 @@ use App\Http\Controllers\ClientController;
 */
 
 //先不要動
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 // ------------------------------
 
 Route::get('/dashboard', function () {
@@ -35,7 +35,7 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 
-Route::get('/index', [IndexController::class,'index']);
+Route::get('/', [IndexController::class,'index']);
 
 // 不確定是否正確
 Route::get('/about',[HtmlController::class,'about']);
