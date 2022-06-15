@@ -5,10 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use App\Models\User;
 
 class ClientController extends Controller
 {
-    //
+
 
     public function createAccount(){
 
@@ -29,6 +30,8 @@ class ClientController extends Controller
             'password' => Hash::make($request->password),
             'power' => 2,
         ]);
+
+
 
         return redirect('/index');
     }

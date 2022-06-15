@@ -192,7 +192,7 @@
                                 登入
                             </button>
                             <div class="text-sm font-medium text-gray-500 ">
-                                Not registered? <a href="#" class="text-blue-700 hover:underline " >Create account</a>
+                                Not registered? <a href="/createAccount" class="text-blue-700 hover:underline " >Create account</a>
                             </div>
                         </form>
                     </div>

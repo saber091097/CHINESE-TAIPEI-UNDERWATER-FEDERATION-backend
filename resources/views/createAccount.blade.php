@@ -36,15 +36,16 @@
                             <span class="ts">已經有帳號了嗎？</span>
                             <a href="" class="tsb">登入</a>
                         </div>
-                        <form name="formCreate" class=" w-full" action="" method="">
+                        <form name="formCreate" class=" w-full" action="/createAccount/store" method="post">
+                            @csrf
                             <div class="innerbox-nickName flex flex-col w-full">
                                 <label class="" for="nickName"><span class="ts ts75">暱稱</span><span class="ts star">*</span></label>
-                                <input class="input-text w-full focus:outline-none" id="nickName" type="text" name="nickName" value="" placeholder="輸入暱稱">
+                                <input class="input-text w-full focus:outline-none" id="nickName" type="text" name="name" value="" placeholder="輸入暱稱">
                             </div>
 
                             <div class="innerbox-mail flex flex-col w-full">
                                 <label class="" for="mail"><span class="ts ts75">電子郵件地址</span><span class="ts star">*</span></label>
-                                <input class="input-text w-full focus:outline-none" id="mail" type="text" name="mail" value="" placeholder="輸入電子郵件地址"
+                                <input class="input-text w-full focus:outline-none" id="mail" type="text" name="email" value="" placeholder="輸入電子郵件地址"
                                 onkeyup="value=value. replace(/[^\a-\z\A-\Z0-9\@\.]/g,'')">
                             </div>
 
