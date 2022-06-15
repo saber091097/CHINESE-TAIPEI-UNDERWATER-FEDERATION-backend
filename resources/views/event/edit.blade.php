@@ -47,6 +47,10 @@
                         <input type="text" name="event" id="event" style="border-radius: 5px; width:50%;"
                             value="{{ $data->event }}">
                     </div>
+                    <div class="price">
+                        活動價格：
+                        <input type="text" name="price" id="price" style="border-radius: 5px; width:50%;margin-top:10px;" value="{{$data->price}}">
+                    </div>
                     <div class="event_img" style="margin: 10px 0;">
                         活動介紹照片：
                         <input type="file" name="event_img[]" id="event_img" class="border-0" multiple accept="image/*">

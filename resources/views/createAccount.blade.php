@@ -14,8 +14,8 @@
         <div id="create" class="createAccount fixed">
             <div class="w-full h-full content flex flex-col">
                 <div class="w-full contentTop flex justify-end">
-                    <button id="btn-close1" class="rounded-full">
-                        <a href="/index.html">
+                    {{-- <button id="btn-close1" class="rounded-full">
+                        <a href="index">
                             <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M0 22C0 9.84974 9.84974 0 22 0C34.1503 0 44 9.84974 44 22C44 34.1503 34.1503 44 22 44C9.84974 44 0 34.1503 0 22Z"
@@ -27,7 +27,7 @@
                                 </g>
                             </svg>
                         </a>
-                    </button>
+                    </button> --}}
                 </div>
                 <div class="contentBtm flex flex-col w-full">
                     <div class="contentBtmInnerbox flex flex-col w-full">

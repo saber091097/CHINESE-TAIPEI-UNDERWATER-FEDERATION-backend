@@ -17,8 +17,7 @@
         }
 
         body main {
-            top: 0px;
-            height: calc(100vh - 80px);
+            top: 80px;
         }
 
         body main .section {
@@ -38,8 +37,9 @@
                 transform: translateY(0%);
             }
         }
-        td{
-            border:1px solid black;
+
+        td {
+            border: 1px solid black;
         }
     </style>
 @endsection
@@ -182,21 +182,21 @@
                                     </div>
                                 </div>
                                 <!-- <div class="fixed-ts-box w-full flex flex-col">
-                                    <div class="select-box flex flex-col w-full">
-                                        <label class="ts" for="class-select1">選擇課程</label>
-                                        <select name="class1" id="class-select1">
-                                            <option value="1">1231231</option>
-                                            <option value="2">6/18-19 日月潭SUP三合一</option>
-                                            <option value="3">6/18-19 日月潭SUP三合一</option>
-                                        </select>
-                                    </div>
-                                    <div class="price-box">
-                                        <h1> NT4,500</h1>
-                                        <span class="ts">含保險、器材、救生衣</span>
-                                    </div>
-                                    <button class="w-full singUp-btn flex justify-center items-center">線上報名</button>
-                                    <span class="phone">電洽報名 04-22312698</span>
-                                </div> -->
+                                        <div class="select-box flex flex-col w-full">
+                                            <label class="ts" for="class-select1">選擇課程</label>
+                                            <select name="class1" id="class-select1">
+                                                <option value="1">1231231</option>
+                                                <option value="2">6/18-19 日月潭SUP三合一</option>
+                                                <option value="3">6/18-19 日月潭SUP三合一</option>
+                                            </select>
+                                        </div>
+                                        <div class="price-box">
+                                            <h1> NT4,500</h1>
+                                            <span class="ts">含保險、器材、救生衣</span>
+                                        </div>
+                                        <button class="w-full singUp-btn flex justify-center items-center">線上報名</button>
+                                        <span class="phone">電洽報名 04-22312698</span>
+                                    </div> -->
                                 <div class="tab w-full">
                                     <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 items-center"
                                         id="s1-tabs-tab" role="tablist">
@@ -1820,28 +1820,28 @@
                                         </li>
                                     </ul>
                                     {{-- @foreach ($data as $item) --}}
-                                        <div class="tab-content" id="s5-tabs-tabContent">
-                                            <div class="tabs-1 tab-pane fade show active flex flex-col" id="s5-tabs-1"
-                                                role="tabpanel" aria-labelledby="s5-tabs-1-tab">
-                                                {{$data->event_intr}}
+                                    <div class="tab-content" id="s5-tabs-tabContent">
+                                        <div class="tabs-1 tab-pane fade show active flex flex-col" id="sup-intr"
+                                            role="tabpanel" aria-labelledby="s5-tabs-1-tab">
+                                            {{ $data->event_intr }}
 
-                                            </div>
-                                            <div class="tabs-2 tab-pane fade flex flex-col" id="s5-tabs-2" role="tabpanel"
-                                                aria-labelledby="s5-tabs-2-tab">
-                                                {!! $data->event_proc !!}
-
-                                            </div>
-                                            <div class="tabs-3 tab-pane fade flex flex-col" id="s5-tabs-3" role="tabpanel"
-                                                aria-labelledby="s5-tabs-3-tab">
-                                                {{$data->event_dire}}
-
-                                            </div>
-                                            <div class="tabs-4 tab-pane fade flex flex-col" id="s5-tabs-4" role="tabpanel"
-                                                aria-labelledby="s5-tabs-4-tab">
-                                                {{$data->event_notice}}
-
-                                            </div>
                                         </div>
+                                        <div class="tabs-2 tab-pane fade flex flex-col" id="s5-tabs-2" role="tabpanel"
+                                            aria-labelledby="s5-tabs-2-tab">
+                                            {!! $data->event_proc !!}
+
+                                        </div>
+                                        <div class="tabs-3 tab-pane fade flex flex-col" id="s5-tabs-3" role="tabpanel"
+                                            aria-labelledby="s5-tabs-3-tab">
+                                            {{ $data->event_dire }}
+
+                                        </div>
+                                        <div class="tabs-4 tab-pane fade flex flex-col" id="s5-tabs-4" role="tabpanel"
+                                            aria-labelledby="s5-tabs-4-tab">
+                                            {{ $data->event_notice }}
+
+                                        </div>
+                                    </div>
                                     {{-- @endforeach --}}
                                 </div>
                             </div>
@@ -1849,25 +1849,25 @@
                                 <div class="fixed-box sticky top-10 flex flex-col">
                                     <div class="select-box flex flex-col w-full">
                                         <label class="ts" for="class-select">選擇課程</label>
-                                        <select name="class" id="class-select">
+                                        <select id="class-select5" onchange="changeclass(this)" style="padding: 9px 13px;border-radius:6px;">
                                             @foreach ($sup as $item)
-                                                <option onchange="changeclass({{$item->id}})">{{$item->event}}</option>
-
+                                                <option value="{{ $item->id }}">{{ $item->event }}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                     <div class="price-box">
                                         {{-- @foreach ($data as $item) --}}
-                                        <h1> NT{{$data->price}}</h1>
+                                        <h1> NT{{ $data->price }}</h1>
 
                                         {{-- @endforeach --}}
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
                                     {{-- @foreach ($data as $item) --}}
 
-                                    <form action="/signup1/{{$data->id}}" method="POST">
+                                    <form action="/signup1/{{ $data->id }}" method="POST">
                                         @csrf
-                                        <button class="w-full singUp-btn flex justify-center items-center" type="submit">線上報名</button>
+                                        <button class="w-full singUp-btn flex justify-center items-center"
+                                            type="submit">線上報名</button>
                                         <span class="phone">電洽報名 04-22312698</span>
                                     </form>
                                     {{-- @endforeach --}}
@@ -1887,17 +1887,30 @@
     <script src="{{ asset('js/classes.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 
-<script>
-    function changeclass($id){
-        let formData = new FormData();
+    <script>
+        function changeclass(getId) {
+
+            // console.log(getId.value);
+            var id = getId.value
+            let formData = new FormData();
             formData.append('_method', 'POST');
-            formData.append('_token', '  {{ csrf_token() }}');
-        fetch('/changeclasses/'+id{
-            method: "POST",
-            body: formData
-        })
-    }
+            formData.append('_token', '{{ csrf_token() }}');
+            for (var pair of formData.entries()) {
+                console.log(pair[0] + ', ' + pair[1]);
+            }
+            console.log('/changeclasses/' + id);
+            fetch('/changeclasses/' + id, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                return response.json();
+            }).then( data => {
+                console.log(data);
+                const modal5 = document.querySelector('#sup-intr')
 
-</script>
-
+                modal5.innerHTML = data.event_intr
+            })
+        }
+    </script>
 @endsection
