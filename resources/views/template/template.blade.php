@@ -134,12 +134,13 @@
                             <li class="mr-4"><a href="/dashboard">後台</a></li>
                         @endif
                         <li class="mr-4">
-                            <button data-dropdown-toggle="dropdownleft">
-                                <img src="{{ asset('img/icon/Avatar.png') }}" alt="">
-                            </button>
+                            <div data-dropdown-toggle="dropdownleft" class="relative" style="width:50px;height:50px;border-radius:50%;background-color: gainsboro">
+                                <span class="absolute"
+                                    style="top:50%;left:50%;transform:translate(-50%,-50%);font-size:28px;font-weight:500;">{{ substr(Auth::user()->name, 0, 1) }}</span>
+                            </div>
                         </li>
                         <li class="mr-4">
-                            <div class="p-0 nameblack" style='margin-right:5px; '>{{ Auth::user()->name }}</div>
+                            <div class="p-0 nameblack" style='margin-right:5px; '>您好，{{ Auth::user()->name }}</div>
                         </li>
 
                     @endauth
@@ -248,7 +249,7 @@
                     <div class="footer_container">
                         <div class="footer_logo_menu flex-col sm:flex sm:flex-row sm:justify-between">
                             <div class="left flex flex-col ">
-                                <img src="./img/logo/CHINESE TAIPEI UNDERWATER FEDERATION-white logo.png"
+                                <img src="{{asset('img/logo/CHINESE TAIPEI UNDERWATER FEDERATION-white logo.png')}}"
                                     alt="台中市水中運動協會">
                                 <span>台中市北區天祥街10號</span>
                                 <span>04-22312698</span>

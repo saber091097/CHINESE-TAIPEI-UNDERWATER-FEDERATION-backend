@@ -30,14 +30,14 @@ class SignUp extends Model
 {
     /**
      * The table associated with the model.
-     * 
+     *
      * @var string
      */
     protected $table = 'sign_up_lists';
 
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'integer';
@@ -45,5 +45,7 @@ class SignUp extends Model
     /**
      * @var array
      */
-    protected $fillable = ['created_at', 'updated_at', 'event_id', 'name', 'id_card', 'gender', 'phone', 'email', 'addr', 'line_id', 'emer_name', 'emer_phone', 'headshot', 'id_card_img_front', 'id_card_img_reverse', 'plus1', 'plus2', 'plus3', 'plus4'];
+    protected $fillable = ['created_at', 'updated_at', 'event_id', 'name', 'id_card', 'gender', 'phone', 'email', 'addr', 'line_id', 'emer_name', 'emer_phone',  'plus1', 'plus2', 'plus3', 'plus4','user_id'];
+
+    
 }
