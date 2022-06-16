@@ -18,8 +18,8 @@ class ClassesController extends Controller
         $sup=Event::where('event_type',2)->get();
         $sup_rwd=Event::where('event_type',2)->get();
 
-        $data=Event::where('event_type',2)->take(1)->first();
-
+        $data=Event::where('event_type',2)->take(1)->get();
+        // dd($data->all());
         return view('classes',compact('windsurf','windsurf_rwd','sup','sup_rwd','data'));
     }
 

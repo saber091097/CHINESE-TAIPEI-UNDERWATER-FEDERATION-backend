@@ -39,9 +39,63 @@
             </div>
         </section>
         <section class="container flex flex-col">
+            <div class="content content-class w-full">
+                <div class="title">
+                    <h3 class="h3m">報名課程</h3>
+                </div>
+                <table class="table w-full">
+                    <thead>
+                        <tr class="flex">
+                            <th class="t-name flex">課程名稱</th>
+                            <th class="t-type">類型</th>
+                            <th class="t-price flex justify-end">總價</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="flex">
+                            <td class="t-name">SUP教練教練班</td>
+                            <td class="t-type flex justify-center">SUP</td>
+                            <td class="t-price price flex justify-end">NT4,500</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="flex justify-end">
+                            <td class="">付款方式統一為匯款</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <table class="table-ts w-full">
+                    <tbody class="w-full">
+                        <tr>
+                            <td class="td-t">課程名稱</td>
+                            <td class="td-c flex justify-end">SUP教練教練班</td>
+                        </tr>
+                        <tr>
+                            <td class="td-t">類型</td>
+                            <td class="td-c flex justify-end">SUP</td>
+                        </tr>
+                        <tr>
+                            <td class="td-t">總價</td>
+                            <td class="td-c flex justify-end">NT4,500</td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="w-full">
+                        <tr class="">
+                            <td></td>
+                            <td class="flex justify-end">付款方式統一為匯款</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div class="account w-full flex flex-col">
+                    <span class="ts tsg">匯款帳戶</span>
+                    <span class="ts">銀行：兆豐金控</span>
+                    <span class="ts">帳號：(017)00410765400</span>
+                    <span class="ts">姓名：詹寓崵</span>
+                </div>
+            </div>
             <form action="/signup3" method="POST" name="formS2" class="content-form flex flex-col w-full" enctype="multipart/form-data">
                 @csrf
-                <div class="title w-full">
+                <div class="form-title w-full">
                     <h3 class="h3m">個人基本資料</h3>
                     <div class="w-full flex flex-col sm:flex-row">
                         <span class="w-full sm:w-auto caption">請務必填寫正確資料，</span>
@@ -128,42 +182,30 @@
 
                 <div class="w-full innerbox-class flex flex-col">
                     <p class="ts title-C">選修課程 (可複選)<span class="ts star star-C">*</span></p>
-                    <div class="box-class flex flex-col sm:flex-row">
+                    <div class="box-class flex flex-col">
                         <div class="form-check form-check-inline">
-                            <input name="class1"
-                                class="form-check-input check1 appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white
-                        checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1
-                        align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                                type="checkbox" id="checkbox1" value="1">
-                            <label class="form-check-label inline-block text-gray-800 cursor-pointer"
-                                for="checkbox1">獨木舟</label>
+                            <input name="class1" class="form-check-input check1 appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white
+                            checked:bg-blue-600 checked:border-blue-600 mr-2 focus:outline-none transition duration-200 mt-1
+                            align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer" type="checkbox" id="checkbox1" value="1">
+                            <label class="w-4/5 sm:w-11/12 form-check-label inline-block text-gray-800 cursor-pointer" for="checkbox1">獨木舟，加價購 $1,500</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input name="class2"
-                                class="form-check-input check2 appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white
-                        checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1
-                        align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                                type="checkbox" id="checkbox2" value="2">
-                            <label class="form-check-label inline-block text-gray-800 cursor-pointer"
-                                for="checkbox2">風浪板</label>
+                            <input name="class2" class="form-check-input check2 appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white
+                            checked:bg-blue-600 checked:border-blue-600 mr-2 focus:outline-none transition duration-200 mt-1
+                            align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer" type="checkbox" id="checkbox2" value="2">
+                            <label class="w-4/5 sm:w-11/12 form-check-label inline-block text-gray-800 cursor-pointer" for="checkbox2">風浪板，加價購 $1,500</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input name="class3"
-                                class="form-check-input check3 appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white
-                        checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1
-                        align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                                type="checkbox" id="checkbox3" value="3">
-                            <label class="form-check-label inline-block text-gray-800 cursor-pointer"
-                                for="checkbox3">SUP救生</label>
+                            <input name="class3" class="form-check-input check3 appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white
+                            checked:bg-blue-600 checked:border-blue-600 mr-2 focus:outline-none transition duration-200 mt-1
+                            align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer" type="checkbox" id="checkbox3" value="3">
+                            <label class="w-4/5 sm:w-11/12 form-check-label inline-block text-gray-800 cursor-pointer" for="checkbox3">SUP救生，加價購 $1,500</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input name="class4"
-                                class="form-check-input check4 appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white
-                        checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1
-                        align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                                type="checkbox" id="checkbox4" value="4">
-                            <label class="form-check-label inline-block text-gray-800 cursor-pointer"
-                                for="checkbox4">無</label>
+                            <input name="class4" class="form-check-input check4 appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white
+                            checked:bg-blue-600 checked:border-blue-600 mr-2 focus:outline-none transition duration-200 mt-1
+                            align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer" type="checkbox" id="checkbox4" value="4">
+                            <label class="w-4/5 sm:w-11/12 form-check-label inline-block text-gray-800 cursor-pointer" for="checkbox4">無</label>
                         </div>
                     </div>
                     <div class="warning-class"></div>

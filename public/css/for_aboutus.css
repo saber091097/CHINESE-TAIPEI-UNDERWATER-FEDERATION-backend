@@ -572,9 +572,9 @@ nav {
   cursor: pointer;
 }
 
-* body .container .nav .left ul li:not(:last-child) {
+/* * body .container .nav .left ul li:not(:last-child) {
   padding-right: 25px;
-}
+} */
 
 * body .container .nav .left ul li:last-child {
   padding: 0 67px 0 5px;
