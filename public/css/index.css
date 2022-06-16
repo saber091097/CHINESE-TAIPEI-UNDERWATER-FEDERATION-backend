@@ -218,6 +218,9 @@
         display: none;
     }
 }
+.items-center{
+    margin-right: 63px;
+}
 
 
 /* navbar 結束 */
@@ -871,11 +874,11 @@
 }
 
 * body .container .backgroundimg .popular-courses .popular-courses-top .zh-aboutus {
-    color: #141414;
+    color: #FFFFFF;
 }
 
 * body .container .backgroundimg .popular-courses .popular-courses-top .en-aboutus {
-    color: #141414;
+    color: #FFFFFF;
 }
 
 * body .container .backgroundimg .popular-courses .popular-courses-imgs {
