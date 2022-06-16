@@ -203,6 +203,7 @@
                                         <li class="nav-item">
                                             <a href="#s1-tabs-1"
                                                 class="
+                                            active
                                             nav-link
                                             nav-link1
                                             block
@@ -588,6 +589,7 @@
                                         <li class="nav-item">
                                             <a href="#s2-tabs-1"
                                                 class="
+                                            active
                                             nav-link
                                             nav-link1
                                             block
@@ -973,6 +975,7 @@
                                         <li class="nav-item">
                                             <a href="#s3-tabs-1"
                                                 class="
+                                            active
                                             nav-link
                                             nav-link1
                                             block
@@ -1359,6 +1362,7 @@
                                         <li class="nav-item">
                                             <a href="#s4-tabs-1"
                                                 class="
+                                            active
                                             nav-link
                                             nav-link1
                                             block
@@ -1755,6 +1759,7 @@
                                         <li class="nav-item">
                                             <a href="#s5-tabs-1"
                                                 class="
+                                                    active
                                                     nav-link
                                                     nav-link1
                                                     block
