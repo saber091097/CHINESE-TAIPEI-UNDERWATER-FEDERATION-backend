@@ -38,6 +38,7 @@ class EventController extends Controller
             'event_notice'=>$request->event_notice,
             'name'=>Auth::user()->name,
             'price'=>$request->price,
+            'event_date'=>$request->date,
         ]);
 
         if ($request->hasfile('event_img')){
@@ -105,6 +106,7 @@ class EventController extends Controller
             'event_notice'=>$request->event_notice,
             'name'=>Auth::user()->name,
             'price'=>$request->price,
+            'event_date'=>$request->date,
         ]);
 
         return redirect('new');

@@ -41,7 +41,7 @@
                 <div class="data w-full">
                     <div class="flex flex-col sm:flex-row w-full">
                         <span class="tm w-full sm:w-1/2">課程日期</span>
-                        <span class="tl w-full sm:w-1/2">6/17 ~6/18</span>
+                        <span class="tl w-full sm:w-1/2">{{$data->event->event_date}}</span>
                     </div>
                     <div class="flex flex-col sm:flex-row w-full">
                         <span class="tm w-full sm:w-1/2">姓名</span>
