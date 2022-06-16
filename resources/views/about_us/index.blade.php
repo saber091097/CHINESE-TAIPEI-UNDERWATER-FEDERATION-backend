@@ -255,6 +255,26 @@
             background-color: #ffffff;
         }
 
+        #dropdownleft ul{
+            border-radius: 6px;
+            box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05), 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        #dropdownleft ul li:hover{
+            border-radius: 6px;
+        }
+
+        #dropdownNavbar ul{
+            border-radius: 6px;
+            box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05), 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        #dropdownNavbar ul li a{
+            border-radius: 6px;
+        }
+        #title{
+            margin-top: 80px
+        }
     </style>
     {{-- @endsection --}}
 </head>
@@ -422,20 +442,6 @@
                     @guest
                         <li data-modal-toggle="authentication-modal">登入</li>
                     @endguest
-                </ul>
-            </div>
-
-            <div id="dropdownleft" class="hidden z-10 dropdownleft">
-                <ul class="bg-white rounded-lg">
-                    <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
-                        <a href="/personal-center" style="color: black">個人中心</a>
-                    </li>
-                    <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
-                        <form action="logout" method="POST" class="d-flex m-0" id="logout">
-                            @csrf
-                            <button type="submit" style="color: red;width:100%;left:0;">登出</button>
-                        </form>
-                    </li>
                 </ul>
             </div>
 
