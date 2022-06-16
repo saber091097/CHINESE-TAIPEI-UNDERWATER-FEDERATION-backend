@@ -310,13 +310,6 @@
     {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> --}}
     <script src="{{ asset('js/hamburgerMenu.js') }}"></script>
 
-<<<<<<< Updated upstream
-=======
-    {{-- <script>
-        var check_account = {!!json_encode($)!!}
-        console.log();
-    </script> --}}
->>>>>>> Stashed changes
     @yield('js')
 </body>
 
