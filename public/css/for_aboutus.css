@@ -589,12 +589,18 @@ nav {
   color: #3B54F3;
   opacity: 1;
 }
-
+/* footer 開始 */
 * body .container .footer {
   height: 525px;
   background-color: #3B54F3;
   padding-top: 120px;
 }
+* body .container .footer .left {
+    padding-left: 142px;
+  }
+  * .footer .left img{
+    margin-bottom: 36px;
+  }
 
 @media (max-width: 873px) {
   * body .container .footer {
@@ -611,10 +617,6 @@ nav {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-}
-
-* body .container .footer .left {
-  padding-left: 142px;
 }
 
 @media (max-width: 873px) {
@@ -634,6 +636,8 @@ nav {
   padding-right: 215px;
   height: 204px;
 }
+
+
 
 @media (max-width: 873px) {
   * body .container .footer .right {
@@ -708,3 +712,4 @@ nav {
     font-weight: 400;
   }
 }
+/* footer 結束 */

@@ -248,10 +248,12 @@
                     <span class="zh-aboutus">熱門課程</span>
                     <span class="en-aboutus">Popular Courses</span>
                 </div>
-                <div class="popular-courses-imgs flex">
+
+                <div class="popular-courses-imgs flex courses">
                     <div class="courses1 flex relative">
                         <p class="absolute hidden">立式浪板</p>
                     </div>
+
                     <div class="courses2 flex relative">
                         <p class="absolute hidden">潛水</p>
                     </div>

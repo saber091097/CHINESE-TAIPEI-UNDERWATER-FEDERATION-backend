@@ -283,6 +283,18 @@
         #title {
             margin-top: 80px
         }
+
+        /* footer 開始 */
+        .left>img {
+            width: 313px;
+            cursor: pointer;
+        }
+
+        @media (max-width:1024px) {
+            * body .container .footer .right {
+                padding-right: 0;
+            }
+        }
     </style>
     {{-- @endsection --}}
 </head>
@@ -747,6 +759,8 @@
         <div class="container max-w-full h-auto">
             <div class="footer flex flex-wrap justify-between w-full">
                 <div class="left flex flex-col ">
+                    <img src="{{ asset('img/logo/CHINESE TAIPEI UNDERWATER FEDERATION-white logo.png') }}"
+                        alt="台中市水中運動協會">
                     <span>台中市北區天祥街10號</span>
                     <span>04-22312698</span>
                 </div>
@@ -788,7 +802,57 @@
             </div>
         </div>
     </footer>
-
+    {{-- <footer class="w-full" data-scroll-section id="footer">
+        <div class="container max-w-full ">
+            <div class="footer flex justify-center">
+                <div class="footer_container">
+                    <div class="footer_logo_menu flex-col sm:flex sm:flex-row sm:justify-between">
+                        <div class="left flex flex-col ">
+                            <img src="{{ asset('img/logo/CHINESE TAIPEI UNDERWATER FEDERATION-white logo.png') }}"
+                                alt="台中市水中運動協會">
+                            <span>台中市北區天祥街10號</span>
+                            <span>04-22312698</span>
+                        </div>
+                        <div class="right text-white sm:flex ">
+                            <ul class="page flex flex-col justify-between">
+                                <li class="flex justify-between">首頁
+                                    <svg xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                    </svg>
+                                </li>
+                                <li class="flex justify-between">關於我們
+                                    <svg xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                    </svg>
+                                </li>
+                                <li class="flex justify-between">課程
+                                    <svg xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                    </svg>
+                                </li>
+                                <li class="flex justify-between">活動照片
+                                    <svg xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                    </svg>
+                                </li>
+                            </ul>
+                            <ul class="link">
+                                <li>Facebook</li>
+                                <li>instagram</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="copyright text-white opacity-50 w-full flex sm:justify-start md:justify-end">
+                        <span>© COPYRIGHT 2022 台中水中運動協會 All Rights Reserved.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer> --}}
 
     {{-- @section('js') --}}
 
