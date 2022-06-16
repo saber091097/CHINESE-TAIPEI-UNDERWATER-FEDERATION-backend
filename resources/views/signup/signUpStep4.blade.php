@@ -86,7 +86,7 @@
                     <span class="ts">以及</span>
                     <span class="tsr">個人大頭照</span>
                     <span class="ts">至</span>
-                    <span class="tsb">Facebook粉絲專頁</span>
+                    <a href="https://zh-tw.facebook.com/groups/275355242947/" class="tsb">Facebook粉絲專頁</a>
                     <span class="ts">，才算報名成功唷!</span>
                 </p>
                 <div class="account w-full flex flex-col">
