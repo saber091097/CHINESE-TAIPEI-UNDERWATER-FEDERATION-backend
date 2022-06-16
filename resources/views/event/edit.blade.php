@@ -47,6 +47,10 @@
                         <input type="text" name="event" id="event" style="border-radius: 5px; width:50%;"
                             value="{{ $data->event }}">
                     </div>
+                    <div class="date">
+                        活動日期：
+                        <input type="text" name="date" id="date" style="border-radius: 5px; width:50%;margin-top:10px;" value="{{$data->event_date}}">
+                    </div>
                     <div class="price">
                         活動價格：
                         <input type="text" name="price" id="price" style="border-radius: 5px; width:50%;margin-top:10px;" value="{{$data->price}}">
@@ -89,19 +93,19 @@
                     </div>
                     <div class="event_intr flex" style="margin: 10px 0;">
                         <div>活動介紹：</div>
-                        <textarea name="event_intr" id="event_intr" cols="90" rows="10" style="border-radius:5px;">{{ $data->event_intr }}</textarea>
+                        <textarea name="event_intr" id="event_intr" cols="65" rows="10" style="border-radius:5px;">{{ $data->event_intr }}</textarea>
                     </div>
                     <div class="event_proc flex">
                         <div>課程流程：</div>
-                        <textarea name="event_proc" id="event_proc" cols="90" rows="10" style="border-radius:5px;">{{ $data->event_proc }}</textarea>
+                        <textarea name="event_proc" id="event_proc" cols="65" rows="10" style="border-radius:5px;">{{ $data->event_proc }}</textarea>
                     </div>
                     <div class="event_dire flex" style="margin: 10px 0;">
                         <div>指導單位：</div>
-                        <textarea name="event_dire" id="event_dire" cols="90" rows="5" style="border-radius:5px;">{{ $data->event_dire }}</textarea>
+                        <textarea name="event_dire" id="event_dire" cols="65" rows="5" style="border-radius:5px;">{{ $data->event_dire }}</textarea>
                     </div>
                     <div class="event_notice flex">
                         <div>注意事項：</div>
-                        <textarea name="event_notice" id="event_notice" cols="90" rows="10" style="border-radius:5px;">{{ $data->event_notice }}</textarea>
+                        <textarea name="event_notice" id="event_notice" cols="65" rows="10" style="border-radius:5px;">{{ $data->event_notice }}</textarea>
                     </div>
                     <div class="flex justify-center" style="margin: 10px;">
                         <button type="submit"

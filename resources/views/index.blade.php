@@ -238,6 +238,7 @@
                     </div>
                 </div>
             </div>
+            <!-- 熱門課程 old -->
             <div class="popular-courses">
                 <div class="popular-courses-top flex flex-col">
                     <div class="color-line flex">
@@ -259,6 +260,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- 最新消息 old -->
             <div class="news flex justify-between">
                 <div class="news-left">
                     <div class="news-left-top">
@@ -363,6 +366,135 @@
                 </div>
             </div>
         </div>
+        <!-- 熱門課程 -->
+        {{-- <div class="popular-courses">
+            <div class="popular-courses-top flex flex-col">
+                <div class="color-line flex">
+                    <div class="blue1"></div>
+                    <div class="blue2"></div>
+                </div>
+                <span class="zh-aboutus">熱門課程</span>
+                <span class="en-aboutus">Popular Courses</span>
+            </div>
+            <div class="popular-courses-imgs flex">
+                <div class="courses1 flex relative">
+                    <p class="absolute hidden">立式浪板</p>
+                </div>
+                <div class="courses2 flex relative">
+                    <p class="absolute hidden">潛水</p>
+                </div>
+                <div class="courses3 flex relative">
+                    <p class="absolute hidden">風浪板</p>
+                </div>
+            </div>
+        </div> --}}
+
+        <!-- 最新消息 -->
+        {{-- <div class="news flex justify-between">
+            <div class="news-left">
+                <div class="news-left-top">
+                    <div class="color-line flex">
+                        <div class="blue1"></div>
+                        <div class="blue2"></div>
+                    </div>
+                    <span class="zh-aboutus">最新消息</span>
+                    <span class="en-aboutus">NEWS</span>
+                </div>
+                <div class="news-left-bottom">
+                    <a href="./news.html" class="flex">
+                        <span>了解更多</span>
+                        <svg xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="news-right">
+                <div class="placard-news">
+                    <a href="./event.html" class="flex">
+                        <div class="placard-left mr-auto">
+                            <div class="time">
+                                <label for="event"></label>
+                                <button>公告</button>
+                                <span>2022.05.22</span>
+                            </div>
+                            <div class="event">
+                                <span>6月18-19日月潭SUP三合一教練班</span>
+                            </div>
+                        </div>
+                        <div class="placard-right flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="placard-news">
+                    <a href="./event.html" class="flex">
+                        <div class="placard-left mr-auto">
+                            <div class="time">
+                                <label for="event"></label>
+                                <button>公告</button>
+                                <span>2022.05.22</span>
+                            </div>
+                            <div class="event">
+                                <span>6月18-19日月潭SUP三合一教練班</span>
+                            </div>
+                        </div>
+                        <div class="placard-right flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="placard-news">
+                    <a href="./event.html" class="flex">
+                        <div class="placard-left mr-auto">
+                            <div class="time">
+                                <label for="event"></label>
+                                <button>公告</button>
+                                <span>2022.05.22</span>
+                            </div>
+                            <div class="event">
+                                <span>6月18-19日月潭SUP三合一教練班</span>
+                            </div>
+                        </div>
+                        <div class="placard-right flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="placard-news">
+                    <a href="./event.html" class="flex">
+                        <div class="placard-left mr-auto">
+                            <div class="time">
+                                <label for="event"></label>
+                                <button>公告</button>
+                                <span>2022.05.22</span>
+                            </div>
+                            <div class="event">
+                                <span>6月18-19日月潭SUP三合一教練班</span>
+                            </div>
+                        </div>
+                        <div class="placard-right flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div> --}}
+
+        <!-- QA -->
         <div id="question" class="question-backgroundimg" data-scroll-section data-scroll-section-inview>
             <div class="question-area flex justify-between" >
                 <div class="question-left flex flex-col">

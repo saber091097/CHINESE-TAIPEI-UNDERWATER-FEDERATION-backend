@@ -39,4 +39,9 @@ class Event extends Model
     public function videos(){
         return $this->hasMany(Video::class,'event_id','id');
     }
+
+    public function signup(){
+        return $this->hasone(SignUp::class,'event_id','id');
+    }
+
 }

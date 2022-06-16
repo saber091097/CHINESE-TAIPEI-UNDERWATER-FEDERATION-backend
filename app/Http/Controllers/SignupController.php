@@ -124,4 +124,9 @@ class SignupController extends Controller
         return view('signup.signUpStep3',compact('data'));
     }
 
+
+    public function signup4($id){
+        $data = SignUp::where('id',$id)->first();
+        return view('signup.signUpStep4',compact('data'));
+    }
 }

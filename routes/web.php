@@ -141,7 +141,7 @@ Route::prefix('/account')->group(function () {
 Route::post('/signup1/{id}', [SignupController::class,'signup1']);
 Route::post('/signup2', [SignupController::class,'signup2']);
 Route::post('/signup3', [SignupController::class,'signup3']);
-Route::post('/signup4', [SignupController::class,'signup4']);
+Route::get('/signup4/{id}', [SignupController::class,'signup4']);
 
 Route::get('/classes', [ClassesController::class,'classes']);
 Route::post('/changeclasses/{id}', [ClassesController::class,'changeclass']);
