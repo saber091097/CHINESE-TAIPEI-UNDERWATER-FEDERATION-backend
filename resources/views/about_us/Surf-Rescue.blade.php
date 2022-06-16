@@ -2,13 +2,15 @@
 @section('css')
 
 <link rel="stylesheet" href="{{asset('css/Surf-Rescue.css')}}">
+<link rel="stylesheet" href="{{asset('css/nav&footer.css')}}">
+
 <title>救生員分門別類</title>
 @endsection
 
 @section('main')
 
 <div class="container flex justify-center max-w-full flex-wrap">
-    <main class="Surf-Rescue flex-warp flex-col flex">
+    <main class="Surf-Rescue flex-warp flex-col flex mt-20">
         <div class="breadcrumb">
             <ul class="flex items-center justify-start flex-wrap">
                 <li><a href="/">首頁</a></li>
