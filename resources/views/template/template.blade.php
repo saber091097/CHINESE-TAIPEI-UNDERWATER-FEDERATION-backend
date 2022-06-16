@@ -107,13 +107,13 @@
                             <li class="hamburger__list-item "><a href="/album" class="hover-target full md:w-3/5"><span>活動照片</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg>
                             </a></li>
-                    </ul>
+                     </ul>
+                    </div>
                 </div>
-            </div>
             <div class='cursor' id="cursor"></div>
             <div class='cursor2' id="cursor2"></div>
             <div class='cursor3' id="cursor3"></div>
-            {{-- </div> --}}
+            </div>
             <!-- 手機版的menu 結束-->
 
             <!-- 桌機版的menu -->
