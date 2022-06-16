@@ -1727,27 +1727,27 @@
                                     <div class="select-box flex flex-col w-full">
                                         <label class="ts" for="class-select">選擇課程</label>
                                         <select id="class-select5-rwd" onchange="changeclass_rwd(this)" style="padding: 9px 13px;border-radius:6px;">
-                                            {{-- @foreach ($sup_rwd as $item)
+                                            @foreach ($sup_rwd as $item)
                                                 <option value="{{ $item->id }}">{{ $item->event }}</option>
-                                            @endforeach --}}
+                                            @endforeach
                                         </select>
                                     </div>
                                     <div class="price-box">
-                                        {{-- @foreach ($data as $item) --}}
-                                        {{-- <h1> NT{{ $data->price }}</h1> --}}
+                                        @foreach ($data as $item)
+                                        <h1> NT{{ $data->price }}</h1>
 
-                                        {{-- @endforeach --}}
+                                        @endforeach
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
-                                    {{-- @foreach ($data as $item) --}}
+                                    @foreach ($data as $item)
 
-                                    {{-- <form action="/signup1/{{ $data->id }}" method="POST" id="supform-rwd">
+                                    <form action="/signup1/{{ $data->id }}" method="POST" id="supform-rwd">
                                         @csrf
                                         <button class="w-full singUp-btn flex justify-center items-center"
                                             type="submit">線上報名</button>
                                         <span class="phone">電洽報名 04-22312698</span>
-                                    </form> --}}
-                                    {{-- @endforeach --}}
+                                    </form>
+                                    @endforeach
                                 </div>
                                 <div class="tab w-full">
                                     <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 items-center"
@@ -1825,30 +1825,30 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    {{-- @foreach ($data as $item) --}}
+                                    @foreach ($data as $item)
                                     <div class="tab-content" id="s5-tabs-tabContent">
                                         <div class="tabs-1 tab-pane fade show active flex flex-col" id="s5-tabs-1"
                                             role="tabpanel" aria-labelledby="s5-tabs-1-tab">
-                                            {{-- {{ $data->event_intr }} --}}
+                                            {{ $data->event_intr }}
 
                                         </div>
                                         <div class="tabs-2 tab-pane fade flex flex-col" id="s5-tabs-2" role="tabpanel"
                                             aria-labelledby="s5-tabs-2-tab">
-                                            {{-- {!! $data->event_proc !!} --}}
+                                            {!! $data->event_proc !!}
 
                                         </div>
                                         <div class="tabs-3 tab-pane fade flex flex-col" id="s5-tabs-3" role="tabpanel"
                                             aria-labelledby="s5-tabs-3-tab">
-                                            {{-- {{ $data->event_dire }} --}}
+                                            {{ $data->event_dire }}
 
                                         </div>
                                         <div class="tabs-4 tab-pane fade flex flex-col" id="s5-tabs-4" role="tabpanel"
                                             aria-labelledby="s5-tabs-4-tab">
-                                            {{-- {{ $data->event_notice }} --}}
+                                            {{ $data->event_notice }}
 
                                         </div>
                                     </div>
-                                    {{-- @endforeach --}}
+                                    @endforeach
                                 </div>
                             </div>
                             <div class="in-in-innerbox-left w-4/12 flex justify-end">
@@ -1856,27 +1856,27 @@
                                     <div class="select-box flex flex-col w-full">
                                         <label class="ts" for="class-select5">選擇課程</label>
                                         <select id="class-select5" onchange="changeclass(this)" style="padding: 9px 13px;border-radius:6px;">
-                                            {{-- @foreach ($sup as $item)
+                                            @foreach ($sup as $item)
                                                 <option value="{{ $item->id }}">{{ $item->event }}</option>
-                                            @endforeach --}}
+                                            @endforeach
                                         </select>
                                     </div>
                                     <div class="price-box">
-                                        {{-- @foreach ($data as $item) --}}
-                                        {{-- <h1> NT{{ $data->price }}</h1> --}}
+                                        @foreach ($data as $item)
+                                        <h1> NT{{ $data->price }}</h1>
 
-                                        {{-- @endforeach --}}
+                                        @endforeach
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
-                                    {{-- @foreach ($data as $item) --}}
+                                    @foreach ($data as $item)
 
-                                    {{-- <form action="/signup1/{{ $data->id }}" method="POST" id="supform">
+                                    <form action="/signup1/{{ $data->id }}" method="POST" id="supform">
                                         @csrf
                                         <button class="w-full singUp-btn flex justify-center items-center"
                                             type="submit">線上報名</button>
                                         <span class="phone">電洽報名 04-22312698</span>
-                                    </form> --}}
-                                    {{-- @endforeach --}}
+                                    </form>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
