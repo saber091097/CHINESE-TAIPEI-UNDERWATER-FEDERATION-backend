@@ -182,7 +182,7 @@
 @endsection
 
 @section('js')
-    <script src="/js/signUpStep2.js"></script>
+    <script src="{{asset('js/signUpStep2.js')}}"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 @endsection
