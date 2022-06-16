@@ -93,19 +93,19 @@
                     </div>
                     <div class="event_intr flex" style="margin: 10px 0;">
                         <div>活動介紹：</div>
-                        <textarea name="event_intr" id="event_intr" cols="65" rows="10" style="border-radius:5px;">{{ $data->event_intr }}</textarea>
+                        <textarea name="event_intr" id="event_intr" cols="65" rows="10" style="border-radius:5px;">{!! $data->event_intr !!}</textarea>
                     </div>
                     <div class="event_proc flex">
                         <div>課程流程：</div>
-                        <textarea name="event_proc" id="event_proc" cols="65" rows="10" style="border-radius:5px;">{{ $data->event_proc }}</textarea>
+                        <textarea name="event_proc" id="event_proc" cols="65" rows="10" style="border-radius:5px;">{!! $data->event_proc !!}</textarea>
                     </div>
                     <div class="event_dire flex" style="margin: 10px 0;">
                         <div>指導單位：</div>
-                        <textarea name="event_dire" id="event_dire" cols="65" rows="5" style="border-radius:5px;">{{ $data->event_dire }}</textarea>
+                        <textarea name="event_dire" id="event_dire" cols="65" rows="5" style="border-radius:5px;">{!! $data->event_dire !!}</textarea>
                     </div>
                     <div class="event_notice flex">
                         <div>注意事項：</div>
-                        <textarea name="event_notice" id="event_notice" cols="65" rows="10" style="border-radius:5px;">{{ $data->event_notice }}</textarea>
+                        <textarea name="event_notice" id="event_notice" cols="65" rows="10" style="border-radius:5px;">{!! $data->event_notice !!}</textarea>
                     </div>
                     <div class="flex justify-center" style="margin: 10px;">
                         <button type="submit"
@@ -148,7 +148,37 @@
     </script>
     <script>
         ClassicEditor
+                .create( document.querySelector( '#event_intr' ) )
+                .then( editor => {
+                        console.log( editor );
+                } )
+                .catch( error => {
+                        console.error( error );
+                } );
+    </script>
+    <script>
+        ClassicEditor
                 .create( document.querySelector( '#event_proc' ) )
+                .then( editor => {
+                        console.log( editor );
+                } )
+                .catch( error => {
+                        console.error( error );
+                } );
+    </script>
+    <script>
+        ClassicEditor
+                .create( document.querySelector( '#event_dire' ) )
+                .then( editor => {
+                        console.log( editor );
+                } )
+                .catch( error => {
+                        console.error( error );
+                } );
+    </script>
+    <script>
+        ClassicEditor
+                .create( document.querySelector( '#event_notice' ) )
                 .then( editor => {
                         console.log( editor );
                 } )
