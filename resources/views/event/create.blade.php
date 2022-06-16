@@ -95,6 +95,14 @@
 @section('js')
 <script>
     ClassicEditor
+            .create( document.querySelector( '#event_intr' ) )
+            .then( editor => {
+                    console.log( editor );
+            } )
+            .catch( error => {
+                    console.error( error );
+            } );
+    ClassicEditor
             .create( document.querySelector( '#event_proc' ) )
             .then( editor => {
                     console.log( editor );
