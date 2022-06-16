@@ -237,6 +237,7 @@ body main .section .s-container .s-innerbox .s-innerbox-btm .class-content .in-i
 
   body main .box-right {
     background-image: url("/img/sup-1.png");
+    margin-right: unset;
   }
 
   @media (max-width: 768px) {
@@ -266,6 +267,7 @@ body main .section .s-container .s-innerbox .s-innerbox-btm .class-content .in-i
 
   body main .box-left .innerbox .in-innerbox-right {
     background-image: url("/img/wind-1.png");
+    margin-right: unset;;
   }
 
   @media (max-width: 768px) {
