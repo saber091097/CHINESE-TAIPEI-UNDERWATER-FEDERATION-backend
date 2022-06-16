@@ -273,7 +273,7 @@
                         <span class="en-aboutus">NEWS</span>
                     </div>
                     <div class="news-left-bottom">
-                        <a href="./news.html" class="flex">
+                        <a href="./news" class="flex">
                             <span>了解更多</span>
                             <svg xmlns="http://www.w3.org/2000/svg">
                                 <path
