@@ -967,7 +967,7 @@
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
                                     <button type="button" class="w-full singUp-btn btn-bgG flex justify-center items-center">聯絡本會</button>
-                                    <span class="phone">電洽報名 04-22312698</span>
+                                    <span class="phone">聯絡本會 04-22312698</span>
                                 </div>
                                 <div class="tab w-full">
                                     <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 items-center"
@@ -1241,7 +1241,7 @@
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
                                     <button type="button" class="w-full singUp-btn btn-bgG flex justify-center items-center">聯絡本會</button>
-                                    <span class="phone">電洽報名 04-22312698</span>
+                                    <span class="phone">聯絡本會 04-22312698</span>
                                 </div>
                             </div>
                         </div>
@@ -1354,7 +1354,7 @@
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
                                     <button type="button" class="w-full singUp-btn btn-bgG flex justify-center items-center">聯絡本會</button>
-                                    <span class="phone">電洽報名 04-22312698</span>
+                                    <span class="phone">聯絡本會 04-22312698</span>
                                 </div>
                                 <div class="tab w-full">
                                     <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 items-center"
@@ -1628,7 +1628,7 @@
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
                                     <button type="button" class="w-full singUp-btn btn-bgG flex justify-center items-center">聯絡本會</button>
-                                    <span class="phone">電洽報名 04-22312698</span>
+                                    <span class="phone">聯絡本會 04-22312698</span>
                                 </div>
                             </div>
                         </div>
