@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
     <title>個人中心</title>
     <link rel="stylesheet" href="{{ asset('css/personalcenter.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/nav&footer.css') }}">
+
 @endsection
 
 
