@@ -95,7 +95,7 @@
             </div>
             <form action="/signup3" method="POST" name="formS2" class="content-form flex flex-col w-full" enctype="multipart/form-data">
                 @csrf
-                <div class="title w-full">
+                <div class="form-title w-full">
                     <h3 class="h3m">個人基本資料</h3>
                     <div class="w-full flex flex-col sm:flex-row">
                         <span class="w-full sm:w-auto caption">請務必填寫正確資料，</span>

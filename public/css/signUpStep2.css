@@ -250,9 +250,9 @@ main .container {
 }
 
 main .container .title {
-  height: 64px;
+  height: 40px;
   border-bottom: 1px solid #E5E7EB;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 @media (max-width: 640px) {
@@ -391,6 +391,12 @@ main .container .content-class {
   main .container .content-class .account .tsg {
     opacity: 0.6;
     margin-bottom: 8px;
+  }
+
+  main .container .form-title {
+    height: 64px;
+    border-bottom: 1px solid #E5E7EB;
+    margin-bottom: 32px;
   }
 
 main .container .caption {

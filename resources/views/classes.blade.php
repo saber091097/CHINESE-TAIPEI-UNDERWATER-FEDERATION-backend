@@ -314,11 +314,11 @@
                                             <div class="video">
                                                 <h3 class="h3m">課程教學示範</h3>
                                                 <div class="video-link">
-                                                    <iframe width="100%" height="420"
+                                                    {{-- <iframe width="100%" height="420"
                                                         src="https://www.youtube.com/embed/5PGKxWH2WYs"
                                                         title="YouTube video player" frameborder="0"
                                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                        allowfullscreen></iframe>
+                                                        allowfullscreen></iframe> --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -700,11 +700,11 @@
                                             <div class="video">
                                                 <h3 class="h3m">課程教學示範</h3>
                                                 <div class="video-link">
-                                                    <iframe width="100%" height="420"
+                                                    {{-- <iframe width="100%" height="420"
                                                         src="https://www.youtube.com/embed/5PGKxWH2WYs"
                                                         title="YouTube video player" frameborder="0"
                                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                        allowfullscreen></iframe>
+                                                        allowfullscreen></iframe> --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -1087,11 +1087,11 @@
                                             <div class="video">
                                                 <h3 class="h3m">課程教學示範</h3>
                                                 <div class="video-link">
-                                                    <iframe width="100%" height="420"
+                                                    {{-- <iframe width="100%" height="420"
                                                         src="https://www.youtube.com/embed/5PGKxWH2WYs"
                                                         title="YouTube video player" frameborder="0"
                                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                        allowfullscreen></iframe>
+                                                        allowfullscreen></iframe> --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -1474,11 +1474,11 @@
                                             <div class="video">
                                                 <h3 class="h3m">課程教學示範</h3>
                                                 <div class="video-link">
-                                                    <iframe width="100%" height="420"
+                                                    {{-- <iframe width="100%" height="420"
                                                         src="https://www.youtube.com/embed/5PGKxWH2WYs"
                                                         title="YouTube video player" frameborder="0"
                                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                        allowfullscreen></iframe>
+                                                        allowfullscreen></iframe> --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -1731,6 +1731,7 @@
                                     <div class="select-box flex flex-col w-full">
                                         <label class="ts" for="class-select">選擇課程</label>
                                         <select id="class-select5-rwd" onchange="changeclass_rwd(this)" style="padding: 9px 13px;border-radius:6px;">
+                                            <option value="0">請選擇課程</option>
                                             @foreach ($sup_rwd as $item)
                                                 <option value="{{ $item->id }}">{{ $item->event }}</option>
                                             @endforeach
@@ -1738,14 +1739,14 @@
                                     </div>
                                     <div class="price-box">
                                         {{-- @foreach ($data as $item) --}}
-                                        <h1> NT{{ $data->price }}</h1>
+                                        <h1 id="sup_price"> NT</h1>{{-- {{ $data->price }} --}}
 
                                         {{-- @endforeach --}}
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
                                     {{-- @foreach ($data as $item) --}}
 
-                                    <form action="/signup1/{{ $data->id }}" method="POST" id="supform-rwd">
+                                    <form action="/signup1/" method="POST" id="supform-rwd">
                                         @csrf
                                         <button class="w-full singUp-btn flex justify-center items-center"
                                             type="submit">線上報名</button>
@@ -1834,22 +1835,25 @@
                                     <div class="tab-content" id="s5-tabs-tabContent">
                                         <div class="tabs-1 tab-pane fade show active flex flex-col" id="s5-tabs-1"
                                             role="tabpanel" aria-labelledby="s5-tabs-1-tab">
-                                            {!! $data->event_intr !!}
-
+                                            {{-- {!! $data->event_intr !!} --}}
+                                            請選擇課程
                                         </div>
                                         <div class="tabs-2 tab-pane fade flex flex-col" id="s5-tabs-2" role="tabpanel"
                                             aria-labelledby="s5-tabs-2-tab">
-                                            {!! $data->event_proc !!}
+                                            {{-- {!! $data->event_proc !!} --}}
+                                            請選擇課程
 
                                         </div>
                                         <div class="tabs-3 tab-pane fade flex flex-col" id="s5-tabs-3" role="tabpanel"
                                             aria-labelledby="s5-tabs-3-tab">
-                                            {!! $data->event_dire !!}
+                                            {{-- {!! $data->event_dire !!} --}}
+                                            請選擇課程
 
                                         </div>
                                         <div class="tabs-4 tab-pane fade flex flex-col" id="s5-tabs-4" role="tabpanel"
                                             aria-labelledby="s5-tabs-4-tab">
-                                            {!! $data->event_notice !!}
+                                            {{-- {!! $data->event_notice !!} --}}
+                                            請選擇課程
 
                                         </div>
                                     </div>
@@ -1861,6 +1865,7 @@
                                     <div class="select-box flex flex-col w-full">
                                         <label class="ts" for="class-select5">選擇課程</label>
                                         <select id="class-select5" onchange="changeclass(this)" style="padding: 9px 13px;border-radius:6px;">
+                                            <option value="0">請選擇</option>
                                             @foreach ($sup as $item)
                                                 <option value="{{ $item->id }}">{{ $item->event }}</option>
                                             @endforeach
@@ -1868,14 +1873,14 @@
                                     </div>
                                     <div class="price-box">
                                         {{-- @foreach ($data as $item) --}}
-                                        <h1> NT{{ $data->price }}</h1>
+                                        <h1 id="sup_price"> NT</h1>{{-- {{ $data->price }} --}}
 
                                         {{-- @endforeach --}}
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
                                     {{-- @foreach ($data as $item) --}}
 
-                                    <form action="/signup1/{{ $data->id }}" method="POST" id="supform">
+                                    <form action="/signup1/" method="POST" id="supform">
                                         @csrf
                                         <button class="w-full singUp-btn flex justify-center items-center"
                                             type="submit">線上報名</button>
@@ -1904,24 +1909,41 @@
             let formData = new FormData();
             formData.append('_method', 'POST');
             formData.append('_token', '{{ csrf_token() }}');
-            fetch('/changeclasses/' + id, {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                return response.json();
-            }).then( data => {
+            console.log(id);
+            if (id == 0){
                 const sup_intr = document.querySelector('#s5-tabs-1')
                 const sup_proc = document.querySelector('#s5-tabs-2')
                 const sup_dire = document.querySelector('#s5-tabs-3')
                 const sup_notice = document.querySelector('#s5-tabs-4')
                 const formsup = document.querySelector('#supform')
-                sup_intr.innerHTML = data.event_intr
-                sup_proc.innerHTML = data.event_proc
-                sup_dire.innerHTML = data.event_dire
-                sup_notice.innerHTML = data.event_notice
-                formsup.action = "/signup1/"+data.id
-            })
+                const sup_price = document.querySelector('#sup_price')
+                sup_intr.innerHTML = "請選擇課程"
+                sup_proc.innerHTML = "請選擇課程"
+                sup_dire.innerHTML = "請選擇課程"
+                sup_notice.innerHTML = "請選擇課程"
+                sup_price.innerHTML = "NT"
+            }else{
+                fetch('/changeclasses/' + id, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    return response.json();
+                }).then( data => {
+                    const sup_intr = document.querySelector('#s5-tabs-1')
+                    const sup_proc = document.querySelector('#s5-tabs-2')
+                    const sup_dire = document.querySelector('#s5-tabs-3')
+                    const sup_notice = document.querySelector('#s5-tabs-4')
+                    const formsup = document.querySelector('#supform')
+                    const sup_price = document.querySelector('#sup_price')
+                    sup_intr.innerHTML = data.event_intr
+                    sup_proc.innerHTML = data.event_proc
+                    sup_dire.innerHTML = data.event_dire
+                    sup_notice.innerHTML = data.event_notice
+                    sup_price.innerHTML = data.price
+                    formsup.action = "/signup1/"+data.id
+                })
+            }
         }
 
         function changeclass_rwd(getId) {
@@ -1929,24 +1951,40 @@
             let formData = new FormData();
             formData.append('_method', 'POST');
             formData.append('_token', '{{ csrf_token() }}');
-            fetch('/changeclasses/' + id, {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                return response.json();
-            }).then( data => {
+            if (id == 0){
                 const sup_intr = document.querySelector('#s5-tabs-1')
                 const sup_proc = document.querySelector('#s5-tabs-2')
                 const sup_dire = document.querySelector('#s5-tabs-3')
                 const sup_notice = document.querySelector('#s5-tabs-4')
-                const formsup_rwd = document.querySelector('#supform-rwd')
-                sup_intr.innerHTML = data.event_intr
-                sup_proc.innerHTML = data.event_proc
-                sup_dire.innerHTML = data.event_dire
-                sup_notice.innerHTML = data.event_notice
-                formsup_rwd.action = "/signup1/"+data.id
-            })
+                const formsup = document.querySelector('#supform')
+                const sup_price = document.querySelector('#sup_price')
+                sup_intr.innerHTML = "請選擇課程"
+                sup_proc.innerHTML = "請選擇課程"
+                sup_dire.innerHTML = "請選擇課程"
+                sup_notice.innerHTML = "請選擇課程"
+                sup_price.innerHTML = "NT"
+            }else{
+                fetch('/changeclasses/' + id, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    return response.json();
+                }).then( data => {
+                    const sup_intr = document.querySelector('#s5-tabs-1')
+                    const sup_proc = document.querySelector('#s5-tabs-2')
+                    const sup_dire = document.querySelector('#s5-tabs-3')
+                    const sup_notice = document.querySelector('#s5-tabs-4')
+                    const formsup_rwd = document.querySelector('#supform-rwd')
+                    const sup_price = document.querySelector('#sup_price')
+                    sup_intr.innerHTML = data.event_intr
+                    sup_proc.innerHTML = data.event_proc
+                    sup_dire.innerHTML = data.event_dire
+                    sup_notice.innerHTML = data.event_notice
+                    sup_price.innerHTML = data.price
+                    formsup_rwd.action = "/signup1/"+data.id
+                })
+            }
         }
     </script>
 @endsection

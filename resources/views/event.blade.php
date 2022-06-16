@@ -2,7 +2,7 @@
 
     @section('css')
     <link rel="stylesheet" href="{{asset('css/event.css')}}">
-    <title>Document</title>
+    <title>{{$events[0]->event}}</title>
     @endsection
 
 

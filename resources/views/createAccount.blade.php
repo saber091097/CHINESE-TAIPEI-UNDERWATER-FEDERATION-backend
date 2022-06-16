@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{{asset('css/createAccount.css')}}">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-<link rel="stylesheet" href="./css/locomotive-scroll.css" />
+{{-- <link rel="stylesheet" href="./css/locomotive-scroll.css" /> --}}
 <title>註冊帳號</title>
 @endsection
 

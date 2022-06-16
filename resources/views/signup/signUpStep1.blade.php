@@ -112,7 +112,8 @@
 
             <div class="innerbox-id flex flex-col w-full">
                 <label class="ts" for="id">身分證字號 (ID Numbers)<span class="ts star">*</span></label>
-                <input class="input-text w-full focus:outline-none" id="id" type="text" name="id" value="" placeholder="請輸入身分證字號">
+                <input class="input-text w-full focus:outline-none" id="id" type="text" name="id" value="" placeholder="請輸入身分證字號"
+                onkeyup="value=value. replace(/[^\a-\z\A-\Z0-9]/g,'')">
             </div>
 
             <div class="innerbox-sex flex flex-col">
@@ -134,13 +135,14 @@
 
             <div class="innerbox-phone flex flex-col">
                 <label class="ts" for="phone">聯絡電話<span class="ts star">*</span></label>
-                <input class="input-text w-full focus:outline-none" id="phone" type="text" name="phone" value="" placeholder="0912345678">
+                <input class="input-text w-full focus:outline-none" id="phone" type="text" name="phone" value="" placeholder="0912345678"
+                onkeyup="value=value.replace(/[^0-9 \-\+\)\(]/g,'')">
             </div>
 
             <div class="innerbox-mail flex flex-col">
-                <label class="ts" for="mail">Email<span class="ts star">*</span></label>
-                <input class="input-text w-full focus:outline-none" id="mail" type="text" name="email" value="" placeholder="abc123@google.com">
-                <div class="mail-warning"></div>
+                <label class="ts" for="email">Email<span class="ts star">*</span></label>
+                <input class="input-text w-full focus:outline-none" id="email" type="text" name="email" value="" placeholder="abc123@google.com"
+                onkeyup="value=value. replace(/[^\a-\z\A-\Z0-9\@\.]/g,'')">
             </div>
 
             <div class="innerbox-address flex flex-col">
@@ -160,13 +162,13 @@
                     </div>
                 </div>
                 <div class="input-address w-full flex flex-col">
-                    <input class="input-text w-full focus:outline-none" id="" type="text" name="address" value="" placeholder="請輸入地址">
+                    <input class="input-text w-full focus:outline-none" id="addressinput" type="text" name="address" value="" placeholder="請輸入地址">
                 </div>
             </div>
 
             <div class="innerbox-btn w-full flex justify-between">
                 <button class="btn btn-cancel rounded flex justify-center items-center" type="button">取消</button>
-                <button class="btn btn-next rounded flex justify-center items-center" type="submit">下一步</button>
+                <button class="btn btn-next rounded flex justify-center items-center" onclick="next()" type="button">下一步</button>
             </div>
         </form>
     </section>
