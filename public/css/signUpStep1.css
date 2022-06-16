@@ -33,19 +33,6 @@ body {
   background-color: #F9FAFB;
 }
 
-header {
-  width: 100%;
-  height: 80px;
-  z-index: 50;
-}
-
-footer {
-  width: 100%;
-  height: 527px;
-  z-index: 50;
-  background-color: #3B54F3;
-}
-
 main {
   padding: 80px 0px;
   position: relative;
@@ -178,6 +165,7 @@ main .progress {
   height: 32px;
   margin-bottom: 40px;
   z-index: 50;
+  margin-top: 80px;
 }
 
 @media (max-width: 640px) {
@@ -327,11 +315,21 @@ main .container .content-class .table-ts .td-t {
 }
 
 main .container .content-class .table-ts .td-c {
-  width: 168px;
+  width: 388px;
   height: 56px;
   color: #141414;
   padding: 16px;
 }
+
+main .container .content-class .table-ts .t-price .price{
+    color: #3B54F3;
+  }
+
+@media (max-width: 550px) {
+    main .container .content-class .table-ts .td-c {
+      width: 168px;
+    }
+  }
 
 main .container .content-class .table-ts tfoot td {
   color: #C1C4CA;
@@ -462,7 +460,7 @@ main .container .content-form .innerbox-address .address #address .selector-c .s
           box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
   border-radius: 6px;
   color: #141414;
-  opacity: 0.6;
+  /* opacity: 0.6; */
 }
 
 main .container .content-form .innerbox-address .address #address .selector-c .select select:focus {

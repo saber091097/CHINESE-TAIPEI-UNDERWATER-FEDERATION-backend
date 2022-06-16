@@ -183,6 +183,7 @@ main .progress {
   height: 32px;
   margin-bottom: 40px;
   z-index: 50;
+  margin-top: 80px;
 }
 
 @media (max-width: 640px) {

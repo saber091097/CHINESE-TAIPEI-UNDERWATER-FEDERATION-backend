@@ -98,7 +98,7 @@ function next(){
         onkeyup="value=value.replace(/[^0-9 \-\+\)\(]/g,'')">
         <span class="ts ts-red">請確認聯絡電話輸入的格式</span>
         `;
-    }else if (emailValue == "") {
+    }else if (formS1.email.value == "") {
         mailBox.innerHTML = "";
         mailBox.innerHTML = `
         <label class="ts ts-red" for="email">Email<span class="ts ts-red star">*</span></label>
@@ -106,7 +106,7 @@ function next(){
         onkeyup="value=value. replace(/[^\a-\z\A-\Z0-9\@\.]/g,'')">
         <span class="ts ts-red">請輸入Email</span>
         `;
-    }else if (!checkEmail(emailValue)){
+    }else if (!checkEmail(formS1.email.value)){
 		mailBox.innerHTML = "";
         mailBox.innerHTML = `
         <label class="ts ts-red" for="email">Email<span class="ts ts-red star">*</span></label>
@@ -206,7 +206,7 @@ function next(){
         `;
     };
 
-    if (!emailValue == "" && checkEmail(emailValue)) {
+    if (!emailValue == "" && checkEmail(formS1.email.value)) {
         mailBox.innerHTML = "";
         mailBox.innerHTML = `
         <label class="ts" for="email">Email<span class="ts star">*</span></label>

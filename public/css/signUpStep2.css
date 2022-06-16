@@ -33,19 +33,6 @@ body {
   background-color: #F9FAFB;
 }
 
-header {
-  width: 100%;
-  height: 80px;
-  z-index: 50;
-}
-
-footer {
-  width: 100%;
-  height: 527px;
-  z-index: 50;
-  background-color: #3B54F3;
-}
-
 main {
   padding: 80px 0px;
   position: relative;
@@ -178,6 +165,7 @@ main .progress {
   height: 32px;
   margin-bottom: 40px;
   z-index: 50;
+  margin-top: 80px;
 }
 
 @media (max-width: 640px) {
@@ -255,15 +243,15 @@ main .container .title {
   margin-bottom: 24px;
 }
 
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
   main .container .title {
     height: 88px;
   }
-}
+} */
 
 main .container .title .h3m {
   font-weight: 500;
-  margin-bottom: 4px;
+  /* margin-bottom: 4px; */
 }
 
 main .container .content-class {
@@ -307,7 +295,7 @@ main .container .content-class {
 
   main .container .content-class .table tbody .price {
     color: #3B54F3;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   main .container .content-class .table .t-name {
@@ -352,6 +340,10 @@ main .container .content-class {
     height: 56px;
     color: #141414;
     padding: 16px;
+  }
+
+  main .container .content-class .table-ts .t-price .price{
+    color: #3B54F3;
   }
 
   @media (max-width: 550px) {
@@ -399,6 +391,17 @@ main .container .content-class {
     margin-bottom: 32px;
   }
 
+  @media (max-width: 640px) {
+    main .container .form-title {
+      height: 88px;
+    }
+  }
+
+  main .container .form-title .h3m {
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
 main .container .caption {
   line-height: 20px;
   color: #141414;
@@ -423,7 +426,7 @@ main .container .content-form .red-star {
   color: #FC3434;
 }
 
-main .container .content-form div:not(:last-child) {
+/* main .container .content-form div:not(:last-child) {
   margin-bottom: 32px;
 }
 
@@ -431,7 +434,7 @@ main .container .content-form div:not(:last-child) {
   main .container .content-form div:not(:last-child) {
     margin-bottom: 24px;
   }
-}
+} */
 
 main .container .content-form .input-text {
   height: 46px;
@@ -458,8 +461,15 @@ main .container .content-form .innerbox-contact, main .container .content-form .
 @media (max-width: 640px) {
   main .container .content-form .innerbox-contact, main .container .content-form .innerbox-id {
     height: 66px;
+    margin-bottom: 24px;
   }
 }
+
+@media (max-width: 640px) {
+    main .container .content-form .innerbox-contact {
+      height: 165px;
+    }
+  }
 
 main .container .content-form .innerbox-contact {
   margin-bottom: 32px;
@@ -468,13 +478,19 @@ main .container .content-form .innerbox-contact {
 @media (max-width: 640px) {
   main .container .content-form .innerbox-contact {
     height: 165px;
-    margin-bottom: 24px;
+    /* margin-bottom: 24px; */
   }
 }
 
 main .container .content-form .innerbox-contact div:first-child {
   margin-right: 32px;
 }
+
+@media (max-width: 640px) {
+    main .container .content-form .innerbox-contact .innerbox-contact-per {
+      margin-bottom: 24px;
+    }
+  }
 
 main .container .content-form .innerbox-headshot {
   width: 216px;
@@ -485,6 +501,7 @@ main .container .content-form .innerbox-headshot {
 @media (max-width: 640px) {
   main .container .content-form .innerbox-headshot {
     height: 148px;
+    margin-bottom: 24px;
   }
 }
 
@@ -566,7 +583,7 @@ main .container .content-form .innerbox-idCard .box-idCard {
 
 main .container .content-form .innerbox-idCard .box-idCard #idCard1_img, main .container .content-form .innerbox-idCard .box-idCard #idCard2_img {
   display: none;
-  width: 300px;
+  width: 275px;
 }
 
 main .container .content-form .innerbox-idCard .box-idCard .in-inner-idCard {

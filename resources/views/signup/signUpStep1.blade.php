@@ -83,7 +83,7 @@
                     </tr>
                     <tr>
                         <td class="td-t">總價</td>
-                        <td class="td-c flex justify-end">NT4,500</td>
+                        <td class="td-c flex justify-end t-price price">NT4,500</td>
                     </tr>
                 </tbody>
                 <tfoot>
