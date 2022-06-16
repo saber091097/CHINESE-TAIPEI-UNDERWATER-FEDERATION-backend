@@ -248,6 +248,7 @@
                     <span class="zh-aboutus">熱門課程</span>
                     <span class="en-aboutus">Popular Courses</span>
                 </div>
+<<<<<<< Updated upstream
 
                 <div class="popular-courses-imgs flex courses">
                     <div class="courses1 flex relative">
@@ -255,9 +256,16 @@
                     </div>
 
                     <div class="courses2 flex relative">
+=======
+                <div class="popular-courses-imgs flex">
+                    <div class="courses1 flex relative" onclick="location.href='/classes'" style="cursor: pointer">
+                        <p class="absolute hidden">立式浪板</p>
+                    </div>
+                    <div class="courses2 flex relative" onclick="location.href='/classes'" style="cursor: pointer">
+>>>>>>> Stashed changes
                         <p class="absolute hidden">潛水</p>
                     </div>
-                    <div class="courses3 flex relative">
+                    <div class="courses3 flex relative" onclick="location.href='/classes'" style="cursor: pointer">
                         <p class="absolute hidden">風浪板</p>
                     </div>
                 </div>
