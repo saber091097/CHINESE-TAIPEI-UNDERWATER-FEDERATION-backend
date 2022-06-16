@@ -31,8 +31,12 @@ class HtmlController extends Controller
         return view('about_us.Surf-Rescue');
     }
 
+<<<<<<< Updated upstream
     public function news(){
         $data=Event::get();
         return view('news',compact('data'));
     }
+=======
+   
+>>>>>>> Stashed changes
 }
