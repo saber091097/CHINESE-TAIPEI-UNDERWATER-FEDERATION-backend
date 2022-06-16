@@ -33,7 +33,6 @@
 
     <title>關於我們</title>
     <style>
-
         /*  */
         body {
             font-family: 'Noto Sans TC', sans-serif;
@@ -248,32 +247,46 @@
             box-shadow: 0 0 0 999px rgba(55, 65, 81, 0.5);
             z-index: 1000;
         }
-        .nav{
+
+        .nav {
             position: fixed;
             top: 0;
             z-index: 1;
             background-color: #ffffff;
         }
 
-        #dropdownleft ul{
+        #dropdownleft ul {
             border-radius: 6px;
             box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05), 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
 
-        #dropdownleft ul li:hover{
+        #dropdownleft ul li:hover {
             border-radius: 6px;
         }
 
-        #dropdownNavbar ul{
+        #dropdownNavbar ul {
             border-radius: 6px;
             box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05), 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
 
-        #dropdownNavbar ul li a{
+        #dropdownNavbar ul li a {
             border-radius: 6px;
         }
-        #title{
+
+        #title {
             margin-top: 80px
+        }
+
+        /* footer 開始 */
+        .left>img {
+            width: 313px;
+            cursor: pointer;
+        }
+
+        @media (max-width:1024px) {
+            * body .container .footer .right {
+                padding-right: 0;
+            }
         }
     </style>
     {{-- @endsection --}}
@@ -317,8 +330,7 @@
                 <div class="hamburger__content">
                     <ul class="hamburger__list">
                         <li class="hamburger__list-item nav-active ">
-                            <a href="/news"
-                                class="hover-target full md:w-3/5"><span>最新消息</span>
+                            <a href="/news" class="hover-target full md:w-3/5"><span>最新消息</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -341,8 +353,7 @@
                         </li>
 
                         <li class="hamburger__list-item ">
-                            <a href="/Past-presidents"
-                                class="hover-target full md:w-3/5"><span>歷屆會長</span>
+                            <a href="/Past-presidents" class="hover-target full md:w-3/5"><span>歷屆會長</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -353,8 +364,7 @@
                         </li>
 
                         <li class="hamburger__list-item ">
-                            <a href="/organization"
-                                class="hover-target full md:w-3/5"><span>協會組織架構</span>
+                            <a href="/organization" class="hover-target full md:w-3/5"><span>協會組織架構</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -365,8 +375,7 @@
                         </li>
 
                         <li class="hamburger__list-item ">
-                            <a href="/Surf-Rescue"
-                                class="hover-target full md:w-3/5"><span>救生員資格檢定</span>
+                            <a href="/Surf-Rescue" class="hover-target full md:w-3/5"><span>救生員資格檢定</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -377,8 +386,7 @@
                         </li>
 
                         <li class="hamburger__list-item ">
-                            <a href="/classes"
-                                class="hover-target full md:w-3/5"><span>課程</span>
+                            <a href="/classes" class="hover-target full md:w-3/5"><span>課程</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -389,8 +397,7 @@
                         </li>
 
                         <li class="hamburger__list-item ">
-                            <a href="/album"
-                                class="hover-target full md:w-3/5"><span>活動照片</span>
+                            <a href="/album" class="hover-target full md:w-3/5"><span>活動照片</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -633,6 +640,8 @@
         <div class="container max-w-full h-auto">
             <div class="footer flex flex-wrap justify-between w-full">
                 <div class="left flex flex-col ">
+                    <img src="{{ asset('img/logo/CHINESE TAIPEI UNDERWATER FEDERATION-white logo.png') }}"
+                        alt="台中市水中運動協會">
                     <span>台中市北區天祥街10號</span>
                     <span>04-22312698</span>
                 </div>
@@ -674,7 +683,57 @@
             </div>
         </div>
     </footer>
-
+    {{-- <footer class="w-full" data-scroll-section id="footer">
+        <div class="container max-w-full ">
+            <div class="footer flex justify-center">
+                <div class="footer_container">
+                    <div class="footer_logo_menu flex-col sm:flex sm:flex-row sm:justify-between">
+                        <div class="left flex flex-col ">
+                            <img src="{{ asset('img/logo/CHINESE TAIPEI UNDERWATER FEDERATION-white logo.png') }}"
+                                alt="台中市水中運動協會">
+                            <span>台中市北區天祥街10號</span>
+                            <span>04-22312698</span>
+                        </div>
+                        <div class="right text-white sm:flex ">
+                            <ul class="page flex flex-col justify-between">
+                                <li class="flex justify-between">首頁
+                                    <svg xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                    </svg>
+                                </li>
+                                <li class="flex justify-between">關於我們
+                                    <svg xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                    </svg>
+                                </li>
+                                <li class="flex justify-between">課程
+                                    <svg xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                    </svg>
+                                </li>
+                                <li class="flex justify-between">活動照片
+                                    <svg xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                    </svg>
+                                </li>
+                            </ul>
+                            <ul class="link">
+                                <li>Facebook</li>
+                                <li>instagram</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="copyright text-white opacity-50 w-full flex sm:justify-start md:justify-end">
+                        <span>© COPYRIGHT 2022 台中水中運動協會 All Rights Reserved.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer> --}}
 
     {{-- @section('js') --}}
 
