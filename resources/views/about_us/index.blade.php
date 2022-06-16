@@ -508,7 +508,7 @@
                 </ul>
             </div>
             <div id="authentication-modal" tabindex="-1" aria-hidden="true" style="z-index: 100;"
-                class="hidden overflow-y-auto overflow-x-hidden fixed top-28 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full authentication">
+                class="hidden overflow-y-auto overflow-x-hidden fixed top-20 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full authentication">
                 <div class="relative p-4 w-full max-w-md h-full md:h-auto">
                     <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                         <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent"
@@ -526,20 +526,21 @@
                             </svg>
                         </button>
 
-                        <div class="py-6 px-6 lg:px-8">
-                            <h3 class="mb-4 text-xl font-medium text-gray-900 ">登入</h3>
+                        <div class="py-6 px-6 lg:px-8" style="font-weight: 500; box-shadow: 0 0 0 999px rgba(55, 65, 81, 0.5);
+                        z-index: 1000;">
+                            <h3 class="mb-4 text-xl  text-gray-900 " style="font-family:unset;">登入</h3>
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
                                 <div>
                                     <label for="email"
-                                        class="block mb-2 text-sm font-medium text-gray-900 ">電子信箱</label>
+                                        class="block mb-2 text-sm  text-gray-900 " style="font-weight:500">電子信箱</label>
                                     <input type="email" name="email" id="email"
                                         class="text-gray-900 text-sm block w-full p-2.5"
                                         placeholder="name@company.com">
                                 </div>
                                 <div>
                                     <label for="password"
-                                        class="block mb-2 text-sm font-medium text-gray-900 ">密碼</label>
+                                        class="block mb-2 text-sm  text-gray-900 " style="font-weight:500">密碼</label>
                                     <input type="password" name="password" id="password" placeholder="••••••••"
                                         class="text-gray-900 text-sm block w-full p-2.5">
                                 </div>
@@ -550,17 +551,17 @@
                                                 name="remember">
                                         </div>
                                         <label for="remember"
-                                            class="ml-2 text-sm font-medium text-gray-900">{{ __('記住我') }}</label>
+                                            class="ml-2 text-sm  text-gray-900" style="font-weight:500">{{ __('記住我') }}</label>
                                     </div>
                                     <a href="{{ route('password.request') }}"
                                         class="text-sm text-blue-700 hover:underline ">忘記密碼</a>
                                 </div>
                                 <button type="submit"
                                     class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300
-                                font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
+                                 rounded-lg text-sm px-5 py-2.5 text-center ">
                                     登入
                                 </button>
-                                <div class="text-sm font-medium text-gray-500 ">
+                                <div class="text-sm  text-gray-500 ">
                                     Not registered? <a href="createAccount"
                                         class="text-blue-700 hover:underline ">Create
                                         account</a>
@@ -654,7 +655,33 @@
             </div>
         </div>
     </nav>
-
+    {{-- <main style="" >
+        <div id="page">
+            <!-- 大標 關於我們 -->
+            <div id="title" class="content-title flex flex-wrap" style="color:black;">
+                <div class="color-line flex" style="margin:0 auto;">
+                    <div class="blue1"
+                        style="width: 25px;
+              height: 4px;
+              background-color: #3B54F3;"></div>
+                    <div class="blue2"
+                        style="width: 25px;
+              height: 4px;
+              background-color: #6EEDF0;
+              border-radius: 0 25px 25px 0;">
+                    </div>
+                </div>
+                關於我們
+            </div>
+            <!-- 大標 About -->
+            <div id="about" class="z-1">
+                <span class="test" id="aboutspan">About</span>
+            </div>
+            <div id="imgsection">
+                <img id="banner_img" src="{{ asset('img/img_aboutUsBg1.png') }}" alt="">
+            </div>
+        </div>
+    </main> --}}
 
     <main data-w-id="62042371c2f75a04a47ec666" class="body">
         <div id="timeline" class="section-timeline">
