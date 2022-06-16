@@ -508,7 +508,7 @@
                 </ul>
             </div>
             <div id="authentication-modal" tabindex="-1" aria-hidden="true" style="z-index: 100;"
-                class="hidden overflow-y-auto overflow-x-hidden fixed top-28 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full authentication">
+                class="hidden overflow-y-auto overflow-x-hidden fixed top-20 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full authentication">
                 <div class="relative p-4 w-full max-w-md h-full md:h-auto">
                     <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                         <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent"
@@ -526,20 +526,21 @@
                             </svg>
                         </button>
 
-                        <div class="py-6 px-6 lg:px-8">
-                            <h3 class="mb-4 text-xl font-medium text-gray-900 ">登入</h3>
+                        <div class="py-6 px-6 lg:px-8" style="font-weight: 500; box-shadow: 0 0 0 999px rgba(55, 65, 81, 0.5);
+                        z-index: 1000;">
+                            <h3 class="mb-4 text-xl  text-gray-900 " style="font-family:unset;">登入</h3>
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
                                 <div>
                                     <label for="email"
-                                        class="block mb-2 text-sm font-medium text-gray-900 ">電子信箱</label>
+                                        class="block mb-2 text-sm  text-gray-900 " style="font-weight:500">電子信箱</label>
                                     <input type="email" name="email" id="email"
                                         class="text-gray-900 text-sm block w-full p-2.5"
                                         placeholder="name@company.com">
                                 </div>
                                 <div>
                                     <label for="password"
-                                        class="block mb-2 text-sm font-medium text-gray-900 ">密碼</label>
+                                        class="block mb-2 text-sm  text-gray-900 " style="font-weight:500">密碼</label>
                                     <input type="password" name="password" id="password" placeholder="••••••••"
                                         class="text-gray-900 text-sm block w-full p-2.5">
                                 </div>
@@ -550,17 +551,17 @@
                                                 name="remember">
                                         </div>
                                         <label for="remember"
-                                            class="ml-2 text-sm font-medium text-gray-900">{{ __('記住我') }}</label>
+                                            class="ml-2 text-sm  text-gray-900" style="font-weight:500">{{ __('記住我') }}</label>
                                     </div>
                                     <a href="{{ route('password.request') }}"
                                         class="text-sm text-blue-700 hover:underline ">忘記密碼</a>
                                 </div>
                                 <button type="submit"
                                     class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300
-                                font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
+                                 rounded-lg text-sm px-5 py-2.5 text-center ">
                                     登入
                                 </button>
-                                <div class="text-sm font-medium text-gray-500 ">
+                                <div class="text-sm  text-gray-500 ">
                                     Not registered? <a href="createAccount"
                                         class="text-blue-700 hover:underline ">Create
                                         account</a>
@@ -654,7 +655,33 @@
             </div>
         </div>
     </nav>
-
+    {{-- <main style="" >
+        <div id="page">
+            <!-- 大標 關於我們 -->
+            <div id="title" class="content-title flex flex-wrap" style="color:black;">
+                <div class="color-line flex" style="margin:0 auto;">
+                    <div class="blue1"
+                        style="width: 25px;
+              height: 4px;
+              background-color: #3B54F3;"></div>
+                    <div class="blue2"
+                        style="width: 25px;
+              height: 4px;
+              background-color: #6EEDF0;
+              border-radius: 0 25px 25px 0;">
+                    </div>
+                </div>
+                關於我們
+            </div>
+            <!-- 大標 About -->
+            <div id="about" class="z-1">
+                <span class="test" id="aboutspan">About</span>
+            </div>
+            <div id="imgsection">
+                <img id="banner_img" src="{{ asset('img/img_aboutUsBg1.png') }}" alt="">
+            </div>
+        </div>
+    </main> --}}
 
     <main data-w-id="62042371c2f75a04a47ec666" class="body">
         <div id="timeline" class="section-timeline">
@@ -766,25 +793,43 @@
                 </div>
                 <div class="right flex text-white">
                     <ul class="page">
-                        <li class="flex justify-between">首頁
+                        <li class="flex justify-between"><a href="/">首頁</a>
                             <svg xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
                             </svg>
                         </li>
-                        <li class="flex justify-between">關於我們
+                        <li class="flex justify-between"> <a href="/about">關於我們</a>
                             <svg xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
                             </svg>
                         </li>
-                        <li class="flex justify-between">課程
+                        <li class="flex justify-between"> <a href="/Past-presidents">歷屆會長</a>
                             <svg xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
                             </svg>
                         </li>
-                        <li class="flex justify-between">活動照片
+                        <li class="flex justify-between"> <a href="/organization">協會組織架構</a>
+                            <svg xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                            </svg>
+                        </li>
+                        <li class="flex justify-between"> <a href="/Surf-Rescue">救生員資格檢定</a>
+                            <svg xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                            </svg>
+                        </li>
+                        <li class="flex justify-between"> <a href="/classes">課程</a>
+                            <svg xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                            </svg>
+                        </li>
+                        <li class="flex justify-between"><a href="/album">活動照片</a>
                             <svg xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
@@ -792,8 +837,8 @@
                         </li>
                     </ul>
                     <ul class="link">
-                        <li>Facebook</li>
-                        <li>instagram</li>
+                        <li> <a href="https://www.facebook.com/%E5%8F%B0%E4%B8%AD%E5%B8%82%E6%B0%B4%E4%B8%AD%E9%81%8B%E5%8B%95%E5%8D%94%E6%9C%83%E6%BD%9B%E6%B0%B4%E5%A7%94%E5%93%A1%E6%9C%83-203136269701568">Facebook</a> </li>
+                        <li> <a href="https://www.instagram.com/suptuf/">instagram</a></li>
                     </ul>
                 </div>
                 <div class="copyright text-white opacity-50 w-full flex justify-end">

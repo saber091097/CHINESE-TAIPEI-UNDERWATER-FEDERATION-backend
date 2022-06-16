@@ -21,6 +21,10 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('css/photo.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/nav&footer.css') }}">
+
+
+
     <title>活動照片</title>
     <style>
 

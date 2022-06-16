@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="{{asset('css/photo_div.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/nav&footer.css') }}">
     <title>潛水照片</title>
     <style>
         .swiper_img {
