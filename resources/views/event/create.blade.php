@@ -102,8 +102,30 @@
             .catch( error => {
                     console.error( error );
             } );
+</script>
+<script>
     ClassicEditor
             .create( document.querySelector( '#event_proc' ) )
+            .then( editor => {
+                    console.log( editor );
+            } )
+            .catch( error => {
+                    console.error( error );
+            } );
+</script>
+<script>
+    ClassicEditor
+            .create( document.querySelector( '#event_dire' ) )
+            .then( editor => {
+                    console.log( editor );
+            } )
+            .catch( error => {
+                    console.error( error );
+            } );
+</script>
+<script>
+    ClassicEditor
+            .create( document.querySelector( '#event_notice' ) )
             .then( editor => {
                     console.log( editor );
             } )
