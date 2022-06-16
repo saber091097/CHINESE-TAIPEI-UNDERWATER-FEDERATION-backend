@@ -52,7 +52,7 @@
                     </div>
                     <div class="event-content">
                         <span>
-                            {{$events[0]->event_intr}}
+                            {!! $events[0]->event_intr !!}
                             {{-- 台中市水中運動協會自由潛水課程:
                             free diving LV1課程適用於一般人仕，簡單來說，就是利用閒暇時間，穿著漂亮的水中服裝，長蛙，面鏡呼吸管，休閒輕鬆的水中長蛙運動， 拍一些美美的照片隨時能夠滿足您的需求。<br>
                             <br>
