@@ -1835,7 +1835,6 @@
                                         <div class="tabs-1 tab-pane fade show active flex flex-col" id="s5-tabs-1"
                                             role="tabpanel" aria-labelledby="s5-tabs-1-tab">
                                             {!! $data->event_intr !!}
-
                                         </div>
                                         <div class="tabs-2 tab-pane fade flex flex-col" id="s5-tabs-2" role="tabpanel"
                                             aria-labelledby="s5-tabs-2-tab">
