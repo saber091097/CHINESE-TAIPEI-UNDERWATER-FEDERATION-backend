@@ -314,11 +314,11 @@
                                             <div class="video">
                                                 <h3 class="h3m">課程教學示範</h3>
                                                 <div class="video-link">
-                                                    <iframe width="100%" height="420"
+                                                    {{-- <iframe width="100%" height="420"
                                                         src="https://www.youtube.com/embed/5PGKxWH2WYs"
                                                         title="YouTube video player" frameborder="0"
                                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                        allowfullscreen></iframe>
+                                                        allowfullscreen></iframe> --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -700,11 +700,11 @@
                                             <div class="video">
                                                 <h3 class="h3m">課程教學示範</h3>
                                                 <div class="video-link">
-                                                    <iframe width="100%" height="420"
+                                                    {{-- <iframe width="100%" height="420"
                                                         src="https://www.youtube.com/embed/5PGKxWH2WYs"
                                                         title="YouTube video player" frameborder="0"
                                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                        allowfullscreen></iframe>
+                                                        allowfullscreen></iframe> --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -1087,11 +1087,11 @@
                                             <div class="video">
                                                 <h3 class="h3m">課程教學示範</h3>
                                                 <div class="video-link">
-                                                    <iframe width="100%" height="420"
+                                                    {{-- <iframe width="100%" height="420"
                                                         src="https://www.youtube.com/embed/5PGKxWH2WYs"
                                                         title="YouTube video player" frameborder="0"
                                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                        allowfullscreen></iframe>
+                                                        allowfullscreen></iframe> --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -1474,11 +1474,11 @@
                                             <div class="video">
                                                 <h3 class="h3m">課程教學示範</h3>
                                                 <div class="video-link">
-                                                    <iframe width="100%" height="420"
+                                                    {{-- <iframe width="100%" height="420"
                                                         src="https://www.youtube.com/embed/5PGKxWH2WYs"
                                                         title="YouTube video player" frameborder="0"
                                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                        allowfullscreen></iframe>
+                                                        allowfullscreen></iframe> --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -1731,6 +1731,7 @@
                                     <div class="select-box flex flex-col w-full">
                                         <label class="ts" for="class-select">選擇課程</label>
                                         <select id="class-select5-rwd" onchange="changeclass_rwd(this)" style="padding: 9px 13px;border-radius:6px;">
+                                            <option value="0">請選擇</option>
                                             @foreach ($sup_rwd as $item)
                                                 <option value="{{ $item->id }}">{{ $item->event }}</option>
                                             @endforeach
@@ -1745,7 +1746,7 @@
                                     </div>
                                     {{-- @foreach ($data as $item) --}}
 
-                                    <form action="/signup1/{{ $data->id }}" method="POST" id="supform-rwd">
+                                    <form action="/signup1/" method="POST" id="supform-rwd">
                                         @csrf
                                         <button class="w-full singUp-btn flex justify-center items-center"
                                             type="submit">線上報名</button>
@@ -1860,6 +1861,7 @@
                                     <div class="select-box flex flex-col w-full">
                                         <label class="ts" for="class-select5">選擇課程</label>
                                         <select id="class-select5" onchange="changeclass(this)" style="padding: 9px 13px;border-radius:6px;">
+                                            <option value="0">請選擇</option>
                                             @foreach ($sup as $item)
                                                 <option value="{{ $item->id }}">{{ $item->event }}</option>
                                             @endforeach
@@ -1874,7 +1876,7 @@
                                     </div>
                                     {{-- @foreach ($data as $item) --}}
 
-                                    <form action="/signup1/{{ $data->id }}" method="POST" id="supform">
+                                    <form action="/signup1/" method="POST" id="supform">
                                         @csrf
                                         <button class="w-full singUp-btn flex justify-center items-center"
                                             type="submit">線上報名</button>
