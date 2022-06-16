@@ -409,8 +409,8 @@
             <!-- 手機版的menu 結束-->
             <div class="left flex justify-end ml-auto lg:block hidden" style="padding-left: 63px;">
                 <ul class="flex items-center" style="opacity:">
-                    <li class="mr-4"><a href="./news">最新消息</a></li>
-                    <li class="mr-4">
+                    <li class="mr-6"><a href="./news">最新消息</a></li>
+                    <li class="mr-6">
                         <button class="flex" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
                             關於我們
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -420,21 +420,21 @@
                                     fill="#141414" />
                             </svg>
                         </button>
-                    </li class="mr-4">
-                    <li class="mr-4"><a href="/classes">課程</a></li>
-                    <li class="mr-4"><a href="/album">活動照片</a></li>
+                    </li class="mr-6">
+                    <li class="mr-6"><a href="/classes">課程</a></li>
+                    <li class="mr-6"><a href="/album">活動照片</a></li>
                     @auth
                         @if (Auth::user()->power == 1)
-                            <li><a href="/dashboard">後台</a></li>
+                            <li class="mr-6"><a href="/dashboard">後台</a></li>
                         @endif
-                        <li class="mr-4">
+                        <li class="mr-6">
                             <div data-dropdown-toggle="dropdownleft" class="relative"
                                 style="width:50px;height:50px;border-radius:50%;background-color: gainsboro">
                                 <span class="absolute"
                                     style="top:50%;left:50%;transform:translate(-50%,-50%);font-size:28px;font-weight:500;">{{ substr(Auth::user()->name, 0, 1) }}</span>
                             </div>
                         </li>
-                        <li class="mr-4">
+                        <li class="mr-6">
                             <div class="p-0 nameblack" style='margin-right:5px; '>您好，{{ Auth::user()->name }}</div>
                         </li>
 

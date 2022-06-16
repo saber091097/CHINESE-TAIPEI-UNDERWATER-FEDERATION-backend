@@ -218,9 +218,9 @@
         display: none;
     }
 }
-/* .items-center{
-    margin-right: 63px;
-} */
+.items-center{
+    align-items: center;
+}
 
 
 /* navbar 結束 */
