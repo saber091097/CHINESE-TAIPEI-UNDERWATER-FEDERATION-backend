@@ -219,7 +219,7 @@
     }
 }
 .items-center{
-    margin-right: 63px;
+    align-items: center;
 }
 
 
