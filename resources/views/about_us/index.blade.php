@@ -89,12 +89,12 @@
             color: #D9D9D9;
             position: relative;
             overflow: hidden;
-            z-index: 10;
+            z-index: 0;
         }
 
         #aboutspan {
             position: absolute;
-            z-index: 10;
+            z-index: 0;
             /* bottom: -290px; */
             left: 50%;
             transform: translateX(-50%);
@@ -317,7 +317,7 @@
                 <div class="hamburger__content">
                     <ul class="hamburger__list">
                         <li class="hamburger__list-item nav-active ">
-                            <a href="#"
+                            <a href="/news"
                                 class="hover-target full md:w-3/5"><span>最新消息</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -330,7 +330,7 @@
 
                         <li class="hamburger__list-item ">
                             {{-- <div class="menu about"> --}}
-                            <a href="#s1" class="hover-target full md:w-3/5"><span>關於我們</span>
+                            <a href="/about" class="hover-target full md:w-3/5"><span>關於我們</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -341,7 +341,7 @@
                         </li>
 
                         <li class="hamburger__list-item ">
-                            <a href="#s3"
+                            <a href="/Past-presidents"
                                 class="hover-target full md:w-3/5"><span>歷屆會長</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -353,7 +353,7 @@
                         </li>
 
                         <li class="hamburger__list-item ">
-                            <a href="#s3"
+                            <a href="/organization"
                                 class="hover-target full md:w-3/5"><span>協會組織架構</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -365,7 +365,7 @@
                         </li>
 
                         <li class="hamburger__list-item ">
-                            <a href="#s3"
+                            <a href="/Surf-Rescue"
                                 class="hover-target full md:w-3/5"><span>救生員資格檢定</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -377,7 +377,7 @@
                         </li>
 
                         <li class="hamburger__list-item ">
-                            <a href="#s3"
+                            <a href="/classes"
                                 class="hover-target full md:w-3/5"><span>課程</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -389,7 +389,7 @@
                         </li>
 
                         <li class="hamburger__list-item ">
-                            <a href="#s4"
+                            <a href="/album"
                                 class="hover-target full md:w-3/5"><span>活動照片</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -421,7 +421,7 @@
                             </svg>
                         </button>
                     </li class="mr-4">
-                    <li class="mr-4"><a href="./classes">課程</a></li>
+                    <li class="mr-4"><a href="/classes">課程</a></li>
                     <li class="mr-4"><a href="/album">活動照片</a></li>
                     @auth
                         @if (Auth::user()->power == 1)
@@ -462,19 +462,19 @@
             <div id="dropdownNavbar" class="hidden z-10 dropdownNavbar" style="color:black">
                 <ul class="bg-white">
                     <li>
-                        <a href="about"
+                        <a href="/about"
                             class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">關於我們</a>
                     </li>
                     <li>
-                        <a href="Past-presidents"
+                        <a href="/Past-presidents"
                             class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">歷屆會長</a>
                     </li>
                     <li>
-                        <a href="./organization .html"
+                        <a href="/organization"
                             class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">協會組織架構</a>
                     </li>
                     <li>
-                        <a href="./surf-Rescue.html"
+                        <a href="/Surf-Rescue"
                             class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">救生員資格檢定</a>
                     </li>
                 </ul>
