@@ -1834,7 +1834,7 @@
                                     <div class="tab-content" id="s5-tabs-tabContent">
                                         <div class="tabs-1 tab-pane fade show active flex flex-col" id="s5-tabs-1"
                                             role="tabpanel" aria-labelledby="s5-tabs-1-tab">
-                                            {{ $data->event_intr }}
+                                            {!! $data->event_intr !!}
 
                                         </div>
                                         <div class="tabs-2 tab-pane fade flex flex-col" id="s5-tabs-2" role="tabpanel"
@@ -1844,12 +1844,12 @@
                                         </div>
                                         <div class="tabs-3 tab-pane fade flex flex-col" id="s5-tabs-3" role="tabpanel"
                                             aria-labelledby="s5-tabs-3-tab">
-                                            {{ $data->event_dire }}
+                                            {!! $data->event_dire !!}
 
                                         </div>
                                         <div class="tabs-4 tab-pane fade flex flex-col" id="s5-tabs-4" role="tabpanel"
                                             aria-labelledby="s5-tabs-4-tab">
-                                            {{ $data->event_notice }}
+                                            {!! $data->event_notice !!}
 
                                         </div>
                                     </div>
