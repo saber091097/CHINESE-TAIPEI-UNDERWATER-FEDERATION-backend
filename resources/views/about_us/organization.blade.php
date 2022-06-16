@@ -3,6 +3,7 @@
 
 @section('css')
 <link rel="stylesheet" href="{{asset('css/organization .css')}}">
+<link rel="stylesheet" href="{{asset('css/nav&footer.css')}}">
 <title>組織架構</title>
 
 @endsection
@@ -10,7 +11,7 @@
 @section('main')
 
 <div class="container flex justify-center max-w-full flex-wrap">
-    <div class="organization w-full flex-warp flex-col flex">
+    <div class="organization w-full flex-warp flex-col flex mt-20">
         <div class="breadcrumb">
             <ul class="flex items-center justify-start flex-wrap">
                 <li><a href="/">首頁</a></li>

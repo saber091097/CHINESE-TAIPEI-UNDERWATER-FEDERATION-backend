@@ -3,12 +3,14 @@
   font-weight: 500;
 }
 
-* body .container .footer .left span {
+/* footer 開始 */
+/* * body .container .footer .left span {
   font-size: 18px;
   font-weight: 400;
-}
+} */
 
-* body .container .nav .right .logo .name .zh-name span {
+/* navbar 開始 */
+/* * body .container .nav .right .logo .name .zh-name span {
   font-size: 16px;
   font-weight: 500;
 }
@@ -16,8 +18,8 @@
 * body .container .nav .left ul li, * body .container .footer .right ul {
   font-size: 16px;
   font-weight: 400;
-}
-
+} */
+/* navbar 結束 */
 * body .container .organization .breadcrumb {
   font-size: 14px;
   font-weight: 400;
@@ -38,7 +40,8 @@
   width: 100%;
 }
 
-* body .container .nav {
+/* navbar 開始 */
+/* * body .container .nav {
   width: 1440px;
   height: 80px;
   -webkit-box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
@@ -92,7 +95,8 @@
 
 * body .container .nav .left ul li:last-child {
   padding: 0 67px 0 5px;
-}
+} */
+/* navbar 結束 */
 
 * body .container .organization {
   width: 80%;
@@ -194,8 +198,8 @@
     padding-bottom: 80px;
   }
 }
-
-* body .container .footer {
+/* footer 開始 */
+/* * body .container .footer {
   height: 525px;
   background-color: #3B54F3;
   padding-top: 120px;
@@ -312,5 +316,6 @@
     font-size: 12px;
     font-weight: 400;
   }
-}
+} */
+/* footer 結束 */
 /*# sourceMappingURL=organization .css.map */
