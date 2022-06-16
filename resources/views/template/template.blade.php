@@ -23,6 +23,8 @@
             opacity: .6;
             cursor: auto;
         }
+
+
     </style>
     @yield('css')
 </head>
@@ -62,14 +64,25 @@
                 <div class="hamburger">
                     <div class="hamburger__content">
                         <ul class="hamburger__list">
-                            <li class="hamburger__list-item nav-active "><a href="/news" class="hover-target full md:w-3/5"><span>最新消息</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg>
-                            </a></li>
+                            <li class="hamburger__list-item nav-active "><a href="/news"
+                                    class="hover-target full md:w-3/5"><span>最新消息</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
+                                            fill="#3B54F3" />
+                                    </svg>
+                                </a></li>
 
                             <li class="hamburger__list-item ">
                                 {{-- <div class="menu about"> --}}
-                                    <a href="/about" class="hover-target full md:w-3/5"><span>關於我們</span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg></a>
+                                <a href="/about" class="hover-target full md:w-3/5"><span>關於我們</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
+                                            fill="#3B54F3" />
+                                    </svg></a>
                                 {{-- </div> --}}
                                 {{-- <div class="submenu aboutSub">
                                     <div class="sub_wrap">
@@ -86,33 +99,112 @@
                                       </ul>
                                     </div>
                                 </div> --}}
-                        </li>
+                            </li>
 
-                            <li class="hamburger__list-item "><a href="/Past-presidents" class="hover-target full md:w-3/5"><span>歷屆會長</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg>
-                            </a></li>
+                            <li class="hamburger__list-item "><a href="/Past-presidents"
+                                    class="hover-target full md:w-3/5"><span>歷屆會長</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
+                                            fill="#3B54F3" />
+                                    </svg>
+                                </a></li>
 
-                            <li class="hamburger__list-item "><a href="/organization" class="hover-target full md:w-3/5"><span>協會組織架構</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg>
-                            </a></li>
+                            <li class="hamburger__list-item "><a href="/organization"
+                                    class="hover-target full md:w-3/5"><span>協會組織架構</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
+                                            fill="#3B54F3" />
+                                    </svg>
+                                </a></li>
 
-                            <li class="hamburger__list-item "><a href="/Surf-Rescue" class="hover-target full md:w-3/5"><span>救生員資格檢定</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg>
-                            </a></li>
+                            <li class="hamburger__list-item "><a href="/Surf-Rescue"
+                                    class="hover-target full md:w-3/5"><span>救生員資格檢定</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
+                                            fill="#3B54F3" />
+                                    </svg>
+                                </a></li>
 
-                            <li class="hamburger__list-item "><a href="/classes" class="hover-target full md:w-3/5"><span>課程</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg>
-                            </a></li>
+                            <li class="hamburger__list-item "><a href="/classes"
+                                    class="hover-target full md:w-3/5"><span>課程</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
+                                            fill="#3B54F3" />
+                                    </svg>
+                                </a></li>
 
-                            <li class="hamburger__list-item "><a href="/album" class="hover-target full md:w-3/5"><span>活動照片</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg>
-                            </a></li>
-                     </ul>
+                            <li class="hamburger__list-item "><a href="/album"
+                                    class="hover-target full md:w-3/5"><span>活動照片</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
+                                            fill="#3B54F3" />
+                                    </svg>
+                                </a></li>
+                            @auth
+                                <li class="hamburger__list-item "><a href="/personal-center"
+                                        class="hover-target full md:w-3/5"><span>個人中心</span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
+                                                fill="#3B54F3" />
+                                        </svg>
+                                    </a></li>
+                                    {{-- 以下登出這塊還沒改好 --}}
+                                <li class="hamburger__list-item">
+                                    <form action="logout" method="POST" class="hover-target full md:w-3/5"
+                                        style="padding-left: 5px;position: relative;
+                                    text-decoration: none;
+                                    color: #141414;
+                                    overflow: hidden;
+                                    cursor: pointer;
+                                    padding-left: 5px;
+                                    padding-right: 5px;
+                                    display: inline-block;
+                                    text-transform: uppercase;
+                                    transition: all 200ms linear;">
+                                        @csrf
+                                        <button class="hover-target full md:w-3/5" type="submit">
+                                            <span class="hover-target"
+                                                style="color: black;float:left;width:60%;display:block;text-align:start">登出</span>
+                                            <svg style="float:right" width="24" height="24" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
+                                                    fill="#3B54F3" />
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </li>
+                                {{-- 以上為漢堡條登出欄位 --}}
+                            @endauth
+                            @guest
+                                <li class="hamburger__list-item "><a data-modal-toggle="authentication-modal"
+                                        class="hover-target full md:w-3/5"><span>登入</span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
+                                                fill="#3B54F3" />
+                                        </svg>
+                                    </a></li>
+                            @endguest
+                        </ul>
                     </div>
                 </div>
-            <div class='cursor' id="cursor"></div>
-            <div class='cursor2' id="cursor2"></div>
-            <div class='cursor3' id="cursor3"></div>
+                <div class='cursor' id="cursor"></div>
+                <div class='cursor2' id="cursor2"></div>
+                <div class='cursor3' id="cursor3"></div>
             </div>
             <!-- 手機版的menu 結束-->
 
@@ -138,7 +230,8 @@
                             <li class="mr-6"><a href="/dashboard">後台</a></li>
                         @endif
                         <li class="mr-6">
-                            <div data-dropdown-toggle="dropdownleft" class="relative" style="width:50px;height:50px;border-radius:50%;background-color: gainsboro">
+                            <div data-dropdown-toggle="dropdownleft" class="relative"
+                                style="width:50px;height:50px;border-radius:50%;background-color: gainsboro">
                                 <span class="absolute"
                                     style="top:50%;left:50%;transform:translate(-50%,-50%);font-size:28px;font-weight:500;">{{ substr(Auth::user()->name, 0, 1) }}</span>
                             </div>
@@ -155,7 +248,7 @@
             </div>
         </nav>
         <div id="authentication-modal" tabindex="-1" aria-hidden="true" style="z-index: 60;"
-            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full authentication">
+            class="hidden overflow-y-auto overflow-x-hidden fixed top-28 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full authentication">
             <div class="relative p-4 w-full max-w-md h-full md:h-auto">
                 <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                     <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent"
