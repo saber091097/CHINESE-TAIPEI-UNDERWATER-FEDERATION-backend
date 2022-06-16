@@ -661,7 +661,7 @@ body main .section .s-container .s-innerbox .s-innerbox-btm .class-content .in-i
     margin-bottom: 10px;
   }
 
-  body main .section .s-container .s-innerbox .s-innerbox-btm .class-content .in-in-innerbox-right .fixed-ts-box .singUp-btn .btn-bgG{
+  body main .section .s-container .s-innerbox .s-innerbox-btm .class-content .in-in-innerbox-right .fixed-ts-box .btn-bgG {
     background-color: #EAEDEF;
     color: #141414;
   }
@@ -827,7 +827,7 @@ body main .section .s-container .s-innerbox .s-innerbox-btm .class-content .in-i
     margin-bottom: 16px;
   }
 
-  body main .section .s-container .s-innerbox .s-innerbox-btm .class-content .in-in-innerbox-left .fixed-box .singUp-btn .btn-bgG {
+  body main .section .s-container .s-innerbox .s-innerbox-btm .class-content .in-in-innerbox-left .fixed-box .btn-bgG {
     background-color: #EAEDEF;
     color: #141414;
   }
