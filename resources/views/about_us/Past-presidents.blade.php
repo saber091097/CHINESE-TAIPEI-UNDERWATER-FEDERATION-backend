@@ -41,12 +41,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="flex">
-                            <td class="flex items-center year">2009年</td>
-                            <td class="flex items-center">長莊浩志</td>
-                            <td class="flex items-center">榮譽理事</td>
+                        @foreach ($data as $item)
+                        <tr class="flex" style="width:1000px">
+                            <td class="flex items-center year">{{$item->year}}</td>
+                            <td class="flex items-center">{{$item->name}}</td>
+                            <td class="flex items-center" style="width: 300px;">{{$item->position}}</td>
                         </tr>
-                        <tr class="flex">
+                        @endforeach
+                        {{-- <tr class="flex">
                             <td class="flex items-center year">2009年</td>
                             <td class="flex items-center">曾文樂</td>
                             <td class="flex items-center">創會理事長</td>
@@ -65,7 +67,7 @@
                             <td class="flex items-center year">2021年</td>
                             <td class="flex items-center">詹寓崵</td>
                             <td class="flex items-center">理事長</td>
-                        </tr>
+                        </tr> --}}
                     </tbody>
                 </table>
 
