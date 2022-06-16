@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\NewLeader;
 
 class HtmlController extends Controller
 {
     //
 
     public function Pastpresidents(){
-        return view('about_us.Past-presidents');
+        $data= NewLeader::get();
+        return view('about_us.Past-presidents',compact('data'));
     }
 
     public function about(){
