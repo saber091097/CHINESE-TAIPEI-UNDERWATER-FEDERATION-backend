@@ -296,7 +296,8 @@
             <div class="hamburger lg:hidden">
                 <div class="hamburger__content">
                     <ul class="hamburger__list">
-                        <li class="hamburger__list-item nav-active "><a href="#"
+                        <li class="hamburger__list-item nav-active ">
+                            <a href="#"
                                 class="hover-target full md:w-3/5"><span>最新消息</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -304,7 +305,8 @@
                                         d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
                                         fill="#3B54F3" />
                                 </svg>
-                            </a></li>
+                            </a>
+                        </li>
 
                         <li class="hamburger__list-item ">
                             {{-- <div class="menu about"> --}}
@@ -314,11 +316,12 @@
                                     <path
                                         d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
                                         fill="#3B54F3" />
-                                </svg></a>
-
+                                </svg>
+                            </a>
                         </li>
 
-                        <li class="hamburger__list-item "><a href="#s3"
+                        <li class="hamburger__list-item ">
+                            <a href="#s3"
                                 class="hover-target full md:w-3/5"><span>歷屆會長</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -326,9 +329,11 @@
                                         d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
                                         fill="#3B54F3" />
                                 </svg>
-                            </a></li>
+                            </a>
+                        </li>
 
-                        <li class="hamburger__list-item "><a href="#s3"
+                        <li class="hamburger__list-item ">
+                            <a href="#s3"
                                 class="hover-target full md:w-3/5"><span>協會組織架構</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -336,9 +341,11 @@
                                         d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
                                         fill="#3B54F3" />
                                 </svg>
-                            </a></li>
+                            </a>
+                        </li>
 
-                        <li class="hamburger__list-item "><a href="#s3"
+                        <li class="hamburger__list-item ">
+                            <a href="#s3"
                                 class="hover-target full md:w-3/5"><span>救生員資格檢定</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -346,9 +353,11 @@
                                         d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
                                         fill="#3B54F3" />
                                 </svg>
-                            </a></li>
+                            </a>
+                        </li>
 
-                        <li class="hamburger__list-item "><a href="#s3"
+                        <li class="hamburger__list-item ">
+                            <a href="#s3"
                                 class="hover-target full md:w-3/5"><span>課程</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -356,9 +365,11 @@
                                         d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
                                         fill="#3B54F3" />
                                 </svg>
-                            </a></li>
+                            </a>
+                        </li>
 
-                        <li class="hamburger__list-item "><a href="#s4"
+                        <li class="hamburger__list-item ">
+                            <a href="#s4"
                                 class="hover-target full md:w-3/5"><span>活動照片</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -366,7 +377,8 @@
                                         d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
                                         fill="#3B54F3" />
                                 </svg>
-                            </a></li>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -413,106 +425,62 @@
                 </ul>
             </div>
 
+            <div id="dropdownleft" class="hidden z-10 dropdownleft">
+                <ul class="bg-white rounded-lg">
+                    <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
+                        <a href="/personal-center" style="color: black">個人中心</a>
+                    </li>
+                    <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
+                        <form action="logout" method="POST" class="d-flex m-0" id="logout">
+                            @csrf
+                            <button type="submit" style="color: red;width:100%;left:0;">登出</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="dropdownleft" class="hidden z-10 dropdownleft">
+                <ul class="bg-white rounded-lg">
+                    <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
+                        <a href="/personal-center" style="color: black">個人中心</a>
+                    </li>
+                    <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
+                        <form action="logout" method="POST" class="d-flex m-0" id="logout">
+                            @csrf
+                            <button type="submit" style="color: red;width:100%;left:0;">登出</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="dropdownNavbar" class="hidden z-10 dropdownNavbar" style="color:black">
+                <ul class="bg-white">
+                    <li>
+                        <a href="about"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">關於我們</a>
+                    </li>
+                    <li>
+                        <a href="Past-presidents"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">歷屆會長</a>
+                    </li>
+                    <li>
+                        <a href="./organization .html"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">協會組織架構</a>
+                    </li>
+                    <li>
+                        <a href="./surf-Rescue.html"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">救生員資格檢定</a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <!-- Main modal -->
-        <div id="authentication-modal" tabindex="-1" aria-hidden="true"
-            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
-            <div class="relative p-4 w-full max-w-md h-full md:h-auto">
-                <!-- Modal content -->
-                <div id="modal_content" class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                    <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent"
-                        data-modal-toggle="authentication-modal">
-                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M0 22C0 9.84974 9.84974 0 22 0C34.1503 0 44 9.84974 44 22C44 34.1503 34.1503 44 22 44C9.84974 44 0 34.1503 0 22Z"
-                                fill="#F3F6F9" />
-                            <g opacity="0.7">
-                                <path
-                                    d="M22.0007 20.586L26.9507 15.636L28.3647 17.05L23.4147 22L28.3647 26.95L26.9507 28.364L22.0007 23.414L17.0507 28.364L15.6367 26.95L20.5867 22L15.6367 17.05L17.0507 15.636L22.0007 20.586Z"
-                                    fill="#141414" />
-                            </g>
-                        </svg>
-                    </button>
-                    <div class="py-6 px-6 lg:px-8">
-                        <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white"
-                            style="font-family: 'Noto Sans TC', sans-serif;">登入</h3>
-                        <form class="space-y-6" action="#">
-                            <div>
-                                <label for="email"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">電子信箱</label>
-                                <input type="email" name="email" id="email"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                    placeholder="name@company.com" required>
-                            </div>
-                            <div>
-                                <label for="password"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">密碼</label>
-                                <input type="password" name="password" id="password" placeholder="••••••••"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                    required>
-                            </div>
-                            <div class="flex justify-between">
-                                <div class="flex items-start">
-                                    <div class="flex items-center h-5">
-                                        <input id="remember" type="checkbox" value=""
-                                            class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
-                                            required>
-                                    </div>
-                                    <label for="remember"
-                                        class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                                        style="margin-bottom:0 ;">記住我</label>
-                                </div>
-                                <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500"
-                                    style="height:20px;line-height: 20px;font-family: 'Noto Sans TC', sans-serif;">忘記密碼</a>
-                            </div>
-                            <button type="submit"
-                                class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">登入</button>
-                            <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-                                Not registered? <a href="#"
-                                    class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         {{-- 大頭貼的下拉式選單 --}}
-        <div id="dropdownleft" class="hidden z-10 dropdownleft">
-            <ul class="bg-white rounded-lg">
-                <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
-                    <a href="/personal-center" style="color: black">個人中心</a>
-                </li>
-                <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
-                    <form action="logout" method="POST" class="d-flex m-0" id="logout">
-                        @csrf
-                        <button type="submit" style="color: red;width:100%;left:0;">登出</button>
-                    </form>
-                </li>
-            </ul>
-        </div>
+
         {{-- 關於我們的下拉式選單 --}}
-        <div id="dropdownNavbar" class="hidden z-10 dropdownNavbar" style="color:black">
-            <ul class="bg-white">
-                <li>
-                    <a href="about"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">關於我們</a>
-                </li>
-                <li>
-                    <a href="Past-presidents"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">歷屆會長</a>
-                </li>
-                <li>
-                    <a href="./organization .html"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">協會組織架構</a>
-                </li>
-                <li>
-                    <a href="./surf-Rescue.html"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">救生員資格檢定</a>
-                </li>
-            </ul>
-        </div>
+
         {{-- 分隔線 --}}
         <!-- <div class="flex justify-center items-center" style="width:100%;height: 503px;">
       <div class="name">
