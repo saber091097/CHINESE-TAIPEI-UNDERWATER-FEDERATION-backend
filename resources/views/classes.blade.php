@@ -457,7 +457,7 @@
                                     <div class="select-box flex flex-col w-full">
                                         <label class="ts" for="class-select1">選擇課程</label>
                                         <select name="class1" id="class-select1">
-                                            @foreach ($windsur as $data)
+                                            @foreach ($windsurf as $data)
                                                 <option value="{{ $data->id }}">{{ $data->event }}</option>
                                             @endforeach
                                         </select>
