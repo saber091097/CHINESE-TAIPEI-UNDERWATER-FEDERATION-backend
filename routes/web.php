@@ -11,6 +11,7 @@ use App\Http\Controllers\SignupController;
 use App\Http\Controllers\ClassesController;
 use App\Http\Controllers\PersonalCenterController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\NewsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -152,4 +153,8 @@ Route::post('/createAccount/store', [ClientController::class,'store']);
 
 Route::get('/organization', [HtmlController::class,'organ']);
 Route::get('/Surf-Rescue', [HtmlController::class,'rescue']);
-Route::get('/news', [HtmlController::class,'news']);
+
+
+Route::get('/news', [NewsController::class,'news']);
+Route::get('/event/{id}', [NewsController::class,'news_to_event']);
+

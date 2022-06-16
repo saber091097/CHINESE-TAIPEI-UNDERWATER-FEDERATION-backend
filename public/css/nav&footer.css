@@ -242,6 +242,7 @@
 
 * body .container .nav .left {
     padding-left: 63px;
+
 }
 
 @media (max-width: 1024px) {
@@ -252,6 +253,7 @@
 @media (max-width: 768px) {
     * body .container .nav .left {
         padding-top: 16px;
+
     }
 }
 
@@ -817,6 +819,7 @@ footer {
         position: fixed;
         visibility: hidden;
         top: 50%;
+        left: 0;
         margin-top: 20px;
         transform: translate(0%, -50%);
         width: 100%;
@@ -992,6 +995,7 @@ footer {
         transform: translateX(0%) translateY(0%);
         border-radius: 0;
         top: 80px;
+        left: 0;
     }
 }
 

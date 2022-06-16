@@ -15,7 +15,7 @@ class EventimgController extends Controller
     public function album()
     {
         // $album = EventImg_List::where('eventimg_type',1)->latest()->get();
-        $album = EventImg_List::get();
+        $album = EventImg_List::orderby('id','desc')->get();
         // dd($album->id);
         // dd($album);
 
