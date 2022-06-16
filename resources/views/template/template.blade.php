@@ -29,11 +29,11 @@
 
 <body>
     <div class="container flex justify-center max-w-full flex-wrap" data-scroll-container>
-        <nav class="nav flex md:items-center justify-between" data-scroll-section >
+        <nav class="nav flex md:items-center justify-between" data-scroll-section>
             <div class="left ">
                 <a href="/">
                     <div class="logo flex">
-                        <img src="{{asset('img/logo/only_logo.svg')}}" alt="">
+                        <img src="{{ asset('img/logo/only_logo.svg') }}" alt="">
                         {{-- hidden sm:block --}}
                         <div class="name flex flex-col ">
                             <div class="zh-name">
@@ -47,15 +47,14 @@
                 </a>
             </div>
             <!-- 手機版的menu 開始 -->
-                <!-- hamburger menu  -->
-                <div class="cd-header lg:hidden">
-                    <div class="header-wrapper">
-                        <div class="nav-but-wrap">
-                            <div class="menu-icon hover-target">
-                                <span class="menu-icon__line menu-icon__line-left"></span>
-                                <span class="menu-icon__line"></span>
-                                <span class="menu-icon__line menu-icon__line-right"></span>
-                            </div>
+            <!-- hamburger menu  -->
+            <div class="cd-header lg:hidden">
+                <div class="header-wrapper">
+                    <div class="nav-but-wrap">
+                        <div class="menu-icon hover-target">
+                            <span class="menu-icon__line menu-icon__line-left"></span>
+                            <span class="menu-icon__line"></span>
+                            <span class="menu-icon__line menu-icon__line-right"></span>
                         </div>
                     </div>
                 </div>
@@ -87,7 +86,7 @@
                                       </ul>
                                     </div>
                                 </div> --}}
-                            </li>
+                        </li>
 
                             <li class="hamburger__list-item "><a href="Past-presidents" class="hover-target full md:w-3/5"><span>歷屆會長</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg>
@@ -108,12 +107,12 @@
                             <li class="hamburger__list-item "><a href="/album" class="hover-target full md:w-3/5"><span>活動照片</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg>
                             </a></li>
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
-                <div class='cursor' id="cursor"></div>
-                <div class='cursor2' id="cursor2"></div>
-                <div class='cursor3' id="cursor3"></div>
+            </div>
+            <div class='cursor' id="cursor"></div>
+            <div class='cursor2' id="cursor2"></div>
+            <div class='cursor3' id="cursor3"></div>
             {{-- </div> --}}
             <!-- 手機版的menu 結束-->
 
@@ -124,7 +123,12 @@
                     <li class="mr-6">
                         <button class="flex" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
                             關於我們
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0007 13.172L16.9507 8.22198L18.3647 9.63598L12.0007 16L5.63672 9.63598L7.05072 8.22198L12.0007 13.172Z" fill="#141414"/></svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.0007 13.172L16.9507 8.22198L18.3647 9.63598L12.0007 16L5.63672 9.63598L7.05072 8.22198L12.0007 13.172Z"
+                                    fill="#141414" />
+                            </svg>
                         </button>
                     </li>
                     <li class="mr-6"><a href="/classes">課程</a></li>
@@ -156,7 +160,8 @@
                 <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                     <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent"
                         data-modal-toggle="authentication-modal">
-                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M0 22C0 9.84974 9.84974 0 22 0C34.1503 0 44 9.84974 44 22C44 34.1503 34.1503 44 22 44C9.84974 44 0 34.1503 0 22Z"
                                 fill="#F3F6F9" />
@@ -173,7 +178,8 @@
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div>
-                                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">電子信箱</label>
+                                <label for="email"
+                                    class="block mb-2 text-sm font-medium text-gray-900 ">電子信箱</label>
                                 <input type="email" name="email" id="email"
                                     class="text-gray-900 text-sm block w-full p-2.5" placeholder="name@company.com">
                             </div>
@@ -200,7 +206,8 @@
                                 登入
                             </button>
                             <div class="text-sm font-medium text-gray-500 ">
-                                Not registered? <a href="createAccount" class="text-blue-700 hover:underline " >Create account</a>
+                                Not registered? <a href="createAccount" class="text-blue-700 hover:underline ">Create
+                                    account</a>
                             </div>
                         </form>
                     </div>
@@ -249,7 +256,7 @@
                     <div class="footer_container">
                         <div class="footer_logo_menu flex-col sm:flex sm:flex-row sm:justify-between">
                             <div class="left flex flex-col ">
-                                <img src="{{asset('img/logo/CHINESE TAIPEI UNDERWATER FEDERATION-white logo.png')}}"
+                                <img src="{{ asset('img/logo/CHINESE TAIPEI UNDERWATER FEDERATION-white logo.png') }}"
                                     alt="台中市水中運動協會">
                                 <span>台中市北區天祥街10號</span>
                                 <span>04-22312698</span>
@@ -299,9 +306,9 @@
     <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- jquery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> --}}
-  <script src="{{asset('js/hamburgerMenu.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> --}}
+    <script src="{{ asset('js/hamburgerMenu.js') }}"></script>
     @yield('js')
 </body>
 

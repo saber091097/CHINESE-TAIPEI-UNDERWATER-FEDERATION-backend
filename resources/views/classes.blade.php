@@ -185,9 +185,9 @@
                                         <div class="select-box flex flex-col w-full">
                                             <label class="ts" for="class-select1-rwd">選擇課程</label>
                                             <select name="class1" id="class-select1-rwd">
-                                                @foreach ($windsurf_rwd as $data)
+                                                {{-- @foreach ($windsurf_rwd as $data)
                                                     <option value="{{ $data->id }}">{{ $data->event }}</option>
-                                                @endforeach
+                                                @endforeach --}}
                                             </select>
                                         </div>
                                         <div class="price-box">
@@ -203,6 +203,7 @@
                                         <li class="nav-item">
                                             <a href="#s1-tabs-1"
                                                 class="
+                                            active
                                             nav-link
                                             nav-link1
                                             block
@@ -588,6 +589,7 @@
                                         <li class="nav-item">
                                             <a href="#s2-tabs-1"
                                                 class="
+                                            active
                                             nav-link
                                             nav-link1
                                             block
@@ -973,6 +975,7 @@
                                         <li class="nav-item">
                                             <a href="#s3-tabs-1"
                                                 class="
+                                            active
                                             nav-link
                                             nav-link1
                                             block
@@ -1359,6 +1362,7 @@
                                         <li class="nav-item">
                                             <a href="#s4-tabs-1"
                                                 class="
+                                            active
                                             nav-link
                                             nav-link1
                                             block
@@ -1733,13 +1737,13 @@
                                         </select>
                                     </div>
                                     <div class="price-box">
-                                        {{-- @foreach ($data as $item) --}}
+                                        @foreach ($data as $item)
                                         <h1> NT{{ $data->price }}</h1>
 
-                                        {{-- @endforeach --}}
+                                        @endforeach
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
-                                    {{-- @foreach ($data as $item) --}}
+                                    @foreach ($data as $item)
 
                                     <form action="/signup1/{{ $data->id }}" method="POST" id="supform-rwd">
                                         @csrf
@@ -1747,7 +1751,7 @@
                                             type="submit">線上報名</button>
                                         <span class="phone">電洽報名 04-22312698</span>
                                     </form>
-                                    {{-- @endforeach --}}
+                                    @endforeach
                                 </div>
                                 <div class="tab w-full">
                                     <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 items-center"
@@ -1755,6 +1759,7 @@
                                         <li class="nav-item">
                                             <a href="#s5-tabs-1"
                                                 class="
+                                                    active
                                                     nav-link
                                                     nav-link1
                                                     block
@@ -1825,7 +1830,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    {{-- @foreach ($data as $item) --}}
+                                    @foreach ($data as $item)
                                     <div class="tab-content" id="s5-tabs-tabContent">
                                         <div class="tabs-1 tab-pane fade show active flex flex-col" id="s5-tabs-1"
                                             role="tabpanel" aria-labelledby="s5-tabs-1-tab">
@@ -1848,7 +1853,7 @@
 
                                         </div>
                                     </div>
-                                    {{-- @endforeach --}}
+                                    @endforeach
                                 </div>
                             </div>
                             <div class="in-in-innerbox-left w-4/12 flex justify-end">
@@ -1862,13 +1867,13 @@
                                         </select>
                                     </div>
                                     <div class="price-box">
-                                        {{-- @foreach ($data as $item) --}}
+                                        @foreach ($data as $item)
                                         <h1> NT{{ $data->price }}</h1>
 
-                                        {{-- @endforeach --}}
+                                        @endforeach
                                         <span class="ts">含保險、器材、救生衣</span>
                                     </div>
-                                    {{-- @foreach ($data as $item) --}}
+                                    @foreach ($data as $item)
 
                                     <form action="/signup1/{{ $data->id }}" method="POST" id="supform">
                                         @csrf
@@ -1876,7 +1881,7 @@
                                             type="submit">線上報名</button>
                                         <span class="phone">電洽報名 04-22312698</span>
                                     </form>
-                                    {{-- @endforeach --}}
+                                    @endforeach
                                 </div>
                             </div>
                         </div>

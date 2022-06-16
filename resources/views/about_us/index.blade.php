@@ -21,15 +21,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <!-- flowbite CDN 彈出式視窗 -->
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
+
+    <link rel="stylesheet" href="{{ asset('css/for_aboutus.css') }}">
+
     <!-- timeline -->
     <link href="https://assets.website-files.com/61f969f7e3cde769a08142b5/css/nation-and-james.8e5924b2f.min.css"
         rel="stylesheet" type="text/css" />
 
-    <link rel="stylesheet" href="{{ asset('css/nav&footer.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/for_aboutus.css') }}"> --}}
 
 
     <title>關於我們</title>
     <style>
+
+        /*  */
         body {
             font-family: 'Noto Sans TC', sans-serif;
             font-weight: unset;
@@ -243,6 +248,13 @@
             box-shadow: 0 0 0 999px rgba(55, 65, 81, 0.5);
             z-index: 1000;
         }
+        .nav{
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            background-color: #ffffff;
+        }
+
     </style>
     {{-- @endsection --}}
 </head>
@@ -255,44 +267,143 @@
                 <a href="/">
                     <div class="logo flex">
                         <img src="./img/logo/only_logo.svg" alt="">
-                        <div class="name flex flex-col hidden lg:block">
+                        <div class="name flex flex-col hidden sm:block">
                             <div class="zh-name">
                                 <span>台中市水中運動協會</span>
                             </div>
                             <div class="en-name">
-                                <span style="font-size:16px; font-weight:500;">CHINESE TAIPEI UNDERWATER FEDERATION</span>
+                                <span style="font-size:16px; font-weight:400;">CHINESE TAIPEI UNDERWATER
+                                    FEDERATION</span>
                             </div>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="burger mr-4 lg:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" />
-                </svg>
+            <!-- 手機版的menu 開始 -->
+            <!-- hamburger menu  -->
+            <div class="cd-header lg:hidden">
+                <div class="header-wrapper">
+                    <div class="nav-but-wrap">
+                        <div class="menu-icon hover-target">
+                            <span class="menu-icon__line menu-icon__line-left"></span>
+                            <span class="menu-icon__line"></span>
+                            <span class="menu-icon__line menu-icon__line-right"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="left flex justify-end ml-auto lg:block hidden">
-                <ul class="flex items-center" style="opacity: 0.6">
-                    <li><a href="./news.html">最新消息</a></li>
-                    <li>
+            <!-- hamburger menu 展開 -->
+            <div class="hamburger lg:hidden">
+                <div class="hamburger__content">
+                    <ul class="hamburger__list">
+                        <li class="hamburger__list-item nav-active "><a href="#"
+                                class="hover-target full md:w-3/5"><span>最新消息</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
+                                        fill="#3B54F3" />
+                                </svg>
+                            </a></li>
+
+                        <li class="hamburger__list-item ">
+                            {{-- <div class="menu about"> --}}
+                            <a href="#s1" class="hover-target full md:w-3/5"><span>關於我們</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
+                                        fill="#3B54F3" />
+                                </svg></a>
+
+                        </li>
+
+                        <li class="hamburger__list-item "><a href="#s3"
+                                class="hover-target full md:w-3/5"><span>歷屆會長</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
+                                        fill="#3B54F3" />
+                                </svg>
+                            </a></li>
+
+                        <li class="hamburger__list-item "><a href="#s3"
+                                class="hover-target full md:w-3/5"><span>協會組織架構</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
+                                        fill="#3B54F3" />
+                                </svg>
+                            </a></li>
+
+                        <li class="hamburger__list-item "><a href="#s3"
+                                class="hover-target full md:w-3/5"><span>救生員資格檢定</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
+                                        fill="#3B54F3" />
+                                </svg>
+                            </a></li>
+
+                        <li class="hamburger__list-item "><a href="#s3"
+                                class="hover-target full md:w-3/5"><span>課程</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
+                                        fill="#3B54F3" />
+                                </svg>
+                            </a></li>
+
+                        <li class="hamburger__list-item "><a href="#s4"
+                                class="hover-target full md:w-3/5"><span>活動照片</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
+                                        fill="#3B54F3" />
+                                </svg>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class='cursor hidden' id="cursor" style="display:none"></div>
+            <div class='cursor2' id="cursor2"></div>
+            <div class='cursor3' id="cursor3"></div>
+            {{-- </div> --}}
+            <!-- 手機版的menu 結束-->
+            <div class="left flex justify-end ml-auto lg:block hidden" style="padding-left: 63px;">
+                <ul class="flex items-center" style="opacity:">
+                    <li class="mr-4"><a href="./news">最新消息</a></li>
+                    <li class="mr-4">
                         <button class="flex" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
                             關於我們
-                            <img src="./img/icon/ic_arrow-down.svg" alt="">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.0007 13.172L16.9507 8.22198L18.3647 9.63598L12.0007 16L5.63672 9.63598L7.05072 8.22198L12.0007 13.172Z"
+                                    fill="#141414" />
+                            </svg>
                         </button>
-                    </li>
-                    <li><a href="./classes.html">課程</a></li>
-                    <li><a href="album">活動照片</a></li>
+                    </li class="mr-4">
+                    <li class="mr-4"><a href="./classes">課程</a></li>
+                    <li class="mr-4"><a href="/album">活動照片</a></li>
                     @auth
                         @if (Auth::user()->power == 1)
                             <li><a href="/dashboard">後台</a></li>
                         @endif
-                        <li>
-                            <button data-dropdown-toggle="dropdownleft">
-                                <img src="{{ asset('img/icon/Avatar.png') }}" alt="">
-                            </button>
+                        <li class="mr-4">
+                            <div data-dropdown-toggle="dropdownleft" class="relative"
+                                style="width:50px;height:50px;border-radius:50%;background-color: gainsboro">
+                                <span class="absolute"
+                                    style="top:50%;left:50%;transform:translate(-50%,-50%);font-size:28px;font-weight:500;">{{ substr(Auth::user()->name, 0, 1) }}</span>
+                            </div>
                         </li>
-                        <li>
-                            <div class="p-0 nameblack" style='margin-right:5px; '>{{ Auth::user()->name }}</div>
+                        <li class="mr-4">
+                            <div class="p-0 nameblack" style='margin-right:5px; '>您好，{{ Auth::user()->name }}</div>
                         </li>
 
                     @endauth
@@ -312,7 +423,8 @@
                 <div id="modal_content" class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                     <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent"
                         data-modal-toggle="authentication-modal">
-                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M0 22C0 9.84974 9.84974 0 22 0C34.1503 0 44 9.84974 44 22C44 34.1503 34.1503 44 22 44C9.84974 44 0 34.1503 0 22Z"
                                 fill="#F3F6F9" />
@@ -367,7 +479,7 @@
             </div>
         </div>
         {{-- 大頭貼的下拉式選單 --}}
-        <div id="dropdownleft" class="hidden z-10 dropdownleft" >
+        <div id="dropdownleft" class="hidden z-10 dropdownleft">
             <ul class="bg-white rounded-lg">
                 <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
                     <a href="/personal-center" style="color: black">個人中心</a>
@@ -420,13 +532,16 @@
             <!-- 大標 關於我們 -->
             <div id="title" class="content-title flex flex-wrap z-10" style="color:black;">
                 <div class="color-line flex" style="margin:0 auto;">
-                    <div class="blue1" style="width: 25px;
+                    <div class="blue1"
+                        style="width: 25px;
               height: 4px;
               background-color: #3B54F3;"></div>
-                    <div class="blue2" style="width: 25px;
+                    <div class="blue2"
+                        style="width: 25px;
               height: 4px;
               background-color: #6EEDF0;
-              border-radius: 0 25px 25px 0;"></div>
+              border-radius: 0 25px 25px 0;">
+                    </div>
                 </div>
                 關於我們
             </div>
@@ -458,9 +573,11 @@
                         </div>
                         <div id="w-node-_1b11356a-0a20-9bf6-b946-d66fb4f3a530-fd5f313d" class="timeline_right">
                             <div class="margin-bottom-medium">
-                                <p class="paragraph serif white mb-2" style="font-weight: 500;
+                                <p class="paragraph serif white mb-2"
+                                    style="font-weight: 500;
                     font-size: 24px;
-                    line-height: 32px;">救生員分門別類</p>
+                    line-height: 32px;">
+                                    救生員分門別類</p>
                                 <p class="paragraph serif white"
                                     style="font-weight: 400; font-size: 18px; opacity: 0.75;">
                                     我國為參加日本舉行的「亞洲蹼泳錦標賽」，仍以「中華台北水中運動協會」名稱申請加入世界水中運動聯盟 (CMAS)
@@ -483,9 +600,11 @@
                         </div>
                         <div class="timeline_right">
                             <div class="margin-bottom-medium">
-                                <p class="paragraph serif white mb-2" style="font-weight: 500;
+                                <p class="paragraph serif white mb-2"
+                                    style="font-weight: 500;
                     font-size: 24px;
-                    line-height: 32px;">推廣水中運動</p>
+                    line-height: 32px;">
+                                    推廣水中運動</p>
                                 <p class="paragraph serif white"
                                     style="font-size: 18px;font-weight: 400;opacity: 0.75;">
                                     本會獲內政部核准成立「中華民國水中運動協會」，並以行政院體委會為目的事業主關機關，開始推展水中運動及救攤等任務。
@@ -510,9 +629,11 @@
                         </div>
                         <div class="timeline_right">
                             <div class="margin-bottom-medium">
-                                <p class="paragraph serif white mb-2" style="font-weight: 500;
+                                <p class="paragraph serif white mb-2"
+                                    style="font-weight: 500;
                     font-size: 24px;
-                    line-height: 32px;">正式獲內政部核准成立</p>
+                    line-height: 32px;">
+                                    正式獲內政部核准成立</p>
                                 <p class="paragraph serif white"
                                     style="font-size: 18px;font-weight: 400; opacity: 0.75;">
                                     本會獲內政部核准成立「中華民國水中運動協會」，並以行政院體委會為目的事業主關機關，開始推展水中運動及救攤等任務。</p>
@@ -600,11 +721,14 @@
         function myfunction() {
             if (document.documentElement.scrollTop < 350) {
                 document.getElementById("aboutspan").className = "test1";
-            } else if (document.documentElement.scrollTop > 500) {
+            } else if (document.documentElement.scrollTop > 350) {
                 document.getElementById("aboutspan").className = "test0";
             }
         }
     </script>
+
+    <script src="{{ asset('js/hamburgerMenu.js') }}"></script>
+
     {{-- @endsection --}}
 
 

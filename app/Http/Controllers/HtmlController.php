@@ -32,6 +32,7 @@ class HtmlController extends Controller
     }
 
     public function news(){
-        return view('news');
+        $data=Event::get();
+        return view('news',compact('data'));
     }
 }
