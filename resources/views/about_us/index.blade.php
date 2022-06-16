@@ -424,7 +424,7 @@
                                     </svg>
                                 </a></li>
                             {{-- 以下登出這塊還沒改好 --}}
-                            <li class="hamburger__list-item">
+                            {{-- <li class="hamburger__list-item">
                                 <form action="logout" method="POST" class="hover-target full md:w-3/5"
                                     style="padding-left: 5px;position: relative;
                                     text-decoration: none;
@@ -435,12 +435,12 @@
                                     padding-right: 5px;
                                     display: inline-block;
                                     text-transform: uppercase;
-                                    transition: all 200ms linear;">
+                                    transition: all 200ms linear; width:100%">
                                     @csrf
-                                    <button class="hover-target full md:w-3/5" type="submit">
+                                    <button class="hover-target full" type="submit" style="width:100%">
                                         <span class="hover-target"
-                                            style="color: black;float:left;width:60%;display:block;text-align:start">登出</span>
-                                        <svg style="float:right" width="24" height="24" viewBox="0 0 24 24"
+                                            style="color: black;float:left;;text-align:start">登出</span>
+                                        <svg style="" width="24" height="24" viewBox="0 0 24 24"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
@@ -448,7 +448,7 @@
                                         </svg>
                                     </button>
                                 </form>
-                            </li>
+                            </li> --}}
                             {{-- 以上為漢堡條登出欄位 --}}
                         @endauth
                         @guest

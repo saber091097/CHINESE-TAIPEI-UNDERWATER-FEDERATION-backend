@@ -161,7 +161,7 @@
                                         </svg>
                                     </a></li>
                                     {{-- 以下登出這塊還沒改好 --}}
-                                <li class="hamburger__list-item">
+                                {{-- <li class="hamburger__list-item">
                                     <form action="logout" method="POST" class="hover-target full md:w-3/5"
                                         style="padding-left: 5px;position: relative;
                                     text-decoration: none;
@@ -185,7 +185,7 @@
                                             </svg>
                                         </button>
                                     </form>
-                                </li>
+                                </li> --}}
                                 {{-- 以上為漢堡條登出欄位 --}}
                             @endauth
                             @guest
