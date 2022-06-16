@@ -226,7 +226,7 @@ main .container {
 @media (max-width: 640px) {
   main .container {
     width: 500px;
-    height: 1690px;
+    height: 1715px;
     padding: 16px;
   }
 }
@@ -312,11 +312,12 @@ main .container .content-class {
 
   main .container .content-class .table tfoot td {
     color: #C1C4CA;
+    font-size: 12px;
   }
 
   main .container .content-class .table-ts {
     display: none;
-    height: 196px;
+    height: 220px;
     margin-bottom: 24px;
   }
 
@@ -342,8 +343,9 @@ main .container .content-class {
     padding: 16px;
   }
 
-  main .container .content-class .table-ts .t-price .price{
-    color: #3B54F3;
+  main .container .content-class .table-ts .t-price {
+    color: #3B54F3 ;
+    font-weight: 500;
   }
 
   @media (max-width: 550px) {
@@ -354,6 +356,7 @@ main .container .content-class {
 
   main .container .content-class .table-ts tfoot td {
     color: #C1C4CA;
+    font-size: 12px;
   }
 
   main .container .content-class .account {
@@ -400,6 +403,7 @@ main .container .content-class {
   main .container .form-title .h3m {
     font-weight: 500;
     margin-bottom: 4px;
+    font-size: 18px;
   }
 
 main .container .caption {
@@ -456,6 +460,7 @@ main .container .content-form .input-text:focus {
 
 main .container .content-form .innerbox-contact, main .container .content-form .innerbox-id {
   height: 75px;
+  margin-bottom: 32px;
 }
 
 @media (max-width: 640px) {
@@ -667,7 +672,7 @@ main .container .content-form .innerbox-class {
 
 @media (max-width: 640px) {
     main .container .content-form .innerbox-class {
-        height: 185px;
+        /* height: 195px; */
         margin-bottom: 24px;
     }
 }

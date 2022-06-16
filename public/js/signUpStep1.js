@@ -206,7 +206,7 @@ function next(){
         `;
     };
 
-    if (!emailValue == "" && checkEmail(formS1.email.value)) {
+    if (!formS1.email.value == "" && checkEmail(emailValue)) {
         mailBox.innerHTML = "";
         mailBox.innerHTML = `
         <label class="ts" for="email">Email<span class="ts star">*</span></label>

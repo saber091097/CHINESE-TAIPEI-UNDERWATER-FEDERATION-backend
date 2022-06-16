@@ -212,7 +212,7 @@ main .container {
 @media (max-width: 640px) {
   main .container {
     width: 500px;
-    height: 1244px;
+    height: 1265px;
     padding: 16px;
   }
 }
@@ -274,7 +274,7 @@ main .container .content-class .table tbody td {
 
 main .container .content-class .table tbody .price {
   color: #3B54F3;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 main .container .content-class .table .t-name {
@@ -321,8 +321,9 @@ main .container .content-class .table-ts .td-c {
   padding: 16px;
 }
 
-main .container .content-class .table-ts .t-price .price{
-    color: #3B54F3;
+main .container .content-class .table-ts .t-price {
+    color: #3B54F3 ;
+    font-weight: 500;
   }
 
 @media (max-width: 550px) {
@@ -477,6 +478,8 @@ main .container .content-form .innerbox-address .address #address .selector-c .s
   }
 }
 
+
+
 main .container .content-form .innerbox-address .address #address .selector-c .select .color-change {
   color: #141414;
   opacity: 1;
@@ -508,8 +511,14 @@ main .container .content-form .innerbox-address .address #address .selector-c .s
 }
 
 main .container .content-form .innerbox-address .address #address .selector-c #select-county {
-  margin-right: 16px;
-}
+    margin-right: 16px;
+  }
+
+  @media (max-width: 640px) {
+    main .container .content-form .innerbox-address .address #address .selector-c #select-county {
+      margin-bottom: 16px;
+    }
+  }
 
 main .container .content-form .innerbox-address .address #address .span-none {
   display: none !important;

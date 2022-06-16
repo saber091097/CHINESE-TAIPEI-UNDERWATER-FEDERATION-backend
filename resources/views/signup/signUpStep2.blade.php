@@ -145,7 +145,7 @@
                     <input id="upload-idC1" onchange="readURL(this)" targetID="idCard1_img" name="idCard1" type="file"
                         accept="image/jpeg, image/png" />
                     <div class="box-idCard box-idCard1 w-full flex justify-center items-center">
-                        <img id="idCard1_img" src="#" alt="">
+                        <img id="idCard1_img" class="img_idCard1" src="#" alt="">
                         <div id="in-inner-idCard1" class="in-inner-idCard in-inner-idCard1 flex flex-col items-center">
                             <div class="icon">
                                 <img class="w-full h-full" src="{{asset('img/icon/ic_image-add-line.svg')}}" alt="" style="opacity: .3">
@@ -165,7 +165,7 @@
                     <input id="upload-idC2" onchange="readURL(this)" targetID="idCard2_img" name="idCard2" type="file"
                         accept="image/jpeg, image/png" />
                     <div class="box-idCard box-idCard2 w-full flex justify-center items-center">
-                        <img id="idCard2_img" src="" alt="">
+                        <img id="idCard2_img" class="img_idCard2" src="" alt="">
                         <div id="in-inner-idCard2" class="in-inner-idCard in-inner-idCard2 flex flex-col items-center">
                             <div class="icon">
                                 <img class="w-full h-full" src="{{asset('img/icon/ic_image-add-line.svg')}}" alt="" style="opacity: .3">

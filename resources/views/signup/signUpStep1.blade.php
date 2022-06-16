@@ -89,7 +89,7 @@
                 <tfoot>
                     <tr class="">
                         <td></td>
-                        <td class="flex justify-end">付款方式統一為匯款</td>
+                        <td class="tf-td flex justify-end">付款方式統一為匯款</td>
                     </tr>
                 </tfoot>
             </table>
