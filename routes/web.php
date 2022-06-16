@@ -12,6 +12,7 @@ use App\Http\Controllers\ClassesController;
 use App\Http\Controllers\PersonalCenterController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\JoinController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -158,3 +159,15 @@ Route::get('/Surf-Rescue', [HtmlController::class,'rescue']);
 Route::get('/news', [NewsController::class,'news']);
 Route::get('/event/{id}', [NewsController::class,'news_to_event']);
 
+Route::prefix('/joinlist')->group(function () {
+    Route::get('/', [JoinController::class,'index']);
+    Route::get('/joinlist/{id}', [JoinController::class,'joinlist']);
+
+    Route::get('/create', [JoinController::class,'create']);
+    Route::post('/store', [JoinController::class,'store']);
+
+    Route::get('/edit/{id}', [JoinController::class,'edit']);
+    Route::post('/update/{id}', [JoinController::class,'update']);
+
+    Route::post('/del/{id}', [JoinController::class,'del']);
+});

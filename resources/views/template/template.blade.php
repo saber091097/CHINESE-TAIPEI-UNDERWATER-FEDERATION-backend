@@ -162,7 +162,7 @@
                                     </a></li>
                                     {{-- 以下登出這塊還沒改好 --}}
                                 <li class="hamburger__list-item">
-                                    <form action="logout" method="POST" class="hover-target full md:w-3/5"
+                                    <form action="logout" method="POST" class="hover-target full "
                                         style="padding-left: 5px;position: relative;
                                     text-decoration: none;
                                     color: #141414;
@@ -175,14 +175,17 @@
                                     transition: all 200ms linear;">
                                         @csrf
                                         <button class="hover-target full md:w-3/5" type="submit">
-                                            <span class="hover-target"
-                                                style="color: black;float:left;width:60%;display:block;text-align:start">登出</span>
-                                            <svg style="float:right" width="24" height="24" viewBox="0 0 24 24"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
-                                                    fill="#3B54F3" />
-                                            </svg>
+                                            <div class="md:w-3/5">
+                                                <span class="hover-target"
+                                                    style="color: black;float:left;width:100%;display:block;text-align:start">登出</span>
+                                                <svg style="float:right" width="24" height="24" viewBox="0 0 24 24"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
+                                                        fill="#3B54F3" />
+                                                </svg>
+
+                                            </div>
                                         </button>
                                     </form>
                                 </li>
@@ -356,17 +359,17 @@
                             </div>
                             <div class="right text-white sm:flex ">
                                 <ul class="page flex flex-col justify-between">
-                                    <li class="flex justify-between">首頁
+                                    <li class="flex justify-between"><a href="/"> 首頁
                                         <svg xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                                        </svg>
+                                        </svg></a>
                                     </li>
-                                    <li class="flex justify-between">關於我們
+                                    <li class="flex justify-between"><a href=""> 關於我們
                                         <svg xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                                        </svg>
+                                        </svg></a>
                                     </li>
                                     <li class="flex justify-between">課程
                                         <svg xmlns="http://www.w3.org/2000/svg">
