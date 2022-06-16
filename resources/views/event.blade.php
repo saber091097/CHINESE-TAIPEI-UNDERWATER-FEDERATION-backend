@@ -2,13 +2,15 @@
 
     @section('css')
     <link rel="stylesheet" href="{{asset('css/event.css')}}">
+    <link rel="stylesheet" href="{{asset('css/nav&footer.css')}}">
+
     <title>{{$events[0]->event}}</title>
     @endsection
 
 
     @section('main')
         <div class="news flex justify-center">
-            <div class="width80 flex justify-center flex-col">
+            <div class="width80 flex justify-center flex-col mt-20">
                 <div class="breadcrumb">
                     <ul class="flex justify-start flex-wrap">
                         <li><a href="index.html">首頁</a></li>

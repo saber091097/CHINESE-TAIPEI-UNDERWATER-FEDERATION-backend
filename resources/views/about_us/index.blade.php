@@ -837,8 +837,8 @@
                         </li>
                     </ul>
                     <ul class="link">
-                        <li> <a href="https://www.facebook.com/%E5%8F%B0%E4%B8%AD%E5%B8%82%E6%B0%B4%E4%B8%AD%E9%81%8B%E5%8B%95%E5%8D%94%E6%9C%83%E6%BD%9B%E6%B0%B4%E5%A7%94%E5%93%A1%E6%9C%83-203136269701568">Facebook</a> </li>
-                        <li> <a href="https://www.instagram.com/suptuf/">instagram</a></li>
+                        <li> <a href="https://www.facebook.com/%E5%8F%B0%E4%B8%AD%E5%B8%82%E6%B0%B4%E4%B8%AD%E9%81%8B%E5%8B%95%E5%8D%94%E6%9C%83%E6%BD%9B%E6%B0%B4%E5%A7%94%E5%93%A1%E6%9C%83-203136269701568" target="_blank">Facebook</a> </li>
+                        <li> <a href="https://www.instagram.com/suptuf/" target="_blank">instagram</a></li>
                     </ul>
                 </div>
                 <div class="copyright text-white opacity-50 w-full flex justify-end">

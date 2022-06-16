@@ -175,14 +175,17 @@
                                     transition: all 200ms linear;">
                                         @csrf
                                         <button class="hover-target full md:w-3/5" type="submit">
-                                            <span class="hover-target"
-                                                style="color: black;float:left;width:60%;display:block;text-align:start">登出</span>
-                                            <svg style="float:right" width="24" height="24" viewBox="0 0 24 24"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
-                                                    fill="#3B54F3" />
-                                            </svg>
+                                            <div class="md:w-3/5">
+                                                <span class="hover-target"
+                                                    style="color: black;float:left;width:100%;display:block;text-align:start">登出</span>
+                                                <svg style="float:right" width="24" height="24" viewBox="0 0 24 24"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
+                                                        fill="#3B54F3" />
+                                                </svg>
+
+                                            </div>
                                         </button>
                                     </form>
                                 </li> --}}
@@ -360,13 +363,13 @@
                                         <svg xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                                        </svg>
+                                        </svg></a>
                                     </li>
                                     <li class="flex justify-between"> <a href="/about">關於我們</a>
                                         <svg xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                                        </svg>
+                                        </svg></a>
                                     </li>
                                     <li class="flex justify-between"> <a href="/Past-presidents">歷屆會長</a>
                                         <svg xmlns="http://www.w3.org/2000/svg">
@@ -400,8 +403,8 @@
                                     </li>
                                 </ul>
                                 <ul class="link">
-                                    <li> <a href="https://www.facebook.com/%E5%8F%B0%E4%B8%AD%E5%B8%82%E6%B0%B4%E4%B8%AD%E9%81%8B%E5%8B%95%E5%8D%94%E6%9C%83%E6%BD%9B%E6%B0%B4%E5%A7%94%E5%93%A1%E6%9C%83-203136269701568">Facebook</a> </li>
-                                    <li> <a href="https://www.instagram.com/suptuf/">instagram</a></li>
+                                    <li> <a href="https://www.facebook.com/%E5%8F%B0%E4%B8%AD%E5%B8%82%E6%B0%B4%E4%B8%AD%E9%81%8B%E5%8B%95%E5%8D%94%E6%9C%83%E6%BD%9B%E6%B0%B4%E5%A7%94%E5%93%A1%E6%9C%83-203136269701568" target="_blank">Facebook</a> </li>
+                                    <li> <a href="https://www.instagram.com/suptuf/" target="_blank">instagram</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -3,7 +3,7 @@
   font-weight: 500;
 }
 
-* body .container .footer .left span {
+/* * body .container .footer .left span {
   font-size: 18px;
   font-weight: 400;
 }
@@ -16,7 +16,7 @@
 * body .container .nav .left ul li, * body .container .news .width80 .content .event-content span, * body .container .footer .right ul {
   font-size: 16px;
   font-weight: 400;
-}
+} */
 
 * body .container .news .width80 .content .news .news-title {
   font-size: 14px;
@@ -43,7 +43,7 @@
   width: 100%;
 }
 
-* body .container .nav {
+/* * body .container .nav {
   width: 100%;
   height: 80px;
   -webkit-box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
@@ -97,7 +97,7 @@
 
 * body .container .nav .left ul li:last-child {
   padding: 0 67px 0 5px;
-}
+} */
 
 * body .container .news {
   width: 100%;
@@ -178,7 +178,7 @@
   line-height: 28px;
 }
 
-* body .container .footer {
+/* * body .container .footer {
   height: 525px;
   background-color: #3B54F3;
   padding-top: 120px;
@@ -295,5 +295,5 @@
     font-size: 12px;
     font-weight: 400;
   }
-}
+} */
 /*# sourceMappingURL=event.css.map */
