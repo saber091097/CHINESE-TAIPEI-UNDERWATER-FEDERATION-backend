@@ -283,8 +283,36 @@
                     </div>
                 </div>
                 <div class="news-right">
+                    @foreach ($news as $item)
                     <div class="placard-news">
-                        <a href="./event.html" class="flex">
+                        <a href="./event/{{$item->id}}" class="flex">
+                            <div class="placard-left mr-auto">
+                                <div class="time">
+                                    <label for="event"></label>
+                                    <button>
+                                        @if ($item->anno_type==1)
+                                        公告
+                                        @else
+                                        好消息
+                                        @endif
+                                    </button>
+                                    <span>{{substr($item->updated_at,0,10)}} updated</span>
+                                </div>
+                                <div class="event">
+                                    <span>{{$item->event}}</span>
+                                </div>
+                            </div>
+                            <div class="placard-right flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    @endforeach
+                    {{-- <div class="placard-news">
+                        <a href="./event/" class="flex">
                             <div class="placard-left mr-auto">
                                 <div class="time">
                                     <label for="event"></label>
@@ -362,7 +390,7 @@
                                 </svg>
                             </div>
                         </a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
