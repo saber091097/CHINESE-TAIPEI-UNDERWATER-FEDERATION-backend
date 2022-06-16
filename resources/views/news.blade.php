@@ -7,11 +7,11 @@
 @section('main')
 <div class="container flex justify-center max-w-full flex-wrap">
 
-    <div class="news flex justify-center">
+    <div class="news flex justify-center mt-20">
         <div class="width80 flex justify-center flex-col">
             <div class="breadcrumb">
                 <ul class="flex justify-start flex-wrap">
-                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="/">首頁</a></li>
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg">
                             <path
