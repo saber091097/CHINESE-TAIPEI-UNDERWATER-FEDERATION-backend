@@ -13,10 +13,14 @@ class ClassesController extends Controller
     public function classes(){
 
         $windsurf=Event::where('event_type',1)->get();
+        $windsurf_rwd=Event::where('event_type',1)->get();
+
         $sup=Event::where('event_type',2)->get();
+        $sup_rwd=Event::where('event_type',2)->get();
+
         $data=Event::where('event_type',2)->take(1)->first();
-        
-        return view('classes',compact('windsurf','sup','data'));
+
+        return view('classes',compact('windsurf','windsurf_rwd','sup','sup_rwd','data'));
     }
 
     public function changeclass($id){
