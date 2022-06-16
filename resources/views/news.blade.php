@@ -1,6 +1,8 @@
 @extends('template.template')
 @section('css')
 <link rel="stylesheet" href="{{asset('css/news.css')}}">
+<link rel="stylesheet" href="{{asset('css/nav&footer.css')}}">
+
 <title>最新消息</title>
 
 @endsection
