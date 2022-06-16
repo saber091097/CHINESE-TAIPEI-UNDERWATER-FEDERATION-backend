@@ -521,8 +521,9 @@ nav {
 * body .container .nav {
   width: 100%;
   height: 80px;
-  -webkit-box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
-          box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+  border-bottom: 1px solid #EAEDEF;
+  /* -webkit-box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03); */
+          /* box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03); */
 }
 
 * body .container .nav .right {
@@ -571,9 +572,9 @@ nav {
   cursor: pointer;
 }
 
-* body .container .nav .left ul li:not(:last-child) {
+/* * body .container .nav .left ul li:not(:last-child) {
   padding-right: 25px;
-}
+} */
 
 * body .container .nav .left ul li:last-child {
   padding: 0 67px 0 5px;

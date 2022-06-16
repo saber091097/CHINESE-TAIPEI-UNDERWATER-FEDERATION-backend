@@ -695,6 +695,7 @@ body main .section .s-container .s-innerbox .s-innerbox-btm .class-content .in-i
     border-radius: 8px;
     padding: 0px 24px;
     position: unset;
+    background-color: #fff;
   }
 
   body main .section .s-container .s-innerbox .s-innerbox-btm .class-content .in-in-innerbox-right .tab .nav-tabs .nav-item {

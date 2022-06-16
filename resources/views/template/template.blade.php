@@ -68,7 +68,7 @@
 
                             <li class="hamburger__list-item ">
                                 {{-- <div class="menu about"> --}}
-                                    <a href="about" class="hover-target full md:w-3/5"><span>關於我們</span>
+                                    <a href="/about" class="hover-target full md:w-3/5"><span>關於我們</span>
                                         <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg></a>
                                 {{-- </div> --}}
                                 {{-- <div class="submenu aboutSub">
@@ -88,7 +88,7 @@
                                 </div> --}}
                         </li>
 
-                            <li class="hamburger__list-item "><a href="Past-presidents" class="hover-target full md:w-3/5"><span>歷屆會長</span>
+                            <li class="hamburger__list-item "><a href="/Past-presidents" class="hover-target full md:w-3/5"><span>歷屆會長</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" fill="#3B54F3"/></svg>
                             </a></li>
 
@@ -232,11 +232,11 @@
         <div id="dropdownNavbar" class="hidden dropdownNavbar" style="z-index: 100;">
             <ul class="bg-white">
                 <li>
-                    <a href="about"
+                    <a href="/about"
                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">關於我們</a>
                 </li>
                 <li>
-                    <a href="Past-presidents"
+                    <a href="/Past-presidents"
                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">歷屆會長</a>
                 </li>
                 <li>
@@ -310,13 +310,6 @@
     {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> --}}
     <script src="{{ asset('js/hamburgerMenu.js') }}"></script>
 
-<<<<<<< Updated upstream
-=======
-    {{-- <script>
-        var check_account = {!!json_encode($)!!}
-        console.log();
-    </script> --}}
->>>>>>> Stashed changes
     @yield('js')
 </body>
 
