@@ -766,25 +766,43 @@
                 </div>
                 <div class="right flex text-white">
                     <ul class="page">
-                        <li class="flex justify-between">首頁
+                        <li class="flex justify-between"><a href="/">首頁</a>
                             <svg xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
                             </svg>
                         </li>
-                        <li class="flex justify-between">關於我們
+                        <li class="flex justify-between"> <a href="/about">關於我們</a>
                             <svg xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
                             </svg>
                         </li>
-                        <li class="flex justify-between">課程
+                        <li class="flex justify-between"> <a href="/Past-presidents">歷屆會長</a>
                             <svg xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
                             </svg>
                         </li>
-                        <li class="flex justify-between">活動照片
+                        <li class="flex justify-between"> <a href="/organization">協會組織架構</a>
+                            <svg xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                            </svg>
+                        </li>
+                        <li class="flex justify-between"> <a href="/Surf-Rescue">救生員資格檢定</a>
+                            <svg xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                            </svg>
+                        </li>
+                        <li class="flex justify-between"> <a href="/classes">課程</a>
+                            <svg xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                            </svg>
+                        </li>
+                        <li class="flex justify-between"><a href="/album">活動照片</a>
                             <svg xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
@@ -792,8 +810,8 @@
                         </li>
                     </ul>
                     <ul class="link">
-                        <li>Facebook</li>
-                        <li>instagram</li>
+                        <li> <a href="https://www.facebook.com/%E5%8F%B0%E4%B8%AD%E5%B8%82%E6%B0%B4%E4%B8%AD%E9%81%8B%E5%8B%95%E5%8D%94%E6%9C%83%E6%BD%9B%E6%B0%B4%E5%A7%94%E5%93%A1%E6%9C%83-203136269701568">Facebook</a> </li>
+                        <li> <a href="https://www.instagram.com/suptuf/">instagram</a></li>
                     </ul>
                 </div>
                 <div class="copyright text-white opacity-50 w-full flex justify-end">
