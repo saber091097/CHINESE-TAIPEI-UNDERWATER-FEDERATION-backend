@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
     <link rel="stylesheet" href="{{ asset('css/classes.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/nav&footer.css') }}"> --}}
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <title>課程總覽</title>
@@ -26,6 +27,9 @@
 
         footer {
             width: 100%;
+        }
+        .footer{
+            background-color: #3B54F3;
         }
 
         @keyframes moveToTop {

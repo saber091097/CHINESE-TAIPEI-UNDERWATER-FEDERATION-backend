@@ -248,16 +248,14 @@
                     <span class="zh-aboutus">熱門課程</span>
                     <span class="en-aboutus">Popular Courses</span>
                 </div>
-
-                <div class="popular-courses-imgs flex courses">
-                    <div class="courses1 flex relative">
+                <div class="popular-courses-imgs flex">
+                    <div class="courses1 flex relative" onclick="location.href='/classes'" style="cursor: pointer">
                         <p class="absolute hidden">立式浪板</p>
                     </div>
-
-                    <div class="courses2 flex relative">
+                    <div class="courses2 flex relative" onclick="location.href='/classes'" style="cursor: pointer">
                         <p class="absolute hidden">潛水</p>
                     </div>
-                    <div class="courses3 flex relative">
+                    <div class="courses3 flex relative" onclick="location.href='/classes'" style="cursor: pointer">
                         <p class="absolute hidden">風浪板</p>
                     </div>
                 </div>
@@ -584,7 +582,7 @@
                                 </svg>
                             </summary>
                             <div class="answer">
-                                <p>可以點選首頁的左上角的聯絡我們或者可以滑到頁尾的地方有fb,ig連結可以私訊我們。</p>
+                                <p>可以滑到頁尾的地方有fb,ig連結可以私訊我們。</p>
                             </div>
                         </details>
                     </div>
@@ -592,7 +590,7 @@
             </div>
         </div>
         <div class="bottomimg w-full flex" data-scroll-section>
-            <a href="#" class="w-1/2 relative eventimg ">
+            <a href="/album" class="w-1/2 relative eventimg ">
                 <div class="gray w-full h-full absolute top-0">
                 </div>
                 <div class="h-full">
@@ -610,7 +608,7 @@
                 </div>
 
             </a>
-            <a href="/classes.html" class="w-1/2 relative classesimg">
+            <a href="/classes" class="w-1/2 relative classesimg">
                 <div class="gray w-full h-full absolute top-0">
                 </div>
                 <div class="h-full">
