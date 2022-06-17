@@ -330,7 +330,7 @@ main .container .content-class .table-ts .td-t {
 }
 
 main .container .content-class .table-ts .td-c {
-  width: 168px;
+  width: 388px;
   height: 56px;
   color: #141414;
   font-weight: 500;
@@ -340,6 +340,12 @@ main .container .content-class .table-ts .td-c {
 main .container .content-class .table-ts .t-price {
     color: #3B54F3 ;
     font-weight: 500;
+  }
+
+  @media (max-width: 550px) {
+    main .container .content-class .table-ts .td-c {
+      width: 168px;
+    }
   }
 
 main .container .content-class .table-ts tfoot td {
