@@ -36,7 +36,7 @@
         <div class="content flex flex-col w-full">
             <div class="content-data ">
                 <div class="title">
-                    <h3 class="h3m">SUP教練教練班</h3>
+                    <h3 class="h3m">{{$event}}</h3>
                 </div>
                 <div class="data w-full">
                     <div class="flex flex-col sm:flex-row w-full">

@@ -100,7 +100,7 @@
                 <span class="ts">姓名：詹寓崵</span>
             </div>
         </div>
-        <form action="/signup2" method="POST" name="formS1" class="content content-form flex flex-col w-full">
+        <form action="/signup2/{{$event->id}}" method="POST" name="formS1" class="content content-form flex flex-col w-full">
             @csrf
             <div class="title">
                 <h3 class="h3m">基本資料</h3>

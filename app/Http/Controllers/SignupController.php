@@ -25,8 +25,10 @@ class SignupController extends Controller
         return view('signup.signUpStep1',compact('event'));
     }
 
-    public function signup2(Request $request){
+    public function signup2($id,Request $request){
+        $event= Event::where('id',$id)->first();
         session([
+            'event'=>$event->event,
             'name'=>$request->name,
             'id_card'=>$request->id,
             'gender'=>$request->sex,
@@ -35,7 +37,9 @@ class SignupController extends Controller
             'addr'=>$request->county.$request->district.$request->address,
         ]);
 
-        return view('signup.signUpStep2');
+        $event= session::get('event');
+
+        return view('signup.signUpStep2',compact('event'));
     }
 
     public function signup3(Request $request){
@@ -135,6 +139,7 @@ class SignupController extends Controller
     public function signup4($id){
         $data = SignUp::where('id',$id)->first();
         $subtotal = session::get('subtotal');
-        return view('signup.signUpStep4',compact('data','subtotal'));
+        $event=session::get('event');
+        return view('signup.signUpStep4',compact('data','subtotal','event'));
     }
 }

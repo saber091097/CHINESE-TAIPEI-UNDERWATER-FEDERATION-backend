@@ -53,7 +53,7 @@
                     </thead>
                     <tbody>
                         <tr class="flex">
-                            <td class="t-name">SUP教練教練班</td>
+                            <td class="t-name">{{$event}}</td>
                             <td class="t-type flex justify-center">SUP</td>
                             <td class="t-price price flex justify-end">NT4,500</td>
                         </tr>
