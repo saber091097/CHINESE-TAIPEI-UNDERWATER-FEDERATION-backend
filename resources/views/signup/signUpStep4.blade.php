@@ -74,7 +74,7 @@
                     <h3 class="h3m">報名費用</h3>
                 </div>
                 <h2 class="h2m">
-                   NT{{$subtotal}}
+                   NT {{$subtotal}}
                 </h2>
                 <p class="ps w-full">
                     <span class="ts">請依照下方匯款資訊進行匯款，並且</span>
