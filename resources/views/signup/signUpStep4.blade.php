@@ -74,11 +74,7 @@
                     <h3 class="h3m">報名費用</h3>
                 </div>
                 <h2 class="h2m">
-                    @if ($data->plus4 == 0)
-                    NT{{$data->event->price}}
-                    @else
-                    NT{{$data->event->price}} + 1500 * ({{$data->plus1}}+{{$data->plus2}}+{{$data->plus3}})
-                    @endif
+                   NT{{$subtotal}}
                 </h2>
                 <p class="ps w-full">
                     <span class="ts">請依照下方匯款資訊進行匯款，並且</span>

@@ -97,6 +97,10 @@ class SignupController extends Controller
             'user_id'=>$DB_id->id,
         ]);
 
+
+        $plus= 1500 *($data->plus1 +$data->plus2 +$data->plus3);
+        $subtotal = $data->event->price + $plus;
+
         if ($request->hasfile('headshot')){
             $path = FilesController::imgUpload($request->headshot,'headshot');
             HeadShot::create([
@@ -120,13 +124,17 @@ class SignupController extends Controller
                 'user_id'=>$DB_id->id,
             ]);
         }
+        session([
+            'subtotal'=>$subtotal,
+        ]);
 
-        return view('signup.signUpStep3',compact('data'));
+        return view('signup.signUpStep3',compact('data','subtotal'));
     }
 
 
     public function signup4($id){
         $data = SignUp::where('id',$id)->first();
-        return view('signup.signUpStep4',compact('data'));
+        $subtotal = session::get('subtotal');
+        return view('signup.signUpStep4',compact('data','subtotal'));
     }
 }

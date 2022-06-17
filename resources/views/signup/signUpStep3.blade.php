@@ -65,7 +65,7 @@
                                 救生
                             @endif
                             </td>
-                        <td class="t-price price flex justify-end">{{$data->event->price}}</td>
+                        <td id="price" class="t-price price flex justify-end">{{$subtotal}}</td>
                     </tr>
                 </tbody>
                 <tfoot>
@@ -86,7 +86,7 @@
                     </tr>
                     <tr>
                         <td class="td-t">總價</td>
-                        <td class="td-c flex justify-end t-price price">NT4,500</td>
+                        <td class="td-c flex justify-end t-price price">NT{{$subtotal}}</td>
                     </tr>
                 </tbody>
                 <tfoot>
@@ -183,6 +183,8 @@
 @endsection
 
 @section('js')
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 @endsection
