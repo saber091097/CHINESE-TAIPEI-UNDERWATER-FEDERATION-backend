@@ -115,7 +115,7 @@ function next(){
         <span class="ts ts-red">請確認Email輸入的格式</span>
         `;
 	}else if (countyValue == "" || districtValue == "") {
-
+        xxss
         warning.innerHTML = `
         <span class="w-full ts ts-red span-red">請選擇完整的縣市與區域</span>
         `;
