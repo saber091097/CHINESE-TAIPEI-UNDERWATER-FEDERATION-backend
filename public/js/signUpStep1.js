@@ -31,6 +31,8 @@ function next(){
     var idValue = document.getElementById("id").value;
     var phoneValue = document.getElementById("phone").value;
     var emailValue = document.getElementById("email").value;
+    // var emailV = formS1.elements["email"].value;
+
     var countyValue = document.getElementById("county").value;
     var districtValue = document.getElementById("district").value;
     var addressValue = document.getElementById("addressinput").value;
@@ -115,7 +117,7 @@ function next(){
         <span class="ts ts-red">請確認Email輸入的格式</span>
         `;
 	}else if (countyValue == "" || districtValue == "") {
-        
+
         warning.innerHTML = `
         <span class="w-full ts ts-red span-red">請選擇完整的縣市與區域</span>
         `;

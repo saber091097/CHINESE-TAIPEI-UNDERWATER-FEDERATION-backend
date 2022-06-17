@@ -34,7 +34,7 @@
                         <h1 class="h1">建立帳戶</h1>
                         <div class="ps">
                             <span class="ts">已經有帳號了嗎？</span>
-                            <a href="" class="tsb">登入</a>
+                            <a style="cursor: pointer;" data-modal-toggle="authentication-modal" class="tsb">登入</a>
                         </div>
                         <form name="formCreate" class=" w-full" action="/createAccount/store" method="post">
                             @csrf
