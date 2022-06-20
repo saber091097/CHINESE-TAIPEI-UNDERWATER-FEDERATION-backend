@@ -20,6 +20,8 @@
                 <span class="" data-scroll-section>沒事多玩水 多玩水沒事</span>
             </div>
         </div>
+
+        <!------------ popup開始 ---------------->
         <div id="CMASModal" tabindex="-1" aria-hidden="true"
             class="hidden fixed overflow-y-auto overflow-x-hidden w-full top-0 right-0 left-0 z-50 h-full justify-center items-center CMASModal h-modal">
             <div class="relative w-full h-full  CMAS">
@@ -38,7 +40,7 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="p-6 flex CMAS-content">
+                    <div class="p-8 flex CMAS-content pb-14">
                         <div class="CMAS-img">
                             <img src="/img/logo_cmas_popup.svg" alt="">
                         </div>
@@ -82,7 +84,7 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="p-6 flex PADI-content">
+                    <div class="p-8 flex PADI-content pb-14">
                         <div class="PADI-img">
                             <img src="/img/logo_padi_popup.svg" alt="">
                         </div>
@@ -126,7 +128,7 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="p-6 flex SUPTUF-content">
+                    <div class="p-8 flex SUPTUF-content pb-14">
                         <div class="SUPTUF-img">
                             <img src="/img/logo_sup_popup.svg" alt="">
                         </div>
@@ -192,7 +194,7 @@
                         <div class="blue1"></div>
                         <div class="blue2"></div>
                     </div>
-                    <span class="zh-aboutus">三大認證系統</span>
+                    <span class="zh-aboutus my-1">三大認證系統</span>
                     <span class="en-aboutus">Three certification systems</span>
                 </div>
                 <div class="certification-bottom flex justify-between">

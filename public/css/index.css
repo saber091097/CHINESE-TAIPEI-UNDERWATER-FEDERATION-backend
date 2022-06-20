@@ -267,6 +267,9 @@
     }
 }
 
+/* popup開始
+============================================================ */
+
 * body .container .CMASModal .CMAS {
     width: 1000px;
     height: 388px;
@@ -375,7 +378,7 @@
 }
 
 * body .container .PADIModal .PADI {
-    width: 1000px;
+    width: 75%;
     height: 388px;
 }
 
@@ -587,6 +590,8 @@
     height: 24px;
     fill: #3B54F3;
 }
+/* popup 結束
+============================================================ */
 
 * body .container .backgroundimg {
     height: auto;
@@ -776,7 +781,7 @@
 }
 
 * body .container .backgroundimg .certification .certification-bottom .certification-board {
-    width: 354px;
+    width: 33%;
     height: 274px;
     border-radius: 16px;
     cursor: pointer;
@@ -811,8 +816,15 @@
 }
 
 * body .container .backgroundimg .certification .certification-bottom .certification-board .certification-img img {
-    height: 186px;
-    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 @media (max-width: 1100px) {
