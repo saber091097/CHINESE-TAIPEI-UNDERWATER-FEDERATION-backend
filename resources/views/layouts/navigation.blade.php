@@ -41,6 +41,11 @@
                        活動名單
                     </x-nav-link>
                 </div> --}}
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="'/indeximg'" :active="request()->Is('indeximg')">
+                       首頁照片更新
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->

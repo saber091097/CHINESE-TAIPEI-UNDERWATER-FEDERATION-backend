@@ -13,6 +13,7 @@ use App\Http\Controllers\PersonalCenterController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\JoinController;
+use App\Http\Controllers\IndexImgController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -170,4 +171,16 @@ Route::prefix('/joinlist')->group(function () {
     Route::post('/update/{id}', [JoinController::class,'update']);
 
     Route::post('/del/{id}', [JoinController::class,'del']);
+});
+
+Route::prefix('/indeximg')->group(function () {
+    Route::get('/', [IndexImgController::class,'index']);
+
+    Route::get('/create', [IndexImgController::class,'create']);
+    Route::post('/store', [IndexImgController::class,'store']);
+
+    Route::get('/edit/{id}', [IndexImgController::class,'edit']);
+    Route::post('/update/{id}', [IndexImgController::class,'update']);
+
+    Route::delete('/del/{id}', [IndexImgController::class,'del']);
 });
