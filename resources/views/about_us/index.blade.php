@@ -152,7 +152,7 @@
             opacity: 1;
             z-index: 10;
             animation-name: float;
-            animation-duration: 1.5s;
+            animation-duration: 1s;
             animation-timing-function: linear;
             animation-fill-mode: forwards;
         }
@@ -164,7 +164,7 @@
             transform: translateX(-50%);
             /* opacity: 0.2; */
             animation-name: float;
-            animation-duration: 1.5s;
+            animation-duration: 1s;
             animation-timing-function: linear;
             animation-fill-mode: forwards;
             z-index: 10;
@@ -507,10 +507,47 @@
                     @endguest
                 </ul>
             </div>
-            <div id="authentication-modal" tabindex="-1" aria-hidden="true" style="z-index: 100;"
+
+
+            <div id="dropdownleft" class="hidden z-10 dropdownleft">
+                <ul class="bg-white rounded-lg">
+                    <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
+                        <a href="/personal-center" style="color: black">個人中心</a>
+                    </li>
+                    <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
+                        <form action="logout" method="POST" class="d-flex m-0" id="logout">
+                            @csrf
+                            <button type="submit" style="color: red;width:100%;left:0;">登出</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="dropdownNavbar" class="hidden z-10 dropdownNavbar" style="color:black">
+                <ul class="bg-white">
+                    <li>
+                        <a href="/about"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">關於我們</a>
+                    </li>
+                    <li>
+                        <a href="/Past-presidents"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">歷屆會長</a>
+                    </li>
+                    <li>
+                        <a href="/organization"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">協會組織架構</a>
+                    </li>
+                    <li>
+                        <a href="/Surf-Rescue"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">救生員資格檢定</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="authentication-modal" tabindex="-1" aria-hidden="true" style="z-index: 100;"
                 class="hidden overflow-y-auto overflow-x-hidden fixed top-20 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full authentication">
                 <div class="relative p-4 w-full max-w-md h-full md:h-auto">
-                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <div class="relative bg-white rounded-lg shadow " style="border-radius:16px;">
                         <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent"
                             data-modal-toggle="authentication-modal">
                             <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
@@ -527,7 +564,7 @@
                         </button>
 
                         <div class="py-6 px-6 lg:px-8" style="font-weight: 500; box-shadow: 0 0 0 999px rgba(55, 65, 81, 0.5);
-                        z-index: 1000;">
+                        z-index: 1000;border-radius:16px;">
                             <h3 class="mb-4 text-xl  text-gray-900 " style="font-family:unset;">登入</h3>
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
@@ -571,43 +608,6 @@
                     </div>
                 </div>
             </div>
-
-            <div id="dropdownleft" class="hidden z-10 dropdownleft">
-                <ul class="bg-white rounded-lg">
-                    <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
-                        <a href="/personal-center" style="color: black">個人中心</a>
-                    </li>
-                    <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
-                        <form action="logout" method="POST" class="d-flex m-0" id="logout">
-                            @csrf
-                            <button type="submit" style="color: red;width:100%;left:0;">登出</button>
-                        </form>
-                    </li>
-                </ul>
-            </div>
-
-            <div id="dropdownNavbar" class="hidden z-10 dropdownNavbar" style="color:black">
-                <ul class="bg-white">
-                    <li>
-                        <a href="/about"
-                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">關於我們</a>
-                    </li>
-                    <li>
-                        <a href="/Past-presidents"
-                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">歷屆會長</a>
-                    </li>
-                    <li>
-                        <a href="/organization"
-                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">協會組織架構</a>
-                    </li>
-                    <li>
-                        <a href="/Surf-Rescue"
-                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">救生員資格檢定</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
         <!-- Main modal -->
 
         {{-- 大頭貼的下拉式選單 --}}
