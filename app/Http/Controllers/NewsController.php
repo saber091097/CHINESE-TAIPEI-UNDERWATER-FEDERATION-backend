@@ -13,8 +13,11 @@ class NewsController extends Controller
     public function news(){
         $news = Event::orderby('id','desc')->get();
         // dd($news);
-
-        return view('news',compact('news'));
+        $anno_one = Event::where('anno_type','1')->orderby('id','desc')->get();
+        // dd($anno_one);
+        $anno_two = Event::where('anno_type','2')->orderby('id','desc')->get();
+        // dd($anno_two);
+        return view('news',compact('news','anno_one','anno_two'));
     }
 
     public function news_to_event($id){
