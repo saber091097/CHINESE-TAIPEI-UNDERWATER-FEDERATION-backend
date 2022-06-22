@@ -1552,9 +1552,9 @@
     margin-top: 36px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     * .footer .right {
-        width: 60%;
+        width: 100%;
     }
 }
 

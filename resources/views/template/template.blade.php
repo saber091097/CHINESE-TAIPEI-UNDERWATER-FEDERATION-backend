@@ -350,7 +350,7 @@
             <div class="container max-w-full ">
                 <div class="footer flex justify-center">
                     <div class="footer_container">
-                        <div class="footer_logo_menu flex-col sm:flex sm:flex-row sm:justify-between">
+                        <div class="footer_logo_menu flex-col md:flex md:flex-row md:justify-between">
                             <div class="left flex flex-col ">
                                 <img src="{{ asset('img/logo/CHINESE TAIPEI UNDERWATER FEDERATION-white logo.png') }}"
                                     alt="台中市水中運動協會">

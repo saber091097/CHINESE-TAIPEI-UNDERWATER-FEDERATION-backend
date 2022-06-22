@@ -784,64 +784,68 @@
 
     <footer>
         <div class="container max-w-full h-auto">
-            <div class="footer flex flex-wrap justify-between w-full">
-                <div class="left flex flex-col ">
-                    <img src="{{ asset('img/logo/CHINESE TAIPEI UNDERWATER FEDERATION-white logo.png') }}"
-                        alt="台中市水中運動協會">
-                    <span>台中市北區天祥街10號</span>
-                    <span>04-22312698</span>
+            <div class="footer w-full">
+                {{-- flex-wrap --}}
+                <div class="footer_top flex-col md:flex md:flex-row md:justify-between">
+                    <div class="left flex flex-col ">
+                        <img src="{{ asset('img/logo/CHINESE TAIPEI UNDERWATER FEDERATION-white logo.png') }}"
+                            alt="台中市水中運動協會">
+                        <span>台中市北區天祥街10號</span>
+                        <span>04-22312698</span>
+                    </div>
+                    <div class="right text-white sm:flex">
+                        <ul class="page flex flex-col justify-between">
+                            <li class="flex justify-between"><a href="/">首頁</a>
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                </svg>
+                            </li>
+                            <li class="flex justify-between"> <a href="/about">關於我們</a>
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                </svg>
+                            </li>
+                            <li class="flex justify-between"> <a href="/Past-presidents">歷屆會長</a>
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                </svg>
+                            </li>
+                            <li class="flex justify-between"> <a href="/organization">協會組織架構</a>
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                </svg>
+                            </li>
+                            <li class="flex justify-between"> <a href="/Surf-Rescue">救生員資格檢定</a>
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                </svg>
+                            </li>
+                            <li class="flex justify-between"> <a href="/classes">課程</a>
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                </svg>
+                            </li>
+                            <li class="flex justify-between"><a href="/album">活動照片</a>
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                </svg>
+                            </li>
+                        </ul>
+                        <ul class="link">
+                            <li> <a href="https://www.facebook.com/%E5%8F%B0%E4%B8%AD%E5%B8%82%E6%B0%B4%E4%B8%AD%E9%81%8B%E5%8B%95%E5%8D%94%E6%9C%83%E6%BD%9B%E6%B0%B4%E5%A7%94%E5%93%A1%E6%9C%83-203136269701568" target="_blank">Facebook</a> </li>
+                            <li> <a href="https://www.instagram.com/suptuf/" target="_blank">instagram</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="right flex text-white">
-                    <ul class="page">
-                        <li class="flex justify-between"><a href="/">首頁</a>
-                            <svg xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                            </svg>
-                        </li>
-                        <li class="flex justify-between"> <a href="/about">關於我們</a>
-                            <svg xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                            </svg>
-                        </li>
-                        <li class="flex justify-between"> <a href="/Past-presidents">歷屆會長</a>
-                            <svg xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                            </svg>
-                        </li>
-                        <li class="flex justify-between"> <a href="/organization">協會組織架構</a>
-                            <svg xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                            </svg>
-                        </li>
-                        <li class="flex justify-between"> <a href="/Surf-Rescue">救生員資格檢定</a>
-                            <svg xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                            </svg>
-                        </li>
-                        <li class="flex justify-between"> <a href="/classes">課程</a>
-                            <svg xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                            </svg>
-                        </li>
-                        <li class="flex justify-between"><a href="/album">活動照片</a>
-                            <svg xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                            </svg>
-                        </li>
-                    </ul>
-                    <ul class="link">
-                        <li> <a href="https://www.facebook.com/%E5%8F%B0%E4%B8%AD%E5%B8%82%E6%B0%B4%E4%B8%AD%E9%81%8B%E5%8B%95%E5%8D%94%E6%9C%83%E6%BD%9B%E6%B0%B4%E5%A7%94%E5%93%A1%E6%9C%83-203136269701568" target="_blank">Facebook</a> </li>
-                        <li> <a href="https://www.instagram.com/suptuf/" target="_blank">instagram</a></li>
-                    </ul>
-                </div>
-                <div class="copyright text-white opacity-50 w-full flex justify-end">
+
+                <div class="copyright text-white opacity-50 w-full flex sm:justify-start md:justify-end">
                     <span>© COPYRIGHT 2022 台中水中運動協會 All Rights Reserved.</span>
                 </div>
             </div>
