@@ -125,8 +125,6 @@ class SignupController extends Controller
         ]);
 
 
-
-
         if ($request->hasfile('headshot')){
             $path = FilesController::imgUpload($request->headshot,'headshot');
             HeadShot::create([
