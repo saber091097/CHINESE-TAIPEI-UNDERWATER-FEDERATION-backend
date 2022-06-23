@@ -21,7 +21,7 @@
             </div>
         </div>
 
-        <!------------ popup開始 ---------------->
+        <!------------ popup開始 ------------>
         <div id="CMASModal" tabindex="-1" aria-hidden="true"
             class="hidden fixed overflow-y-auto overflow-x-hidden w-full top-0 right-0 left-0 z-50 h-full justify-center items-center CMASModal h-modal">
             <div class="relative w-full h-full  CMAS">
@@ -161,7 +161,7 @@
                             <div class="blue1"></div>
                             <div class="blue2"></div>
                         </div>
-                        <span class="zh-aboutus">關於我們</span>
+                        <span class="zh-aboutus my-1">關於我們</span>
                         <span class="en-aboutus">About us</span>
                     </div>
                 </div>
@@ -247,7 +247,7 @@
                         <div class="blue1"></div>
                         <div class="blue2"></div>
                     </div>
-                    <span class="zh-aboutus">熱門課程</span>
+                    <span class="zh-aboutus my-1">熱門課程</span>
                     <span class="en-aboutus">Popular Courses</span>
                 </div>
                 <div class="popular-courses-imgs flex">
@@ -271,7 +271,7 @@
                             <div class="blue1"></div>
                             <div class="blue2"></div>
                         </div>
-                        <span class="zh-aboutus">最新消息</span>
+                        <span class="zh-aboutus my-1">最新消息</span>
                         <span class="en-aboutus">NEWS</span>
                     </div>
                     <div class="news-left-bottom">
@@ -532,7 +532,7 @@
                         <div class="blue1"></div>
                         <div class="blue2"></div>
                     </div>
-                    <span class="zh-aboutus">常見問題</span>
+                    <span class="zh-aboutus my-1">常見問題</span>
                     <span class="en-aboutus">FAQ</span>
                 </div>
                 <div class="question-right flex flex-wrap" >

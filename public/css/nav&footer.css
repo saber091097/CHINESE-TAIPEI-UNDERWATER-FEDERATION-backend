@@ -482,9 +482,9 @@ footer {
     /* height: 160px; */
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     * .footer .right {
-        width: 60%;
+        width: 100%;
     }
 }
 

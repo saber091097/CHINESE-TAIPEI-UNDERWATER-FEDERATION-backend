@@ -329,19 +329,19 @@
             <ul class="bg-white">
                 <li>
                     <a href="/about"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">關於我們</a>
+                        class="block px-4 py-2 hover:bg-gray-100">關於我們</a>
                 </li>
                 <li>
                     <a href="/Past-presidents"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">歷屆會長</a>
+                        class="block px-4 py-2 hover:bg-gray-100">歷屆會長</a>
                 </li>
                 <li>
                     <a href="/organization"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">協會組織架構</a>
+                        class="block px-4 py-2 hover:bg-gray-100">協會組織架構</a>
                 </li>
                 <li>
                     <a href="/Surf-Rescue"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">救生員資格檢定</a>
+                        class="block px-4 py-2 hover:bg-gray-100">救生員資格檢定</a>
                 </li>
             </ul>
         </div>
@@ -350,7 +350,7 @@
             <div class="container max-w-full ">
                 <div class="footer flex justify-center">
                     <div class="footer_container">
-                        <div class="footer_logo_menu flex-col sm:flex sm:flex-row sm:justify-between">
+                        <div class="footer_logo_menu flex-col md:flex md:flex-row md:justify-between">
                             <div class="left flex flex-col ">
                                 <img src="{{ asset('img/logo/CHINESE TAIPEI UNDERWATER FEDERATION-white logo.png') }}"
                                     alt="台中市水中運動協會">

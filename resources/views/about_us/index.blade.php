@@ -152,7 +152,7 @@
             opacity: 1;
             z-index: 10;
             animation-name: float;
-            animation-duration: 1.5s;
+            animation-duration: 1s;
             animation-timing-function: linear;
             animation-fill-mode: forwards;
         }
@@ -164,7 +164,7 @@
             transform: translateX(-50%);
             /* opacity: 0.2; */
             animation-name: float;
-            animation-duration: 1.5s;
+            animation-duration: 1s;
             animation-timing-function: linear;
             animation-fill-mode: forwards;
             z-index: 10;
@@ -507,10 +507,47 @@
                     @endguest
                 </ul>
             </div>
-            <div id="authentication-modal" tabindex="-1" aria-hidden="true" style="z-index: 100;"
+
+
+            <div id="dropdownleft" class="hidden z-10 dropdownleft">
+                <ul class="bg-white rounded-lg">
+                    <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
+                        <a href="/personal-center" style="color: black">個人中心</a>
+                    </li>
+                    <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
+                        <form action="logout" method="POST" class="d-flex m-0" id="logout">
+                            @csrf
+                            <button type="submit" style="color: red;width:100%;left:0;">登出</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="dropdownNavbar" class="hidden z-10 dropdownNavbar" style="color:black">
+                <ul class="bg-white">
+                    <li>
+                        <a href="/about"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">關於我們</a>
+                    </li>
+                    <li>
+                        <a href="/Past-presidents"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">歷屆會長</a>
+                    </li>
+                    <li>
+                        <a href="/organization"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">協會組織架構</a>
+                    </li>
+                    <li>
+                        <a href="/Surf-Rescue"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">救生員資格檢定</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="authentication-modal" tabindex="-1" aria-hidden="true" style="z-index: 100;"
                 class="hidden overflow-y-auto overflow-x-hidden fixed top-20 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full authentication">
                 <div class="relative p-4 w-full max-w-md h-full md:h-auto">
-                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <div class="relative bg-white rounded-lg shadow " style="border-radius:16px;">
                         <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent"
                             data-modal-toggle="authentication-modal">
                             <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
@@ -527,7 +564,7 @@
                         </button>
 
                         <div class="py-6 px-6 lg:px-8" style="font-weight: 500; box-shadow: 0 0 0 999px rgba(55, 65, 81, 0.5);
-                        z-index: 1000;">
+                        z-index: 1000;border-radius:16px;">
                             <h3 class="mb-4 text-xl  text-gray-900 " style="font-family:unset;">登入</h3>
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
@@ -571,43 +608,6 @@
                     </div>
                 </div>
             </div>
-
-            <div id="dropdownleft" class="hidden z-10 dropdownleft">
-                <ul class="bg-white rounded-lg">
-                    <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
-                        <a href="/personal-center" style="color: black">個人中心</a>
-                    </li>
-                    <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
-                        <form action="logout" method="POST" class="d-flex m-0" id="logout">
-                            @csrf
-                            <button type="submit" style="color: red;width:100%;left:0;">登出</button>
-                        </form>
-                    </li>
-                </ul>
-            </div>
-
-            <div id="dropdownNavbar" class="hidden z-10 dropdownNavbar" style="color:black">
-                <ul class="bg-white">
-                    <li>
-                        <a href="/about"
-                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">關於我們</a>
-                    </li>
-                    <li>
-                        <a href="/Past-presidents"
-                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">歷屆會長</a>
-                    </li>
-                    <li>
-                        <a href="/organization"
-                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">協會組織架構</a>
-                    </li>
-                    <li>
-                        <a href="/Surf-Rescue"
-                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">救生員資格檢定</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
         <!-- Main modal -->
 
         {{-- 大頭貼的下拉式選單 --}}
@@ -784,64 +784,68 @@
 
     <footer>
         <div class="container max-w-full h-auto">
-            <div class="footer flex flex-wrap justify-between w-full">
-                <div class="left flex flex-col ">
-                    <img src="{{ asset('img/logo/CHINESE TAIPEI UNDERWATER FEDERATION-white logo.png') }}"
-                        alt="台中市水中運動協會">
-                    <span>台中市北區天祥街10號</span>
-                    <span>04-22312698</span>
+            <div class="footer w-full">
+                {{-- flex-wrap --}}
+                <div class="footer_top flex-col md:flex md:flex-row md:justify-between">
+                    <div class="left flex flex-col ">
+                        <img src="{{ asset('img/logo/CHINESE TAIPEI UNDERWATER FEDERATION-white logo.png') }}"
+                            alt="台中市水中運動協會">
+                        <span>台中市北區天祥街10號</span>
+                        <span>04-22312698</span>
+                    </div>
+                    <div class="right text-white sm:flex">
+                        <ul class="page flex flex-col justify-between">
+                            <li class="flex justify-between"><a href="/">首頁</a>
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                </svg>
+                            </li>
+                            <li class="flex justify-between"> <a href="/about">關於我們</a>
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                </svg>
+                            </li>
+                            <li class="flex justify-between"> <a href="/Past-presidents">歷屆會長</a>
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                </svg>
+                            </li>
+                            <li class="flex justify-between"> <a href="/organization">協會組織架構</a>
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                </svg>
+                            </li>
+                            <li class="flex justify-between"> <a href="/Surf-Rescue">救生員資格檢定</a>
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                </svg>
+                            </li>
+                            <li class="flex justify-between"> <a href="/classes">課程</a>
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                </svg>
+                            </li>
+                            <li class="flex justify-between"><a href="/album">活動照片</a>
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                                </svg>
+                            </li>
+                        </ul>
+                        <ul class="link">
+                            <li> <a href="https://www.facebook.com/%E5%8F%B0%E4%B8%AD%E5%B8%82%E6%B0%B4%E4%B8%AD%E9%81%8B%E5%8B%95%E5%8D%94%E6%9C%83%E6%BD%9B%E6%B0%B4%E5%A7%94%E5%93%A1%E6%9C%83-203136269701568" target="_blank">Facebook</a> </li>
+                            <li> <a href="https://www.instagram.com/suptuf/" target="_blank">instagram</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="right flex text-white">
-                    <ul class="page">
-                        <li class="flex justify-between"><a href="/">首頁</a>
-                            <svg xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                            </svg>
-                        </li>
-                        <li class="flex justify-between"> <a href="/about">關於我們</a>
-                            <svg xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                            </svg>
-                        </li>
-                        <li class="flex justify-between"> <a href="/Past-presidents">歷屆會長</a>
-                            <svg xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                            </svg>
-                        </li>
-                        <li class="flex justify-between"> <a href="/organization">協會組織架構</a>
-                            <svg xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                            </svg>
-                        </li>
-                        <li class="flex justify-between"> <a href="/Surf-Rescue">救生員資格檢定</a>
-                            <svg xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                            </svg>
-                        </li>
-                        <li class="flex justify-between"> <a href="/classes">課程</a>
-                            <svg xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                            </svg>
-                        </li>
-                        <li class="flex justify-between"><a href="/album">活動照片</a>
-                            <svg xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
-                            </svg>
-                        </li>
-                    </ul>
-                    <ul class="link">
-                        <li> <a href="https://www.facebook.com/%E5%8F%B0%E4%B8%AD%E5%B8%82%E6%B0%B4%E4%B8%AD%E9%81%8B%E5%8B%95%E5%8D%94%E6%9C%83%E6%BD%9B%E6%B0%B4%E5%A7%94%E5%93%A1%E6%9C%83-203136269701568" target="_blank">Facebook</a> </li>
-                        <li> <a href="https://www.instagram.com/suptuf/" target="_blank">instagram</a></li>
-                    </ul>
-                </div>
-                <div class="copyright text-white opacity-50 w-full flex justify-end">
+
+                <div class="copyright text-white opacity-50 w-full flex sm:justify-start md:justify-end">
                     <span>© COPYRIGHT 2022 台中水中運動協會 All Rights Reserved.</span>
                 </div>
             </div>

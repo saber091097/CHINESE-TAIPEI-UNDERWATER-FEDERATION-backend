@@ -34,8 +34,8 @@
             /* max-height: 100%; */
             height: auto;
             /* position: absolute;
-                                            top: 50%;
-                                            transform: translateY(-50%); */
+                                                top: 50%;
+                                                transform: translateY(-50%); */
         }
     </style>
 @endsection
@@ -109,7 +109,8 @@
                 </div>
             @endforeach --}}
             @foreach ($photo as $item)
-                <div data-modal-toggle="popup-modal" style="background-image: url({{ $item->img_path }})" onclick="myfunc({{$loop->index}})">
+                <div data-modal-toggle="popup-modal" style="background-image: url({{ $item->img_path }})"
+                    onclick="myfunc({{ $loop->index }})">
                 </div>
             @endforeach
         </div>
@@ -119,16 +120,13 @@
             class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
             <div class="relative p-4 w-full max-w-8xl h-auto">
                 <!-- Modal content -->
-                <div id="modal" class="dark:bg-gray-700">
+                <div id="modal" class="">
                     <button type="button"
-                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        class="text-gray-400  ml-auto inline-flex items-center"
                         data-modal-toggle="popup-modal">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
+                        <svg class="inline-flex items-center" width="44" height="44" viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
+                            <path style="width: 100%;height:100%;" d="M11.9997 10.586L16.9497 5.63599L18.3637 7.04999L13.4137 12L18.3637 16.95L16.9497 18.364L11.9997 13.414L7.04974 18.364L5.63574 16.95L10.5857 12L5.63574 7.04999L7.04974 5.63599L11.9997 10.586Z" fill="#FFFFFF"/>
+                            </svg>
                     </button>
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
@@ -141,14 +139,16 @@
                         </div>
 
                         <div id="next" class="swiper-button-next absolute">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z"
                                     fill="#141414" />
                             </svg>
                         </div>
                         <div id="prev" class="swiper-button-prev absolute">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M10.828 12L15.778 16.95L14.364 18.364L8 12L14.364 5.63599L15.778 7.04999L10.828 12Z"
                                     fill="#141414" />
@@ -160,9 +160,9 @@
 
                     <!-- Modal footer -->
                     <!-- <div
-                                                        class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
+                                                            class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
 
-                                                    </div> -->
+                                                        </div> -->
                 </div>
             </div>
         </div>

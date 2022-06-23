@@ -185,6 +185,12 @@
   width: 56px;
   height: 56px;
 }
+@media (max-width: 320px) {
+    * body #page #modal button {
+        width: 30px;
+        height: 30px;
+    }
+  }
 
 * body #page #modal button svg {
   margin: auto;
