@@ -177,7 +177,7 @@ Route::prefix('/indeximg')->group(function () {
     Route::get('/', [IndexImgController::class,'index']);
 
     Route::get('/create', [IndexImgController::class,'create']);
-    Route::post('/store', [IndexImgController::class,'store']);
+    Route::post('/update/windsurf', [IndexImgController::class,'windsurfupdate']);
 
     Route::get('/edit/{id}', [IndexImgController::class,'edit']);
     Route::post('/update/{id}', [IndexImgController::class,'update']);
