@@ -45,10 +45,10 @@ class SignUp extends Model
     /**
      * @var array
      */
-    protected $fillable = ['created_at', 'updated_at', 'event_id', 'name', 'id_card', 'gender', 'phone', 'email', 'addr', 'line_id', 'emer_name', 'emer_phone',  'plus1', 'plus2', 'plus3', 'plus4','user_id'];
+    protected $fillable = ['created_at', 'updated_at', 'event_id', 'name', 'id_card', 'gender', 'phone', 'email', 'addr', 'line_id', 'emer_name', 'emer_phone',  'plus', 'user_id' ,'subtotal',];
 
     public function headshot(){
-        return $this->hasone(headshot::class,'user_id','user_id');
+        return $this->hasone(HeadShot::class,'user_id','user_id');
     }
 
     public function idcard_front(){

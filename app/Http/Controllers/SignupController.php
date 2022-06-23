@@ -83,6 +83,31 @@ class SignupController extends Controller
             $request->class4 = 0;
         }
 
+        $plus= 1500 *($request->class1 +$request->class2 +$request->class3);
+        $event_id=session::get('event_id');
+        $event=Event::where('id',$event_id)->first();
+        $subtotal = $event->price + $plus;
+
+        if ($request->class1 == 1 and $request->class2 == 1 and $request->class3 == 1){
+            $plus_class ='獨木舟,風浪板,SUP救生';
+        }elseif($request->class1 == 0 and $request->class2 == 1 and $request->class3 == 1){
+            $plus_class ='風浪板,SUP救生';
+        }elseif($request->class1 == 0 and $request->class2 == 0 and $request->class3 == 1){
+            $plus_class ='SUP救生';
+        }elseif($request->class1 == 0 and $request->class2 == 0 and $request->class3 == 0){
+            $plus_class ='無';
+        }elseif($request->class1 == 1 and $request->class2 == 0 and $request->class3 == 1){
+            $plus_class ='獨木舟,SUP救生';
+        }elseif($request->class1 == 1 and $request->class2 == 0 and $request->class3 == 0){
+            $plus_class ='獨木舟';
+        }elseif($request->class1 == 0 and $request->class2 == 1 and $request->class3 == 0){
+            $plus_class ='風浪板';
+        }elseif($request->class1 == 1 and $request->class2 == 1 and $request->class3 == 0){
+            $plus_class ='獨木舟,風浪板';
+        }elseif($request->class1 == 1 and $request->class2 == 0 and $request->class3 == 1){
+            $plus_class ='獨木舟,SUP救生';
+        }
+
         $data = SignUp::create([
             'event_id'=>session::get('event_id'),
             'name'=> session::get('name'),
@@ -94,16 +119,13 @@ class SignupController extends Controller
             'line_id'=>$request->lineId,
             'emer_name'=>$request->contact,  //緊急聯絡人
             'emer_phone'=>$request->contactPhone, //緊急連絡人電話
-            'plus1'=>$request->class1,//額外加課程
-            'plus2'=>$request->class2,//額外加課程
-            'plus3'=>$request->class3,//額外加課程
-            'plus4'=>$request->class4,//額外加課程
+            'plus'=>$plus_class,
             'user_id'=>$DB_id->id,
+            'subtotal'=>$subtotal,
         ]);
 
 
-        $plus= 1500 *($data->plus1 +$data->plus2 +$data->plus3);
-        $subtotal = $data->event->price + $plus;
+
 
         if ($request->hasfile('headshot')){
             $path = FilesController::imgUpload($request->headshot,'headshot');

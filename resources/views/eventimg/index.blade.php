@@ -29,7 +29,7 @@
                         </tr>
                     </thead>
                     <tbody>
-
+                        <tr>
                             <td class="flex  "style="width:100%;">
                                 <a href="eventimg/windsurf" class="flex w-full">
                                 <img src="{{asset('img/popular courses-03.jpg')}}" alt="" style="width: 150px;height:150px;border-radius:5px;">
@@ -38,54 +38,57 @@
                                 </div>
                             </a>
                             </td>
-
-
-                            <td class="flex  "style="width:100%;">
+                        </tr>
+                        <tr>
+                            <td class="flex "style="width:100%;">
                                 <a href="eventimg/diving" class="flex w-full">
                                 <img src="{{asset('img/S__14082097.jpg')}}" alt="" style="width: 150px;height:150px;border-radius:5px;">
-                                <div class="flex justify-center items-center ml-12" style="font-size:24px;">
+                                <div class="flex items-center ml-12" style="font-size:24px;">
                                     潛水
                                 </div>
                             </a>
                             </td>
-
-
+                        </tr>
+                        <tr>
                             <td class="flex  "style="width:100%;">
                                 <a href="eventimg/sup" class="flex w-full">
                                 <img src="{{asset('img/sup-2.png')}}" alt="" style="width: 150px;height:150px;border-radius:5px;">
-                                <div class="flex justify-center items-center ml-12" style="font-size:24px;">
+                                <div class="flex items-center ml-12" style="font-size:24px;">
                                     SUP立式划槳
                                 </div>
-                            </a>
+                                </a>
                             </td>
-
-
+                        </tr>
+                        <tr>
                             <td class="flex  "style="width:100%;">
                                 <a href="eventimg/swimming" class="flex w-full">
                                 <img src="{{asset('img/pexels-mali-maeder-1415810.jpg')}}" alt="" style="width: 150px;height:150px;border-radius:5px;">
-                                <div class="flex justify-center items-center ml-12" style="font-size:24px;">
+                                <div class="flex items-center ml-12" style="font-size:24px;">
                                     游泳
                                 </div>
                             </a>
                             </td>
-
-
+                        </tr>
+                        <tr>
                             <td class="flex  "style="width:100%; margin-bottom:15px;">
                                 <a href="eventimg/lifesaving" class="flex w-full">
-                                <img src="{{asset('img/lifebuoy-g7352a0456_1920.jpg')}}" alt="" style="width: 150px;height:150px;border-radius:5px;">
-                                <div class="flex justify-center items-center ml-12" style="font-size:24px;">
-                                    救生
-                                </div>
-                            </a>
+                                    <img src="{{asset('img/lifebuoy-g7352a0456_1920.jpg')}}" alt="" style="width: 150px;height:150px;border-radius:5px;">
+                                    <div class="flex items-center ml-12" style="font-size:24px;">
+                                        救生
+                                    </div>
+                                </a>
                             </td>
+                        </tr>
+                        <tr>
                             <td class="flex  "style="width:100%; margin-bottom:15px;">
                                 <a href="eventimg/other" class="flex w-full">
-                                <img src="{{asset('img/Rectangle78.png')}}" alt="" style="width: 150px;height:150px;border-radius:5px;">
-                                <div class="flex justify-center items-center ml-12" style="font-size:24px;">
-                                    其他
-                                </div>
-                            </a>
+                                    <img src="{{asset('img/Rectangle78.png')}}" alt="" style="width: 150px;height:150px;border-radius:5px;">
+                                    <div class="flex items-center ml-12 w-full" style="font-size:24px;">
+                                        其他
+                                    </div>
+                                </a>
                             </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
