@@ -210,6 +210,7 @@
             /* margin-top: 38px; */
             z-index: 999999;
             background-color: white;
+            /* position: relative; */
         }
 
         #banner_img {
@@ -650,9 +651,66 @@
             <div id="about" class="z-1">
                 <span class="test" id="aboutspan">About</span>
             </div>
-            <div id="imgsection">
-                <img id="banner_img" src="{{ asset('img/img_aboutUsBg1.png') }}" alt="">
+
+            <div class="try">
+                <div class="asd">
+                    <div id="imgsection">
+                    <img id="banner_img" src="{{ asset('img/img_aboutUsBg1.png') }}" alt="">
+                    </div>
+                </div>
+
+                <!---------------- wave ---------------->
+                <section>
+                    <svg viewBox="0 0 120 28">
+                        <defs>
+                            <mask id="xxx">
+                                <circle cx="7" cy="12" r="40" fill="#fff" />
+                            </mask>
+
+                            <filter id="goo">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+                                <feColorMatrix in="blur" mode="matrix" values="
+                               1 0 0 0 0
+                               0 1 0 0 0
+                               0 0 1 0 0
+                               0 0 0 13 -9" result="goo" />
+                                <feBlend in="SourceGraphic" in2="goo" />
+                            </filter>
+                            <path id="wave"
+                                d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
+                        </defs>
+
+                        <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-10"></use>
+                        <use id="wave2" class="wave" xlink:href="#wave" x="0" y="-5"></use>
+
+
+                    </svg>
+
+                </section>
+                <!---------------- wave black ---------------->
+                {{-- <div class="banner">
+                    <div class="wave-container">
+
+                        <div>
+                            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                                <defs>
+                                    <path id="gentle-wave" stroke-width="1px" fill="none" stroke="rgb(255, 255, 255)"
+                                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                                </defs>
+                                <g class="parallax">
+                                    <use xlink:href="#gentle-wave" x="48" y="0" />
+                                    <use xlink:href="#gentle-wave" x="48" y="3" />
+                                    <use xlink:href="#gentle-wave" x="48" y="7" />
+                                    <use xlink:href="#gentle-wave" x="48" y="5" />
+                                </g>
+                            </svg>
+                        </div>
+
+                    </div>
+                </div> --}}
             </div>
+
         </div>
     </nav>
     {{-- <main style="" >
@@ -778,6 +836,7 @@
                 </div>
             </div>
         </div>
+
 
     </main>
     {{-- @endsection --}}
