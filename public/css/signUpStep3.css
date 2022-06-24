@@ -165,6 +165,20 @@ main .waveAnimation .waveBottom {
           animation: move_wave 15s linear infinite;
 }
 
+@media (max-width: 640px) {
+    main .waveTop {
+        background-size: 80% 90px;
+    }
+
+    main .waveMiddle {
+        background-size: 80% 90px;
+    }
+
+    main .waveBottom {
+        background-size: 80% 90px;
+    }
+}
+
 main .progress {
   width: 256px;
   height: 32px;
