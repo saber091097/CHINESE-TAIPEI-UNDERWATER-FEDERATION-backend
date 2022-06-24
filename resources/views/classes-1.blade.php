@@ -60,7 +60,7 @@
                             <h5 class="h5">Life Saving</h5>
                         </div>
                     </div>
-                    <div id="callS2" data-modal-toggle="modal02"
+                    <div id="callS2" data-modal-toggle="modal01"
                         class="in-in-innerbox in-innerbox-btm w-full h-1/2 flex justify-center items-center bg-center bg-cover cursor-pointer">
                         <div class="title flex flex-col justify-between items-center">
                             <h2 class="h2m">游泳</h2>
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="callS3" data-modal-toggle="modal03"
+                <div id="calls2" data-modal-toggle="modal02"
                     class="in-innerbox in-innerbox-right w-full md:w-1/2 h-full flex  justify-center items-center bg-center bg-cover cursor-pointer">
                     <div class="title flex flex-col justify-between items-center">
                         <h2 class="h2m">風浪板</h2>
@@ -76,7 +76,7 @@
                     </div>
                 </div>
             </div>
-            <div id="callS4" data-modal-toggle="modal04"
+            <div id="callS4" data-modal-toggle="modal02"
                 class="innerbox innerbox-btm w-full h-1/2 flex justify-center items-center bg-center bg-cover cursor-pointer">
                 <div class="title flex flex-col justify-between items-center">
                     <h2 class="h2m">潛水</h2>
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </div>
-        <div id="callS5" data-modal-toggle="modal05"
+        <div id="callS5" data-modal-toggle="modal01"
             class="box box-right w-full md:w-1/2 h-full flex justify-center items-center bg-center bg-cover cursor-pointer">
             <div class="title flex flex-col justify-between items-center">
                 <h2 class="h2m">立式划槳</h2>
@@ -480,14 +480,14 @@
                 </div>
         </section>
         <!------------------------------ model02 風浪板 潛水---------------------------------->
-        <section id="modal03" tabindex="-1" aria-hidden="true"
+        <section id="modal02" tabindex="-1" aria-hidden="true"
             class="section hidden overflow-y-auto overflow-x-hidden bg-white flex flex-col justify-between items-center">
-            <div class="s3-container s-container w-full h-full bg-white flex flex-col justify-between items-center">
-                <div class="w-full h-full s3-innerbox s-innerbox flex flex-col items-center">
-                    <div class="w-full s3-innerbox-top s-innerbox-top flex justify-end">
-                        <button id="btn-close3" data-modal-toggle="modal03" class="btn-close fixed rounded-full"></button>
+            <div class="s2-container s-container w-full h-full bg-white flex flex-col justify-between items-center">
+                <div class="w-full h-full s2-innerbox s-innerbox flex flex-col items-center">
+                    <div class="w-full s2-innerbox-top s-innerbox-top flex justify-end">
+                        <button id="btn-close2" data-modal-toggle="modal02" class="btn-close fixed rounded-full"></button>
                     </div>
-                    <div class="s3-innerbox-btm s-innerbox-btm w-4/5 flex flex-col">
+                    <div class="s2-innerbox-btm s-innerbox-btm w-4/5 flex flex-col">
                         <div class="list w-full flex justify-between">
                             <div class="breadcrumb">
                                 <ul class="flex items-center justify-start">
@@ -516,7 +516,7 @@
                         <div class="class-content w-full flex flex-row">
                             <div class="in-in-innerbox-right w-8/12 ">
                                 <div class="banner w-full">
-                                    <div id="s3_mySwiper2"
+                                    <div id="s2_mySwiper2"
                                         style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
                                         class="swiper mySwiper2">
                                         <div class="swiper-wrapper">
@@ -542,10 +542,10 @@
                                                 <img src="/img/S__14082117.jpg" />
                                             </div>
                                         </div>
-                                        <div id="s3_swiper_button_next" class="swiper-button-next"></div>
-                                        <div id="s3_swiper_button_prev" class="swiper-button-prev"></div>
+                                        <div id="s2_swiper_button_next" class="swiper-button-next"></div>
+                                        <div id="s2_swiper_button_prev" class="swiper-button-prev"></div>
                                     </div>
-                                    <div id="s3_mySwiper" thumbsSlider="" class="swiper mySwiper">
+                                    <div id="s2_mySwiper" thumbsSlider="" class="swiper mySwiper">
                                         <div class="swiper-wrapper swiper-btm">
                                             <div class="swiper-slide">
                                                 <img src="/img/S__14082119.jpg" />
@@ -589,9 +589,9 @@
                                 </div>
                                 <div class="tab w-full">
                                     <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 items-center"
-                                        id="s3-tabs-tab" role="tablist">
+                                        id="s2-tabs-tab" role="tablist">
                                         <li class="nav-item">
-                                            <a href="#s3-tabs-1"
+                                            <a href="#s2-tabs-1"
                                                 class="
                                             active
                                             nav-link
@@ -604,13 +604,13 @@
                                             border-x-0 border-t-0 border-b-2 border-transparent
                                             focus:border-transparent
                                         "
-                                                id="s3-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#s3-tabs-1"
-                                                role="tab" aria-controls="s3-tabs-1" aria-selected="true">
+                                                id="s2-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#s2-tabs-1"
+                                                role="tab" aria-controls="s2-tabs-1" aria-selected="true">
                                                 <span class="tab-span tab-span1">活動介紹</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="#s3-tabs-2"
+                                            <a href="#s2-tabs-2"
                                                 class="
                                             nav-link
                                             nav-link2
@@ -622,13 +622,13 @@
                                             border-x-0 border-t-0 border-b-2 border-transparent
                                             focus:border-transparent
                                         "
-                                                id="s3-tabs-2-tab" data-bs-toggle="pill" data-bs-target="#s3-tabs-2"
-                                                role="tab" aria-controls="s3-tabs-2" aria-selected="false">
+                                                id="s2-tabs-2-tab" data-bs-toggle="pill" data-bs-target="#s2-tabs-2"
+                                                role="tab" aria-controls="s2-tabs-2" aria-selected="false">
                                                 <span class="tab-span tab-span2">課程流程</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="#s3-tabs-3"
+                                            <a href="#s2-tabs-3"
                                                 class="
                                             nav-link
                                             nav-link3
@@ -640,13 +640,13 @@
                                             border-x-0 border-t-0 border-b-2 border-transparent
                                             focus:border-transparent
                                         "
-                                                id="s3-tabs-3-tab" data-bs-toggle="pill" data-bs-target="#s3-tabs-3"
-                                                role="tab" aria-controls="s3-tabs-3" aria-selected="false">
+                                                id="s2-tabs-3-tab" data-bs-toggle="pill" data-bs-target="#s2-tabs-3"
+                                                role="tab" aria-controls="s2-tabs-3" aria-selected="false">
                                                 <span class="tab-span tab-span3">指導單位</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="#s3-tabs-4"
+                                            <a href="#s2-tabs-4"
                                                 class="
                                             nav-link
                                             nav-link4
@@ -658,15 +658,15 @@
                                             border-x-0 border-t-0 border-b-2 border-transparent
                                             focus:border-transparent
                                         "
-                                                id="s3-tabs-4-tab" data-bs-toggle="pill" data-bs-target="#s3-tabs-4"
-                                                role="tab" aria-controls="s3-tabs-4" aria-selected="false">
+                                                id="s2-tabs-4-tab" data-bs-toggle="pill" data-bs-target="#s2-tabs-4"
+                                                role="tab" aria-controls="s2-tabs-4" aria-selected="false">
                                                 <span class="tab-span tab-span4">注意事項</span>
                                             </a>
                                         </li>
                                     </ul>
-                                    <div class="tab-content" id="s3-tabs-tabContent">
-                                        <div class="tabs-1 tab-pane fade show active flex flex-col" id="s3-tabs-1"
-                                            role="tabpanel" aria-labelledby="s3-tabs-1-tab">
+                                    <div class="tab-content" id="s2-tabs-tabContent">
+                                        <div class="tabs-1 tab-pane fade show active flex flex-col" id="s2-tabs-1"
+                                            role="tabpanel" aria-labelledby="s2-tabs-1-tab">
                                             <div class="intro">
                                                 <h3 class="h3m">風浪板</h3>
                                                 <p class="tm">【風帆隨筆_.
@@ -713,8 +713,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="tabs-2 tab-pane fade flex flex-col" id="s3-tabs-2" role="tabpanel"
-                                            aria-labelledby="s3-tabs-2-tab">
+                                        <div class="tabs-2 tab-pane fade flex flex-col" id="s2-tabs-2" role="tabpanel"
+                                            aria-labelledby="s2-tabs-2-tab">
                                             <div class="flex flex-col day1">
                                                 <h3 class="mb-4">第一天</h3>
                                                 <div class="flex flex-col">
@@ -804,8 +804,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="tabs-3 tab-pane fade flex flex-col" id="s3-tabs-3" role="tabpanel"
-                                            aria-labelledby="s3-tabs-3-tab">
+                                        <div class="tabs-3 tab-pane fade flex flex-col" id="s2-tabs-3" role="tabpanel"
+                                            aria-labelledby="s2-tabs-3-tab">
                                             <div class="flex flex-col box">
                                                 <h3 class="h3m">指導單位</h3>
                                                 <p class="tm">主辦單位：台中市水中運動協會,SUP風浪板/獨木舟委員會</p>
@@ -818,8 +818,8 @@
                                                 <p class="tm">停車場資訊： Google地圖收尋（帖泊喀露營區）</p>
                                             </div>
                                         </div>
-                                        <div class="tabs-4 tab-pane fade flex flex-col" id="s3-tabs-4" role="tabpanel"
-                                            aria-labelledby="s3-tabs-4-tab">
+                                        <div class="tabs-4 tab-pane fade flex flex-col" id="s2-tabs-4" role="tabpanel"
+                                            aria-labelledby="s2-tabs-4-tab">
                                             <div class="flex flex-col box">
                                                 <h3 class="h3m">注意事項</h3>
                                                 <p class="tm">活動含保險、器材、救生衣，繳交後非本會或天然災害因素恕不退還。</p>
