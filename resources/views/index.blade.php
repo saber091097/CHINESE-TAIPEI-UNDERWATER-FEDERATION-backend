@@ -188,7 +188,7 @@
             <div class="img">
                 <img class="absolute img02" src="./img/index-diving02-img.svg" alt="">
             </div>
-            <div class="certification">
+            <div class="certification my-20">
                 <div class="certification-top flex flex-col">
                     <div class="color-line flex">
                         <div class="blue1"></div>
@@ -241,7 +241,7 @@
                 </div>
             </div>
             <!-- 熱門課程 old -->
-            <div class="popular-courses">
+            {{-- <div class="popular-courses">
                 <div class="popular-courses-top flex flex-col">
                     <div class="color-line flex">
                         <div class="blue1"></div>
@@ -261,10 +261,10 @@
                         <p class="absolute hidden">風浪板</p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             <!-- 最新消息 old -->
-            <div class="news flex justify-between">
+            {{-- <div class="news flex justify-between">
                 <div class="news-left">
                     <div class="news-left-top">
                         <div class="color-line flex">
@@ -312,7 +312,10 @@
                             </div>
                         </a>
                     </div>
-                    @endforeach
+                    @endforeach --}}
+
+
+                    <!-- 原本被隱藏的 -->
                     {{-- <div class="placard-news">
                         <a href="./event/" class="flex">
                             <div class="placard-left mr-auto">
@@ -393,45 +396,48 @@
                             </div>
                         </a>
                     </div> --}}
-                </div>
-            </div>
+                    <!-- 原本被隱藏的 -->
+
+
+                {{-- </div>
+            </div> --}}
         </div>
         <!-- 熱門課程 -->
-        {{-- <div class="popular-courses">
+        <div class="popular-courses my-20">
             <div class="popular-courses-top flex flex-col">
                 <div class="color-line flex">
                     <div class="blue1"></div>
                     <div class="blue2"></div>
                 </div>
-                <span class="zh-aboutus">熱門課程</span>
+                <span class="zh-aboutus my-1">熱門課程</span>
                 <span class="en-aboutus">Popular Courses</span>
             </div>
             <div class="popular-courses-imgs flex">
-                <div class="courses1 flex relative">
+                <div class="courses1 flex relative" onclick="location.href='/classes'" style="cursor: pointer">
                     <p class="absolute hidden">立式浪板</p>
                 </div>
-                <div class="courses2 flex relative">
+                <div class="courses2 flex relative" onclick="location.href='/classes'" style="cursor: pointer">
                     <p class="absolute hidden">潛水</p>
                 </div>
-                <div class="courses3 flex relative">
+                <div class="courses3 flex relative" onclick="location.href='/classes'" style="cursor: pointer">
                     <p class="absolute hidden">風浪板</p>
                 </div>
             </div>
-        </div> --}}
+        </div>
 
         <!-- 最新消息 -->
-        {{-- <div class="news flex justify-between">
-            <div class="news-left">
-                <div class="news-left-top">
+        <div class="news flex justify-between py-20">
+            <div class="news-left ">
+                <div class="news-left-top mb-10">
                     <div class="color-line flex">
                         <div class="blue1"></div>
                         <div class="blue2"></div>
                     </div>
-                    <span class="zh-aboutus">最新消息</span>
+                    <span class="zh-aboutus my-1">最新消息</span>
                     <span class="en-aboutus">NEWS</span>
                 </div>
-                <div class="news-left-bottom">
-                    <a href="./news.html" class="flex">
+                <div class="news-left-bottom hidden md:block">
+                    <a href="./news" class="flex">
                         <span>了解更多</span>
                         <svg xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -441,8 +447,36 @@
                 </div>
             </div>
             <div class="news-right">
+                @foreach ($news as $item)
                 <div class="placard-news">
-                    <a href="./event.html" class="flex">
+                    <a href="./event/{{$item->id}}" class="flex">
+                        <div class="placard-left mr-auto">
+                            <div class="time">
+                                <label for="event"></label>
+                                <button>
+                                    @if ($item->anno_type==1)
+                                    公告
+                                    @else
+                                    好消息
+                                    @endif
+                                </button>
+                                <span>{{substr($item->updated_at,0,10)}} updated</span>
+                            </div>
+                            <div class="event">
+                                <span>{{$item->event}}</span>
+                            </div>
+                        </div>
+                        <div class="placard-right flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                @endforeach
+                {{-- <div class="placard-news">
+                    <a href="./event/" class="flex">
                         <div class="placard-left mr-auto">
                             <div class="time">
                                 <label for="event"></label>
@@ -520,13 +554,13 @@
                             </svg>
                         </div>
                     </a>
-                </div>
+                </div> --}}
             </div>
-        </div> --}}
+        </div>
 
         <!-- QA -->
-        <div id="question" class="question-backgroundimg" data-scroll-section data-scroll-section-inview>
-            <div class="question-area flex justify-between" >
+        <div id="question" class="question-backgroundimg mt-20" data-scroll-section data-scroll-section-inview>
+            <div class="question-area flex justify-between py-20" >
                 <div class="question-left flex flex-col">
                     <div class="color-line flex">
                         <div class="blue1"></div>

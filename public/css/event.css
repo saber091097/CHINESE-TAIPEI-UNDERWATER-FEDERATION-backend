@@ -105,11 +105,12 @@
 
 * body .container .news .width80 {
   width: 80%;
+  margin: auto;
 }
 
 @media (max-width: 1024px) {
   * body .container .news .width80 {
-    width: 95%;
+    width: 90%;
   }
 }
 
