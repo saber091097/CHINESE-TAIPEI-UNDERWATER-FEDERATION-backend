@@ -1290,7 +1290,7 @@ details summary::-webkit-details-marker {
     }
 }
 
-.news {
+.news-backgroundimg {
     background-image: url("/img/banner/bg_index_news.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1300,7 +1300,7 @@ details summary::-webkit-details-marker {
 }
 
 @media (max-width:768px) {
-    .news {
+    .news-backgroundimg {
         background-image: url("img/banner/bg_index_news_768px.png");
         background-position: top;
     }

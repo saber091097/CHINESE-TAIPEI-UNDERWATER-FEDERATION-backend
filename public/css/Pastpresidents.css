@@ -102,9 +102,9 @@
       align-items: center;
     }
   }
-  * body .container .past-presidents .breadcrumb {
+  /* * body .container .past-presidents .breadcrumb {
     margin-top: 24px;
-  }
+  } */
   @media (max-width: 586px) {
     * body .container .past-presidents .breadcrumb {
       margin-top: 16px;
