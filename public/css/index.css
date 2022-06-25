@@ -1977,6 +1977,59 @@
         width: 50px;
     }
 }
+@media screen and (max-width: 1024px) {
+    .hamburger__list-item button {
+        position: relative;
+        text-decoration: none;
+        color: #141414;
+        overflow: hidden;
+        cursor: pointer;
+        padding-left: 5px;
+        padding-right: 5px;
+        display: inline-block;
+        text-transform: uppercase;
+        transition: all 200ms linear;
+        letter-spacing: 3px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hamburger__list-item button:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        margin-top: -2px;
+        left: 50%;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        transition: all 200ms linear;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hamburger__list-item button:hover:after {
+        height: 10px;
+        opacity: 1;
+        left: 0;
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hamburger__list-item button:hover {
+        color: #3B54F3;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hamburger__list-item.active-nav button:after {
+        height: 10px;
+        opacity: 1;
+        left: 0;
+        width: 50px;
+    }
+}
 
 @media screen and (max-width: 1024px) {
     body.nav-active .hamburger__content {
@@ -2124,15 +2177,21 @@ nav {
 .hamburger__list-item a {
     display: flex;
 }
+.hamburger__list-item button {
+    display: flex;
+    width: 100%;
+}
 
 .hamburger__list-item span {
     width: 60%;
+    text-align: start;
 }
 @media (max-width:460px) {
     .hamburger__list-item span {
         width: 100%;
     }
 }
+
 
 /* 手機版的menu 結束 */
 

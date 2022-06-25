@@ -23,8 +23,6 @@
             opacity: .6;
             cursor: auto;
         }
-
-
     </style>
     @yield('css')
 </head>
@@ -160,35 +158,31 @@
                                                 fill="#3B54F3" />
                                         </svg>
                                     </a></li>
-                                    {{-- 以下登出這塊還沒改好 --}}
-                                {{-- <li class="hamburger__list-item">
-                                    <form action="logout" method="POST" class="hover-target full md:w-3/5"
-                                        style="padding-left: 5px;position: relative;
-                                    text-decoration: none;
-                                    color: #141414;
-                                    overflow: hidden;
-                                    cursor: pointer;
-                                    padding-left: 5px;
-                                    padding-right: 5px;
-                                    display: inline-block;
-                                    text-transform: uppercase;
-                                    transition: all 200ms linear;">
+                                {{-- <li class="hamburger__list-item "><a href="logout"
+                                        class="logout_post hover-target full md:w-3/5"><span>登出</span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
+                                                fill="#3B54F3" />
+                                        </svg>
+                                    </a></li> --}}
+                                {{-- 以下漢堡條登出 --}}
+                                <li class="hamburger__list-item">
+                                    <form action="logout" method="POST" class="hover-target full md:w-3/5">
                                         @csrf
                                         <button class="hover-target full md:w-3/5" type="submit">
-                                            <div class="md:w-3/5">
-                                                <span class="hover-target"
-                                                    style="color: black;float:left;width:100%;display:block;text-align:start">登出</span>
-                                                <svg style="float:right" width="24" height="24" viewBox="0 0 24 24"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
-                                                        fill="#3B54F3" />
-                                                </svg>
-
-                                            </div>
+                                            <span class="hover-target"
+                                                style="">登出</span>
+                                            <svg style="float:right" width="24" height="24" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M16.172 11L10.808 5.63598L12.222 4.22198L20 12L12.222 19.778L10.808 18.364L16.172 13H4V11H16.172Z"
+                                                    fill="#3B54F3" />
+                                            </svg>
                                         </button>
                                     </form>
-                                </li> --}}
+                                </li>
                                 {{-- 以上為漢堡條登出欄位 --}}
                             @endauth
                             @guest
@@ -328,20 +322,16 @@
         <div id="dropdownNavbar" class="hidden dropdownNavbar" style="z-index: 100;">
             <ul class="bg-white">
                 <li>
-                    <a href="/about"
-                        class="block px-4 py-2 hover:bg-gray-100">關於我們</a>
+                    <a href="/about" class="block px-4 py-2 hover:bg-gray-100">關於我們</a>
                 </li>
                 <li>
-                    <a href="/Past-presidents"
-                        class="block px-4 py-2 hover:bg-gray-100">歷屆會長</a>
+                    <a href="/Past-presidents" class="block px-4 py-2 hover:bg-gray-100">歷屆會長</a>
                 </li>
                 <li>
-                    <a href="/organization"
-                        class="block px-4 py-2 hover:bg-gray-100">協會組織架構</a>
+                    <a href="/organization" class="block px-4 py-2 hover:bg-gray-100">協會組織架構</a>
                 </li>
                 <li>
-                    <a href="/Surf-Rescue"
-                        class="block px-4 py-2 hover:bg-gray-100">救生員資格檢定</a>
+                    <a href="/Surf-Rescue" class="block px-4 py-2 hover:bg-gray-100">救生員資格檢定</a>
                 </li>
             </ul>
         </div>
@@ -403,8 +393,10 @@
                                     </li>
                                 </ul>
                                 <ul class="link">
-                                    <li> <a href="https://www.facebook.com/%E5%8F%B0%E4%B8%AD%E5%B8%82%E6%B0%B4%E4%B8%AD%E9%81%8B%E5%8B%95%E5%8D%94%E6%9C%83%E6%BD%9B%E6%B0%B4%E5%A7%94%E5%93%A1%E6%9C%83-203136269701568" target="_blank">Facebook</a> </li>
-                                    <li> <a href="https://www.instagram.com/suptuf/" target="_blank">instagram</a></li>
+                                    <li> <a href="https://www.facebook.com/%E5%8F%B0%E4%B8%AD%E5%B8%82%E6%B0%B4%E4%B8%AD%E9%81%8B%E5%8B%95%E5%8D%94%E6%9C%83%E6%BD%9B%E6%B0%B4%E5%A7%94%E5%93%A1%E6%9C%83-203136269701568"
+                                            target="_blank">Facebook</a> </li>
+                                    <li> <a href="https://www.instagram.com/suptuf/" target="_blank">instagram</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -423,7 +415,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> --}}
     <script src="{{ asset('js/hamburgerMenu.js') }}"></script>
-
     @yield('js')
 </body>
 
