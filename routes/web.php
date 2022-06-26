@@ -152,6 +152,7 @@ Route::post('/changeclasses/{id}', [ClassesController::class,'changeclass']);
 
 Route::get('/createAccount', [ClientController::class,'createAccount']);
 Route::post('/createAccount/store', [ClientController::class,'store']);
+// Route::post('/account/login', [ClientController::class,'login']);
 
 Route::get('/organization', [HtmlController::class,'organ']);
 Route::get('/Surf-Rescue', [HtmlController::class,'rescue']);
