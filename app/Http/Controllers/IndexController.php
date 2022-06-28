@@ -14,4 +14,6 @@ class IndexController extends Controller
 
         return view('index',compact('news'));
     }
+
+
 }

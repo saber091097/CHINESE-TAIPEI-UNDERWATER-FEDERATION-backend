@@ -14,6 +14,7 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\JoinController;
 use App\Http\Controllers\IndexImgController;
+use App\Http\Controllers\ExcelExportController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,6 +40,8 @@ require __DIR__.'/auth.php';
 
 
 Route::get('/', [IndexController::class,'index']);
+
+Route::get('/excelexport/{id}', [ExcelExportController::class,'export']);
 
 // 不確定是否正確
 Route::get('/about',[HtmlController::class,'about']);
