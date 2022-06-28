@@ -582,19 +582,19 @@
                 <ul class="bg-white">
                     <li>
                         <a href="/about"
-                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">關於我們</a>
+                            class="block px-4 py-2 hover:bg-gray-100">關於我們</a>
                     </li>
                     <li>
                         <a href="/Past-presidents"
-                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">歷屆會長</a>
+                            class="block px-4 py-2 hover:bg-gray-100">歷屆會長</a>
                     </li>
                     <li>
                         <a href="/organization"
-                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">協會組織架構</a>
+                            class="block px-4 py-2 hover:bg-gray-100">協會組織架構</a>
                     </li>
                     <li>
                         <a href="/Surf-Rescue"
-                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">救生員資格檢定</a>
+                            class="block px-4 py-2 hover:bg-gray-100">救生員資格檢定</a>
                     </li>
                 </ul>
             </div>

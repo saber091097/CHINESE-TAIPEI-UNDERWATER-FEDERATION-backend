@@ -247,7 +247,7 @@
         <div id="authentication-modal" tabindex="-1" aria-hidden="true" style="z-index: 60;"
             class="hidden overflow-y-auto overflow-x-hidden fixed top-28 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full authentication">
             <div class="relative p-4 w-full max-w-md h-full md:h-auto">
-                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <div class="relative bg-white rounded-lg shadow ">
                     <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent"
                         data-modal-toggle="authentication-modal">
                         <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
