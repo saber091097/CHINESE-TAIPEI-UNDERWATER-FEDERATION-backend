@@ -177,9 +177,9 @@
     border-radius: 6px;
 }
 
-* body .container .dropdownNavbar ul li {
+/* * body .container .dropdownNavbar ul li {
     height: 44px;
-}
+} */
 
 * body .container .dropdownNavbar ul li:first-child {
     margin-top: 4px;
