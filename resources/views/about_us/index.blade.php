@@ -361,6 +361,15 @@
             width: 60%;
             text-align: start;
         }
+
+        * body .container .dropdownNavbar ul li a:hover {
+            color: #3B54F3;
+        }
+
+        * body .container .dropdownNavbar ul li:hover {
+            background-color: #EBEEFE;
+            border-radius: 6px;
+        }
     </style>
     {{-- @endsection --}}
 </head>
@@ -579,22 +588,18 @@
             </div>
 
             <div id="dropdownNavbar" class="hidden z-10 dropdownNavbar" style="color:black">
-                <ul class="bg-white">
+                <ul class="bg-white text-base">
                     <li>
-                        <a href="/about"
-                            class="block px-4 py-2 hover:bg-gray-100">關於我們</a>
+                        <a href="/about" class="block px-4 py-2 hover:bg-gray-100">關於我們</a>
                     </li>
                     <li>
-                        <a href="/Past-presidents"
-                            class="block px-4 py-2 hover:bg-gray-100">歷屆會長</a>
+                        <a href="/Past-presidents" class="block px-4 py-2 hover:bg-gray-100">歷屆會長</a>
                     </li>
                     <li>
-                        <a href="/organization"
-                            class="block px-4 py-2 hover:bg-gray-100">協會組織架構</a>
+                        <a href="/organization" class="block px-4 py-2 hover:bg-gray-100">協會組織架構</a>
                     </li>
                     <li>
-                        <a href="/Surf-Rescue"
-                            class="block px-4 py-2 hover:bg-gray-100">救生員資格檢定</a>
+                        <a href="/Surf-Rescue" class="block px-4 py-2 hover:bg-gray-100">救生員資格檢定</a>
                     </li>
                 </ul>
             </div>
