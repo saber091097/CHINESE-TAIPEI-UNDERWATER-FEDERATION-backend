@@ -38,8 +38,8 @@
 
                             <label for="power">使用者權限</label>
                             <select name="power" id="power">
-                                <option value="1" @if ($account->power == 1) selected @endif >管理者</option>
-                                <option value="2" @if ($account->power == 2) selected @endif >一般會員</option>
+                                <option value="2" @if ($account->power == 2) selected @endif >管理者</option>
+                                <option value="3" @if ($account->power == 3) selected @endif >一般會員</option>
                             </select>
 
                             <div class="button-box flex justify-center "style="margin:15px;">

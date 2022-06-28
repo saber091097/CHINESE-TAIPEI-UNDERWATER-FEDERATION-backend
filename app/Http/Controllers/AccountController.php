@@ -40,7 +40,7 @@ class AccountController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'power' => 1,
+            'power' => 2,
         ]);
 
         return redirect('/account');
