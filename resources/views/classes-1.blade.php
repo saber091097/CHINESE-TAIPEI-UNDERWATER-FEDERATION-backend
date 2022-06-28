@@ -84,7 +84,7 @@
                 </div>
             </div>
         </div>
-        <div id="callS5" data-modal-toggle="modal01"
+        <div id="callS1" data-modal-toggle="modal01"
             class="box box-right w-full md:w-1/2 h-full flex justify-center items-center bg-center bg-cover cursor-pointer">
             <div class="title flex flex-col justify-between items-center">
                 <h2 class="h2m">立式划槳</h2>
@@ -187,19 +187,30 @@
                                 </div>
                                     <div class="fixed-ts-box w-full flex flex-col">
                                         <div class="select-box flex flex-col w-full">
-                                            <label class="ts" for="class-select1-rwd">選擇課程</label>
-                                            <select name="class1" id="class-select1-rwd">
-                                                @foreach ($windsurf_rwd as $data)
-                                                    <option value="{{ $data->id }}">{{ $data->event }}</option>
+                                            <label class="ts" for="class-select">選擇課程</label>
+                                            <select id="class-select5-rwd" onchange="changeclass_rwd(this)" style="padding: 9px 13px;border-radius:6px;">
+                                                <option value="0">請選擇課程</option>
+                                                @foreach ($sup_rwd as $item)
+                                                    <option value="{{ $item->id }}">{{ $item->event }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
                                         <div class="price-box">
-                                            <h1> NT4,500</h1>
+                                            {{-- @foreach ($data as $item) --}}
+                                            <h1 id="price-rwd"> NT</h1>{{-- {{ $data->price }} --}}
+
+                                            {{-- @endforeach --}}
                                             <span class="ts">含保險、器材、救生衣</span>
                                         </div>
-                                        <button class="w-full singUp-btn flex justify-center items-center">線上報名</button>
-                                        <span class="phone">電洽報名 04-22312698</span>
+                                        {{-- @foreach ($data as $item) --}}
+
+                                        <form action="/signup1/" method="POST" id="supform-rwd">
+                                            @csrf
+                                            <button class="w-full singUp-btn flex justify-center items-center"
+                                                type="submit">線上報名</button>
+                                            <span class="phone">電洽報名 04-22312698</span>
+                                        </form>
+                                        {{-- @endforeach --}}
                                     </div>
                                 <div class="tab w-full">
                                     <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 items-center"
@@ -278,201 +289,63 @@
                                             </a>
                                         </li>
                                     </ul>
+                                    {{-- @foreach ($data as $item) --}}
                                     <div class="tab-content" id="s1-tabs-tabContent">
                                         <div class="tabs-1 tab-pane fade show active flex flex-col" id="s1-tabs-1"
-                                            role="tabpanel" aria-labelledby="tabs-1-tab">
-                                            <div class="intro">
-                                                <h3 class="h3m">水上救生</h3>
-                                                <p class="tm">救生員：指經檢定合格，具備救生基礎知識及能力，擔任水域救生工作之體育專業人員。
-                                                    為推廣水上安全教育，提倡水上救生技術、培養義務救生員，減少水難為目的!</p>
-                                            </div>
-                                            <div class="purpor">
-                                                <h3 class="h3m">活動主旨</h3>
-                                                <p class="tm">SUP立式划槳教練課程，選修風浪板、獨木舟三合一Windsupyak板，
-                                                    推動水上運動觀光及帶動地方觀光和繁榮提升SUP風浪板/獨木舟運動風氣及培訓專業教練人才。
-                                                    發展專利著作SUPTUF(中華民國立式划槳浪板訓練協會)教學系統認證。有品牌有信譽的標章SUPTUF已經榮獲中華民國經濟部智慧財產局註冊、認證。
-                                                </p>
-                                            </div>
-                                            <div class="time">
-                                                <h3 class="h3m">活動時間</h3>
-                                                <p class="tm">6月18-19日(周六、日)</p>
-                                            </div>
-                                            <div class="timeline">
-                                                <h3 class="h3m">報名截止</h3>
-                                                <p class="tm">45人額滿(15人開班)</p>
-                                            </div>
-                                            <div class="place">
-                                                <h3 class="h3m">活動地點</h3>
-                                                <p class="tm">日月潭石水上活動中心.</p>
-                                            </div>
-                                            <div class="qualification">
-                                                <h3 class="h3m">報名資格</h3>
-                                                <p class="tm">1、年滿18歲,未滿18歲由監護人簽同意書(未滿18歲,青少年助理教練)。 <br>
-                                                    2、對SUP立式划槳有興趣or有玩過or已經是SUP玩家。<br>
-                                                    3、身心健全、水性佳。</p>
-                                            </div>
-                                            <div class="lesson">
-                                                <h3 class="h3m">活動課程</h3>
-                                                <p class="tm"></p>
-                                            </div>
-                                            <div class="video">
-                                                <h3 class="h3m">課程教學示範</h3>
-                                                <div class="video-link">
-                                                    {{-- <iframe width="100%" height="420"
-                                                        src="https://www.youtube.com/embed/5PGKxWH2WYs"
-                                                        title="YouTube video player" frameborder="0"
-                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                        allowfullscreen></iframe> --}}
-                                                </div>
-                                            </div>
+                                            role="tabpanel" aria-labelledby="s1-tabs-1-tab">
+                                            {{-- {!! $data->event_intr !!} --}}
+                                            請選擇課程
                                         </div>
                                         <div class="tabs-2 tab-pane fade flex flex-col" id="s1-tabs-2" role="tabpanel"
-                                            aria-labelledby="tabs-2-tab">
-                                            <div class="flex flex-col day1">
-                                                <h3>第一天</h3>
-                                                <div class="flex flex-col">
-                                                    <div class="flex day-time-title day-time">
-                                                        <span class="ts ts-left">時間</span>
-                                                        <span class="ts">行程</span>
-                                                    </div>
-                                                    <div class="flex day-time">
-                                                        <span class="time">08:30</span>
-                                                        <p class="tm">報到學科教室(google頭社國小)
-                                                            往前300公尺(南投縣魚池鄉頭社村96號，後面，頭社村社區活動中心)</p>
-                                                    </div>
-                                                    <div class="flex day-time">
-                                                        <span class="time">09:00</span>
-                                                        <p class="tm">專利SUP立式划槳專長教練課程(風浪板、獨木舟)三合一概念；立式划槳風浪板，
-                                                            獨木舟器材名稱操作使用介紹，Windsupyak板，基本技巧原理講解</p>
-                                                    </div>
-                                                    <div class="flex day-time">
-                                                        <span class="time">12:00</span>
-                                                        <p class="tm">午餐便當</p>
-                                                    </div>
-                                                    <div class="flex day-time">
-                                                        <span class="time">14:00</span>
-                                                        <p class="tm">SUP示範教學7項基本水中技巧</p>
-                                                    </div>
-                                                    <div class="flex day-time">
-                                                        <span class="time">16:00</span>
-                                                        <p class="tm">選修獨木舟、風浪板者由專業教練現場解說演練教學</p>
-                                                    </div>
-                                                    <div class="flex day-time">
-                                                        <span class="time">17:00</span>
-                                                        <p class="tm">結束</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <h3>第二天</h3>
-                                                <div class="flex flex-col">
-                                                    <div class="flex day-time-title day-time">
-                                                        <span class="ts ts-left">時間</span>
-                                                        <span class="ts">行程</span>
-                                                    </div>
-                                                    <div class="flex day-time">
-                                                        <span class="time">09:30</span>
-                                                        <p class="tm">報到(指定地點)</p>
-                                                    </div>
-                                                    <div class="flex day-time">
-                                                        <span class="time">09:50</span>
-                                                        <p class="tm">SUP板、巡航、SUP七項技巧訓練</p>
-                                                    </div>
-                                                    <div class="flex day-time">
-                                                        <span class="time">10:00</span>
-                                                        <p class="tm">定軸不換槳手180度、360度轉向練習</p>
-                                                    </div>
-                                                    <div class="flex day-time">
-                                                        <span class="time">10:15</span>
-                                                        <p class="tm">水上安全講解及如何處理意外狀況SUP救生練習</p>
-                                                    </div>
-                                                    <div class="flex day-time">
-                                                        <span class="time">10:30</span>
-                                                        <p class="tm">立式划槳浪板七項技巧測驗</p>
-                                                    </div>
-                                                    <div class="flex day-time">
-                                                        <span class="time">11:45</span>
-                                                        <p class="tm">專利三合一SUP板，獨木舟示範驗收</p>
-                                                    </div>
-                                                    <div class="flex day-time">
-                                                        <span class="time">12:00</span>
-                                                        <p class="tm">午餐便當</p>
-                                                    </div>
-                                                    <div class="flex day-time">
-                                                        <span class="time">13:00</span>
-                                                        <p class="tm">教練式教式講、選修風浪板者加強定點轉向練習</p>
-                                                    </div>
-                                                    <div class="flex day-time">
-                                                        <span class="time">15:00</span>
-                                                        <p class="tm">課程結束</p>
-                                                    </div>
-                                                    <div class="flex day-time">
-                                                        <span class="time">16:00</span>
-                                                        <p class="tm">研討會</p>
-                                                    </div>
-                                                    <div class="flex day-time">
-                                                        <span class="time">17:00</span>
-                                                        <p class="tm">結束</p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            aria-labelledby="s1-tabs-2-tab">
+                                            {{-- {!! $data->event_proc !!} --}}
+                                            請選擇課程
+
                                         </div>
                                         <div class="tabs-3 tab-pane fade flex flex-col" id="s1-tabs-3" role="tabpanel"
-                                            aria-labelledby="tabs-3-tab">
-                                            <div class="flex flex-col box">
-                                                <h3 class="h3m">指導單位</h3>
-                                                <p class="tm">主辦單位：台中市水中運動協會,SUP風浪板/獨木舟委員會</p>
-                                                <p class="tm">協辦單位: 日月磐石水上活動中心</p>
-                                            </div>
-                                            <div class="flex flex-col box">
-                                                <h3 class="h3m">聯絡資訊</h3>
-                                                <p class="tm">聯絡電話： 李小姐0989-360077</p>
-                                                <p class="tm">地址： 南投縣日月村中正路102號</p>
-                                                <p class="tm">停車場資訊： Google地圖收尋（帖泊喀露營區）</p>
-                                            </div>
+                                            aria-labelledby="s1-tabs-3-tab">
+                                            {{-- {!! $data->event_dire !!} --}}
+                                            請選擇課程
+
                                         </div>
                                         <div class="tabs-4 tab-pane fade flex flex-col" id="s1-tabs-4" role="tabpanel"
-                                            aria-labelledby="tabs-4-tab">
-                                            <div class="flex flex-col box">
-                                                <h3 class="h3m">注意事項</h3>
-                                                <p class="tm">活動含保險、器材、救生衣，繳交後非本會或天然災害因素恕不退還。</p>
-                                                <p class="tm">報名電話：水中運動協會報名專線 04-22312698 台中市總教練 詹寓崵 0930975535
-                                                </p>
-                                                <p class="tm">報名Mail ： pennondive@gmail.com</p>
-                                            </div>
-                                            <div class="flex flex-col box">
-                                                <h3 class="h3m">其他</h3>
-                                                <p class="tm">中華民國政府立案,教育部門,風管處認可,水域管理辦法,各大院校適用。</p>
-                                                <p class="tm">有品牌有信譽的標章SUPTUF已經榮獲中華民國經濟部智慧財產局註冊、認證。</p>
-                                                <p class="tm">通過測驗頒協會SUP丙級立式划槳教練證照。</p>
-                                                <p class="tm">選修:風浪板教練證,獨木舟教練證Windsupyak
-                                                    instructor等專長教練證,相關業務洽協會辦公室)。</p>
-                                            </div>
-                                            <div class="flex flex-col box">
-                                                <h3 class="h3m">匯款資訊</h3>
-                                                <p class="tm">ATM兆豐國際商銀台中分行(017)</p>
-                                                <p class="tm">帳號:00410765400</p>
-                                            </div>
+                                            aria-labelledby="s1-tabs-4-tab">
+                                            {{-- {!! $data->event_notice !!} --}}
+                                            請選擇課程
+
                                         </div>
                                     </div>
+                                    {{-- @endforeach --}}
                                 </div>
                             </div>
                             <div class="in-in-innerbox-left w-4/12 flex justify-end">
                                 <div class="fixed-box sticky top-10 flex flex-col">
                                     <div class="select-box flex flex-col w-full">
-                                        <label class="ts" for="class-select1">選擇課程</label>
-                                        <select name="class1" id="class-select1">
-                                            @foreach ($windsurf as $data)
-                                                <option value="{{ $data->id }}">{{ $data->event }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    <div class="price-box">
-                                        <h1> NT4,500</h1>
-                                        <span class="ts">含保險、器材、救生衣</span>
-                                    </div>
-                                    <button class="w-full singUp-btn flex justify-center items-center">線上報名</button>
-                                    <span class="phone">電洽報名 04-22312698</span>
+                                        <div class="select-box flex flex-col w-full">
+                                            <label class="ts" for="class-select5">選擇課程</label>
+                                            <select id="class-select5" onchange="changeclass(this)" style="padding: 9px 13px;border-radius:6px;">
+                                                <option value="0">請選擇</option>
+                                                @foreach ($sup as $item)
+                                                    <option value="{{ $item->id }}">{{ $item->event }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="price-box">
+                                            {{-- @foreach ($data as $item) --}}
+                                            <h1 id="price"> NT</h1>{{-- {{ $data->price }} --}}
+
+                                            {{-- @endforeach --}}
+                                            <span class="ts">含保險、器材、救生衣</span>
+                                        </div>
+                                        {{-- @foreach ($data as $item) --}}
+
+                                        <form action="/signup1/" method="POST" id="supform">
+                                            @csrf
+                                            <button class="w-full singUp-btn flex justify-center items-center"
+                                                type="submit">線上報名</button>
+                                            <span class="phone">電洽報名 04-22312698</span>
+                                        </form>
+                                        {{-- @endforeach --}}
                                 </div>
                             </div>
                         </div>
@@ -833,9 +706,9 @@
                                                 <p class="tm">有品牌有信譽的標章SUPTUF已經榮獲中華民國經濟部智慧財產局註冊、認證。</p>
                                                 <p class="tm">通過測驗頒協會SUP丙級立式划槳教練證照。</p>
                                                 <p class="tm">選修:風浪板教練證,獨木舟教練證Windsupyak
-                                                    instructor等專長教練證,相關業務洽協會辦公室)。</p>
+                                                    instructor等專長教練證,相關業務洽協會辦公室。</p>
                                             </div>
-                                            <div class="flex flex-col box">
+                                            <div class="flex flex-col box bgGray">
                                                 <h3 class="h3m">匯款資訊</h3>
                                                 <p class="tm">ATM兆豐國際商銀台中分行(017)</p>
                                                 <p class="tm">帳號:00410765400</p>
@@ -882,10 +755,10 @@
             formData.append('_method', 'POST');
             formData.append('_token', '{{ csrf_token() }}');
             if (id == 0){
-                const sup_intr = document.querySelector('#s5-tabs-1')
-                const sup_proc = document.querySelector('#s5-tabs-2')
-                const sup_dire = document.querySelector('#s5-tabs-3')
-                const sup_notice = document.querySelector('#s5-tabs-4')
+                const sup_intr = document.querySelector('#s1-tabs-1')
+                const sup_proc = document.querySelector('#s1-tabs-2')
+                const sup_dire = document.querySelector('#s1-tabs-3')
+                const sup_notice = document.querySelector('#s1-tabs-4')
                 const formsup = document.querySelector('#supform')
                 const sup_price = document.querySelector('#price')
                 sup_intr.innerHTML = "請選擇課程"
@@ -901,10 +774,10 @@
                 .then(response => {
                     return response.json();
                 }).then( data => {
-                    const sup_intr = document.querySelector('#s5-tabs-1')
-                    const sup_proc = document.querySelector('#s5-tabs-2')
-                    const sup_dire = document.querySelector('#s5-tabs-3')
-                    const sup_notice = document.querySelector('#s5-tabs-4')
+                    const sup_intr = document.querySelector('#s1-tabs-1')
+                    const sup_proc = document.querySelector('#s1-tabs-2')
+                    const sup_dire = document.querySelector('#s1-tabs-3')
+                    const sup_notice = document.querySelector('#s1-tabs-4')
                     const formsup = document.querySelector('#supform')
                     const sup_price = document.querySelector('#price')
                     console.log(sup_price);
@@ -924,10 +797,10 @@
             formData.append('_method', 'POST');
             formData.append('_token', '{{ csrf_token() }}');
             if (id == 0){
-                const sup_intr = document.querySelector('#s5-tabs-1')
-                const sup_proc = document.querySelector('#s5-tabs-2')
-                const sup_dire = document.querySelector('#s5-tabs-3')
-                const sup_notice = document.querySelector('#s5-tabs-4')
+                const sup_intr = document.querySelector('#s1-tabs-1')
+                const sup_proc = document.querySelector('#s1-tabs-2')
+                const sup_dire = document.querySelector('#s1-tabs-3')
+                const sup_notice = document.querySelector('#s1-tabs-4')
                 const formsup = document.querySelector('#supform')
                 const sup_price = document.querySelector('#price')
                 console.log(sup_price);
@@ -944,10 +817,10 @@
                 .then(response => {
                     return response.json();
                 }).then( data => {
-                    const sup_intr = document.querySelector('#s5-tabs-1')
-                    const sup_proc = document.querySelector('#s5-tabs-2')
-                    const sup_dire = document.querySelector('#s5-tabs-3')
-                    const sup_notice = document.querySelector('#s5-tabs-4')
+                    const sup_intr = document.querySelector('#s1-tabs-1')
+                    const sup_proc = document.querySelector('#s1-tabs-2')
+                    const sup_dire = document.querySelector('#s1-tabs-3')
+                    const sup_notice = document.querySelector('#s1-tabs-4')
                     const formsup_rwd = document.querySelector('#supform-rwd')
                     const sup_price = document.querySelector('#price-rwd')
                     sup_intr.innerHTML = data.event_intr

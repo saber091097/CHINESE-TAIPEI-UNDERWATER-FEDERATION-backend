@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\WindsurfImg;
+use App\Http\Controllers\FilesController;
 
 class IndexImgController extends Controller
 {
@@ -13,15 +15,12 @@ class IndexImgController extends Controller
         return view('index_img.index',compact('header','slot'));
     }
 
-    public function windsurfupdate(){
-        if ($request->hasfile('indexwindsurf')) {
-            foreach ($request->event_img as $key => $value) {
-                $path = FilesController::imgUpload($value, 'indexwindsurf');
-                WindsurfImg::create([
-                    'windsurfimg' => $path,
-                ]);
-            }
-        }
+    public function windsurfupdate(Request $request){
+
+        WindsurfImg::create([
+            'windsurfimg' => $request->indexwindsurf,
+        ]);
+
         return redirect('/indeximg');
     }
 }

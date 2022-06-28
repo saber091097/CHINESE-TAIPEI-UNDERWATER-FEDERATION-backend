@@ -33,7 +33,23 @@ class ClientController extends Controller
 
         return redirect('/index');
     }
+
+
+    // public function login(Request $request){
+    //     $email = $request->email;
+    //     $password = $request->password;
+
+    //     $user = User::where('email', $email)->first();
+    //     if(!$user){
+    //         return response(['message' => 'Login failed. Please check email id']);
+    //     }
+    //     if(!Hash::check($password, $user->password)){
+    //         return response(['message' => 'Login failed. Please check password']);
+    //     }
+    //     return response(['message' => 'Login successfully', 'api_token' => $user->api_token]);
+    // }
 }
+
 
 
 //後端 驗證
@@ -49,12 +65,3 @@ class ClientController extends Controller
 // return "{\"msg\":\"true\"}";
 // }
 
-// 檢查暱稱名是否已存在
-// public String checkName(String username) {
-// System.out.println("checkName");
-// System.out.println(username);
-// User user = userService.findUserByName(username);
-// if (user != null) {
-// return "{\"msg\":\"false\"}";
-// }
-// return "{\"msg\":\"true\"}";

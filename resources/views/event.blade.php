@@ -33,7 +33,7 @@
                         <li>{{$events[0]->event}}</li>
                     </ul>
                 </div>
-                <div class="content">
+                <div class="content w-full">
                     <div class="news">
                         <div class="news-title flex flex-wrap">
                             最新消息
@@ -71,6 +71,26 @@
                             4、深水池：【課程須配合北區深水池開放時間】 1000-1200、1400-1600、1700-1900、1930-2130四個時段。<br>
                             5、深水池無限團練：【課程須配合北區深水池開放時間】 1000-1200、1400-1600、1700-1900、1930-2130四個時段。<br><br> --}}
                         </span>
+                        <div class="flex flex-col innerbox">
+                            <h3 class="tm">指導單位</h3>
+                            <p class="tm">主辦單位：台中市水中運動協會,SUP風浪板/獨木舟委員會</p>
+                            <p class="tm">協辦單位: 日月磐石水上活動中心</p>
+                        </div>
+                        <div class="flex flex-col innerbox">
+                            <h3 class="tm">注意事項</h3>
+                            <p class="tm">活動含保險、器材、救生衣，繳交後非本會或天然災害因素恕不退還。</p>
+                            <p class="tm">報名電話：水中運動協會報名專線 04-22312698 台中市總教練 詹寓崵 0930975535
+                            </p>
+                            <p class="tm">報名Mail ： pennondive@gmail.com</p>
+                        </div>
+                        <div class="flex flex-col innerbox bgGray">
+                            <h3 class="tm">匯款資訊</h3>
+                            <p class="tm">ATM兆豐國際商銀台中分行(017)</p>
+                            <p class="tm">帳號:00410765400</p>
+                        </div>
+                    </div>
+                    <div class="btn-content w-full flex justify-center">
+                        <button class="flex justify-center items-center">報名課程</button>
                     </div>
                 </div>
 

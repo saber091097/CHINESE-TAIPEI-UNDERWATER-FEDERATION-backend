@@ -19,7 +19,7 @@ class JoinController extends Controller
         $header='參加活動頁';
         $slot='';
         $data = SignUp::where('event_id',$id)->get();
-        
-        return view('join_list.joinlist',compact('data','header','slot'));
+        $event = SignUp::where('event_id',$id)->first();
+        return view('join_list.joinlist',compact('data','header','slot','event'));
     }
 }
