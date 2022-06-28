@@ -68,7 +68,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="calls2" data-modal-toggle="modal02"
+                <div id="callS3" data-modal-toggle="modal02"
                     class="in-innerbox in-innerbox-right w-full md:w-1/2 h-full flex  justify-center items-center bg-center bg-cover cursor-pointer">
                     <div class="title flex flex-col justify-between items-center">
                         <h2 class="h2m">風浪板</h2>
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </div>
-        <div id="callS1" data-modal-toggle="modal01"
+        <div id="callS5" data-modal-toggle="modal01"
             class="box box-right w-full md:w-1/2 h-full flex justify-center items-center bg-center bg-cover cursor-pointer">
             <div class="title flex flex-col justify-between items-center">
                 <h2 class="h2m">立式划槳</h2>
@@ -98,8 +98,8 @@
                 class="s1-container s-container w-full h-full bg-white flex flex-col justify-between items-center">
                 <div class="w-full h-full s1-innerbox s-innerbox flex flex-col items-center">
                     <div class="w-full s1-innerbox-top s-innerbox-top flex justify-end">
-                        <button id="btn-close1" data-modal-toggle="modal01"
-                            class="btn-close block fixed rounded-full"></button>
+                        <button id="" data-modal-toggle="modal01"
+                            class="btn-close btn-close1 block fixed rounded-full"></button>
                     </div>
                     <div class="s1-innerbox-btm s-innerbox-btm w-4/5 flex flex-col">
                         <div id="list1" class="list w-full flex justify-between">
@@ -119,13 +119,13 @@
                                                 d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
                                         </svg>
                                     </li>
-                                    <li class="inpage">水上救生</li>
+                                    <li id="" class="s1Bread inpage"></li>
                                 </ul>
                             </div>
                         </div>
                         <div id="class_title1" class="class-title flex flex-col">
-                            <h5 class="h5">Life Saving</h5>
-                            <h2 class="h2m">水上救生</h2>
+                            <h5 id="" class="s1En h5"></h5>
+                            <h2 id="" class="s1Title h2m"></h2>
                         </div>
                         <div class="class-content w-full flex flex-row">
                             <div class="in-in-innerbox-right w-8/12 ">
@@ -188,8 +188,11 @@
                                     <div class="fixed-ts-box w-full flex flex-col">
                                         <div class="select-box flex flex-col w-full">
                                             <label class="ts" for="class-select">選擇課程</label>
-                                            <select id="class-select5-rwd" onchange="changeclass_rwd(this)" style="padding: 9px 13px;border-radius:6px;">
+                                            <select id="class-select5-rwd" class="selectClass" onchange="changeclass_rwd(this)" style="padding: 9px 13px;border-radius:6px;">
                                                 <option value="0">請選擇課程</option>
+                                                <option class="selectSup" value="1">立式划槳</option>
+                                                <option class="selectSwim" value="2">游泳</option>
+                                                <option class="selectSaving" value="3">水上救生</option>
                                                 @foreach ($sup_rwd as $item)
                                                     <option value="{{ $item->id }}">{{ $item->event }}</option>
                                                 @endforeach
@@ -323,8 +326,11 @@
                                     <div class="select-box flex flex-col w-full">
                                         <div class="select-box flex flex-col w-full">
                                             <label class="ts" for="class-select5">選擇課程</label>
-                                            <select id="class-select5" onchange="changeclass(this)" style="padding: 9px 13px;border-radius:6px;">
-                                                <option value="0">請選擇</option>
+                                            <select id="class-select5" class="selectClass" onchange="changeclass(this)" style="padding: 9px 13px;border-radius:6px;">
+                                                <option value="0">請選擇課程</option>
+                                                <option class="selectSup" value="1">立式划槳</option>
+                                                <option class="selectSwim" value="2">游泳</option>
+                                                <option class="selectSaving" value="3">水上救生</option>
                                                 @foreach ($sup as $item)
                                                     <option value="{{ $item->id }}">{{ $item->event }}</option>
                                                 @endforeach
@@ -358,7 +364,7 @@
             <div class="s2-container s-container w-full h-full bg-white flex flex-col justify-between items-center">
                 <div class="w-full h-full s2-innerbox s-innerbox flex flex-col items-center">
                     <div class="w-full s2-innerbox-top s-innerbox-top flex justify-end">
-                        <button id="btn-close2" data-modal-toggle="modal02" class="btn-close fixed rounded-full"></button>
+                        <button id="" data-modal-toggle="modal02" class="btn-close2 btn-close fixed rounded-full"></button>
                     </div>
                     <div class="s2-innerbox-btm s-innerbox-btm w-4/5 flex flex-col">
                         <div class="list w-full flex justify-between">
@@ -378,13 +384,13 @@
                                                 d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
                                         </svg>
                                     </li>
-                                    <li class="inpage">風浪板</li>
+                                    <li id="" class="s2Bread inpage"></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="class-title flex flex-col">
-                            <h5 class="h5">Windsurf Board</h5>
-                            <h2 class="h2m">風浪板</h2>
+                            <h5 id="" class="s2En h5"></h5>
+                            <h2 id="" class="s2Title h2m"></h2>
                         </div>
                         <div class="class-content w-full flex flex-row">
                             <div class="in-in-innerbox-right w-8/12 ">
@@ -749,6 +755,7 @@
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 
     <script>
+
         function changeclass(getId) {
             var id = getId.value
             let formData = new FormData();
@@ -789,6 +796,36 @@
                     formsup.action = "/signup1/"+data.id
                 })
             }
+
+            // const selectC = document.querySelector(".selectClass");
+
+            // const s1Bread = document.querySelector(".s1Bread");
+            // const s1En = document.querySelector(".s1En");
+            // const s1Title = document.querySelector(".s1Title");
+
+            // if (selectC.options[1].selected) {
+            //     s1Bread.innerHTML = "";
+            //     s1Bread.innerHTML = "立式划槳";
+            //     s1En.innerHTML = "";
+            //     s1En.innerHTML = "SUP";
+            //     s1Title.innerHTML = "";
+            //     s1Title.innerHTML = "立式划槳";
+            // }else if (selectC.options[2].selected) {
+            //     s1Bread.innerHTML = "";
+            //     s1Bread.innerHTML = "游泳";
+            //     s1En.innerHTML = "";
+            //     s1En.innerHTML = "Swimming";
+            //     s1Title.innerHTML = "";
+            //     s1Title.innerHTML = "游泳";
+            // }else if (selectC.options[3].selected) {
+            //     s1Bread.innerHTML = "";
+            //     s1Bread.innerHTML = "水上救生";
+            //     s1En.innerHTML = "";
+            //     s1En.innerHTML = "Life Saving";
+            //     s1Title.innerHTML = "";
+            //     s1Title.innerHTML = "水上救生";
+            // }else
+
         }
 
         function changeclass_rwd(getId) {

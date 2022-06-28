@@ -683,7 +683,7 @@ body main .section .s-container .s-innerbox .s-innerbox-btm .class-content .in-i
 
   @media (max-width: 830px) {
     body main .section .s-container .s-innerbox .s-innerbox-btm .class-content .in-in-innerbox-right .tab {
-      height: calc(100% - 400px);
+      height: calc(100% - 100px);
     }
   }
 
@@ -891,7 +891,7 @@ body main .section .s-container .s-innerbox .s-innerbox-btm .class-content .in-i
             transition-duration: 1s, 1s, 1s, 1s;
   }
 
-  body main .wfull3 {
+  /* body main .wfull3 {
     top: 0;
     left: 0;
     width: 100%;
@@ -922,9 +922,9 @@ body main .section .s-container .s-innerbox .s-innerbox-btm .class-content .in-i
     transition-property: width, left, top, border-radius;
     -webkit-transition-duration: 1s, 1s, 1s, 1s;
             transition-duration: 1s, 1s, 1s, 1s;
-  }
+  } */
 
-  body main .moveBtm {
+  /* body main .moveBtm {
     position: absolute;
     top: 100%;
     left: 0;
@@ -932,12 +932,12 @@ body main .section .s-container .s-innerbox .s-innerbox-btm .class-content .in-i
     transition-property: left, top;
     -webkit-transition-duration: 1s, 1s;
             transition-duration: 1s, 1s;
-  }
+  } */
 
-  body main .w975-1 {
+  /* body main .w975-1 {
     width: 97.5%;
     top: 10%;
     left: 1.25%;
     border-radius: 32px 32px 0px 0px;
-  }
+  } */
   /*# sourceMappingURL=classes.css.map */
