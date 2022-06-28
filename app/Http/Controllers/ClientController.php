@@ -28,7 +28,7 @@ class ClientController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'power' => 2,
+            'power' => 3,
         ]);
 
         return redirect('/index');

@@ -48,6 +48,9 @@
                         </div>
                     </div>
                     <div class="placard" style="display: block">
+                        {{-- @php
+                            dd($news)
+                        @endphp --}}
                         @foreach ($news as $item)
                             <div class="placard-news">
                                 <a href="/event/{{ $item->id }}" class="flex">
@@ -142,7 +145,7 @@
                     <div class="nextpage flex items-center justify-between mt-10">
                         <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-center ">
                             <div>
-                                <div class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px"
+                                <div id="pagination" class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px"
                                     aria-label="Pagination">
                                     <a href="#"
                                         class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300  text-sm font-medium text-gray-500 hover:bg-gray-50">
@@ -153,7 +156,20 @@
                                                 clip-rule="evenodd" />
                                         </svg>
                                     </a>
-                                    <a href="#" aria-current="page"
+                                    {{-- 測試中 一筆消息就長一頁 --}}
+                                    @php
+                                        $count = count($news);
+                                        if ($count > 0) {
+                                            for ($i = 1; $i <= $count; $i++) {
+                                                $a_begin = '<a href="#" aria-current="page"
+                                            class="border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium">';
+                                                $a_end = '</a>';
+                                                echo $a_begin, $i, $a_end;
+                                            }
+                                        }
+                                    @endphp
+                                    {{-- 測試中 --}}
+                                    {{-- <a href="#" aria-current="page"
                                         class="z-10 bg-indigo-50 border-indigo-500 text-indigo-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
                                         1 </a>
                                     <a href="#"
@@ -173,7 +189,7 @@
                                         9 </a>
                                     <a href="#"
                                         class=" border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
-                                        10 </a>
+                                        10 </a> --}}
                                     <a href="#"
                                         class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 text-sm font-medium text-gray-500 hover:bg-gray-50">
                                         <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
@@ -217,7 +233,41 @@
                 content_two.style.display = 'block';
             }
         }
-
-
     </script>
+
+    {{-- <script>
+        var news = {!! json_encode($news) !!};
+        const i = news.length;
+        console.log(i);
+        const pagination = document.querySelector('#pagination');
+        for (j = 1; j <= news.length; j++) {
+            pagination.innerHTML = '';
+            pagination.innerHTML += `
+            <a href="#"
+                                        class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300  text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                            fill="currentColor" aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+
+                                    <a href="#" aria-current="page"
+                                        class="z-10 bg-indigo-50 border-indigo-500 text-indigo-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                                         </a>
+
+                                    <a href="#"
+                                        class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                            fill="currentColor" aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+
+            `
+        }
+    </script> --}}
 @endsection
