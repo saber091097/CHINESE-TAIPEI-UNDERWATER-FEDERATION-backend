@@ -55,7 +55,7 @@
                         {{ substr($item->updated_at, 0, 4) }}-{{ substr($item->eventimg_name, 0, 2) }}-{{ substr($item->eventimg_name, 2, 2) }}
                     </span>
                     <span class="title" onclick="location.href='/photo/{{ $item->id }}'"
-                        style="font-size:28px;font-weight:500;line-height:38px">
+                        style="">
                         {{ $item->eventimg_name }}</span>
                 </div>
             @endforeach
