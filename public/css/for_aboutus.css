@@ -596,13 +596,29 @@ nav {
 
 /* wave 開始
   ================================================== */
-.try{
-    position: relative;
+.waveAnimations{
+    min-height: 50vh;
+}
+@media (max-width:1440px) {
+    .waveAnimations{
+        min-height: 30vh;
+    }
+}
+@media (max-width:1080px) {
+    .waveAnimations{
+        min-height: 20vh;
+    }
+}
+@media (max-width:760px) {
+    .waveAnimations{
+        min-height: 5vh;
+    }
 }
 * section{
     width: 100%;
     position: absolute;
-    top: 0;
+    /* top: 0; */
+    bottom: 0;
 }
 * section svg {
     width: 100%;
@@ -619,7 +635,8 @@ nav {
 .wave {
     animation: wave 3s linear;
     animation-iteration-count: infinite;
-    fill: #4478e3;
+    /* fill: #4478e3; */
+    fill: #242424;
 }
 
 .gooeff {
@@ -629,12 +646,17 @@ nav {
 #wave2 {
     animation-duration: 5s;
     animation-direction: reverse;
-    opacity: .6
+    /* opacity: .6; */
+    opacity: 1;
+
 }
 
 #wave3 {
     animation-duration: 7s;
     opacity: .3;
+    /* opacity: .6; */
+    fill: #006cff;
+
 }
 
 @keyframes wave {
@@ -643,11 +665,16 @@ nav {
     }
 }
 
+.section-timeline{
+    background-color: #242424 !important;
+}
+
 /* wave 結束
   ================================================== */
 
 
-/* footer 開始 */
+/* footer 開始
+  ==================================================*/
 * body .container .footer {
     /* height: 525px; */
     background-color: #3B54F3;
@@ -818,4 +845,5 @@ nav {
     margin: auto;
 }
 
-/* footer 結束 */
+/* footer 結束
+  ==================================================*/
