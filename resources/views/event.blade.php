@@ -83,13 +83,13 @@
                             </p>
                             <p class="tm">報名Mail ： pennondive@gmail.com</p>
                         </div>
-                        <div class="flex flex-col innerbox bgGray">
+                        <div class="flex flex-col innerbox bgGray mt-9">
                             <h3 class="tm">匯款資訊</h3>
                             <p class="tm">ATM兆豐國際商銀台中分行(017)</p>
                             <p class="tm">帳號:00410765400</p>
                         </div>
                     </div>
-                    <div class="btn-content w-full flex justify-center">
+                    <div class="btn-content w-full flex">
                         <button class="flex justify-center items-center">報名課程</button>
                     </div>
                 </div>

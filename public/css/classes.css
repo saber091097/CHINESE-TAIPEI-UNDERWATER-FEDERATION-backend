@@ -844,6 +844,8 @@ body main .section .s-container .s-innerbox .s-innerbox-btm .class-content .in-i
   body main .section .s-container .s-innerbox .s-innerbox-btm .class-content .in-in-innerbox-left .fixed-box .price-box {
     color: #141414;
     margin-bottom: 36px;
+    margin-top: 16px;
+
   }
 
   body main .section .s-container .s-innerbox .s-innerbox-btm .class-content .in-in-innerbox-left .fixed-box .price-box h1 {

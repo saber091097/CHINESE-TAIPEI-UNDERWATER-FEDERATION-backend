@@ -186,7 +186,7 @@
 }
 
 * body .container .dropdownNavbar ul li a {
-    color: #141414;
+    color: #4e4e4e;
 }
 
 * body .container .dropdownNavbar ul li a:hover {
@@ -232,6 +232,20 @@
 
 .items-center {
     align-items: center;
+}
+.hoverText{
+    color: #4e4e4e;
+}
+.hoverText:hover{
+    color: #3B54F3;
+}
+.hoverText:active{
+    color: #3B54F3;
+    opacity: 1;
+}
+.hoverText:focus{
+    color: #3B54F3;
+    opacity: 1;
 }
 
 
