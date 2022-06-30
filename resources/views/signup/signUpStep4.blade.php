@@ -28,7 +28,7 @@
     <section class="container flex flex-col items-center w-full">
         <div class="content-success flex flex-col items-center w-full">
             <div class="icon-success flex justify-center">
-                <img src="/img/icon/ic_success.png" alt="">
+                <img src="/img/icon/ic_success.svg" alt="">
             </div>
             <h2 class="h2m">報名成功</h2>
         </div>

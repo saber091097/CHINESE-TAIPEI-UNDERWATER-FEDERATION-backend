@@ -11,15 +11,18 @@
             display: flex;
             justify-content: center;
         }
+        .dataTables_wrapper .dataTables_length select{
+            width: 4em ;
+        }
     </style>
 @endsection
 
 @section('main')
     <div class="past-presidents">
-        <div class=" bg-white" style="width:80%; margin:32px 0;border-radius:10px;">
+        <div class=" bg-white py-12" style="width:80%; margin:32px 0;border-radius:10px;">
             <div class="shopbox" style="padding: 0 10%;">
-                <div class="top flex items-center" style="margin-top:40px; margin-bottom:25px;">
-                    <h3 style="font-size:32px;">活動頁</h3>
+                <div class="top flex items-center" style="margin-bottom:25px;">
+                    <h3 style="font-size:32px;">活動名單</h3>
                     <a href="new/create" style="margin-left: auto;"><button style="padding: 10px;background-color:green; color:white;border-radius:5px;">新增消息</button></a>
                 </div>
                 <table id="example" class="display" style="width:100%;">

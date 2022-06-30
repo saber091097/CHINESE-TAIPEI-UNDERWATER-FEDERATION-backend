@@ -20,9 +20,10 @@
     <style>
         .nameblack:hover {
             color: black;
-            opacity: .6;
+            /* opacity: .6; */
             cursor: auto;
         }
+
     </style>
     @yield('css')
 </head>
@@ -208,8 +209,8 @@
             <!-- 桌機版的menu -->
             <div class="left flex justify-end ml-auto hidden lg:block">
                 <ul class="flex items-center">
-                    <li class="mr-6"><a href="/news">最新消息</a></li>
-                    <li class="mr-6">
+                    <li class="mr-6 hoverText"><a href="/news">最新消息</a></li>
+                    <li class="mr-6 hoverText">
                         <button class="flex" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
                             關於我們
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -220,26 +221,26 @@
                             </svg>
                         </button>
                     </li>
-                    <li class="mr-6"><a href="/classes">課程</a></li>
-                    <li class="mr-6"><a href="/album">活動照片</a></li>
+                    <li class="mr-6 hoverText"><a href="/classes">課程</a></li>
+                    <li class="mr-6 hoverText"><a href="/album">活動照片</a></li>
                     @auth
                         @if (Auth::user()->power == 1)
-                            <li class="mr-6"><a href="/dashboard">後台</a></li>
+                            <li class="mr-6 hoverText"><a href="/dashboard">後台</a></li>
                         @endif
-                        <li class="mr-6">
+                        <li class="mr-6 hoverText">
                             <div data-dropdown-toggle="dropdownleft" class="relative"
-                                style="width:50px;height:50px;border-radius:50%;background-color: gainsboro">
+                                style="width:36px;height:36px;border-radius:50%;background-color: gainsboro;cursor: pointer;">
                                 <span class="absolute"
-                                    style="top:50%;left:50%;transform:translate(-50%,-50%);font-size:28px;font-weight:500;">{{ substr(Auth::user()->name, 0, 1) }}</span>
+                                    style="top:50%;left:50%;transform:translate(-50%,-50%);font-size:16px;font-weight:500;">{{ substr(Auth::user()->name, 0, 1) }}</span>
                             </div>
                         </li>
-                        <li class="mr-6">
+                        <li class="mr-6 hoverText">
                             <div class="p-0 nameblack" style='margin-right:5px; '>您好，{{ Auth::user()->name }}</div>
                         </li>
 
                     @endauth
                     @guest
-                        <li class="login mr-6" data-modal-toggle="authentication-modal">登入</li>
+                        <li class="login mr-6 hoverText" data-modal-toggle="authentication-modal">登入</li>
                     @endguest
                 </ul>
             </div>
@@ -247,7 +248,7 @@
         <div id="authentication-modal" tabindex="-1" aria-hidden="true" style="z-index: 60;"
             class="hidden overflow-y-auto overflow-x-hidden fixed top-28 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full authentication">
             <div class="relative p-4 w-full max-w-md h-full md:h-auto">
-                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <div class="relative bg-white rounded-lg shadow ">
                     <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent"
                         data-modal-toggle="authentication-modal">
                         <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
@@ -305,7 +306,7 @@
             </div>
         </div>
 
-        <div id="dropdownleft" class="hidden dropdownleft" style="z-index: 100;">
+        <div id="dropdownleft" class="hidden dropdownleft" style="z-index: 100; ">
             <ul class="bg-white rounded-lg">
                 <li class="block px-4 py-2 hover:bg-gray-100 rounded-lg">
                     <a href="/personal-center">個人中心</a>

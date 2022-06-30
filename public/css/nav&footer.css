@@ -325,16 +325,16 @@
     border-radius: 6px;
 }
 
-* body .container .dropdownNavbar ul li {
+/* * body .container .dropdownNavbar ul li {
     height: 44px;
-}
+} */
 
 * body .container .dropdownNavbar ul li:first-child {
     margin-top: 4px;
 }
 
 * body .container .dropdownNavbar ul li a {
-    color: #141414;
+    color: #4e4e4e;
 }
 
 * body .container .dropdownNavbar ul li a:hover {
@@ -380,6 +380,20 @@
 /* .items-center{
     margin-right: 63px;
 } */
+
+.hoverText{
+    color: #4e4e4e;
+}
+.hoverText:hover{
+    color: #3B54F3;
+}
+.hoverText:active{
+    color: #3B54F3;
+}
+.hoverText:focus{
+    color: #3B54F3;
+}
+
   /* navbar 結束
   ================================================== */
 
