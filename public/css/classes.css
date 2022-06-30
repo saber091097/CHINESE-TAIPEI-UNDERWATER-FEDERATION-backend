@@ -126,7 +126,7 @@ body main .section .s-container .s-innerbox .s-innerbox-btm .class-content .in-i
 }
 
 * body .container .dropdownNavbar ul li {
-    height: 44px;
+    /* height: 44px; */
     z-index: 60;
 }
 
