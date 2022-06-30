@@ -7,8 +7,9 @@ use Illuminate\Contracts\View\View;
 use Maatwebsite\Excel\Concerns\FromView;
 use Maatwebsite\Excel\Concerns\WithDrawings;
 use PhpOffice\PhpSpreadsheet\Worksheet\Drawing;
+use Maatwebsite\Excel\Concerns\WithEvents;
 
-class AffidavitExport implements FromView,WithDrawings
+class AffidavitExport implements FromView,WithDrawings,WithEvents
 {
     //定義傳過來的id
     public $id;
@@ -21,7 +22,7 @@ class AffidavitExport implements FromView,WithDrawings
 
     public function view(): View
     {
-        
+
         return view('exportaffidavit', [
             'data' => SignUp::where('event_id',$this->id)->get()
         ]);
@@ -42,16 +43,9 @@ class AffidavitExport implements FromView,WithDrawings
     //     return $drawings;
     // }
 
-    public function drawings()
+    public function registerEvents()
     {
 
-        $drawing = new Drawing();
-        $drawing->setName('Logo');
-        $drawing->setDescription('This is my logo');
-        $drawing->setPath(public_path('/img/CMAS.png'));
-        $drawing->setHeight(50);
-        $drawing->setCoordinates('A3');
-        $drawing->setWorksheet('切結書.xlsx');
-        return view('exportaffidavit',[$drawing]);
+        return [$this->setImage2Excel($event, 'E2' ,$data['img_path'], 0,90);];
     }
 }
