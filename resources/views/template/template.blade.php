@@ -234,10 +234,6 @@
                                     style="top:50%;left:50%;transform:translate(-50%,-50%);font-size:16px;font-weight:500;">{{ substr(Auth::user()->name, 0, 1) }}</span>
                             </div>
                         </li>
-                        {{-- <li class="mr-6 hoverText">
-                            <div class="p-0 nameblack" style='margin-right:5px; '>您好，{{ Auth::user()->name }}</div>
-                        </li> --}}
-
                     @endauth
                     @guest
                         <li class="login mr-6 hoverText" data-modal-toggle="authentication-modal">登入</li>
