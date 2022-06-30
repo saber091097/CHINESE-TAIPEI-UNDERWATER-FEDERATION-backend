@@ -561,14 +561,14 @@
                         @endif
                         <li class="mr-6">
                             <div data-dropdown-toggle="dropdownleft" class="relative"
-                                style="width:50px;height:50px;border-radius:50%;background-color: gainsboro">
+                                style="width:36px;height:36px;border-radius:50%;background-color: gainsboro">
                                 <span class="absolute"
-                                    style="top:50%;left:50%;transform:translate(-50%,-50%);font-size:28px;font-weight:500;">{{ substr(Auth::user()->name, 0, 1) }}</span>
+                                    style="top:50%;left:50%;transform:translate(-50%,-50%);font-size:16px;font-weight:500;color:#4E4E4E">{{ substr(Auth::user()->name, 0, 1) }}</span>
                             </div>
                         </li>
-                        <li class="mr-6">
+                        {{-- <li class="mr-6">
                             <div class="p-0 nameblack" style='margin-right:5px; '>您好，{{ Auth::user()->name }}</div>
-                        </li>
+                        </li> --}}
 
                     @endauth
                     @guest
