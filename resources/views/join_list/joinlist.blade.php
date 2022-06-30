@@ -21,7 +21,7 @@
             <div class="shopbox flex flex-col" style="padding: 0 10%;">
                 <div class="top flex items-center justify-between" style="margin-top:40px; margin-bottom:25px;">
                     <h3 style="font-size:32px;">{{$event->event->event}}</h3>
-                    <a href="/excelexport/{{$event->event_id}}" style="background-color: #3B54F3;padding:6px 8px;border-radius:5px;color:white;">下載詳細名單</a>
+                    <a href="/excelexportaffidavit/{{$event->event_id}}" style="background-color: #3B54F3;padding:6px 8px;border-radius:5px;color:white;">下載切結書</a>
                 </div>
                 <table id="example" class="display" >
                     <thead>
@@ -30,6 +30,10 @@
                             <th >姓名</th>
                             <th >電話</th>
                             <th >身分證</th>
+                            <th >匯款資訊</th>
+                            <th >匯款進度</th>
+                            <th >備註</th>
+                            <th >功能</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -42,6 +46,17 @@
                                 <td style="text-align:center;">{{$item->name}}</td>
                                 <td style="text-align:center;">{{$item->phone}}</td>
                                 <td style="text-align:center;">{{$item->id_card}}</td>
+                                <td style="text-align:center;">{{$item->fivenumber}}</td>
+                                <td style="text-align:center;">{{$item->remitstate}}</td>
+                                <td style="text-align:center;">{{$item->remark}}</td>
+                                <td style="text-align:center;">
+                                    <a href="/people/{{$item->id}}" style="text-decoration: underline;">編輯</a>
+                                    <button onclick="document.querySelector('#deleteForm{{$item->id}}').submit()" style="text-decoration: underline;">刪除</button>
+                                    <form action="/people/del/{{$item->id}}" id="deleteForm{{$item->id}}" method="POST"
+                                        hidden>
+                                        @csrf
+                                    </form>
+                                </td>
                             </a>
                             </tr>
                         @endforeach

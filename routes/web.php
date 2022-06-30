@@ -41,7 +41,14 @@ require __DIR__.'/auth.php';
 
 Route::get('/', [IndexController::class,'index']);
 
-Route::get('/excelexport/{id}', [ExcelExportController::class,'export']);
+Route::prefix('/people')->group(function () {
+    Route::get('/{id}', [PeopleController::class,'index']);
+
+    Route::post('/del/{id}', [PeopleController::class,'del']);
+});
+
+//excel export
+Route::get('/excelexportaffidavit/{id}', [ExcelExportController::class,'exportaffidavit']);
 
 // 不確定是否正確
 Route::get('/about',[HtmlController::class,'about']);

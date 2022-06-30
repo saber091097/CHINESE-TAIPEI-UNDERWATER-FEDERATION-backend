@@ -3,15 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Exports\JoinList;
+use App\Exports\AffidavitExport;
 use Maatwebsite\Excel\Facades\Excel;
+
 
 class ExcelExportController extends Controller
 {
     //
-    public function export($id){
+    public function exportaffidavit($id){
 
-        return Excel::download(new JoinList($id), '成員名單.xlsx');
+        return Excel::download(new AffidavitExport($id), '切結書.xlsx');
 
     }
 }
