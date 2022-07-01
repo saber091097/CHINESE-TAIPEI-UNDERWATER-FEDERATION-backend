@@ -11,8 +11,8 @@ class ExcelExportController extends Controller
 {
     //
     public function exportaffidavit($id){
-
-        return Excel::download(new AffidavitExport($id), '切結書.xlsx');
+        $data = SignUp::where('event_id',$id)->get();
+        return Excel::download(new AffidavitExport($id,$data), '切結書.xlsx');
 
     }
 }
