@@ -48,7 +48,7 @@ Route::prefix('/people')->group(function () {
 });
 
 //excel export
-Route::get('/excelexportaffidavit/{id}', [ExcelExportController::class,'exportaffidavit']);
+Route::get('/excelexportsignlist/{id}', [ExcelExportController::class,'exportsignlist']);
 
 // 不確定是否正確
 Route::get('/about',[HtmlController::class,'about']);
@@ -175,8 +175,8 @@ Route::prefix('/joinlist')->group(function () {
     Route::get('/', [JoinController::class,'index']);
     Route::get('/joinlist/{id}', [JoinController::class,'joinlist']);
 
-    Route::get('/create', [JoinController::class,'create']);
-    Route::post('/store', [JoinController::class,'store']);
+    Route::get('/joinlist/addpeople/{id}', [JoinController::class,'addpeople']);
+    Route::post('/joinlist/addpeople/{id}/addpeoplestore', [JoinController::class,'addpeoplestore']);
 
     Route::get('/edit/{id}', [JoinController::class,'edit']);
     Route::post('/update/{id}', [JoinController::class,'update']);

@@ -19,9 +19,10 @@
     <div class="past-presidents">
         <div class=" bg-white" style="width:80%; margin:32px 0;border-radius:10px;">
             <div class="shopbox flex flex-col" style="padding: 0 10%;">
-                <div class="top flex items-center justify-between" style="margin-top:40px; margin-bottom:25px;">
+                <div class="top flex items-center" style="margin-top:40px; margin-bottom:25px;">
                     <h3 style="font-size:32px;">{{$event->event->event}}</h3>
-                    <a href="/excelexportaffidavit/{{$event->event_id}}" style="background-color: #3B54F3;padding:6px 8px;border-radius:5px;color:white;">下載切結書</a>
+                    <a href="addpeople/{{$event->event_id}}" style="background-color: green;padding:6px 8px;border-radius:5px;color:white;margin-left:auto;margin-right:20px;">新增學員</a>
+                    <a href="/excelexportsignlist/{{$event->event_id}}" style="background-color: #3B54F3;padding:6px 8px;border-radius:5px;color:white;">下載切結書</a>
                 </div>
                 <table id="example" class="display" >
                     <thead>
