@@ -253,13 +253,13 @@
                 <span class="en-aboutus">Popular Courses</span>
             </div>
             <div class="popular-courses-imgs flex">
-                <div class="courses1 flex relative" onclick="location.href='/classes'" style="cursor: pointer">
+                <div class="courses1 flex relative" onclick="location.href='/classes'" style="cursor: pointer;background-image: url({{$index_sup_img[0]->supimg}});">
                     <p class="absolute hidden">立式浪板</p>
                 </div>
-                <div class="courses2 flex relative" onclick="location.href='/classes'" style="cursor: pointer">
+                <div class="courses2 flex relative" onclick="location.href='/classes'" style="cursor: pointer;background-image: url({{$index_diving_img[0]->divingimg}});">
                     <p class="absolute hidden">潛水</p>
                 </div>
-                <div class="courses3 flex relative" onclick="location.href='/classes'" style="cursor: pointer">
+                <div class="courses3 flex relative" onclick="location.href='/classes'" style="cursor: pointer;background-image: url({{$index_windsurf_img[0]->windsurfimg}});">
                     <p class="absolute hidden">風浪板</p>
                 </div>
             </div>
