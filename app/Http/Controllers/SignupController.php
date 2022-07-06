@@ -175,4 +175,9 @@ class SignupController extends Controller
         $event=session::get('event');
         return view('signup.signUpStep4',compact('data','subtotal','event'));
     }
+
+    public function consent(Request $request){
+
+        return view('consent');
+    }
 }

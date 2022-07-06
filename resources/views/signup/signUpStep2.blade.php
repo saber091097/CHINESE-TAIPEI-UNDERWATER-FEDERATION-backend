@@ -187,25 +187,25 @@
                             <input name="class1" class="form-check-input check1 appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white
                             checked:bg-blue-600 checked:border-blue-600 mr-2 focus:outline-none transition duration-200 mt-1
                             align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer" type="checkbox" id="checkbox1" value="1">
-                            <label class="w-4/5 sm:w-11/12 form-check-label inline-block text-gray-800 cursor-pointer" for="checkbox1">獨木舟，加價購 $1,500</label>
+                            <label class="ts w-4/5 sm:w-11/12 form-check-label inline-block text-gray-800 cursor-pointer" for="checkbox1">獨木舟，加價購 $1,500</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input name="class2" class="form-check-input check2 appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white
                             checked:bg-blue-600 checked:border-blue-600 mr-2 focus:outline-none transition duration-200 mt-1
                             align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer" type="checkbox" id="checkbox2" value="2">
-                            <label class="w-4/5 sm:w-11/12 form-check-label inline-block text-gray-800 cursor-pointer" for="checkbox2">風浪板，加價購 $1,500</label>
+                            <label class="ts w-4/5 sm:w-11/12 form-check-label inline-block text-gray-800 cursor-pointer" for="checkbox2">風浪板，加價購 $1,500</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input name="class3" class="form-check-input check3 appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white
                             checked:bg-blue-600 checked:border-blue-600 mr-2 focus:outline-none transition duration-200 mt-1
                             align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer" type="checkbox" id="checkbox3" value="3">
-                            <label class="w-4/5 sm:w-11/12 form-check-label inline-block text-gray-800 cursor-pointer" for="checkbox3">SUP救生，加價購 $1,500</label>
+                            <label class="ts w-4/5 sm:w-11/12 form-check-label inline-block text-gray-800 cursor-pointer" for="checkbox3">SUP救生，加價購 $1,500</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input name="class4" class="form-check-input check4 appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white
                             checked:bg-blue-600 checked:border-blue-600 mr-2 focus:outline-none transition duration-200 mt-1
                             align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer" type="checkbox" id="checkbox4" value="4">
-                            <label class="w-4/5 sm:w-11/12 form-check-label inline-block text-gray-800 cursor-pointer" for="checkbox4">無</label>
+                            <label class="ts w-4/5 sm:w-11/12 form-check-label inline-block text-gray-800 cursor-pointer" for="checkbox4">無</label>
                         </div>
                     </div>
                     <div class="warning-class"></div>

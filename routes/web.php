@@ -157,6 +157,8 @@ Route::post('/signup2/{id}', [SignupController::class,'signup2']);
 Route::post('/signup3', [SignupController::class,'signup3']);
 Route::get('/signup4/{id}', [SignupController::class,'signup4']);
 
+Route::get('/consent', [SignupController::class,'consent']);
+
 Route::get('/classes', [ClassesController::class,'classes']);
 Route::post('/changeclasses/{id}', [ClassesController::class,'changeclass']);
 
@@ -196,3 +198,6 @@ Route::prefix('/indeximg')->group(function () {
 
     Route::delete('/del/{id}', [IndexImgController::class,'del']);
 });
+
+
+
