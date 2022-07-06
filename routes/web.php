@@ -145,6 +145,7 @@ Route::prefix('/account')->group(function () {
 
 
 Route::post('/signup1/{id}', [SignupController::class,'signup1']);
+Route::post('/signup1/goback}', [SignupController::class,'signup1_goback']);
 Route::post('/signup2/{id}', [SignupController::class,'signup2']);
 Route::post('/signup3', [SignupController::class,'signup3']);
 Route::get('/signup4/{id}', [SignupController::class,'signup4']);
@@ -155,7 +156,7 @@ Route::post('/changeclasses/{id}', [ClassesController::class,'changeclass']);
 
 Route::get('/createAccount', [ClientController::class,'createAccount']);
 Route::post('/createAccount/store', [ClientController::class,'store']);
-// Route::post('/account/login', [ClientController::class,'login']);
+Route::post('/account/login', [ClientController::class,'login']);
 
 Route::get('/organization', [HtmlController::class,'organ']);
 Route::get('/Surf-Rescue', [HtmlController::class,'rescue']);

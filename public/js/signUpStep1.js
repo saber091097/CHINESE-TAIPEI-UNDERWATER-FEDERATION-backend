@@ -141,7 +141,6 @@ function next(){
     }else
     formS1.submit();
 
-    console.log(formS1);
 
     if (!nameValue == "" && !checkName(nameValue)) {
         nameBox.innerHTML = "";
@@ -208,7 +207,7 @@ function next(){
         `;
     };
 
-    if (!formS1.email.value == "" && checkEmail(emailValue)) {
+    if (!formS1.email.value == "" && checkEmail(formS1.email.value)) {
         mailBox.innerHTML = "";
         mailBox.innerHTML = `
         <label class="ts" for="email">Email<span class="ts star">*</span></label>

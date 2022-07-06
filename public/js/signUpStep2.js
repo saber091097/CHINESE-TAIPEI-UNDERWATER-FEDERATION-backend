@@ -134,6 +134,20 @@ var dropHandler2 = function(e) {
     reader2.readAsDataURL(fileList2[0]);
 };
 
+function back() {
+    var form = new FormData();
+
+    form.append('_token', '{{ csrf_token() }}');
+
+    fetch('/signup1/' + id, {
+            method: 'POST',
+            body: form
+        }).then(res =>{
+            submit
+        })
+}
+
+
 const lineId = document.querySelector(".innerbox-id");
 const contacter = document.querySelector(".innerbox-contact-per");
 const contactPhone = document.querySelector(".innerbox-contact-phone");

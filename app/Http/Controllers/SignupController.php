@@ -25,8 +25,19 @@ class SignupController extends Controller
         return view('signup.signUpStep1',compact('event'));
     }
 
+    public function signup1_goback(Request $request){
+        $event= Event::where('id',$id)->first();
+        // dd($event->all());
+        // session([
+        //     'event_id'=>$event->id,
+        // ]);
+
+        return view('signup.signUpStep1',compact('event'));
+    }
+
     public function signup2($id,Request $request){
         $event= Event::where('id',$id)->first();
+        // dd($event->all());
         session([
             'event'=>$event->event,
             'name'=>$request->name,
@@ -41,6 +52,8 @@ class SignupController extends Controller
 
         return view('signup.signUpStep2',compact('event'));
     }
+
+
 
     public function signup3(Request $request){
 

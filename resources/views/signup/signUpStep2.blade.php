@@ -212,12 +212,15 @@
                 </div>
 
                 <div class="innerbox-btn w-full flex justify-between">
-                    <button class="btn btn-cancel rounded flex justify-center items-center" type="button">上一步</button>
+                    <button class="btn btn-cancel rounded flex justify-center items-center" id="btnGoBack" type="button" onclick="document.querySelector('#goBackForm').submit();" >上一步</button>
                     <button class="btn btn-next rounded flex justify-center items-center" onclick="check()"
                         type="button">確認資訊</button>
                 </div>
             </form>
-
+            <form action="/signup1/goback" method="post" hidden id="goBackForm">
+                @method('POST')
+                @csrf
+            </form>
 
         </section>
     </main>
