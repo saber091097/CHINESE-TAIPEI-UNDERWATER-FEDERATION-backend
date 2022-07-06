@@ -27,13 +27,43 @@
                 </div>
                 <table id="example" class="display" style="width:100%;">
                     <tr class="w-full">
-                        <th style="width:300px;text-align:left;">圖片</th>
+                        <th style="width:300px;text-align:left;">目前圖片</th>
                         <th style="width:300px;text-align:center;">位置</th>
                         <th style="width:300px;text-align:center;">更換圖片</th>
                     </tr>
                     <tbody >
                         <tr>
-                            <td><img src="{{asset('img/img_sup.png')}}" alt="" style="border-radius: 10px;margin-top:20px;"></td>
+                            <td><img src="{{$index_sup_img[0]->supimg}}" alt="" style="border-radius: 10px;margin-top:20px;"></td>
+                            <td style="text-align: center;">立式划槳</td>
+                            <td class="flex items-center" style="height: 320px;">
+                                <div>
+                                    <form action="/indeximg/update/sup" method="post">
+                                        <input type="file" name="indexsup" id="indexsup" class="border-0" multiple accept="image/*">
+                                        @csrf
+                                        <button type="submit" style="padding: 6px 8px;color:white;background-color:#3B54F3;border-radius:5px;">保存</button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="{{$index_diving_img[0]->divingimg}}" alt="" style="border-radius: 10px;margin-top:20px;"></td>
+                            <td style="text-align: center;">潛水</td>
+                            <td class="flex items-center" style="height: 320px;">
+                                <div>
+                                    <form action="/indeximg/update/diving" method="post">
+                                        <input type="file" name="indexdiving" id="indexdiving" class="border-0" multiple accept="image/*">
+                                        @csrf
+                                        <button type="submit" style="padding: 6px 8px;color:white;background-color:#3B54F3;border-radius:5px;">保存</button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            @php
+                                // dd($index_windsurf_img[0]->windsurfimg)
+                                // dd($index_diving_img[0]->divingimg)
+                            @endphp
+                            <td><img src="{{$index_windsurf_img[0]->windsurfimg}}" alt="" style="border-radius: 10px;margin-top:20px;"></td>
                             <td style="text-align: center;">風浪板</td>
                             <td class="flex items-center" style="height: 320px;">
                                 <div>
