@@ -33,7 +33,7 @@ class IndexImgController extends Controller
 
         // Storage::disk('local')->put('index_popular3_img', $request->indexsup);
         $path = FilesController::imgUpload($request->indexsup, 'IndexPopular3Img');
-        dd($path);
+        // dd($path);
         SupImg::create([
             'supimg' => $path,
         ]);
@@ -42,16 +42,20 @@ class IndexImgController extends Controller
     }
     public function diving_update(Request $request){
 
+        $path = FilesController::imgUpload($request->indexdiving, 'IndexPopular3Img');
+
         DivingImg::create([
-            'divingimg' => $request->indexdiving,
+            'divingimg' => $path,
         ]);
 
         return redirect('/indeximg');
     }
     public function windsurf_update(Request $request){
 
+        $path = FilesController::imgUpload($request->indexwindsurf, 'IndexPopular3Img');
+
         WindsurfImg::create([
-            'windsurfimg' => $request->indexwindsurf,
+            'windsurfimg' => $path,
         ]);
 
         return redirect('/indeximg');
