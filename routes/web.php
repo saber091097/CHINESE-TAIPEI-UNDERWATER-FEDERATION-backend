@@ -48,7 +48,7 @@ Route::prefix('/people')->group(function () {
 });
 
 //excel export
-Route::get('/excelexportaffidavit/{id}', [ExcelExportController::class,'exportaffidavit']);
+Route::get('/excelexportsignlist/{id}', [ExcelExportController::class,'exportsignlist']);
 
 // 不確定是否正確
 Route::get('/about',[HtmlController::class,'about']);
@@ -152,9 +152,12 @@ Route::prefix('/account')->group(function () {
 
 
 Route::post('/signup1/{id}', [SignupController::class,'signup1']);
+Route::post('/signup1/goback}', [SignupController::class,'signup1_goback']);
 Route::post('/signup2/{id}', [SignupController::class,'signup2']);
 Route::post('/signup3', [SignupController::class,'signup3']);
 Route::get('/signup4/{id}', [SignupController::class,'signup4']);
+
+Route::get('/consent', [SignupController::class,'consent']);
 
 Route::get('/classes', [ClassesController::class,'classes']);
 Route::post('/changeclasses/{id}', [ClassesController::class,'changeclass']);
@@ -162,7 +165,7 @@ Route::post('/changeclasses/{id}', [ClassesController::class,'changeclass']);
 
 Route::get('/createAccount', [ClientController::class,'createAccount']);
 Route::post('/createAccount/store', [ClientController::class,'store']);
-// Route::post('/account/login', [ClientController::class,'login']);
+Route::post('/account/login', [ClientController::class,'login']);
 
 Route::get('/organization', [HtmlController::class,'organ']);
 Route::get('/Surf-Rescue', [HtmlController::class,'rescue']);
@@ -175,8 +178,8 @@ Route::prefix('/joinlist')->group(function () {
     Route::get('/', [JoinController::class,'index']);
     Route::get('/joinlist/{id}', [JoinController::class,'joinlist']);
 
-    Route::get('/create', [JoinController::class,'create']);
-    Route::post('/store', [JoinController::class,'store']);
+    Route::get('/joinlist/addpeople/{id}', [JoinController::class,'addpeople']);
+    Route::post('/joinlist/addpeople/{id}/addpeoplestore', [JoinController::class,'addpeoplestore']);
 
     Route::get('/edit/{id}', [JoinController::class,'edit']);
     Route::post('/update/{id}', [JoinController::class,'update']);
@@ -195,3 +198,6 @@ Route::prefix('/indeximg')->group(function () {
 
     Route::delete('/del/{id}', [IndexImgController::class,'del']);
 });
+
+
+

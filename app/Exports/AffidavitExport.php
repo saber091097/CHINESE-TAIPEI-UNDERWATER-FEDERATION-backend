@@ -10,11 +10,10 @@ use Maatwebsite\Excel\Concerns\WithDrawings;
 use PhpOffice\PhpSpreadsheet\Worksheet\Drawing;
 use Maatwebsite\Excel\Concerns\WithEvents;
 
-class AffidavitExport implements FromView,WithDrawings
+class AffidavitExport implements FromView
 {
     //定義傳過來的id
     public $id;
-    public $data;
     // 轉換成export 要讀取的id
     public function __construct($id)
     {

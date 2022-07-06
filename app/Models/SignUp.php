@@ -45,7 +45,7 @@ class SignUp extends Model
     /**
      * @var array
      */
-    protected $fillable = ['created_at', 'updated_at', 'event_id', 'name', 'id_card', 'gender', 'phone', 'email', 'addr', 'line_id', 'emer_name', 'emer_phone',  'plus', 'user_id' ,'subtotal',];
+    protected $fillable = ['created_at', 'updated_at', 'event_id', 'name', 'id_card', 'gender', 'phone', 'email', 'addr', 'line_id', 'emer_name', 'emer_phone',  'plus', 'user_id' ,'subtotal','remark','fivenumber','remitstate'];
 
     public function headshot(){
         return $this->hasone(HeadShot::class,'user_id','user_id');

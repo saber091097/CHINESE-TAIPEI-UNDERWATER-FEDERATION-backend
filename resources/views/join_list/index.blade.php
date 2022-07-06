@@ -23,7 +23,6 @@
             <div class="shopbox" style="padding: 0 10%;">
                 <div class="top flex items-center" style="margin-bottom:25px;">
                     <h3 style="font-size:32px;">活動名單</h3>
-                    <a href="new/create" style="margin-left: auto;"><button style="padding: 10px;background-color:green; color:white;border-radius:5px;">新增消息</button></a>
                 </div>
                 <table id="example" class="display" style="width:100%;">
                     <thead>

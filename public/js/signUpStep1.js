@@ -22,8 +22,11 @@ const addressSelect = document.querySelector(".address");
 const addressInput = document.querySelector(".input-address");
 const select_county = document.querySelector(".select-county");
 const select_district = document.querySelector(".select-district");
+// const consentBox = document.querySelector(".innerbox-consent");
+
 const warning = document.querySelector(".warning");
 const mail_warning = document.querySelector(".mail-warning");
+const consent_warning = document.querySelector(".warning-consent");
 
 function next(){
 
@@ -36,6 +39,8 @@ function next(){
     var countyValue = document.getElementById("county").value;
     var districtValue = document.getElementById("district").value;
     var addressValue = document.getElementById("addressinput").value;
+
+    var checked = document.querySelector('[name=consent]:checked');
 
     if (formS1.name.value == "") {
         nameBox.innerHTML = "";
@@ -138,10 +143,13 @@ function next(){
         <input class="input-red input-text w-full focus:outline-none" id="addressinput" type="text" name="address" value="${addressValue}" placeholder="請輸入地址">
         <span class="ts ts-red">請確認地址輸入的格式</span>
         `;
+    }else if (!checked){
+        consent_warning.innerHTML = `
+        <span class="ts ts-red">請詳閱並且勾選同意書</span>
+        `;
     }else
     formS1.submit();
 
-    console.log(formS1);
 
     if (!nameValue == "" && !checkName(nameValue)) {
         nameBox.innerHTML = "";
@@ -208,7 +216,7 @@ function next(){
         `;
     };
 
-    if (!formS1.email.value == "" && checkEmail(emailValue)) {
+    if (!formS1.email.value == "" && checkEmail(formS1.email.value)) {
         mailBox.innerHTML = "";
         mailBox.innerHTML = `
         <label class="ts" for="email">Email<span class="ts star">*</span></label>
@@ -231,6 +239,10 @@ function next(){
         <input class="input-text w-full focus:outline-none" id="addressinput" type="text" name="address" value="${addressValue}" placeholder="請輸入地址">
         `;
     };
+
+    if (checked){
+        consent_warning.innerHTML =  "";
+    }
 
 };
 // ------------------姓名認證-----------------------

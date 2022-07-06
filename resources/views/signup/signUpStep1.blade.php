@@ -166,6 +166,16 @@
                 </div>
             </div>
 
+            <div class="innerbox-consent w-full flex flex-col">
+                <div class="flex flex-row">
+                    <input class="mr-2 form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white
+                    checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1
+                    align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer" name="consent" id="consent" type="checkbox">
+                    <label class="ts w-4/5 sm:w-11/12 cursor-pointer" for="consent">詳閱後請勾選<a class="ts star" href="/consent">同意書</a></label>
+                </div>
+                <div class="warning-consent"></div>
+            </div>
+
             <div class="innerbox-btn w-full flex justify-between">
                 <button class="btn btn-cancel rounded flex justify-center items-center" type="button">取消</button>
                 <button class="btn btn-next rounded flex justify-center items-center" onclick="next()" type="button">下一步</button>

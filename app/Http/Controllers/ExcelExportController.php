@@ -10,9 +10,8 @@ use Maatwebsite\Excel\Facades\Excel;
 class ExcelExportController extends Controller
 {
     //
-    public function exportaffidavit($id){
-        $data = SignUp::where('event_id',$id)->get();
-        return Excel::download(new AffidavitExport($id,$data), '切結書.xlsx');
+    public function exportsignlist($id){
+        return Excel::download(new AffidavitExport($id), '成員名單.xlsx');
 
     }
 }

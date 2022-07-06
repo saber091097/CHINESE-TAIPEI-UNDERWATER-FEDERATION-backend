@@ -224,7 +224,7 @@
                     <li class="mr-6 hoverText"><a href="/classes">課程</a></li>
                     <li class="mr-6 hoverText"><a href="/album">活動照片</a></li>
                     @auth
-                        @if (Auth::user()->power == 1)
+                        @if (Auth::user()->power == 1||2)
                             <li class="mr-6 hoverText"><a href="/dashboard">後台</a></li>
                         @endif
                         <li class="mr-6 hoverText">
@@ -263,6 +263,7 @@
                     <div class="py-6 px-6 lg:px-8">
                         <h3 class="mb-4 text-xl font-medium text-gray-900 ">登入</h3>
                         <form method="POST" action="{{ route('login') }}">
+                        {{-- <form method="POST" action="/account/login"> --}}
                             @csrf
                             <div>
                                 <label for="email"

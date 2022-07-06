@@ -41,12 +41,17 @@ class ClientController extends Controller
 
     //     $user = User::where('email', $email)->first();
     //     if(!$user){
-    //         return response(['message' => 'Login failed. Please check email id']);
+    //         // return response(['message' => 'Login failed. Please check email id']);
+    //         $warning = '該用戶不存在!';
+    //         return false;
     //     }
     //     if(!Hash::check($password, $user->password)){
-    //         return response(['message' => 'Login failed. Please check password']);
+    //         // return response(['message' => 'Login failed. Please check password']);
+    //         $warning = '密碼輸入錯誤!';
+    //         return false;
     //     }
-    //     return response(['message' => 'Login successfully', 'api_token' => $user->api_token]);
+    //     // return response(['message' => 'Login successfully', 'api_token' => $user->api_token]);
+    //     return view('template.template', compact('warning'));
     // }
 }
 
