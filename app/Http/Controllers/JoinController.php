@@ -107,7 +107,6 @@ class JoinController extends Controller
             'event_id'=>$event->id,
             'fivenumber'=>$request->fivenumber,
             'remitstate'=>$remitstate,
-            'remark'=>$request->remark,
         ]);
 
         return redirect('joinlist');

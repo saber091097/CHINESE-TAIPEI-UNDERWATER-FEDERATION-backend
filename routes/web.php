@@ -15,6 +15,7 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\JoinController;
 use App\Http\Controllers\IndexImgController;
 use App\Http\Controllers\ExcelExportController;
+use App\Http\Controllers\PeopleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,7 +44,7 @@ Route::get('/', [IndexController::class,'index']);
 
 Route::prefix('/people')->group(function () {
     Route::get('/{id}', [PeopleController::class,'index']);
-
+    Route::post('/update/{id}', [PeopleController::class,'update']);
     Route::post('/del/{id}', [PeopleController::class,'del']);
 });
 
@@ -52,6 +53,7 @@ Route::get('/excelexportsignlist/{id}', [ExcelExportController::class,'exportsig
 
 // 不確定是否正確
 Route::get('/about',[HtmlController::class,'about']);
+
 Route::get('/personal-center',[PersonalCenterController::class,'index']);
 Route::post('/personal-center/update/{id}', [PersonalCenterController::class,'update']);
 
