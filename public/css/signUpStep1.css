@@ -230,7 +230,7 @@ main .container {
 @media (max-width: 640px) {
   main .container {
     width: 500px;
-    height: 1305px;
+    height: 1320px;
     padding: 16px;
   }
 }

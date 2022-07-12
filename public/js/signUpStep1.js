@@ -145,7 +145,7 @@ function next(){
         `;
     }else if (!checked){
         consent_warning.innerHTML = `
-        <span class="ts ts-red">請詳閱並且勾選同意書</span>
+        <span class="ts ts-red">詳閱同意書內容後請勾選</span>
         `;
     }else
     formS1.submit();

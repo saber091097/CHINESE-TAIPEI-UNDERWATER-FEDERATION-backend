@@ -328,10 +328,13 @@
                                             <label class="ts" for="class-select5">選擇課程</label>
                                             <select id="class-select5" class="selectClass" onchange="changeclass(this)" style="padding: 9px 13px;border-radius:6px;">
                                                 <option value="0">請選擇課程</option>
-                                                <option class="selectSup" value="1">立式划槳</option>
+                                                {{-- <option class="selectSup" value="1">立式划槳</option>
                                                 <option class="selectSwim" value="2">游泳</option>
-                                                <option class="selectSaving" value="3">水上救生</option>
+                                                <option class="selectSaving" value="3">水上救生</option> --}}
                                                 @foreach ($sup as $item)
+                                                    <option value="{{ $item->id }}">{{ $item->event }}</option>
+                                                @endforeach
+                                                @foreach ($windsurf as $item)
                                                     <option value="{{ $item->id }}">{{ $item->event }}</option>
                                                 @endforeach
                                             </select>

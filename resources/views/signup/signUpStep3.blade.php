@@ -172,7 +172,7 @@
                 </div>
             </div>
             <div class="innerbox-btn w-full flex justify-between">
-                <button class="btn btn-cancel rounded flex justify-center items-center" type="button">返回修改</button>
+                <button class="btn btn-cancel rounded flex justify-center items-center" type="button" onclick="history.back()">返回修改</button>
                 <button class="btn btn-next rounded flex justify-center items-center" type="submit"><a href="/signup4/{{$data->id}}">確認送出</a></button>
             </div>
         </div>
