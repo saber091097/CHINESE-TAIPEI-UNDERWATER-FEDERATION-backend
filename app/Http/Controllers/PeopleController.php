@@ -124,4 +124,9 @@ class PeopleController extends Controller
 
         return redirect('joinlist');
     }
+
+    public function del($id){
+        $data = SignUp::where('id',$id)->delete();
+        return redirect('joinlist');
+    }
 }
