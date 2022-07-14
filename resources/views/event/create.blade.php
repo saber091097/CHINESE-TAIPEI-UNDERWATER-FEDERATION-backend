@@ -51,8 +51,12 @@
                         <input type="text" name="date" id="date" style="border-radius: 5px; width:50%;margin-top:10px;">
                     </div>
                     <div class="date">
-                        活動日期：
+                        活動報名開始日期：
                         <input type="date" name="startdate" id="date" style="border-radius: 5px; width:50%;margin-top:10px;">
+                    </div>
+                    <div class="date">
+                        活動報名結束日期：
+                        <input type="date" name="enddate" id="date" style="border-radius: 5px; width:50%;margin-top:10px;">
                     </div>
                     <div class="price">
                         活動價格：

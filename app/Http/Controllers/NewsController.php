@@ -11,7 +11,7 @@ class NewsController extends Controller
     //
 
     public function news(){
-        $news = Event::orderby('id','desc')->get();
+        $news = Event::orderby('id','desc')->Paginate(2);
         // dd($news);
         $anno_one = Event::where('anno_type','1')->orderby('id','desc')->get();
         // dd($anno_one);
