@@ -41,7 +41,7 @@
                                 <span>台中市水中運動協會</span>
                             </div>
                             <div class="en-name">
-                                <span>CHINESE TAIPEI UNDERWATER FEDERATION</span>
+                                <span>TAICHUNG CITY UNDERWATER FEDERATION</span>
                             </div>
                         </div>
                     </div>
