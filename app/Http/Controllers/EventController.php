@@ -8,6 +8,7 @@ use App\Models\Event;
 use App\Models\New_img;
 use App\Models\Video;
 use App\Http\Controllers\FilesController;
+use Carbon\Carbon;
 
 class EventController extends Controller
 {
@@ -28,7 +29,7 @@ class EventController extends Controller
     }
 
     public function store(Request $request){
-        dd($request->all());
+        // dd($request->all());
         $data=Event::create([
             'event_type'=> $request->event_type,
             'anno_type'=> $request->anno_type,
@@ -39,7 +40,9 @@ class EventController extends Controller
             'event_notice'=>$request->event_notice,
             'name'=>Auth::user()->name,
             'price'=>$request->price,
-            'event_date'=>$request->date,
+            'startdate'=>$request->startdate,
+            'enddate'=>$request->enddate,
+            'closedate'=>$request->closedate,
         ]);
 
         if ($request->hasfile('event_img')){
@@ -62,15 +65,23 @@ class EventController extends Controller
             }
         }
 
-        return redirect('/new');
+        return redirect('/events');
     }
 
     public function edit($id){
-        $header='活動新增頁';
+        $header='活動編輯頁';
         $slot='';
         $data = Event::where('id',$id)->first();
 
         return view('event.edit',compact('data','header','slot'));
+    }
+
+    public function copy($id){
+        $header='活動編輯頁';
+        $slot='';
+        $data = Event::where('id',$id)->first();
+
+        return view('event.copy',compact('data','header','slot'));
     }
 
     public function update(Request $request,$id){
@@ -107,10 +118,12 @@ class EventController extends Controller
             'event_notice'=>$request->event_notice,
             'name'=>Auth::user()->name,
             'price'=>$request->price,
-            'event_date'=>$request->date,
+            'startdate'=>$request->startdate,
+            'enddate'=>$request->enddate,
+            'closedate'=>$request->closedate,
         ]);
 
-        return redirect('new');
+        return redirect('events');
     }
 
     public function delete_img($img_id){
@@ -119,7 +132,7 @@ class EventController extends Controller
         $new_id = $img->event_id;
         $img->delete();
 
-        return redirect('/new/edit/'.$new_id);
+        return redirect('/events/edit/'.$new_id);
     }
 
     public function delete_video($video_id){
@@ -128,7 +141,7 @@ class EventController extends Controller
         $new_id = $video->event_id;
         $video->delete();
 
-        return redirect('/new/edit/'.$new_id);
+        return redirect('/events/edit/'.$new_id);
     }
 
     public function del($id,){
@@ -146,7 +159,7 @@ class EventController extends Controller
         }
 
         $event->delete();
-        return redirect('new');
+        return redirect('events');
     }
 
 }

@@ -22,12 +22,7 @@
                 <div class="top flex items-center" style="margin-top:40px; margin-bottom:25px;">
                     <h3 style="font-size:32px;">最新消息編輯</h3>
                 </div>
-                @if ($data->closedate > Carbon\Carbon::now())
-成功
-                @else
-失敗
-                @endif
-                <form action="/events/update/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                <form action="/events/store" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="event_type">
                         活動種類：
@@ -124,7 +119,7 @@
                     </div>
                     <div class="flex justify-center" style="margin: 10px;">
                         <button type="submit"
-                            style="padding: 8px 16px;background-color:seagreen;color:white;border-radius:5px;">更新</button>
+                            style="padding: 8px 16px;background-color:seagreen;color:white;border-radius:5px;">發布</button>
                     </div>
                 </form>
             </div>

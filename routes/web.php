@@ -72,11 +72,13 @@ Route::prefix('/presidents')->group(function () {
     Route::post('/del/{id}', [PresidentsController::class,'del']);
 });
 
-Route::prefix('/new')->group(function () {
+Route::prefix('/events')->group(function () {
     Route::get('/', [EventController::class,'index']);
 
     Route::get('/create', [EventController::class,'create']);
     Route::post('/store', [EventController::class,'store']);
+    
+    Route::get('/copy/{id}', [EventController::class,'copy']);
 
     Route::get('/edit/{id}', [EventController::class,'edit']);
     Route::post('/update/{id}', [EventController::class,'update']);

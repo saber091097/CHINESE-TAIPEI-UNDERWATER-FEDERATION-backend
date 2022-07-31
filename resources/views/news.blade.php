@@ -8,7 +8,7 @@
 @section('main')
     <div class="container flex justify-center max-w-full flex-wrap">
 
-        <div class="news flex justify-center mt-20">
+        <div class="news flex justify-center mt-20" >
             <div class="width80 flex justify-center flex-col">
                 <div class="breadcrumb">
                     <ul class="flex justify-start flex-wrap">
@@ -32,7 +32,7 @@
                             最新消息
                         </div>
                     </div>
-                    <div class="class flex">
+                    {{-- <div class="class flex">
                         <div class="class-left flex flex-col">
                             <div class="title">年份</div>
                             <select name="year" id="year" class="w-full text-gray-700">
@@ -41,16 +41,14 @@
                         </div>
                         <div class="class-left flex flex-col">
                             <div class="title">類別</div>
-                            <select name="year" id="anno_type" class="w-full text-gray-700">
-                                <option value="1" id='type_one' onclick="anno_one()">公告</option>
-                                <option value="2" id='type_two' onclick="anno_two()">好消息</option>
+                            <select name="year" id="anno_type" class="w-full text-gray-700" onchange="changenews(this)">
+                                <option value="0" @if ($id == 0) selected @endif id='type_zero' >全部</option>
+                                <option value="1" @if ($id == 1) selected @endif id='type_one' >公告</option>
+                                <option value="2" @if ($id == 2) selected @endif id='type_two' >好消息</option>
                             </select>
                         </div>
-                    </div>
-                    <div class="placard" style="display: block">
-                        {{-- @php
-                            dd($news)
-                        @endphp --}}
+                    </div> --}}
+                    <div class="placard" id="anno" style="display: block;">
                         @foreach ($news as $item)
                             <div class="placard-news">
                                 <a href="/event/{{ $item->id }}" class="flex">
@@ -59,12 +57,12 @@
                                             <label for="event"></label>
                                             <button>
                                                 @if ($item->anno_type == 1)
-                                                    公告
+                                                    課程
                                                 @else
                                                     好消息
                                                 @endif
                                             </button>
-                                            <span>{{ substr($item->updated_at, 0, 10) }} updated</span>
+                                            <span>{{ substr($item->updated_at, 0, 10) }} 發布</span>
                                         </div>
                                         <div class="event">
                                             <span>{{ $item->event }}</span>
@@ -79,9 +77,11 @@
                                 </a>
                             </div>
                         @endforeach
+                        <div id="all"></div>
+                        {{ $news->links() }}
                     </div>
 
-                    <div class="placard" id='content_one' style="display: none">
+                    {{-- <div class="placard" id='content_one' style="display: none">
                         @foreach ($anno_one as $item)
                             <div class="placard-news">
                                 <a href="/event/{{ $item->id }}" class="flex">
@@ -110,15 +110,16 @@
                                 </a>
                             </div>
                         @endforeach
-                    </div>
-                    <div class="placard" id='content_two' style="display: none">
+                        {{ $anno_one->appends(array('anno_type' => '1'))->links() }}
+                    </div> --}}
+                    {{-- <div class="placard" id='content_two' style="display: none">
                         @foreach ($anno_two as $item)
                             <div class="placard-news">
                                 <a href="/event/{{ $item->id }}" class="flex">
                                     <div class="placard-left mr-auto">
                                         <div class="time">
                                             <label for="event"></label>
-                                            <button>
+                                            <button onclick="page($item->anno_type)">
                                                 @if ($item->anno_type == 1)
                                                     公告
                                                 @else
@@ -140,8 +141,17 @@
                                 </a>
                             </div>
                         @endforeach
-                    </div>
-                    {{ $news->links() }}
+                        {{ $anno_two->links() }}
+                    </div> --}}
+                    {{-- <div id="changepage">
+                        @if ($item->anno_type == 1)
+                            {{ $anno_one->links() }}
+                        @elseif ($item->anno_type == 2)
+                            {{ $anno_two->links() }}
+                        @else
+                            {{ $news->links() }}
+                        @endif
+                    </div> --}}
                     {{-- <div class="nextpage flex items-center justify-between mt-10">
                         <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-center ">
                             <div>
@@ -211,31 +221,52 @@
 
 @section('js')
     <script>
-        var anno_type = document.querySelector('#anno_type');
 
-        // console.log(anno_type.value);
-
-        anno_type.addEventListener("change", change_content, false);
-
-        function change_content() {
-            var placard = document.querySelector('.placard');
-            const content_one = document.querySelector('#content_one');
-            const content_two = document.querySelector('#content_two');
-            if (anno_type.value == 1) {
-                // console.log('找公告');
-                placard.style.display = 'none';
-                content_two.style.display = 'none';
-                content_one.style.display = 'block';
-            } else {
-                // console.log('找好消息');
-                placard.style.display = 'none';
-                content_one.style.display = 'none';
-                content_two.style.display = 'block';
-            }
+        function changenews(Id) {
+            var id = Id.value
+            console.log(id);
+            let formData = new FormData();
+            formData.append('_method', 'POST');
+            formData.append('_token', '{{ csrf_token() }}');
+            fetch('/news/'+id,{
+                method:'POST',
+                body: formData
+            })
+            .then(response =>{
+                return response.json();
+            }).then( news => {
+                console.log(data);
+                const event = document.querySelector('#event')
+                return news
+            })
         }
+
+
+        // var anno_type = document.querySelector('#anno_type');
+
+        // anno_type.addEventListener("change", change_content, false);
+
+        // function change_content() {
+        //     var anno = document.querySelector('#anno');
+        //     const content_one = document.querySelector('#content_one');
+        //     const content_two = document.querySelector('#content_two');
+        //     if (anno_type.value == 1) {
+        //         // console.log('找公告');
+        //         fetch
+        //     } else if (anno_type.value == 2) {
+        //         // console.log('找好消息');
+        //         anno.style.display = 'none';
+        //         content_one.style.display = 'none';
+        //         content_two.style.display = 'block';
+        //     }else{
+        //         anno.style.display = 'block';
+        //         content_one.style.display = 'none';
+        //         content_two.style.display = 'none';
+        //     }
+        // }
     </script>
 
-    {{-- <script>
+    <script>
         var news = {!! json_encode($news) !!};
         const i = news.length;
         console.log(i);
@@ -269,5 +300,5 @@
 
             `
         }
-    </script> --}}
+    </script>
 @endsection

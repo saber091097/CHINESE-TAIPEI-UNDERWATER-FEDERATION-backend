@@ -22,27 +22,27 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="'/new'" :active="request()->Is('new*')">
+                    <x-nav-link :href="'/events'" :active="request()->Is('events*')">
                        發布消息
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="'/eventimg'" :active="request()->Is('eventimg')">
+                    <x-nav-link :href="'/eventimg'" :active="request()->Is('eventimg*')">
                        活動照片
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="'/account'" :active="request()->Is('account')">
+                    <x-nav-link :href="'/account'" :active="request()->Is('account*')">
                        帳號管理
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="'/joinlist'" :active="request()->Is('join')">
+                    <x-nav-link :href="'/joinlist'" :active="request()->Is('join*')">
                        活動名單
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="'/indeximg'" :active="request()->Is('indeximg')">
+                    <x-nav-link :href="'/indeximg'" :active="request()->Is('indeximg*')">
                        首頁照片更新
                     </x-nav-link>
                 </div>

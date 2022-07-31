@@ -22,7 +22,7 @@
                 <div class="top flex items-center" style="margin-top:40px; margin-bottom:25px;">
                     <h3 style="font-size:32px;">最新消息發布</h3>
                 </div>
-                <form action="/new/store" method="POST" enctype="multipart/form-data">
+                <form action="/events/store" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="event_type">
                         活動種類：
@@ -37,8 +37,8 @@
                     </div>
                     <div class="anno_type" style="margin: 10px 0;">
                         公告種類：
-                        <select name="anno_type" id="anno_type" style="padding:4px 40px 4px 12px; border-radius:5px;">
-                            <option value="1">公告</option>
+                        <select name="anno_type" onchange="changeclass(this)" id="anno_type" style="padding:4px 40px 4px 12px; border-radius:5px;">
+                            <option value="1">課程</option>
                             <option value="2">好消息</option>
                         </select>
                     </div>
@@ -46,45 +46,47 @@
                         活動名稱：
                         <input type="text" name="event" id="event" style="border-radius: 5px; width:50%;">
                     </div>
-                    <div class="date">
-                        活動日期：
-                        <input type="text" name="date" id="date" style="border-radius: 5px; width:50%;margin-top:10px;">
-                    </div>
-                    <div class="date">
-                        活動報名開始日期：
-                        <input type="date" name="startdate" id="date" style="border-radius: 5px; width:50%;margin-top:10px;">
-                    </div>
-                    <div class="date">
-                        活動報名結束日期：
-                        <input type="date" name="enddate" id="date" style="border-radius: 5px; width:50%;margin-top:10px;">
-                    </div>
-                    <div class="price">
-                        活動價格：
-                        <input type="text" name="price" id="price" style="border-radius: 5px; width:50%;margin-top:10px;">
-                    </div>
-                    <div class="event_img" style="margin: 10px 0;">
-                        活動介紹照片：
-                        <input type="file" name="event_img[]" accept="image/*" id="event_img" class="border-0" multiple accept="image/*">
-                    </div>
-                    <div class="event_video" style="margin: 10px 0;">
-                        活動介紹影片：
-                        <input type="file" name="event_video[]" accept="video/*" id="event_video" class="border-0" multiple accept="image/*">
+                    <div id="delq">
+                        <div class="date flex h-full items-center">
+                            <span style="margin-top:10px;">活動日期：</span>
+                            <input type="date" name="startdate" id="date" style="border-radius: 5px; width:40%;margin-top:10px;" >
+                            <span style="margin-top:10px;">～</span>
+                            <input type="date" name="enddate" id="date" style="border-radius: 5px; width:40%;margin-top:10px;" >
+                        </div>
+                        <div class="closedate">
+                            活動報名結束日期：
+                            <input type="date" name="closedate" id="date" style="border-radius: 5px; width:50%;margin-top:10px;">
+                        </div>
+                        <div class="price">
+                            活動價格：
+                            <input type="text" name="price" id="price" style="border-radius: 5px; width:50%;margin-top:10px;">
+                        </div>
+                        <div class="event_img" style="margin: 10px 0;">
+                            活動介紹照片：
+                            <input type="file" name="event_img[]" accept="image/*" id="event_img" class="border-0" multiple accept="image/*">
+                        </div>
+                        <div class="event_video" style="margin: 10px 0;">
+                            活動介紹影片：
+                            <input type="file" name="event_video[]" accept="video/*" id="event_video" class="border-0" multiple accept="image/*">
+                        </div>
                     </div>
                     <div class="event_intr flex" style="margin: 10px 0;">
                         <div>活動介紹：</div>
                         <textarea name="event_intr" id="event_intr" cols="65" rows="10" style="border-radius:5px;"></textarea>
                     </div>
-                    <div class="event_proc flex">
-                        <div>課程流程：</div>
-                        <textarea name="event_proc" id="event_proc" cols="65" rows="10" style="border-radius:5px;"></textarea>
-                    </div>
-                    <div class="event_dire flex" style="margin: 10px 0;">
-                        <div>指導單位：</div>
-                        <textarea name="event_dire" id="event_dire" cols="65" rows="5" style="border-radius:5px;"></textarea>
-                    </div>
-                    <div class="event_notice flex">
-                        <div>注意事項：</div>
-                        <textarea name="event_notice" id="event_notice" cols="65" rows="10" style="border-radius:5px;"></textarea>
+                    <div id="changetext">
+                        <div class="event_proc flex" >
+                            <div>課程流程：</div>
+                            <textarea name="event_proc" id="event_proc" cols="65" rows="10" style="border-radius:5px;"></textarea>
+                        </div>
+                        <div class="event_dire flex" style="margin: 10px 0;" >
+                            <div>指導單位：</div>
+                            <textarea name="event_dire" id="event_dire" cols="65" rows="5" style="border-radius:5px;"></textarea>
+                        </div>
+                        <div class="event_notice flex">
+                            <div>注意事項：</div>
+                            <textarea name="event_notice" id="event_notice" cols="65" rows="10" style="border-radius:5px;"></textarea>
+                        </div>
                     </div>
                     {{-- <div class="remit flex">
                         <div>匯款資訊：</div>
@@ -101,6 +103,21 @@
 @endsection
 
 @section('js')
+<script>
+    function changeclass(getId) {
+        const id = getId.value;
+        if (id == 2){
+            const text = document.querySelector('#changetext')
+            const delq = document.querySelector('#delq')
+            text.style.display = 'none';
+            delq.style.display = 'none';
+        }else{
+            const text = document.querySelector('#changetext')
+            text.style.display = 'block';
+            delq.style.display = 'block';
+        }
+    }
+</script>
 <script>
     ClassicEditor
             .create( document.querySelector( '#event_intr' ) )

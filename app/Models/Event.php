@@ -30,7 +30,7 @@ class Event extends Model
     /**
      * @var array
      */
-    protected $fillable = ['created_at', 'updated_at', 'event_type', 'event', 'anno_type', 'event_intr', 'event_proc', 'event_dire', 'event_notice', 'name', 'price'];
+    protected $fillable = ['created_at', 'updated_at', 'event_type', 'event', 'anno_type', 'event_intr', 'event_proc', 'event_dire', 'event_notice', 'name', 'price' , 'startdate' , 'enddate' , 'closedate'];
 
     public function imgs(){
         return $this->hasMany(New_img::class,'new_id','id');

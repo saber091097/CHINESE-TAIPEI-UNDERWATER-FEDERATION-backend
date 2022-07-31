@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{asset('css/event.css')}}">
     <link rel="stylesheet" href="{{asset('css/nav&footer.css')}}">
 
-    <title>{{$events[0]->event}}</title>
+    <title>{{$events->event}}</title>
     @endsection
 
 
@@ -27,10 +27,7 @@
                                     d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
                             </svg>
                         </li>
-                        @php
-                            // dd($events[0])
-                        @endphp
-                        <li>{{$events[0]->event}}</li>
+                        <li>{{$events->event}}</li>
                     </ul>
                 </div>
                 <div class="content w-full">
@@ -40,57 +37,42 @@
                         </div>
                     </div>
                     <div class="event-title">
-                        {{$events[0]->event}}
+                        {{$events->event}}
                     </div>
                     <div class="time">
                         <button>
-                            @if ($events[0]->anno_type==1)
-                            公告
+                            @if ($events->anno_type==1)
+                            課程
                             @else
                             好消息
                             @endif
                         </button>
-                        <span>{{substr($events[0]->updated_at,0,10)}} updated</span>
+                        <span>{{substr($events->updated_at,0,10)}} updated</span>
                     </div>
                     <div class="event-content">
                         <span>
-                            {!! $events[0]->event_intr !!}
-                            {{-- 台中市水中運動協會自由潛水課程:
-                            free diving LV1課程適用於一般人仕，簡單來說，就是利用閒暇時間，穿著漂亮的水中服裝，長蛙，面鏡呼吸管，休閒輕鬆的水中長蛙運動， 拍一些美美的照片隨時能夠滿足您的需求。<br>
-                            <br>
-                            推薦協會合約的自由潛水學校Free Pilot 自由領航員潛水中心。<br>
-                            小欣教練Line ID：@tsai-art Instagram：@a_shin0601電話：0915262859<br>
-                            協會辦公室:台中市北區天祥街10號 電話04-22312698<br>
-                            費用:二人成行,每人12300<br>
-                            <br>
-                            課程： RAID▲LV1課程規劃： 總共：學科X1、平壓課X1、泳池課X2、深水池課X1(五米池)；台中每堂課皆為2小時，海訓考照6小時(實際需2天1夜)。
-                            <br>
-                            1、 學科：最早0900-最晚2000，期間都能約課。<br>
-                            2、平壓專門課：最早0900-最晚2000，期間都能約課。<br>
-                            3、泳池課01、02：【課程須配合北區泳池池開放時間】 早場為10：00-12：00、午場為1400-1600 、傍晚場1700-1900、 晚場為19：30-21：30<br>
-                            4、深水池：【課程須配合北區深水池開放時間】 1000-1200、1400-1600、1700-1900、1930-2130四個時段。<br>
-                            5、深水池無限團練：【課程須配合北區深水池開放時間】 1000-1200、1400-1600、1700-1900、1930-2130四個時段。<br><br> --}}
+                            {!! $events->event_intr !!}
                         </span>
-                        <div class="flex flex-col innerbox">
-                            <h3 class="tm">指導單位</h3>
-                            <p class="tm">主辦單位：台中市水中運動協會,SUP風浪板/獨木舟委員會</p>
-                            <p class="tm">協辦單位: 日月磐石水上活動中心</p>
-                        </div>
-                        <div class="flex flex-col innerbox">
-                            <h3 class="tm">注意事項</h3>
-                            <p class="tm">活動含保險、器材、救生衣，繳交後非本會或天然災害因素恕不退還。</p>
-                            <p class="tm">報名電話：水中運動協會報名專線 04-22312698 台中市總教練 詹寓崵 0930975535
-                            </p>
-                            <p class="tm">報名Mail ： pennondive@gmail.com</p>
-                        </div>
-                        <div class="flex flex-col innerbox bgGray mt-9">
-                            <h3 class="tm">匯款資訊</h3>
-                            <p class="tm">ATM兆豐國際商銀台中分行(017)</p>
-                            <p class="tm">帳號:00410765400</p>
+                        <div id="tohidden" @if ($events->anno_type == 2) hidden @endif>
+                            <div class="flex flex-col innerbox" >
+                                <h3 class="tm">指導單位</h3>
+                                {!! $events->event_dire !!}
+                            </div>
+                            <div class="flex flex-col innerbox">
+                                <h3 class="tm">注意事項</h3>
+                                {!! $events->event_notice !!}
+                            </div>
+                            <div class="flex flex-col innerbox bgGray mt-9">
+                                <h3 class="tm">匯款資訊</h3>
+                                <p class="tm">ATM兆豐國際商銀台中分行(017)</p>
+                                <p class="tm">帳號:00410765400</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="btn-content w-full flex">
-                        <button class="flex justify-center items-center">報名課程</button>
+                    <div id="delbut" @if ($events->anno_type == 2) hidden @endif>
+                        <div class="btn-content w-full flex">
+                            <a href=""><button class="flex justify-center items-center">報名課程</button></a>
+                        </div>
                     </div>
                 </div>
 

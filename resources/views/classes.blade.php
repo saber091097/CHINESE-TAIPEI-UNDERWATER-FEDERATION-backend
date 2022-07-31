@@ -1737,8 +1737,13 @@
                                         <select id="class-select5-rwd" onchange="changeclass_rwd(this)" style="padding: 9px 13px;border-radius:6px;">
                                             <option value="0">請選擇課程</option>
                                             @foreach ($sup_rwd as $item)
-                                                <option value="{{ $item->id }}">{{ $item->event }}</option>
+                                                @if ($item->closedate > Carbon\Carbon::now())
+                                                    <option value="{{ $item->id }}">{{ $item->event }}</option>
+                                                @endif
                                             @endforeach
+                                            {{-- @foreach ($sup_rwd as $item)
+                                                <option value="{{ $item->id }}">{{ $item->event }}</option>
+                                            @endforeach --}}
                                         </select>
                                     </div>
                                     <div class="price-box">
@@ -1870,8 +1875,10 @@
                                         <label class="ts" for="class-select5">選擇課程</label>
                                         <select id="class-select5" onchange="changeclass(this)" style="padding: 9px 13px;border-radius:6px;">
                                             <option value="0">請選擇</option>
-                                            @foreach ($sup as $item)
-                                                <option value="{{ $item->id }}">{{ $item->event }}</option>
+                                            @foreach ($sup_rwd as $item)
+                                                @if ($item->closedate > Carbon\Carbon::now())
+                                                    <option value="{{ $item->id }}">{{ $item->event }}</option>
+                                                @endif
                                             @endforeach
                                         </select>
                                     </div>
@@ -1900,7 +1907,6 @@
 
     </main>
 @endsection
-
 
 @section('js')
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -1939,7 +1945,6 @@
                     const sup_notice = document.querySelector('#s5-tabs-4')
                     const formsup = document.querySelector('#supform')
                     const sup_price = document.querySelector('#price')
-                    console.log(sup_price);
                     sup_intr.innerHTML = data.event_intr
                     sup_proc.innerHTML = data.event_proc
                     sup_dire.innerHTML = data.event_dire
