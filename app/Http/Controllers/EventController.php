@@ -43,6 +43,7 @@ class EventController extends Controller
             'startdate'=>$request->startdate,
             'enddate'=>$request->enddate,
             'closedate'=>$request->closedate,
+            'link'=>$request->link,
         ]);
 
         if ($request->hasfile('event_img')){
@@ -121,6 +122,7 @@ class EventController extends Controller
             'startdate'=>$request->startdate,
             'enddate'=>$request->enddate,
             'closedate'=>$request->closedate,
+            'link'=>$request->link,
         ]);
 
         return redirect('events');

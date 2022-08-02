@@ -53,14 +53,14 @@
         <div class="box box-left w-full md:w-1/2 h-full flex flex-col-reverse md:flex-col">
             <div class="innerbox innerbox-top w-full h-1/2 flex flex-col-reverse md:flex-row">
                 <div class="in-innerbox in-innerbox-left w-full md:w-1/2 h-full flex flex-col-reverse md:flex-col">
-                    <div id="callS1" data-modal-toggle="modal01"
+                    <div id="saving" data-modal-toggle="modal01"
                         class="in-in-innerbox in-innerbox-top w-full h-1/2 flex justify-center items-center bg-center bg-cover cursor-pointer">
                         <div class="title flex flex-col justify-between items-center">
                             <h2 class="h2m">水上救生</h2>
                             <h5 class="h5">Life Saving</h5>
                         </div>
                     </div>
-                    <div id="callS2" data-modal-toggle="modal02"
+                    <div id="swimming" data-modal-toggle="modal02"
                         class="in-in-innerbox in-innerbox-btm w-full h-1/2 flex justify-center items-center bg-center bg-cover cursor-pointer">
                         <div class="title flex flex-col justify-between items-center">
                             <h2 class="h2m">游泳</h2>
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="callS3" data-modal-toggle="WINDSURFModal"
+                <div id="windsurf" data-modal-toggle="WINDSURFModal"
                     class="in-innerbox in-innerbox-right w-full md:w-1/2 h-full flex  justify-center items-center bg-center bg-cover cursor-pointer">
                     <div class="title flex flex-col justify-between items-center">
                         <h2 class="h2m">風浪板</h2>
@@ -76,7 +76,7 @@
                     </div>
                 </div>
             </div>
-            <div id="callS4" data-modal-toggle="DIVINGFModal"
+            <div id="diving" data-modal-toggle="DIVINGFModal"
                 class="innerbox innerbox-btm w-full h-1/2 flex justify-center items-center bg-center bg-cover cursor-pointer">
                 <div class="title flex flex-col justify-between items-center">
                     <h2 class="h2m">潛水</h2>
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </div>
-        <div id="callS5" data-modal-toggle="SUPModal"
+        <div id="sup" data-modal-toggle="SUPModal"
             class="box box-right w-full md:w-1/2 h-full flex justify-center items-center bg-center bg-cover cursor-pointer">
             <div class="title flex flex-col justify-between items-center">
                 <h2 class="h2m">立式划槳</h2>
@@ -188,9 +188,6 @@
                                                 <label class="ts" for="class-select">選擇課程</label>
                                                 <select id="class-select5-rwd" class="selectClass" onchange="changeclass_rwd(this)" style="padding: 9px 13px;border-radius:6px;">
                                                     <option value="0">請選擇課程</option>
-                                                    {{-- <option class="selectSup" value="1">立式划槳</option>
-                                                    <option class="selectSwim" value="2">游泳</option>
-                                                    <option class="selectSaving" value="3">水上救生</option> --}}
                                                     @foreach ($saving as $item)
                                                         @if ($item->closedate > Carbon\Carbon::now())
                                                             <option value="{{ $item->id }}">{{ $item->event }}</option>
@@ -199,21 +196,10 @@
                                                 </select>
                                             </div>
                                             <div class="price-box">
-                                                {{-- @foreach ($data as $item) --}}
-                                                <h1 id="price-rwd"> NT</h1>{{-- {{ $data->price }} --}}
-                                                {{-- @endforeach --}}
-
                                                 <span class="ts">含保險、器材、救生衣</span>
                                             </div>
-                                            {{-- @foreach ($data as $item) --}}
-
-                                            <form action="/signup1/" method="POST" id="supform-rwd">
-                                                @csrf
-                                                <button class="w-full singUp-btn flex justify-center items-center"
-                                                    type="submit">線上報名</button>
+                                            <a id="changelink" href="#" class="w-full singUp-btn flex justify-center items-center">線上報名</a>
                                                 <span class="phone">電洽報名 04-22312698</span>
-                                            </form>
-                                            {{-- @endforeach --}}
                                         </div>
                                     <div class="tab w-full">
                                         <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 items-center"
@@ -328,9 +314,6 @@
                                                 <label class="ts" for="class-select5">選擇課程</label>
                                                 <select id="class-select5" class="selectClass" onchange="changeclass(this)" style="padding: 9px 13px;border-radius:6px;">
                                                     <option value="0">請選擇課程</option>
-                                                    {{-- <option class="selectSup" value="1">立式划槳</option>
-                                                    <option class="selectSwim" value="2">游泳</option>
-                                                    <option class="selectSaving" value="3">水上救生</option> --}}
                                                     @foreach ($saving as $item)
                                                         @if ($item->closedate > Carbon\Carbon::now())
                                                             <option value="{{ $item->id }}">{{ $item->event }}</option>
@@ -339,21 +322,16 @@
                                                 </select>
                                             </div>
                                             <div class="price-box">
-                                                {{-- @foreach ($data as $item) --}}
-                                                <h1 id="price"> NT</h1>{{-- {{ $data->price }} --}}
-
-                                                {{-- @endforeach --}}
                                                 <span class="ts">含保險、器材、救生衣</span>
                                             </div>
-                                            {{-- @foreach ($data as $item) --}}
-
+                                            <a id="changelink" href="#" class="w-full singUp-btn flex justify-center items-center">線上報名</a>
+                                            <span class="phone">電洽報名 04-22312698</span>
                                             <form action="/signup1/" method="POST" id="supform">
                                                 @csrf
                                                 <button class="w-full singUp-btn flex justify-center items-center"
                                                     type="submit">線上報名</button>
                                                 <span class="phone">電洽報名 04-22312698</span>
                                             </form>
-                                            {{-- @endforeach --}}
                                     </div>
                                 </div>
                             </div>
@@ -368,7 +346,7 @@
                     <div class="w-full h-full s1-innerbox s-innerbox flex flex-col items-center">
                         <div class="w-full s1-innerbox-top s-innerbox-top flex justify-end">
                             <button id="" data-modal-toggle="modal02"
-                                class="btn-close btn-close1 block fixed rounded-full"></button>
+                                class="btn-close btn-close2 block fixed rounded-full"></button>
                         </div>
                         <div class="s1-innerbox-btm s-innerbox-btm w-4/5 flex flex-col">
                             <div id="list1" class="list w-full flex justify-between">
@@ -388,13 +366,13 @@
                                                     d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
                                             </svg>
                                         </li>
-                                        <li id="" class="s1Bread inpage"></li>
+                                        <li id="" class="s2Bread inpage"></li>
                                     </ul>
                                 </div>
                             </div>
                             <div id="class_title1" class="class-title flex flex-col">
-                                <h5 id="" class="s1En h5"></h5>
-                                <h2 id="" class="s1Title h2m"></h2>
+                                <h5 id="" class="s2En h5"></h5>
+                                <h2 id="" class="s2Title h2m"></h2>
                             </div>
                             <div class="class-content w-full flex flex-row">
                                 <div class="in-in-innerbox-right w-8/12 ">
@@ -459,9 +437,6 @@
                                                 <label class="ts" for="class-select">選擇課程</label>
                                                 <select id="class-select5-rwd" class="selectClass" onchange="changeclass_rwd(this)" style="padding: 9px 13px;border-radius:6px;">
                                                     <option value="0">請選擇課程</option>
-                                                    {{-- <option class="selectSup" value="1">立式划槳</option>
-                                                    <option class="selectSwim" value="2">游泳</option>
-                                                    <option class="selectSaving" value="3">水上救生</option> --}}
                                                     @foreach ($swimming as $item)
                                                         @if ($item->closedate > Carbon\Carbon::now())
                                                             <option value="{{ $item->id }}">{{ $item->event }}</option>
@@ -471,7 +446,7 @@
                                             </div>
                                             <div class="price-box">
                                                 {{-- @foreach ($data as $item) --}}
-                                                <h1 id="price-rwd"> NT</h1>{{-- {{ $data->price }} --}}
+
                                                 {{-- @endforeach --}}
 
                                                 <span class="ts">含保險、器材、救生衣</span>
@@ -599,9 +574,6 @@
                                                 <label class="ts" for="class-select5">選擇課程</label>
                                                 <select id="class-select5" class="selectClass" onchange="changeclass(this)" style="padding: 9px 13px;border-radius:6px;">
                                                     <option value="0">請選擇課程</option>
-                                                    {{-- <option class="selectSup" value="1">立式划槳</option>
-                                                    <option class="selectSwim" value="2">游泳</option>
-                                                    <option class="selectSaving" value="3">水上救生</option> --}}
                                                     @foreach ($swimming as $item)
                                                         @if ($item->closedate > Carbon\Carbon::now())
                                                             <option value="{{ $item->id }}">{{ $item->event }}</option>
@@ -611,7 +583,6 @@
                                             </div>
                                             <div class="price-box">
                                                 {{-- @foreach ($data as $item) --}}
-                                                <h1 id="price"> NT</h1>{{-- {{ $data->price }} --}}
 
                                                 {{-- @endforeach --}}
                                                 <span class="ts">含保險、器材、救生衣</span>
@@ -639,7 +610,7 @@
                     <div class="w-full h-full s1-innerbox s-innerbox flex flex-col items-center">
                         <div class="w-full s1-innerbox-top s-innerbox-top flex justify-end">
                             <button id="" data-modal-toggle="modal01"
-                                class="btn-close btn-close1 block fixed rounded-full"></button>
+                                class="btn-close btn-close5 block fixed rounded-full"></button>
                         </div>
                         <div class="s1-innerbox-btm s-innerbox-btm w-4/5 flex flex-col">
                             <div id="list1" class="list w-full flex justify-between">
@@ -659,13 +630,13 @@
                                                     d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
                                             </svg>
                                         </li>
-                                        <li id="" class="s1Bread inpage"></li>
+                                        <li id="" class="s4Bread inpage"></li>
                                     </ul>
                                 </div>
                             </div>
                             <div id="class_title1" class="class-title flex flex-col">
-                                <h5 id="" class="s1En h5"></h5>
-                                <h2 id="" class="s1Title h2m"></h2>
+                                <h5 id="" class="s4En h5"></h5>
+                                <h2 id="" class="s4Title h2m"></h2>
                             </div>
                             <div class="class-content w-full flex flex-row">
                                 <div class="in-in-innerbox-right w-8/12 ">
@@ -730,9 +701,6 @@
                                                 <label class="ts" for="class-select">選擇課程</label>
                                                 <select id="class-select5-rwd" class="selectClass" onchange="changeclass_rwd(this)" style="padding: 9px 13px;border-radius:6px;">
                                                     <option value="0">請選擇課程</option>
-                                                    {{-- <option class="selectSup" value="1">立式划槳</option>
-                                                    <option class="selectSwim" value="2">游泳</option>
-                                                    <option class="selectSaving" value="3">水上救生</option> --}}
                                                     @foreach ($sup as $item)
                                                         @if ($item->closedate > Carbon\Carbon::now())
                                                             <option value="{{ $item->id }}">{{ $item->event }}</option>
@@ -742,7 +710,7 @@
                                             </div>
                                             <div class="price-box">
                                                 {{-- @foreach ($data as $item) --}}
-                                                <h1 id="price-rwd"> NT</h1>{{-- {{ $data->price }} --}}
+
                                                 {{-- @endforeach --}}
 
                                                 <span class="ts">含保險、器材、救生衣</span>
@@ -870,9 +838,6 @@
                                                 <label class="ts" for="class-select5">選擇課程</label>
                                                 <select id="class-select5" class="selectClass" onchange="changeclass(this)" style="padding: 9px 13px;border-radius:6px;">
                                                     <option value="0">請選擇課程</option>
-                                                    {{-- <option class="selectSup" value="1">立式划槳</option>
-                                                    <option class="selectSwim" value="2">游泳</option>
-                                                    <option class="selectSaving" value="3">水上救生</option> --}}
                                                     @foreach ($sup as $item)
                                                         @if ($item->closedate > Carbon\Carbon::now())
                                                             <option value="{{ $item->id }}">{{ $item->event }}</option>
@@ -882,7 +847,6 @@
                                             </div>
                                             <div class="price-box">
                                                 {{-- @foreach ($data as $item) --}}
-                                                <h1 id="price"> NT</h1>{{-- {{ $data->price }} --}}
 
                                                 {{-- @endforeach --}}
                                                 <span class="ts">含保險、器材、救生衣</span>
@@ -909,8 +873,8 @@
                     class="s1-container s-container w-full h-full bg-white flex flex-col justify-between items-center">
                     <div class="w-full h-full s1-innerbox s-innerbox flex flex-col items-center">
                         <div class="w-full s1-innerbox-top s-innerbox-top flex justify-end">
-                            <button id="" data-modal-toggle="modal01"
-                                class="btn-close btn-close1 block fixed rounded-full"></button>
+                            <button id="" data-modal-toggle="WINDSURFModal"
+                                class="btn-close btn-close3 block fixed rounded-full"></button>
                         </div>
                         <div class="s1-innerbox-btm s-innerbox-btm w-4/5 flex flex-col">
                             <div id="list1" class="list w-full flex justify-between">
@@ -930,13 +894,13 @@
                                                     d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
                                             </svg>
                                         </li>
-                                        <li id="" class="s1Bread inpage"></li>
+                                        <li id="" class="s4Bread inpage"></li>
                                     </ul>
                                 </div>
                             </div>
                             <div id="class_title1" class="class-title flex flex-col">
-                                <h5 id="" class="s1En h5"></h5>
-                                <h2 id="" class="s1Title h2m"></h2>
+                                <h5 id="" class="s4En h5"></h5>
+                                <h2 id="" class="s4Title h2m"></h2>
                             </div>
                             <div class="class-content w-full flex flex-row">
                                 <div class="in-in-innerbox-right w-8/12 ">
@@ -1001,9 +965,6 @@
                                                 <label class="ts" for="class-select">選擇課程</label>
                                                 <select id="class-select5-rwd" class="selectClass" onchange="changeclass_rwd(this)" style="padding: 9px 13px;border-radius:6px;">
                                                     <option value="0">請選擇課程</option>
-                                                    {{-- <option class="selectSup" value="1">立式划槳</option>
-                                                    <option class="selectSwim" value="2">游泳</option>
-                                                    <option class="selectSaving" value="3">水上救生</option> --}}
                                                     @foreach ($windsurf as $item)
                                                         @if ($item->closedate > Carbon\Carbon::now())
                                                             <option value="{{ $item->id }}">{{ $item->event }}</option>
@@ -1013,7 +974,7 @@
                                             </div>
                                             <div class="price-box">
                                                 {{-- @foreach ($data as $item) --}}
-                                                <h1 id="price-rwd"> NT</h1>{{-- {{ $data->price }} --}}
+
                                                 {{-- @endforeach --}}
 
                                                 <span class="ts">含保險、器材、救生衣</span>
@@ -1141,9 +1102,6 @@
                                                 <label class="ts" for="class-select5">選擇課程</label>
                                                 <select id="class-select5" class="selectClass" onchange="changeclass(this)" style="padding: 9px 13px;border-radius:6px;">
                                                     <option value="0">請選擇課程</option>
-                                                    {{-- <option class="selectSup" value="1">立式划槳</option>
-                                                    <option class="selectSwim" value="2">游泳</option>
-                                                    <option class="selectSaving" value="3">水上救生</option> --}}
                                                     @foreach ($windsurf as $item)
                                                         @if ($item->closedate > Carbon\Carbon::now())
                                                             <option value="{{ $item->id }}">{{ $item->event }}</option>
@@ -1153,7 +1111,6 @@
                                             </div>
                                             <div class="price-box">
                                                 {{-- @foreach ($data as $item) --}}
-                                                <h1 id="price"> NT</h1>{{-- {{ $data->price }} --}}
 
                                                 {{-- @endforeach --}}
                                                 <span class="ts">含保險、器材、救生衣</span>
@@ -1180,8 +1137,8 @@
                 class="s1-container s-container w-full h-full bg-white flex flex-col justify-between items-center">
                 <div class="w-full h-full s1-innerbox s-innerbox flex flex-col items-center">
                     <div class="w-full s1-innerbox-top s-innerbox-top flex justify-end">
-                        <button id="" data-modal-toggle="modal01"
-                            class="btn-close btn-close1 block fixed rounded-full"></button>
+                        <button id="" data-modal-toggle="DIVINGFModal"
+                            class="btn-close btn-close4 block fixed rounded-full"></button>
                     </div>
                     <div class="s1-innerbox-btm s-innerbox-btm w-4/5 flex flex-col">
                         <div id="list1" class="list w-full flex justify-between">
@@ -1201,13 +1158,13 @@
                                                 d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
                                         </svg>
                                     </li>
-                                    <li id="" class="s1Bread inpage"></li>
+                                    <li id="" class="s5Bread inpage"></li>
                                 </ul>
                             </div>
                         </div>
                         <div id="class_title1" class="class-title flex flex-col">
-                            <h5 id="" class="s1En h5"></h5>
-                            <h2 id="" class="s1Title h2m"></h2>
+                            <h5 id="" class="s5En h5"></h5>
+                            <h2 id="" class="s5Title h2m"></h2>
                         </div>
                         <div class="class-content w-full flex flex-row">
                             <div class="in-in-innerbox-right w-8/12 ">
@@ -1284,7 +1241,7 @@
                                         </div>
                                         <div class="price-box">
                                             {{-- @foreach ($data as $item) --}}
-                                            <h1 id="price-rwd"> NT</h1>{{-- {{ $data->price }} --}}
+
                                             {{-- @endforeach --}}
 
                                             <span class="ts">含保險、器材、救生衣</span>
@@ -1423,8 +1380,7 @@
                                             </select>
                                         </div>
                                         <div class="price-box">
-                                            {{-- @foreach ($data as $item) --}}
-                                            <h1 id="price"> NT</h1>{{-- {{ $data->price }} --}}
+                                            {{-- @foreach ($data as $item) --}
 
                                             {{-- @endforeach --}}
                                             <span class="ts">含保險、器材、救生衣</span>
@@ -1466,12 +1422,10 @@
                 const sup_dire = document.querySelector('#s1-tabs-3')
                 const sup_notice = document.querySelector('#s1-tabs-4')
                 const formsup = document.querySelector('#supform')
-                const sup_price = document.querySelector('#price')
                 sup_intr.innerHTML = "請選擇課程"
                 sup_proc.innerHTML = "請選擇課程"
                 sup_dire.innerHTML = "請選擇課程"
                 sup_notice.innerHTML = "請選擇課程"
-                sup_price.innerHTML = "NT"
             }else{
                 fetch('/changeclasses/' + id, {
                     method: 'POST',
@@ -1485,14 +1439,12 @@
                     const sup_dire = document.querySelector('#s1-tabs-3')
                     const sup_notice = document.querySelector('#s1-tabs-4')
                     const formsup = document.querySelector('#supform')
-                    const sup_price = document.querySelector('#price')
-                    console.log(sup_price);
+                    const link = document.querySelector('#changelink')
                     sup_intr.innerHTML = data.event_intr
                     sup_proc.innerHTML = data.event_proc
                     sup_dire.innerHTML = data.event_dire
                     sup_notice.innerHTML = data.event_notice
-                    sup_price.innerHTML = "NT"+data.price
-                    formsup.action = "/signup1/"+data.id
+                    document.getElementById("changelink").href = data.link;
                 })
             }
 
@@ -1539,7 +1491,6 @@
                 const sup_notice = document.querySelector('#s1-tabs-4')
                 const formsup = document.querySelector('#supform')
                 const sup_price = document.querySelector('#price')
-                console.log(sup_price);
                 sup_intr.innerHTML = "請選擇課程"
                 sup_proc.innerHTML = "請選擇課程"
                 sup_dire.innerHTML = "請選擇課程"
@@ -1558,13 +1509,12 @@
                     const sup_dire = document.querySelector('#s1-tabs-3')
                     const sup_notice = document.querySelector('#s1-tabs-4')
                     const formsup_rwd = document.querySelector('#supform-rwd')
-                    const sup_price = document.querySelector('#price-rwd')
+                    const link = document.querySelector('#changelink')
                     sup_intr.innerHTML = data.event_intr
                     sup_proc.innerHTML = data.event_proc
                     sup_dire.innerHTML = data.event_dire
                     sup_notice.innerHTML = data.event_notice
-                    sup_price.innerHTML = "NT"+data.price
-                    formsup_rwd.action = "/signup1/"+data.id
+                    document.getElementById("changelink").href = data.link;
                 })
             }
         }

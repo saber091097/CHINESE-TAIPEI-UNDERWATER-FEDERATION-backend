@@ -801,20 +801,8 @@
                             <div class="timeline_circle"></div>
                         </div>
                         <div id="w-node-_1b11356a-0a20-9bf6-b946-d66fb4f3a530-fd5f313d" class="timeline_right">
-                            <div class="margin-bottom-medium">
-                                <p class="paragraph serif white mb-2"
-                                    style="font-weight: 500;
-                    font-size: 24px;
-                    line-height: 32px;">
-                                    救生員分門別類</p>
-                                <p class="paragraph serif white"
-                                    style="font-weight: 400; font-size: 18px; opacity: 0.75;">
-                                    我國為參加日本舉行的「亞洲蹼泳錦標賽」，仍以「中華台北水中運動協會」名稱申請加入世界水中運動聯盟 (CMAS)
-                                    組織，正式開啟本會成立及邁向國際舞臺的新頁。
-                                </p>
-                            </div>
                             <div>
-                                <img src="/img/certification.jpg" alt=""
+                                <img src="/img/Intro.jpg" alt=""
                                     style="width: 100%;border-radius: 8px;height:auto;">
                             </div>
 
@@ -822,61 +810,92 @@
                     </div>
                     <div data-w-id="1b11356a-0a20-9bf6-b946-d66fb4f3a536" class="timeline_item">
                         <div id="w-node-_1b11356a-0a20-9bf6-b946-d66fb4f3a537-fd5f313d" class="timeline_left">
-                            <div class="timeline_date-text outline-text no-margin">1911</div>
+                            <div class="timeline_date-text outline-text no-margin">1991</div>
                         </div>
                         <div id="w-node-_1b11356a-0a20-9bf6-b946-d66fb4f3a53a-fd5f313d" class="timeline_centre">
                             <div class="timeline_circle"></div>
                         </div>
                         <div class="timeline_right">
                             <div class="margin-bottom-medium">
-                                <p class="paragraph serif white mb-2"
-                                    style="font-weight: 500;
-                    font-size: 24px;
-                    line-height: 32px;">
-                                    推廣水中運動</p>
                                 <p class="paragraph serif white"
-                                    style="font-size: 18px;font-weight: 400;opacity: 0.75;">
-                                    本會獲內政部核准成立「中華民國水中運動協會」，並以行政院體委會為目的事業主關機關，開始推展水中運動及救攤等任務。
+                                    style="font-size: 24px;font-weight: 400;opacity: 0.75;text-align: justify;
+                                    text-justify:inter-ideograph;">
+                                    由台中鵬隆潛水中心總教練詹寓崵率領PADI教練團隊進行潛水授課,從初級、進階、救援、潛水長、助理教練…等在台灣各離島及台中開課,展開潛水、水中環保相關業務,隨後2009年成立台中市水中運動協會成為PADI與CMAS雙系統訓練單位。
                                 </p>
                             </div>
                             <div>
                                 <img src="/img/img_about_pic01.png" alt=""
                                     style="width: 100%;border-radius: 8px;height: auto;">
                             </div>
-                            <div data-w-id="0a138b73-59f6-d1e4-718b-f003283e3dd5" class="image-wrapper">
-
-                            </div>
-
                         </div>
                     </div>
                     <div data-w-id="1b11356a-0a20-9bf6-b946-d66fb4f3a549" class="timeline_item">
                         <div id="w-node-_1b11356a-0a20-9bf6-b946-d66fb4f3a54a-fd5f313d" class="timeline_left">
-                            <div class="timeline_date-text outline-text no-margin">2007</div>
+                            <div class="timeline_date-text outline-text no-margin">2009</div>
                         </div>
                         <div id="w-node-_1b11356a-0a20-9bf6-b946-d66fb4f3a54d-fd5f313d" class="timeline_centre">
                             <div class="timeline_circle"></div>
                         </div>
                         <div class="timeline_right">
                             <div class="margin-bottom-medium">
-                                <p class="paragraph serif white mb-2"
-                                    style="font-weight: 500;
-                    font-size: 24px;
-                    line-height: 32px;">
-                                    正式獲內政部核准成立</p>
                                 <p class="paragraph serif white"
-                                    style="font-size: 18px;font-weight: 400; opacity: 0.75;">
-                                    本會獲內政部核准成立「中華民國水中運動協會」，並以行政院體委會為目的事業主關機關，開始推展水中運動及救攤等任務。</p>
+                                    style="font-size: 24px;font-weight: 400; opacity: 0.75;">
+                                    本會在日月潭月牙灣開始推廣風浪板體驗活動,於頭社風帆的家駐點扎根,隨後於2010年開辦丙級風浪板教練班講習,這期間在彰濱水域及月牙灣不間段的推廣風浪板,2021年雲林三條崙海水浴場成立風箏衝浪國際學校,本會於2022隨後再林三條崙海水浴場辦理Level-1和Level-2及丙級風浪板教練班。</p>
                             </div>
                             <div>
-                                <!-- <img src="/img/img_lifeSaving.png" alt="" style="width: 100%;border-radius: 8px;height: 400px;"> -->
+                                <img src="/img/img_about_pic01.png" alt=""
+                                    style="width: 100%;border-radius: 8px;height: auto;">
                             </div>
-                            <div data-w-id="9b376ea9-8851-772e-f6da-9fa5255bbe9e" class="image-wrapper">
-
-                            </div>
-
                         </div>
                     </div>
-                    <div class="overlay-fade-bottom"></div>
+                    <div data-w-id="1b11356a-0a20-9bf6-b946-d66fb4f3a549" class="timeline_item">
+                        <div id="w-node-_1b11356a-0a20-9bf6-b946-d66fb4f3a54a-fd5f313d" class="timeline_left">
+                            <div class="timeline_date-text outline-text no-margin">2013</div>
+                        </div>
+                        <div id="w-node-_1b11356a-0a20-9bf6-b946-d66fb4f3a54d-fd5f313d" class="timeline_centre">
+                            <div class="timeline_circle"></div>
+                        </div>
+                        <div class="timeline_right">
+                            <div class="margin-bottom-medium">
+                                <p class="paragraph serif white"
+                                    style="font-size: 24px;font-weight: 400; opacity: 0.75;">
+                                    立式划槳浪板SUP興起,因為上板容易,老少咸宜,本會於日月潭開辦丙級SUP教練班的第一個單位,帶動日月潭觀光振興經濟,受到當地業者的高度歡迎、支持,並於每個月定期舉辦SUP教練班講習。</p>
+                            </div>
+                            <div>
+                                <img src="/img/img_about_pic01.png" alt=""
+                                    style="width: 100%;border-radius: 8px;height: auto;">
+                            </div>
+                        </div>
+                    </div>
+                    <div data-w-id="1b11356a-0a20-9bf6-b946-d66fb4f3a549" class="timeline_item">
+                        <div id="w-node-_1b11356a-0a20-9bf6-b946-d66fb4f3a54a-fd5f313d" class="timeline_left">
+                            <div class="timeline_date-text outline-text no-margin">2022</div>
+                        </div>
+                        <div id="w-node-_1b11356a-0a20-9bf6-b946-d66fb4f3a54d-fd5f313d" class="timeline_centre">
+                            <div class="timeline_circle"></div>
+                        </div>
+                        <div class="timeline_right">
+                            <div class="margin-bottom-medium">
+                                <p class="paragraph serif white"
+                                    style="font-size: 24px;font-weight: 400; opacity: 0.75;">
+                                    本會申請台灣SUP教學系統第一品牌SUPTUF榮登中華民國經濟部智慧財產局註冊訓練商標。
+                                </p>
+                                <p class="paragraph serif white"
+                                    style="font-size: 24px;font-weight: 400; opacity: 0.75;">
+                                    SUPTUF中華民國立式划槳浪板訓練協會教學系統。</p>
+                                <p class="paragraph serif white"
+                                    style="font-size: 24px;font-weight: 400; opacity: 0.75;">
+                                    中華民國政府認證、交通部觀光局、教育部門、各大專院校、風管處…等認可。</p>
+                                <p class="paragraph serif white"
+                                    style="font-size: 24px;font-weight: 400; opacity: 0.75;">
+                                    感謝:教育部體育署、中華民國體育運動總會、中華民國水中運動總會，等單位指導協助。持續以潛水、SUP、風浪板、救生、游泳...等推廣造福民眾加強水域安全知識概念減少溺水事件為宗旨。</p>
+                            </div>
+                            <div>
+                                <img src="/img/S__9109506_0.jpg" alt=""
+                                    style="width: 100%;border-radius: 8px;height: auto;">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

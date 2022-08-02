@@ -99,6 +99,10 @@
                             </div>
                         </div>
                     </div>
+                    <div class="link flex" style="margin: 10px 0;">
+                        <div style="width: 8%;">報名連結：</div>
+                        <input type="url" name="link" id="link" style="border-radius:5px;width:100%;" value="{{ $data->link}}">
+                    </div>
                     <div class="event_intr flex" style="margin: 10px 0;">
                         <div>活動介紹：</div>
                         <textarea name="event_intr" id="event_intr" cols="65" rows="10" style="border-radius:5px;">{!! $data->event_intr !!}</textarea>

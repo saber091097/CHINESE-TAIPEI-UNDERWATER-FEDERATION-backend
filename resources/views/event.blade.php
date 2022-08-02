@@ -53,6 +53,9 @@
                         <span>
                             {!! $events->event_intr !!}
                         </span>
+                        <span>
+                            {!! $events->event_proc !!}
+                        </span>
                         <div id="tohidden" @if ($events->anno_type == 2) hidden @endif>
                             <div class="flex flex-col innerbox" >
                                 <h3 class="tm">指導單位</h3>
@@ -71,7 +74,7 @@
                     </div>
                     <div id="delbut" @if ($events->anno_type == 2) hidden @endif>
                         <div class="btn-content w-full flex">
-                            <a href=""><button class="flex justify-center items-center">報名課程</button></a>
+                            <a href="{{$events->link}}"><button class="flex justify-center items-center">報名課程</button></a>
                         </div>
                     </div>
                 </div>

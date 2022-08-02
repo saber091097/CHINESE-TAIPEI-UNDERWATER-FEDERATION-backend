@@ -22,11 +22,6 @@
                 <div class="top flex items-center" style="margin-top:40px; margin-bottom:25px;">
                     <h3 style="font-size:32px;">最新消息編輯</h3>
                 </div>
-                @if ($data->closedate > Carbon\Carbon::now())
-成功
-                @else
-失敗
-                @endif
                 <form action="/events/update/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="event_type">
@@ -103,6 +98,10 @@
                                 @endforeach
                             </div>
                         </div>
+                    </div>
+                    <div class="link flex" style="margin: 10px 0;">
+                        <div style="width: 8%;">報名連結：</div>
+                        <input type="url" name="link" id="link" style="border-radius:5px;width:100%;" value="{{ $data->link}}">
                     </div>
                     <div class="event_intr flex" style="margin: 10px 0;">
                         <div>活動介紹：</div>

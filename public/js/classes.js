@@ -12,13 +12,15 @@ const section4 = document.querySelector("#DIVINGFModal");
 const section5 = document.querySelector("#SUPModal");
 
 const close_btn1 = document.querySelector(".btn-close1");
-// const close_btn2 = document.querySelector(".btn-close2");
-// const close_btn5 = document.querySelector(".btn-close5");
+const close_btn2 = document.querySelector(".btn-close2");
+const close_btn3 = document.querySelector(".btn-close3");
+const close_btn4 = document.querySelector(".btn-close4");
+const close_btn5 = document.querySelector(".btn-close5");
 
-const selectSup = document.querySelector(".selectSup");
-const selectSwim = document.querySelector(".selectSwim");
-const selectSaving = document.querySelector(".selectSaving");
-const selectC = document.querySelector(".selectClass");
+// const selectSup = document.querySelector(".selectSup");
+// const selectSwim = document.querySelector(".selectSwim");
+// const selectSaving = document.querySelector(".selectSaving");
+// const selectC = document.querySelector(".selectClass");
 
 const s1Bread = document.querySelector(".s1Bread");
 const s1En = document.querySelector(".s1En");
@@ -27,6 +29,18 @@ const s1Title = document.querySelector(".s1Title");
 const s2Bread = document.querySelector(".s2Bread");
 const s2En = document.querySelector(".s2En");
 const s2Title = document.querySelector(".s2Title");
+
+const s3Bread = document.querySelector(".s3Bread");
+const s3En = document.querySelector(".s3En");
+const s3Title = document.querySelector(".s3Title");
+
+const s4Bread = document.querySelector(".s4Bread");
+const s4En = document.querySelector(".s4En");
+const s4Title = document.querySelector(".s4Title");
+
+const s5Bread = document.querySelector(".s5Bread");
+const s5En = document.querySelector(".s5En");
+const s5Title = document.querySelector(".s5Title");
 
 section1.addEventListener("scroll", event => {
 
@@ -71,6 +85,48 @@ section2.addEventListener("scroll", event => {
     })
 });
 
+section3.addEventListener("scroll", event => {
+
+    if (section3.scrollTop > 100) {
+        section3.classList.add('wfull3');
+    }
+
+    if (section3.scrollTop > 200) {
+        close_btn3.classList.add('appear3');
+    }
+
+    if (section3.scrollTop < 10) {
+        close_btn3.classList.remove('appear3');
+    }
+
+    close_btn3.addEventListener('click' ,function(){
+        section3.classList.remove('wfull3');
+        close_btn3.classList.remove('appear3');
+        window.location.reload();
+    })
+});
+
+section4.addEventListener("scroll", event => {
+
+    if (section4.scrollTop > 100) {
+        section4.classList.add('wfull4');
+    }
+
+    if (section4.scrollTop > 200) {
+        close_btn4.classList.add('appear4');
+    }
+
+    if (section4.scrollTop < 10) {
+        close_btn4.classList.remove('appear4');
+    }
+
+    close_btn4.addEventListener('click' ,function(){
+        section4.classList.remove('wfull4');
+        close_btn4.classList.remove('appear4');
+        window.location.reload();
+    })
+});
+
 section5.addEventListener("scroll", event => {
 
     if (section5.scrollTop > 100) {
@@ -78,16 +134,16 @@ section5.addEventListener("scroll", event => {
     }
 
     if (section5.scrollTop > 200) {
-        close_btn1.classList.add('appear1');
+        close_btn5.classList.add('appear5');
     }
 
     if (section5.scrollTop < 10) {
-        close_btn1.classList.add('appear1');
+        close_btn5.classList.add('appear5');
     }
 
-    close_btn2.addEventListener('click' ,function(){
+    close_btn5.addEventListener('click' ,function(){
         section5.classList.remove('wfull5');
-        close_btn1.classList.add('appear1');
+        close_btn5.classList.add('appear5');
         window.location.reload();
     })
 });
@@ -100,27 +156,27 @@ saving.addEventListener('click' , function(){
 });
 
 swimming.addEventListener('click' , function(){
-    s1Bread.innerHTML = "游泳";
-    s1En.innerHTML = "Swimming";
-    s1Title.innerHTML = "游泳";
+    s2Bread.innerHTML = "游泳";
+    s2En.innerHTML = "Swimming";
+    s2Title.innerHTML = "游泳";
 });
 
 windsurf.addEventListener('click' , function(){
-    s2Bread.innerHTML = "風浪板";
-    s2En.innerHTML = "Windsurf Board";
-    s2Title.innerHTML = "風浪板";
+    s4Bread.innerHTML = "風浪板";
+    s4En.innerHTML = "Windsurf Board";
+    s4Title.innerHTML = "風浪板";
 });
 
 diving.addEventListener('click' , function(){
-    s2Bread.innerHTML = "潛水";
-    s2En.innerHTML = "Diving";
-    s2Title.innerHTML = "潛水";
+    s5Bread.innerHTML = "潛水";
+    s5En.innerHTML = "Diving";
+    s5Title.innerHTML = "潛水";
 });
 
 sup.addEventListener('click' , function(){
-    s1Bread.innerHTML = "立式划槳";
-    s1En.innerHTML = "SUP";
-    s1Title.innerHTML = "立式划槳";
+    s3Bread.innerHTML = "立式划槳";
+    s3En.innerHTML = "SUP";
+    s3Title.innerHTML = "立式划槳";
 });
 
 

@@ -1924,13 +1924,11 @@
                 const sup_proc = document.querySelector('#s5-tabs-2')
                 const sup_dire = document.querySelector('#s5-tabs-3')
                 const sup_notice = document.querySelector('#s5-tabs-4')
-                const formsup = document.querySelector('#supform')
-                const sup_price = document.querySelector('#price')
                 sup_intr.innerHTML = "請選擇課程"
                 sup_proc.innerHTML = "請選擇課程"
                 sup_dire.innerHTML = "請選擇課程"
                 sup_notice.innerHTML = "請選擇課程"
-                sup_price.innerHTML = "NT"
+                document.getElementById("link").href = "#";
             }else{
                 fetch('/changeclasses/' + id, {
                     method: 'POST',
@@ -1943,14 +1941,11 @@
                     const sup_proc = document.querySelector('#s5-tabs-2')
                     const sup_dire = document.querySelector('#s5-tabs-3')
                     const sup_notice = document.querySelector('#s5-tabs-4')
-                    const formsup = document.querySelector('#supform')
-                    const sup_price = document.querySelector('#price')
                     sup_intr.innerHTML = data.event_intr
                     sup_proc.innerHTML = data.event_proc
                     sup_dire.innerHTML = data.event_dire
                     sup_notice.innerHTML = data.event_notice
-                    sup_price.innerHTML = "NT"+data.price
-                    formsup.action = "/signup1/"+data.id
+                    document.getElementById("link").href = data.link;
                 })
             }
         }
@@ -1972,7 +1967,7 @@
                 sup_proc.innerHTML = "請選擇課程"
                 sup_dire.innerHTML = "請選擇課程"
                 sup_notice.innerHTML = "請選擇課程"
-                sup_price.innerHTML = "NT"
+                document.getElementById("link").href = "#";
             }else{
                 fetch('/changeclasses/' + id, {
                     method: 'POST',
@@ -1985,14 +1980,11 @@
                     const sup_proc = document.querySelector('#s5-tabs-2')
                     const sup_dire = document.querySelector('#s5-tabs-3')
                     const sup_notice = document.querySelector('#s5-tabs-4')
-                    const formsup_rwd = document.querySelector('#supform-rwd')
-                    const sup_price = document.querySelector('#price-rwd')
                     sup_intr.innerHTML = data.event_intr
                     sup_proc.innerHTML = data.event_proc
                     sup_dire.innerHTML = data.event_dire
                     sup_notice.innerHTML = data.event_notice
-                    sup_price.innerHTML = "NT"+data.price
-                    formsup_rwd.action = "/signup1/"+data.id
+                    document.getElementById("link").href = data.link;
                 })
             }
         }
