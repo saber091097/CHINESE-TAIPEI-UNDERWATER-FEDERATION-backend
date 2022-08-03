@@ -198,8 +198,8 @@
                                             <div class="price-box">
                                                 <span class="ts">含保險、器材、救生衣</span>
                                             </div>
-                                            <a id="changelink" href="#" class="w-full singUp-btn flex justify-center items-center">線上報名</a>
-                                                <span class="phone">電洽報名 04-22312698</span>
+                                            <a id="changelink1" target="_blank" href="#" class="w-full singUp-btn flex justify-center items-center" >線上報名</a>
+                                            <span class="phone">電洽報名 04-22312698</span>
                                         </div>
                                     <div class="tab w-full">
                                         <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 items-center"
@@ -278,33 +278,25 @@
                                                 </a>
                                             </li>
                                         </ul>
-                                        {{-- @foreach ($data as $item) --}}
                                         <div class="tab-content" id="s1-tabs-tabContent">
                                             <div class="tabs-1 tab-pane fade show active flex flex-col" id="s1-tabs-1"
                                                 role="tabpanel" aria-labelledby="s1-tabs-1-tab">
-                                                {{-- {!! $data->event_intr !!} --}}
                                                 請選擇課程
                                             </div>
                                             <div class="tabs-2 tab-pane fade flex flex-col" id="s1-tabs-2" role="tabpanel"
                                                 aria-labelledby="s1-tabs-2-tab">
-                                                {{-- {!! $data->event_proc !!} --}}
                                                 請選擇課程
-
                                             </div>
                                             <div class="tabs-3 tab-pane fade flex flex-col" id="s1-tabs-3" role="tabpanel"
                                                 aria-labelledby="s1-tabs-3-tab">
-                                                {{-- {!! $data->event_dire !!} --}}
                                                 請選擇課程
 
                                             </div>
                                             <div class="tabs-4 tab-pane fade flex flex-col" id="s1-tabs-4" role="tabpanel"
                                                 aria-labelledby="s1-tabs-4-tab">
-                                                {{-- {!! $data->event_notice !!} --}}
                                                 請選擇課程
-
                                             </div>
                                         </div>
-                                        {{-- @endforeach --}}
                                     </div>
                                 </div>
                                 <div class="in-in-innerbox-left w-4/12 flex justify-end">
@@ -321,18 +313,12 @@
                                                     @endforeach
                                                 </select>
                                             </div>
-                                            <div class="price-box">
-                                                <span class="ts">含保險、器材、救生衣</span>
-                                            </div>
-                                            <a id="changelink" href="#" class="w-full singUp-btn flex justify-center items-center">線上報名</a>
-                                            <span class="phone">電洽報名 04-22312698</span>
-                                            <form action="/signup1/" method="POST" id="supform">
-                                                @csrf
-                                                <button class="w-full singUp-btn flex justify-center items-center"
-                                                    type="submit">線上報名</button>
-                                                <span class="phone">電洽報名 04-22312698</span>
-                                            </form>
-                                    </div>
+                                        </div>
+                                        <div class="price-box w-full">
+                                            <span class="ts">含保險、器材、救生衣</span>
+                                        </div>
+                                        <a id="changelink" target="_blank" href="#" class="w-full singUp-btn flex justify-center items-center">線上報名</a>
+                                        <span class="phone w-full">電洽報名 04-22312698</span>
                                 </div>
                             </div>
                         </div>
@@ -445,21 +431,10 @@
                                                 </select>
                                             </div>
                                             <div class="price-box">
-                                                {{-- @foreach ($data as $item) --}}
-
-                                                {{-- @endforeach --}}
-
                                                 <span class="ts">含保險、器材、救生衣</span>
                                             </div>
-                                            {{-- @foreach ($data as $item) --}}
-
-                                            <form action="/signup1/" method="POST" id="supform-rwd">
-                                                @csrf
-                                                <button class="w-full singUp-btn flex justify-center items-center"
-                                                    type="submit">線上報名</button>
-                                                <span class="phone">電洽報名 04-22312698</span>
-                                            </form>
-                                            {{-- @endforeach --}}
+                                            <a id="changelink" target="_blank" href="#" class="w-full singUp-btn flex justify-center items-center" style="width:50px;">線上報名</a>
+                                            <span class="phone">電洽報名 04-22312698</span>
                                         </div>
                                     <div class="tab w-full">
                                         <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 items-center"
@@ -582,20 +557,10 @@
                                                 </select>
                                             </div>
                                             <div class="price-box">
-                                                {{-- @foreach ($data as $item) --}}
-
-                                                {{-- @endforeach --}}
                                                 <span class="ts">含保險、器材、救生衣</span>
                                             </div>
-                                            {{-- @foreach ($data as $item) --}}
-
-                                            <form action="/signup1/" method="POST" id="supform">
-                                                @csrf
-                                                <button class="w-full singUp-btn flex justify-center items-center"
-                                                    type="submit">線上報名</button>
-                                                <span class="phone">電洽報名 04-22312698</span>
-                                            </form>
-                                            {{-- @endforeach --}}
+                                            <a id="changelink" href="#" target="_blank" class="w-full singUp-btn flex justify-center items-center" style="width:50px;">線上報名</a>
+                                            <span class="phone">電洽報名 04-22312698</span>
                                     </div>
                                 </div>
                             </div>
@@ -709,21 +674,10 @@
                                                 </select>
                                             </div>
                                             <div class="price-box">
-                                                {{-- @foreach ($data as $item) --}}
-
-                                                {{-- @endforeach --}}
-
                                                 <span class="ts">含保險、器材、救生衣</span>
                                             </div>
-                                            {{-- @foreach ($data as $item) --}}
-
-                                            <form action="/signup1/" method="POST" id="supform-rwd">
-                                                @csrf
-                                                <button class="w-full singUp-btn flex justify-center items-center"
-                                                    type="submit">線上報名</button>
-                                                <span class="phone">電洽報名 04-22312698</span>
-                                            </form>
-                                            {{-- @endforeach --}}
+                                            <a id="changelink" target="_blank" href="#" class="w-full singUp-btn flex justify-center items-center" style="width:50px;">線上報名</a>
+                                            <span class="phone">電洽報名 04-22312698</span>
                                         </div>
                                     <div class="tab w-full">
                                         <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 items-center"
@@ -846,20 +800,10 @@
                                                 </select>
                                             </div>
                                             <div class="price-box">
-                                                {{-- @foreach ($data as $item) --}}
-
-                                                {{-- @endforeach --}}
                                                 <span class="ts">含保險、器材、救生衣</span>
                                             </div>
-                                            {{-- @foreach ($data as $item) --}}
-
-                                            <form action="/signup1/" method="POST" id="supform">
-                                                @csrf
-                                                <button class="w-full singUp-btn flex justify-center items-center"
-                                                    type="submit">線上報名</button>
-                                                <span class="phone">電洽報名 04-22312698</span>
-                                            </form>
-                                            {{-- @endforeach --}}
+                                            <a id="changelink" target="_blank" href="#" class="w-full singUp-btn flex justify-center items-center" style="width:50px;">線上報名</a>
+                                            <span class="phone">電洽報名 04-22312698</span>
                                     </div>
                                 </div>
                             </div>
@@ -973,21 +917,10 @@
                                                 </select>
                                             </div>
                                             <div class="price-box">
-                                                {{-- @foreach ($data as $item) --}}
-
-                                                {{-- @endforeach --}}
-
                                                 <span class="ts">含保險、器材、救生衣</span>
                                             </div>
-                                            {{-- @foreach ($data as $item) --}}
-
-                                            <form action="/signup1/" method="POST" id="supform-rwd">
-                                                @csrf
-                                                <button class="w-full singUp-btn flex justify-center items-center"
-                                                    type="submit">線上報名</button>
-                                                <span class="phone">電洽報名 04-22312698</span>
-                                            </form>
-                                            {{-- @endforeach --}}
+                                            <button disabled="true" class="w-full singUp-btn flex justify-center items-center" >洽詢本會</button>
+                                            <span class="phone">電洽報名 04-22312698</span>
                                         </div>
                                     <div class="tab w-full">
                                         <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 items-center"
@@ -1109,21 +1042,12 @@
                                                     @endforeach
                                                 </select>
                                             </div>
-                                            <div class="price-box">
-                                                {{-- @foreach ($data as $item) --}}
-
-                                                {{-- @endforeach --}}
-                                                <span class="ts">含保險、器材、救生衣</span>
-                                            </div>
-                                            {{-- @foreach ($data as $item) --}}
-
-                                            <form action="/signup1/" method="POST" id="supform">
-                                                @csrf
-                                                <button class="w-full singUp-btn flex justify-center items-center"
-                                                    type="submit">線上報名</button>
-                                                <span class="phone">電洽報名 04-22312698</span>
-                                            </form>
-                                            {{-- @endforeach --}}
+                                        </div>
+                                        <div class="price-box">
+                                            <span class="ts">含保險、器材、救生衣</span>
+                                        </div>
+                                        <button disabled="true" class="w-full singUp-btn flex justify-center items-center" >洽詢本會</button>
+                                        <span class="phone">電洽報名 04-22312698</span>
                                     </div>
                                 </div>
                             </div>
@@ -1240,21 +1164,10 @@
                                             </select>
                                         </div>
                                         <div class="price-box">
-                                            {{-- @foreach ($data as $item) --}}
-
-                                            {{-- @endforeach --}}
-
                                             <span class="ts">含保險、器材、救生衣</span>
                                         </div>
-                                        {{-- @foreach ($data as $item) --}}
-
-                                        <form action="/signup1/" method="POST" id="supform-rwd">
-                                            @csrf
-                                            <button class="w-full singUp-btn flex justify-center items-center"
-                                                type="submit">線上報名</button>
-                                            <span class="phone">電洽報名 04-22312698</span>
-                                        </form>
-                                        {{-- @endforeach --}}
+                                        <button disabled="true" class="w-full singUp-btn flex justify-center items-center" >洽詢本會</button>
+                                        <span class="phone">電洽報名 04-22312698</span>
                                     </div>
                                 <div class="tab w-full">
                                     <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 items-center"
@@ -1379,22 +1292,12 @@
                                                 @endforeach
                                             </select>
                                         </div>
-                                        <div class="price-box">
-                                            {{-- @foreach ($data as $item) --}
-
-                                            {{-- @endforeach --}}
-                                            <span class="ts">含保險、器材、救生衣</span>
-                                        </div>
-                                        {{-- @foreach ($data as $item) --}}
-
-                                        <form action="/signup1/" method="POST" id="supform">
-                                            @csrf
-                                            <button class="w-full singUp-btn flex justify-center items-center"
-                                                type="submit">線上報名</button>
-                                            <span class="phone">電洽報名 04-22312698</span>
-                                        </form>
-                                        {{-- @endforeach --}}
-                                </div>
+                                    </div>
+                                    <div class="price-box">
+                                        <span class="ts">含保險、器材、救生衣</span>
+                                    </div>
+                                    <button disabled="true" class="w-full singUp-btn flex justify-center items-center" >洽詢本會</button>
+                                    <span class="phone">電洽報名 04-22312698</span>
                             </div>
                         </div>
                     </div>
@@ -1444,39 +1347,10 @@
                     sup_proc.innerHTML = data.event_proc
                     sup_dire.innerHTML = data.event_dire
                     sup_notice.innerHTML = data.event_notice
+                    console.log(link);
                     document.getElementById("changelink").href = data.link;
                 })
             }
-
-            // const selectC = document.querySelector(".selectClass");
-
-            // const s1Bread = document.querySelector(".s1Bread");
-            // const s1En = document.querySelector(".s1En");
-            // const s1Title = document.querySelector(".s1Title");
-
-            // if (selectC.options[1].selected) {
-            //     s1Bread.innerHTML = "";
-            //     s1Bread.innerHTML = "立式划槳";
-            //     s1En.innerHTML = "";
-            //     s1En.innerHTML = "SUP";
-            //     s1Title.innerHTML = "";
-            //     s1Title.innerHTML = "立式划槳";
-            // }else if (selectC.options[2].selected) {
-            //     s1Bread.innerHTML = "";
-            //     s1Bread.innerHTML = "游泳";
-            //     s1En.innerHTML = "";
-            //     s1En.innerHTML = "Swimming";
-            //     s1Title.innerHTML = "";
-            //     s1Title.innerHTML = "游泳";
-            // }else if (selectC.options[3].selected) {
-            //     s1Bread.innerHTML = "";
-            //     s1Bread.innerHTML = "水上救生";
-            //     s1En.innerHTML = "";
-            //     s1En.innerHTML = "Life Saving";
-            //     s1Title.innerHTML = "";
-            //     s1Title.innerHTML = "水上救生";
-            // }else
-
         }
 
         function changeclass_rwd(getId) {
@@ -1509,12 +1383,12 @@
                     const sup_dire = document.querySelector('#s1-tabs-3')
                     const sup_notice = document.querySelector('#s1-tabs-4')
                     const formsup_rwd = document.querySelector('#supform-rwd')
-                    const link = document.querySelector('#changelink')
+                    const link = document.querySelector('#changelink1')
                     sup_intr.innerHTML = data.event_intr
                     sup_proc.innerHTML = data.event_proc
                     sup_dire.innerHTML = data.event_dire
                     sup_notice.innerHTML = data.event_notice
-                    document.getElementById("changelink").href = data.link;
+                    document.getElementById("changelink1").href = data.link;
                 })
             }
         }
