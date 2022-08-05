@@ -179,62 +179,6 @@ sup.addEventListener('click' , function(){
     s3Title.innerHTML = "立式划槳";
 });
 
-
-// function changeclass(e) {
-
-
-    // else if (selectC.value == 1) {
-    //     s1Bread.innerHTML = "";
-    //     s1Bread.innerHTML = "立式划槳";
-    //     s1En.innerHTML = "";
-    //     s1En.innerHTML = "SUP";
-    //     s1Title.innerHTML = "";
-    //     s1Title.innerHTML = "立式划槳";
-    // }else if (selectC.value == 2) {
-    //     s1Bread.innerHTML = "";
-    //     s1Bread.innerHTML = "游泳";
-    //     s1En.innerHTML = "";
-    //     s1En.innerHTML = "Swimming";
-    //     s1Title.innerHTML = "";
-    //     s1Title.innerHTML = "游泳";
-    // }else if (selectC.value == 3) {
-    //     s1Bread.innerHTML = "";
-    //     s1Bread.innerHTML = "水上救生";
-    //     s1En.innerHTML = "";
-    //     s1En.innerHTML = "Life Saving";
-    //     s1Title.innerHTML = "";
-    //     s1Title.innerHTML = "水上救生";
-    // }else
-
-//     if (selectC.options[1].selected = true) {
-//             s1Bread.innerHTML = "";
-//             s1Bread.innerHTML = "立式划槳";
-//             s1En.innerHTML = "";
-//             s1En.innerHTML = "SUP";
-//             s1Title.innerHTML = "";
-//             s1Title.innerHTML = "立式划槳";
-//         }else if (selectC.options[2].selected = true) {
-//             s1Bread.innerHTML = "";
-//             s1Bread.innerHTML = "游泳";
-//             s1En.innerHTML = "";
-//             s1En.innerHTML = "Swimming";
-//             s1Title.innerHTML = "";
-//             s1Title.innerHTML = "游泳";
-//         }else if (selectC.options[3].selected = true) {
-//             s1Bread.innerHTML = "";
-//             s1Bread.innerHTML = "水上救生";
-//             s1En.innerHTML = "";
-//             s1En.innerHTML = "Life Saving";
-//             s1Title.innerHTML = "";
-//             s1Title.innerHTML = "水上救生";
-//         }else
-// };
-
-
-
-
-
-
 var saving_swiper = new Swiper("#saving_mySwiper", {
     loop: true,
     spaceBetween: 10,

@@ -56,7 +56,8 @@
                         <span>
                             {!! $events->event_proc !!}
                         </span>
-                        <div id="tohidden" @if ($events->anno_type == 2) hidden @endif>
+                        @if ($events->anno_type == 1)
+                        <div id="tohidden">
                             <div class="flex flex-col innerbox" >
                                 <h3 class="tm">指導單位</h3>
                                 {!! $events->event_dire !!}
@@ -71,12 +72,27 @@
                                 <p class="tm">帳號:00410765400</p>
                             </div>
                         </div>
+                        @endif
                     </div>
-                    <div id="delbut" @if ($events->anno_type == 2) hidden @endif>
-                        <div class="btn-content w-full flex">
-                            <a href="{{$events->link}}"><button class="flex justify-center items-center">報名課程</button></a>
+                    @if ($event->anno_type == 1)
+                        <div id="delbut">
+                            <div class="btn-content w-full flex">
+                                <a href="{{$events->link}}"><button class="flex justify-center items-center">報名課程</button></a>
+                            </div>
                         </div>
-                    </div>
+                    @elseif ($event->event_type == 1 or $event->event_type == 3)
+                        <div id="delbut">
+                            <div class="btn-content w-full flex">
+                                <button class="flex justify-center items-center">洽聯本會</button>
+                            </div>
+                        </div>
+                    @elseif ($event->event_type == 2 or $event->event_type == 4 or $event->event_type == 5 or $event->event_type == 6)
+                        <div id="delbut">
+                            <div class="btn-content w-full flex">
+                                <a href="{{$events->link}}"><button class="flex justify-center items-center">報名課程</button></a>
+                            </div>
+                        </div>
+                    @endif
                 </div>
 
             </div>
