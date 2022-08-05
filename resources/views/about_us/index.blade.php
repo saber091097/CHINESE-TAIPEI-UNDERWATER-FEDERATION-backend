@@ -820,12 +820,12 @@
                                 <p class="paragraph serif white"
                                     style="font-size: 24px;font-weight: 400;opacity: 0.75;text-align: justify;
                                     text-justify:inter-ideograph;">
-                                    由台中鵬隆潛水中心總教練詹寓崵率領PADI教練團隊進行潛水授課,從初級、進階、救援、潛水長、助理教練…等在台灣各離島及台中開課,展開潛水、水中環保相關業務,隨後2009年成立台中市水中運動協會成為PADI與CMAS雙系統訓練單位。
+                                    由台中鵬隆潛水中心總教練詹寓崵率領PADI教練團隊進行潛水授課,從初級、進階、救援、潛水長、助理教練…等在台灣各離島及台中開課,展開潛水、水中環保相關業務。
                                 </p>
                             </div>
-                            <div>
-                                <img src="/img/img_about_pic01.png" alt=""
-                                    style="width: 100%;border-radius: 8px;height: auto;">
+                            <div class="flex w-full justify-center">
+                                <img src="/img/padi.jpg" alt="" style="margin-right: 10px;">
+                                <img src="/img/cmas.jpg" alt="" style="width: 210px;">
                             </div>
                         </div>
                     </div>
@@ -840,10 +840,29 @@
                             <div class="margin-bottom-medium">
                                 <p class="paragraph serif white"
                                     style="font-size: 24px;font-weight: 400; opacity: 0.75;">
-                                    本會在日月潭月牙灣開始推廣風浪板體驗活動,於頭社風帆的家駐點扎根,隨後於2010年開辦丙級風浪板教練班講習,這期間在彰濱水域及月牙灣不間段的推廣風浪板,2021年雲林三條崙海水浴場成立風箏衝浪國際學校,本會於2022隨後再林三條崙海水浴場辦理Level-1和Level-2及丙級風浪板教練班。</p>
+                                    2009年成立台中市水中運動協會成為PADI與CMAS雙系統訓練單位，本會在日月潭月牙灣開始推廣風浪板體驗活動,於頭社風帆的家駐點扎根。</p>
                             </div>
-                            <div>
-                                <img src="/img/img_about_pic01.png" alt=""
+                            <div class="flex justify-center w-full">
+                                <img src="/img/S__17866957.jpg" alt=""
+                                    style="width: 50%;border-radius: 8px;height: auto;">
+                            </div>
+                        </div>
+                    </div>
+                    <div data-w-id="1b11356a-0a20-9bf6-b946-d66fb4f3a549" class="timeline_item">
+                        <div id="w-node-_1b11356a-0a20-9bf6-b946-d66fb4f3a54a-fd5f313d" class="timeline_left">
+                            <div class="timeline_date-text outline-text no-margin">2010</div>
+                        </div>
+                        <div id="w-node-_1b11356a-0a20-9bf6-b946-d66fb4f3a54d-fd5f313d" class="timeline_centre">
+                            <div class="timeline_circle"></div>
+                        </div>
+                        <div class="timeline_right">
+                            <div class="margin-bottom-medium">
+                                <p class="paragraph serif white"
+                                    style="font-size: 24px;font-weight: 400; opacity: 0.75;">
+                                    2010年開辦丙級風浪板教練班講習,這期間在彰濱水域及月牙灣不間段的推廣風浪板。
+                                </div>
+                            <div class="flex justify-center w-full">
+                                <img src="/img/S__17866974.jpg" alt=""
                                     style="width: 100%;border-radius: 8px;height: auto;">
                             </div>
                         </div>
@@ -862,8 +881,27 @@
                                     立式划槳浪板SUP興起,因為上板容易,老少咸宜,本會於日月潭開辦丙級SUP教練班的第一個單位,帶動日月潭觀光振興經濟,受到當地業者的高度歡迎、支持,並於每個月定期舉辦SUP教練班講習。</p>
                             </div>
                             <div>
-                                <img src="/img/img_about_pic01.png" alt=""
+                                <img src="/img/S__17866970.jpg" alt=""
                                     style="width: 100%;border-radius: 8px;height: auto;">
+                            </div>
+                        </div>
+                    </div>
+                    <div data-w-id="1b11356a-0a20-9bf6-b946-d66fb4f3a549" class="timeline_item">
+                        <div id="w-node-_1b11356a-0a20-9bf6-b946-d66fb4f3a54a-fd5f313d" class="timeline_left">
+                            <div class="timeline_date-text outline-text no-margin">2021</div>
+                        </div>
+                        <div id="w-node-_1b11356a-0a20-9bf6-b946-d66fb4f3a54d-fd5f313d" class="timeline_centre">
+                            <div class="timeline_circle"></div>
+                        </div>
+                        <div class="timeline_right">
+                            <div class="margin-bottom-medium">
+                                <p class="paragraph serif white"
+                                    style="font-size: 24px;font-weight: 400; opacity: 0.75;">
+                                    2021年雲林三條崙海水浴場成立風箏衝浪國際學校,本會於2022隨後再雲林三條崙海水浴場辦理Level-1和Level-2及丙級風浪板教練班。
+                                </div>
+                            <div>
+                                <img src="/img/S__17866978.jpg" alt=""
+                                    style="width: 100%;border-radius: 8px;height: 500px;">
                             </div>
                         </div>
                     </div>
@@ -892,7 +930,7 @@
                             </div>
                             <div>
                                 <img src="/img/S__9109506_0.jpg" alt=""
-                                    style="width: 100%;border-radius: 8px;height: auto;">
+                                    style="width: 100%;border-radius: 8px; height:auto;">
                             </div>
                         </div>
                     </div>

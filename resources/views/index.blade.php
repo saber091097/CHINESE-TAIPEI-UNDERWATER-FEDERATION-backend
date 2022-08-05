@@ -140,7 +140,7 @@
                                 以SUP立式划槳教練課程,選修風浪板、獨木舟三合一Windsupyak板，推動水上運動觀光及帶動地方觀光和繁榮提升SUP風浪板/獨木舟運動風氣及培訓專業教練人才。
                                 發展專利著作SUPTUF(中華民國立式划槳浪板訓練協會)教學系統認證。有品牌有信譽的標章SUPTUF已經榮獲中華民國經濟部智慧財產局註冊、認證。
                             </p>
-                            <a href="#" class="flex">
+                            <a href="/about" class="flex">
                                 了解更多
                                 <svg xmlns="http://www.w3.org/2000/svg">
                                     <path

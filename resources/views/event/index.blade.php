@@ -27,17 +27,21 @@
                 </div>
                 <table id="example" class="display" style="width:100%;">
                     <thead>
-                        <tr class="flex justify-between" style="border-bottom:1px solid blackk;">
-                            <td class="flex  "style="width:20%;">活動種類</td>
-                            <td class="flex  "style="width:10%;">公告種類</td>
-                            <td class="flex  "style="width:40%;">活動名稱</td>
-                            <td class="flex  "style="width:10%;">發布人</td>
-                            <td class="flex justify-center "style="width:20%;">功能</td>
+                        <tr class="flex justify-between w-full" style="border-bottom:1px solid blackk;">
+                            <td class="flex  "style="width:16%;">id</td>
+                            <td class="flex  "style="width:16%;">活動種類</td>
+                            <td class="flex  "style="width:16%;">公告種類</td>
+                            <td class="flex  "style="width:16%;">活動名稱</td>
+                            <td class="flex  "style="width:16%;">發布人</td>
+                            <td class="flex justify-center "style="width:16%;">功能</td>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($data as $i)
                             <tr class="flex justify-between" style="border-bottom:1px solid blackk;">
+                                <td>
+                                    {{$i->id}}
+                                </td>
                                 <td class="flex "style="width:20%;">
                                     @if ($i->event_type == 1)
                                         風浪板

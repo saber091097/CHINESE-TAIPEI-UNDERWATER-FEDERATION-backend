@@ -17,7 +17,7 @@ class EventController extends Controller
     public function index(){
         $header='活動管理頁';
         $slot='';
-        $data= Event::get();
+        $data= Event::latest()->get();
         return view('event.index',compact('data','header','slot'));
     }
 
