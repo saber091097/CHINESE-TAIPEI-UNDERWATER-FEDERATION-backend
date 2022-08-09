@@ -594,25 +594,13 @@
                                         <div id="sup_mySwiper" class="swiper">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082119.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17785018.jpg') }}" />
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082097.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17785077.jpg') }}" />
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082099.jpg') }}" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082100.jpg') }}" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082109.jpg') }}" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082111.jpg') }}" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082117.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17785107.jpg') }}" />
                                                 </div>
                                             </div>
                                             <div id="sup_swiper_button_next" class="swiper-button-next"
