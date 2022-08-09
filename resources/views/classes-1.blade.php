@@ -32,15 +32,15 @@
             background-color: #3B54F3;
         }
 
-        /* @keyframes moveToTop {
-                from {
-                    transform: translateY(100%);
-                }
+        @keyframes moveToTop {
+                    from {
+                        transform: translateY(100%);
+                    }
 
-                to {
-                    transform: translateY(0%);
+                    to {
+                        transform: translateY(0%);
+                    }
                 }
-            } */
 
         td {
             border: 1px solid black;
@@ -130,9 +130,7 @@
                             <div class="class-content w-full flex flex-row">
                                 <div class="in-in-innerbox-right w-8/12 ">
                                     <div id="banner1" class="banner w-full">
-                                        <div id="saving_mySwiper2"
-                                            style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-                                            class="swiper mySwiper2">
+                                        <div id="saving_mySwiper" class="swiper">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
                                                     <img src="{{ asset('img/S__17866980.jpg') }}" />
@@ -145,8 +143,7 @@
                                                 </div>
                                                 <div class="swiper-slide">
                                                     <img src="{{ asset('img/S__17866984.jpg') }}" />
-                                                </div>
-                                                <div class="swiper-slide">
+                                                </div>                                                <div class="swiper-slide">
                                                     <img src="{{ asset('img/S__17866985.jpg') }}" />
                                                 </div>
                                                 <div class="swiper-slide">
@@ -159,36 +156,12 @@
                                                     <img src="{{ asset('img/S__17866988.jpg') }}" />
                                                 </div>
                                             </div>
-                                            <div id="saving_swiper_button_next" class="swiper-button-next"></div>
-                                            <div id="saving_swiper_button_prev" class="swiper-button-prev"></div>
-                                        </div>
-                                        <div id="saving_mySwiper" thumbsSlider="" class="swiper mySwiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__17866980.jpg') }}" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__17866982.jpg') }}" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__17866983.jpg') }}" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__17866984.jpg') }}" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__17866985.jpg') }}" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__17866986.jpg') }}" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__17866987.jpg') }}" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__17866988.jpg') }}" />
-                                                </div>
-                                            </div>
+                                            <div id="saving_swiper_button_next" class="swiper-button-next"
+                                                style="--swiper-theme-color: #00ff07e6;"></div>
+                                            <div id="saving_swiper_button_prev" class="swiper-button-prev"
+                                                style="--swiper-theme-color: #00ff07e6;"></div>
+                                            <div id="saving_swiper_pagination" class="swiper-pagination"
+                                                style="--swiper-theme-color: #00ff07e6;"></div>
                                         </div>
                                     </div>
                                     <div class="fixed-ts-box w-full flex flex-col">
@@ -217,17 +190,17 @@
                                             <li class="nav-item">
                                                 <a href="#s1-tabs-1"
                                                     class="
-                                                    active
-                                                    nav-link
-                                                    nav-link1
-                                                    block
-                                                    font-medium
-                                                    text-xs
-                                                    leading-tight
-                                                    uppercase
-                                                    border-x-0 border-t-0 border-b-2 border-transparent
-                                                    focus:border-transparent
-                                                "
+                                                        active
+                                                        nav-link
+                                                        nav-link1
+                                                        block
+                                                        font-medium
+                                                        text-xs
+                                                        leading-tight
+                                                        uppercase
+                                                        border-x-0 border-t-0 border-b-2 border-transparent
+                                                        focus:border-transparent
+                                                    "
                                                     id="s1-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-1"
                                                     role="tab" aria-controls="s1-tabs-1" aria-selected="true"
                                                     tabindex="1">
@@ -237,16 +210,16 @@
                                             <li class="nav-item">
                                                 <a href="#s1-tabs-2"
                                                     class="
-                                                    nav-link
-                                                    nav-link2
-                                                    block
-                                                    font-medium
-                                                    text-xs
-                                                    leading-tight
-                                                    uppercase
-                                                    border-x-0 border-t-0 border-b-2 border-transparent
-                                                    focus:border-transparent
-                                                "
+                                                        nav-link
+                                                        nav-link2
+                                                        block
+                                                        font-medium
+                                                        text-xs
+                                                        leading-tight
+                                                        uppercase
+                                                        border-x-0 border-t-0 border-b-2 border-transparent
+                                                        focus:border-transparent
+                                                    "
                                                     id="s1-tabs-2-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-2"
                                                     role="tab" aria-controls="s1-tabs-2" aria-selected="false">
                                                     <span class="tab-span tab-span2">課程流程</span>
@@ -255,16 +228,16 @@
                                             <li class="nav-item">
                                                 <a href="#s1-tabs-3"
                                                     class="
-                                                    nav-link
-                                                    nav-link3
-                                                    block
-                                                    font-medium
-                                                    text-xs
-                                                    leading-tight
-                                                    uppercase
-                                                    border-x-0 border-t-0 border-b-2 border-transparent
-                                                    focus:border-transparent
-                                                "
+                                                        nav-link
+                                                        nav-link3
+                                                        block
+                                                        font-medium
+                                                        text-xs
+                                                        leading-tight
+                                                        uppercase
+                                                        border-x-0 border-t-0 border-b-2 border-transparent
+                                                        focus:border-transparent
+                                                    "
                                                     id="s1-tabs-3-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-3"
                                                     role="tab" aria-controls="s1-tabs-3" aria-selected="false">
                                                     <span class="tab-span tab-span3">指導單位</span>
@@ -273,16 +246,16 @@
                                             <li class="nav-item">
                                                 <a href="#s1-tabs-4"
                                                     class="
-                                                    nav-link
-                                                    nav-link4
-                                                    block
-                                                    font-medium
-                                                    text-xs
-                                                    leading-tight
-                                                    uppercase
-                                                    border-x-0 border-t-0 border-b-2 border-transparent
-                                                    focus:border-transparent
-                                                "
+                                                        nav-link
+                                                        nav-link4
+                                                        block
+                                                        font-medium
+                                                        text-xs
+                                                        leading-tight
+                                                        uppercase
+                                                        border-x-0 border-t-0 border-b-2 border-transparent
+                                                        focus:border-transparent
+                                                    "
                                                     id="s1-tabs-4-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-4"
                                                     role="tab" aria-controls="s1-tabs-4" aria-selected="false">
                                                     <span class="tab-span tab-span4">注意事項</span>
@@ -376,59 +349,53 @@
                             <div class="class-content w-full flex flex-row">
                                 <div class="in-in-innerbox-right w-8/12 ">
                                     <div id="banner1" class="banner w-full">
-                                        <div id="swimming_mySwiper2"
-                                            style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-                                            class="swiper mySwiper2">
+                                        <div id="swimming_mySwiper" class="swiper">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082119.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17891403.jpg') }}" />
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082097.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17891405.jpg') }}" />
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082099.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17891407.jpg') }}" />
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082100.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17891408.jpg') }}" />
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082109.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17891409.jpg') }}" />
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082111.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17891410.jpg') }}" />
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082117.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17891411.jpg') }}" />
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891412.jpg') }}" />
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891413.jpg') }}" />
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891414.jpg') }}" />
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891416.jpg') }}" />
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891417.jpg') }}" />
+                                                </div>                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891418.jpg') }}" />
                                                 </div>
                                             </div>
-                                            <div id="swimming_swiper_button_next" class="swiper-button-next"></div>
-                                            <div id="swimming_swiper_button_prev" class="swiper-button-prev"></div>
-                                        </div>
-                                        <div id="swimming_mySwiper" thumbsSlider="" class="swiper mySwiper">
-                                            <div class="swiper-wrapper swiper-btm">
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082119.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082097.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082099.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082100.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082109.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082111.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082117.jpg" />
-                                                </div>
-                                            </div>
+                                            <div id="swimming_swiper_button_next" class="swiper-button-next"
+                                                style="--swiper-theme-color: #00ff07e6;"></div>
+                                            <div id="swimming_swiper_button_prev" class="swiper-button-prev"
+                                                style="--swiper-theme-color: #00ff07e6;"></div>
+                                            <div id="swimming_swiper_pagination" class="swiper-pagination"
+                                                style="--swiper-theme-color: #00ff07e6;"></div>
                                         </div>
                                     </div>
                                     <div class="fixed-ts-box w-full flex flex-col">
@@ -457,17 +424,17 @@
                                             <li class="nav-item">
                                                 <a href="#s1-tabs-1"
                                                     class="
-                                                    active
-                                                    nav-link
-                                                    nav-link1
-                                                    block
-                                                    font-medium
-                                                    text-xs
-                                                    leading-tight
-                                                    uppercase
-                                                    border-x-0 border-t-0 border-b-2 border-transparent
-                                                    focus:border-transparent
-                                                "
+                                                        active
+                                                        nav-link
+                                                        nav-link1
+                                                        block
+                                                        font-medium
+                                                        text-xs
+                                                        leading-tight
+                                                        uppercase
+                                                        border-x-0 border-t-0 border-b-2 border-transparent
+                                                        focus:border-transparent
+                                                    "
                                                     id="s1-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-1"
                                                     role="tab" aria-controls="s1-tabs-1" aria-selected="true"
                                                     tabindex="1">
@@ -477,16 +444,16 @@
                                             <li class="nav-item">
                                                 <a href="#s1-tabs-2"
                                                     class="
-                                                    nav-link
-                                                    nav-link2
-                                                    block
-                                                    font-medium
-                                                    text-xs
-                                                    leading-tight
-                                                    uppercase
-                                                    border-x-0 border-t-0 border-b-2 border-transparent
-                                                    focus:border-transparent
-                                                "
+                                                        nav-link
+                                                        nav-link2
+                                                        block
+                                                        font-medium
+                                                        text-xs
+                                                        leading-tight
+                                                        uppercase
+                                                        border-x-0 border-t-0 border-b-2 border-transparent
+                                                        focus:border-transparent
+                                                    "
                                                     id="s1-tabs-2-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-2"
                                                     role="tab" aria-controls="s1-tabs-2" aria-selected="false">
                                                     <span class="tab-span tab-span2">課程流程</span>
@@ -495,16 +462,16 @@
                                             <li class="nav-item">
                                                 <a href="#s1-tabs-3"
                                                     class="
-                                                    nav-link
-                                                    nav-link3
-                                                    block
-                                                    font-medium
-                                                    text-xs
-                                                    leading-tight
-                                                    uppercase
-                                                    border-x-0 border-t-0 border-b-2 border-transparent
-                                                    focus:border-transparent
-                                                "
+                                                        nav-link
+                                                        nav-link3
+                                                        block
+                                                        font-medium
+                                                        text-xs
+                                                        leading-tight
+                                                        uppercase
+                                                        border-x-0 border-t-0 border-b-2 border-transparent
+                                                        focus:border-transparent
+                                                    "
                                                     id="s1-tabs-3-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-3"
                                                     role="tab" aria-controls="s1-tabs-3" aria-selected="false">
                                                     <span class="tab-span tab-span3">指導單位</span>
@@ -513,16 +480,16 @@
                                             <li class="nav-item">
                                                 <a href="#s1-tabs-4"
                                                     class="
-                                                    nav-link
-                                                    nav-link4
-                                                    block
-                                                    font-medium
-                                                    text-xs
-                                                    leading-tight
-                                                    uppercase
-                                                    border-x-0 border-t-0 border-b-2 border-transparent
-                                                    focus:border-transparent
-                                                "
+                                                        nav-link
+                                                        nav-link4
+                                                        block
+                                                        font-medium
+                                                        text-xs
+                                                        leading-tight
+                                                        uppercase
+                                                        border-x-0 border-t-0 border-b-2 border-transparent
+                                                        focus:border-transparent
+                                                    "
                                                     id="s1-tabs-4-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-4"
                                                     role="tab" aria-controls="s1-tabs-4" aria-selected="false">
                                                     <span class="tab-span tab-span4">注意事項</span>
@@ -624,9 +591,7 @@
                             <div class="class-content w-full flex flex-row">
                                 <div class="in-in-innerbox-right w-8/12 ">
                                     <div id="banner1" class="banner w-full">
-                                        <div id="sup_mySwiper2"
-                                            style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-                                            class="swiper mySwiper2">
+                                        <div id="sup_mySwiper" class="swiper">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
                                                     <img src="{{ asset('img/S__14082119.jpg') }}" />
@@ -650,33 +615,12 @@
                                                     <img src="{{ asset('img/S__14082117.jpg') }}" />
                                                 </div>
                                             </div>
-                                            <div id="sup_swiper_button_next" class="swiper-button-next"></div>
-                                            <div id="sup_swiper_button_prev" class="swiper-button-prev"></div>
-                                        </div>
-                                        <div id="sup_mySwiper" thumbsSlider="" class="swiper mySwiper">
-                                            <div class="swiper-wrapper swiper-btm">
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082119.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082097.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082099.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082100.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082109.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082111.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082117.jpg" />
-                                                </div>
-                                            </div>
+                                            <div id="sup_swiper_button_next" class="swiper-button-next"
+                                                style="--swiper-theme-color: #00ff07e6;"></div>
+                                            <div id="sup_swiper_button_prev" class="swiper-button-prev"
+                                                style="--swiper-theme-color: #00ff07e6;"></div>
+                                            <div id="sup_swiper_pagination" class="swiper-pagination"
+                                                style="--swiper-theme-color: #00ff07e6;"></div>
                                         </div>
                                     </div>
                                     <div class="fixed-ts-box w-full flex flex-col">
@@ -705,17 +649,17 @@
                                             <li class="nav-item">
                                                 <a href="#s1-tabs-1"
                                                     class="
-                                                    active
-                                                    nav-link
-                                                    nav-link1
-                                                    block
-                                                    font-medium
-                                                    text-xs
-                                                    leading-tight
-                                                    uppercase
-                                                    border-x-0 border-t-0 border-b-2 border-transparent
-                                                    focus:border-transparent
-                                                "
+                                                        active
+                                                        nav-link
+                                                        nav-link1
+                                                        block
+                                                        font-medium
+                                                        text-xs
+                                                        leading-tight
+                                                        uppercase
+                                                        border-x-0 border-t-0 border-b-2 border-transparent
+                                                        focus:border-transparent
+                                                    "
                                                     id="s1-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-1"
                                                     role="tab" aria-controls="s1-tabs-1" aria-selected="true"
                                                     tabindex="1">
@@ -725,16 +669,16 @@
                                             <li class="nav-item">
                                                 <a href="#s1-tabs-2"
                                                     class="
-                                                    nav-link
-                                                    nav-link2
-                                                    block
-                                                    font-medium
-                                                    text-xs
-                                                    leading-tight
-                                                    uppercase
-                                                    border-x-0 border-t-0 border-b-2 border-transparent
-                                                    focus:border-transparent
-                                                "
+                                                        nav-link
+                                                        nav-link2
+                                                        block
+                                                        font-medium
+                                                        text-xs
+                                                        leading-tight
+                                                        uppercase
+                                                        border-x-0 border-t-0 border-b-2 border-transparent
+                                                        focus:border-transparent
+                                                    "
                                                     id="s1-tabs-2-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-2"
                                                     role="tab" aria-controls="s1-tabs-2" aria-selected="false">
                                                     <span class="tab-span tab-span2">課程流程</span>
@@ -743,16 +687,16 @@
                                             <li class="nav-item">
                                                 <a href="#s1-tabs-3"
                                                     class="
-                                                    nav-link
-                                                    nav-link3
-                                                    block
-                                                    font-medium
-                                                    text-xs
-                                                    leading-tight
-                                                    uppercase
-                                                    border-x-0 border-t-0 border-b-2 border-transparent
-                                                    focus:border-transparent
-                                                "
+                                                        nav-link
+                                                        nav-link3
+                                                        block
+                                                        font-medium
+                                                        text-xs
+                                                        leading-tight
+                                                        uppercase
+                                                        border-x-0 border-t-0 border-b-2 border-transparent
+                                                        focus:border-transparent
+                                                    "
                                                     id="s1-tabs-3-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-3"
                                                     role="tab" aria-controls="s1-tabs-3" aria-selected="false">
                                                     <span class="tab-span tab-span3">指導單位</span>
@@ -761,16 +705,16 @@
                                             <li class="nav-item">
                                                 <a href="#s1-tabs-4"
                                                     class="
-                                                    nav-link
-                                                    nav-link4
-                                                    block
-                                                    font-medium
-                                                    text-xs
-                                                    leading-tight
-                                                    uppercase
-                                                    border-x-0 border-t-0 border-b-2 border-transparent
-                                                    focus:border-transparent
-                                                "
+                                                        nav-link
+                                                        nav-link4
+                                                        block
+                                                        font-medium
+                                                        text-xs
+                                                        leading-tight
+                                                        uppercase
+                                                        border-x-0 border-t-0 border-b-2 border-transparent
+                                                        focus:border-transparent
+                                                    "
                                                     id="s1-tabs-4-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-4"
                                                     role="tab" aria-controls="s1-tabs-4" aria-selected="false">
                                                     <span class="tab-span tab-span4">注意事項</span>
@@ -872,59 +816,63 @@
                             <div class="class-content w-full flex flex-row">
                                 <div class="in-in-innerbox-right w-8/12 ">
                                     <div id="banner1" class="banner w-full">
-                                        <div id="windsurf_mySwiper2"
-                                            style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-                                            class="swiper mySwiper2">
+                                        <div id="windsurf_mySwiper" class="swiper">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082119.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17891460.jpg') }}" />
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082097.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17891462.jpg') }}" />
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082099.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17891463.jpg') }}" />
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082100.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17891464.jpg') }}" />
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082109.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17891465.jpg') }}" />
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082111.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17891466.jpg') }}" />
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082117.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17891467.jpg') }}" />
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891468.jpg') }}" />
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891469.jpg') }}" />
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891470.jpg') }}" />
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891471.jpg') }}" />
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891473.jpg') }}" />
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891474.jpg') }}" />
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891475.jpg') }}" />
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891476.jpg') }}" />
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891477.jpg') }}" />
                                                 </div>
                                             </div>
-                                            <div id="windsurf_swiper_button_next" class="swiper-button-next"></div>
-                                            <div id="windsurf_swiper_button_prev" class="swiper-button-prev"></div>
-                                        </div>
-                                        <div id="windsurf_mySwiper" thumbsSlider="" class="swiper mySwiper">
-                                            <div class="swiper-wrapper swiper-btm">
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082119.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082097.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082099.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082100.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082109.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082111.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082117.jpg" />
-                                                </div>
-                                            </div>
+                                            <div id="windsurf_swiper_button_next" class="swiper-button-next"
+                                                style="--swiper-theme-color: #00ff07e6;"></div>
+                                            <div id="windsurf_swiper_button_prev" class="swiper-button-prev"
+                                                style="--swiper-theme-color: #00ff07e6;"></div>
+                                            <div id="windsurf_swiper_pagination" class="swiper-pagination"
+                                                style="--swiper-theme-color: #00ff07e6;"></div>
                                         </div>
                                     </div>
                                     <div class="fixed-ts-box w-full flex flex-col">
@@ -953,17 +901,17 @@
                                             <li class="nav-item">
                                                 <a href="#s1-tabs-1"
                                                     class="
-                                                    active
-                                                    nav-link
-                                                    nav-link1
-                                                    block
-                                                    font-medium
-                                                    text-xs
-                                                    leading-tight
-                                                    uppercase
-                                                    border-x-0 border-t-0 border-b-2 border-transparent
-                                                    focus:border-transparent
-                                                "
+                                                        active
+                                                        nav-link
+                                                        nav-link1
+                                                        block
+                                                        font-medium
+                                                        text-xs
+                                                        leading-tight
+                                                        uppercase
+                                                        border-x-0 border-t-0 border-b-2 border-transparent
+                                                        focus:border-transparent
+                                                    "
                                                     id="s1-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-1"
                                                     role="tab" aria-controls="s1-tabs-1" aria-selected="true"
                                                     tabindex="1">
@@ -973,16 +921,16 @@
                                             <li class="nav-item">
                                                 <a href="#s1-tabs-2"
                                                     class="
-                                                    nav-link
-                                                    nav-link2
-                                                    block
-                                                    font-medium
-                                                    text-xs
-                                                    leading-tight
-                                                    uppercase
-                                                    border-x-0 border-t-0 border-b-2 border-transparent
-                                                    focus:border-transparent
-                                                "
+                                                        nav-link
+                                                        nav-link2
+                                                        block
+                                                        font-medium
+                                                        text-xs
+                                                        leading-tight
+                                                        uppercase
+                                                        border-x-0 border-t-0 border-b-2 border-transparent
+                                                        focus:border-transparent
+                                                    "
                                                     id="s1-tabs-2-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-2"
                                                     role="tab" aria-controls="s1-tabs-2" aria-selected="false">
                                                     <span class="tab-span tab-span2">課程流程</span>
@@ -991,16 +939,16 @@
                                             <li class="nav-item">
                                                 <a href="#s1-tabs-3"
                                                     class="
-                                                    nav-link
-                                                    nav-link3
-                                                    block
-                                                    font-medium
-                                                    text-xs
-                                                    leading-tight
-                                                    uppercase
-                                                    border-x-0 border-t-0 border-b-2 border-transparent
-                                                    focus:border-transparent
-                                                "
+                                                        nav-link
+                                                        nav-link3
+                                                        block
+                                                        font-medium
+                                                        text-xs
+                                                        leading-tight
+                                                        uppercase
+                                                        border-x-0 border-t-0 border-b-2 border-transparent
+                                                        focus:border-transparent
+                                                    "
                                                     id="s1-tabs-3-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-3"
                                                     role="tab" aria-controls="s1-tabs-3" aria-selected="false">
                                                     <span class="tab-span tab-span3">指導單位</span>
@@ -1009,16 +957,16 @@
                                             <li class="nav-item">
                                                 <a href="#s1-tabs-4"
                                                     class="
-                                                    nav-link
-                                                    nav-link4
-                                                    block
-                                                    font-medium
-                                                    text-xs
-                                                    leading-tight
-                                                    uppercase
-                                                    border-x-0 border-t-0 border-b-2 border-transparent
-                                                    focus:border-transparent
-                                                "
+                                                        nav-link
+                                                        nav-link4
+                                                        block
+                                                        font-medium
+                                                        text-xs
+                                                        leading-tight
+                                                        uppercase
+                                                        border-x-0 border-t-0 border-b-2 border-transparent
+                                                        focus:border-transparent
+                                                    "
                                                     id="s1-tabs-4-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-4"
                                                     role="tab" aria-controls="s1-tabs-4" aria-selected="false">
                                                     <span class="tab-span tab-span4">注意事項</span>
@@ -1121,59 +1069,57 @@
                             <div class="class-content w-full flex flex-row">
                                 <div class="in-in-innerbox-right w-8/12 ">
                                     <div id="banner1" class="banner w-full">
-                                        <div id="diving_mySwiper2"
-                                            style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-                                            class="swiper mySwiper2">
+                                        <div id="diving_mySwiper" class="swiper">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082119.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17891423.jpg') }}" />
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082097.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17891425.jpg') }}" />
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082099.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17891426.jpg') }}" />
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082100.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17891427.jpg') }}" />
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082109.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17891428.jpg') }}" />
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082111.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17891429.jpg') }}" />
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="{{ asset('img/S__14082117.jpg') }}" />
+                                                    <img src="{{ asset('img/S__17891430.jpg') }}" />
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891431.jpg') }}" />
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891432.jpg') }}" />
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891433.jpg') }}" />
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891434.jpg') }}" />
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891436.jpg') }}" />
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891437.jpg') }}" />
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="{{ asset('img/S__17891438.jpg') }}" />
                                                 </div>
                                             </div>
-                                            <div id="diving_swiper_button_next" class="swiper-button-next"></div>
-                                            <div id="diving_swiper_button_prev" class="swiper-button-prev"></div>
-                                        </div>
-                                        <div id="diving_mySwiper" thumbsSlider="" class="swiper mySwiper">
-                                            <div class="swiper-wrapper swiper-btm">
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082119.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082097.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082099.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082100.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082109.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082111.jpg" />
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="/img/S__14082117.jpg" />
-                                                </div>
-                                            </div>
+                                            <div id="diving_swiper_button_next" class="swiper-button-next"
+                                                style="--swiper-theme-color: #00ff07e6;"></div>
+                                            <div id="diving_swiper_button_prev" class="swiper-button-prev"
+                                                style="--swiper-theme-color: #00ff07e6;"></div>
+                                            <div id="diving_swiper_pagination" class="swiper-pagination"
+                                                style="--swiper-theme-color: #00ff07e6;"></div>
                                         </div>
                                     </div>
                                     <div class="fixed-ts-box w-full flex flex-col">
@@ -1202,17 +1148,17 @@
                                             <li class="nav-item">
                                                 <a href="#s1-tabs-1"
                                                     class="
-                                                active
-                                                nav-link
-                                                nav-link1
-                                                block
-                                                font-medium
-                                                text-xs
-                                                leading-tight
-                                                uppercase
-                                                border-x-0 border-t-0 border-b-2 border-transparent
-                                                focus:border-transparent
-                                            "
+                                                    active
+                                                    nav-link
+                                                    nav-link1
+                                                    block
+                                                    font-medium
+                                                    text-xs
+                                                    leading-tight
+                                                    uppercase
+                                                    border-x-0 border-t-0 border-b-2 border-transparent
+                                                    focus:border-transparent
+                                                "
                                                     id="s1-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-1"
                                                     role="tab" aria-controls="s1-tabs-1" aria-selected="true"
                                                     tabindex="1">
@@ -1222,16 +1168,16 @@
                                             <li class="nav-item">
                                                 <a href="#s1-tabs-2"
                                                     class="
-                                                nav-link
-                                                nav-link2
-                                                block
-                                                font-medium
-                                                text-xs
-                                                leading-tight
-                                                uppercase
-                                                border-x-0 border-t-0 border-b-2 border-transparent
-                                                focus:border-transparent
-                                            "
+                                                    nav-link
+                                                    nav-link2
+                                                    block
+                                                    font-medium
+                                                    text-xs
+                                                    leading-tight
+                                                    uppercase
+                                                    border-x-0 border-t-0 border-b-2 border-transparent
+                                                    focus:border-transparent
+                                                "
                                                     id="s1-tabs-2-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-2"
                                                     role="tab" aria-controls="s1-tabs-2" aria-selected="false">
                                                     <span class="tab-span tab-span2">課程流程</span>
@@ -1240,16 +1186,16 @@
                                             <li class="nav-item">
                                                 <a href="#s1-tabs-3"
                                                     class="
-                                                nav-link
-                                                nav-link3
-                                                block
-                                                font-medium
-                                                text-xs
-                                                leading-tight
-                                                uppercase
-                                                border-x-0 border-t-0 border-b-2 border-transparent
-                                                focus:border-transparent
-                                            "
+                                                    nav-link
+                                                    nav-link3
+                                                    block
+                                                    font-medium
+                                                    text-xs
+                                                    leading-tight
+                                                    uppercase
+                                                    border-x-0 border-t-0 border-b-2 border-transparent
+                                                    focus:border-transparent
+                                                "
                                                     id="s1-tabs-3-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-3"
                                                     role="tab" aria-controls="s1-tabs-3" aria-selected="false">
                                                     <span class="tab-span tab-span3">指導單位</span>
@@ -1258,16 +1204,16 @@
                                             <li class="nav-item">
                                                 <a href="#s1-tabs-4"
                                                     class="
-                                                nav-link
-                                                nav-link4
-                                                block
-                                                font-medium
-                                                text-xs
-                                                leading-tight
-                                                uppercase
-                                                border-x-0 border-t-0 border-b-2 border-transparent
-                                                focus:border-transparent
-                                            "
+                                                    nav-link
+                                                    nav-link4
+                                                    block
+                                                    font-medium
+                                                    text-xs
+                                                    leading-tight
+                                                    uppercase
+                                                    border-x-0 border-t-0 border-b-2 border-transparent
+                                                    focus:border-transparent
+                                                "
                                                     id="s1-tabs-4-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-4"
                                                     role="tab" aria-controls="s1-tabs-4" aria-selected="false">
                                                     <span class="tab-span tab-span4">注意事項</span>
@@ -1312,8 +1258,8 @@
                                                     style="padding: 9px 13px;border-radius:6px;">
                                                     <option value="0">請選擇課程</option>
                                                     {{-- <option class="selectSup" value="1">立式划槳</option>
-                                                    <option class="selectSwim" value="2">游泳</option>
-                                                    <option class="selectSaving" value="3">水上救生</option> --}}
+                                                        <option class="selectSwim" value="2">游泳</option>
+                                                        <option class="selectSaving" value="3">水上救生</option> --}}
                                                     @foreach ($diving as $item)
                                                         @if ($item->closedate > Carbon\Carbon::now())
                                                             <option value="{{ $item->id }}">{{ $item->event }}</option>

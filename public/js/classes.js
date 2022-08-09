@@ -180,96 +180,87 @@ sup.addEventListener('click' , function(){
 });
 
 var saving_swiper = new Swiper("#saving_mySwiper", {
-    loop: true,
-    spaceBetween: 10,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-});
-var saving_swiper2 = new Swiper("#saving_mySwiper2", {
-    spaceBetween: 10,
-    loop: true,
+    loop:true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    keyboard: {
+      enabled: true,
+    },
+    pagination: {
+      el: "#saving_swiper_pagination",
+      clickable: true,
+    },
     navigation: {
-        nextEl: "#saving_swiper_button_next",
-        prevEl: "#saving_swiper_button_prev",
+      nextEl: "#saving_swiper_button_next",
+      prevEl: "#saving_swiper_button_prev",
     },
-    thumbs: {
-        swiper: saving_swiper,
-    },
-});
+  });
 
 var swimming_swiper = new Swiper("#swimming_mySwiper", {
-    spaceBetween: 10,
-    loop: true,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-});
-var swimming_swiper2 = new Swiper("#swimming_mySwiper2", {
-    spaceBetween: 10,
-    loop: true,
+    loop:true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    keyboard: {
+      enabled: true,
+    },
+    pagination: {
+      el: "#swimming_swiper_pagination",
+      clickable: true,
+    },
     navigation: {
-        nextEl: "#swimming_swiper_button_next",
-        prevEl: "#swimming_swiper_button_prev",
+      nextEl: "#swimming_swiper_button_next",
+      prevEl: "#swimming_swiper_button_prev",
     },
-    thumbs: {
-        swiper: swimming_swiper,
-    },
-});
+  });
 
 var windsurf_swiper = new Swiper("#windsurf_mySwiper", {
-    spaceBetween: 10,
-    loop: true,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-});
-var windsurf_swiper2 = new Swiper("#windsurf_mySwiper2", {
-    spaceBetween: 10,
-    loop: true,
+    loop:true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    keyboard: {
+      enabled: true,
+    },
+    pagination: {
+      el: "#windsurf_swiper_pagination",
+      clickable: true,
+    },
     navigation: {
-        nextEl: "#windsurf_swiper_button_next",
-        prevEl: "#windsurf_swiper_button_prev",
+      nextEl: "#windsurf_swiper_button_next",
+      prevEl: "#windsurf_swiper_button_prev",
     },
-    thumbs: {
-        swiper: windsurf_swiper,
-    },
-});
+  });
 
 var diving_swiper = new Swiper("#diving_mySwiper", {
-    spaceBetween: 10,
-    loop: true,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-});
-var diving_swiper2 = new Swiper("#diving_mySwiper2", {
-    spaceBetween: 10,
-    loop: true,
-    navigation: {
-        nextEl: "#diving_swiper_button_next",
-        prevEl: "#diving_swiper_button_prev",
+    loop:true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    keyboard: {
+      enabled: true,
     },
-    thumbs: {
-        swiper: diving_swiper,
+    pagination: {
+      el: "#diving_swiper_pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: "#diving_swiper_button_next",
+      prevEl: "#diving_swiper_button_prev",
+    },
+  });
+
+var sup_swiper = new Swiper("#sup_mySwiper", {
+    loop:true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    keyboard: {
+      enabled: true,
+    },
+    pagination: {
+      el: "#sup_swiper_pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: "#sup_swiper_button_next",
+      prevEl: "#sup_swiper_button_prev",
     },
 });
 
-var sup_swiper = new Swiper("#sup_mySwiper", {
-    spaceBetween: 10,
-    loop: true,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-});
-var sup_swiper2 = new Swiper("#sup_mySwiper2", {
-    spaceBetween: 10,
-    loop: true,
-    navigation: {
-        nextEl: "#sup_swiper_button_next",
-        prevEl: "#sup_swiper_button_prev",
-    },
-    thumbs: {
-        swiper: sup_swiper,
-    },
-});
