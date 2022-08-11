@@ -53,15 +53,16 @@
                     <span>
                         {!! $events->event_intr !!}
                     </span>
-                    <span>
-                        {!! $events->event_proc !!}
-                    </span>
+
                     @if ($events->anno_type == 1)
-                        <div id="tohidden">
-                            <div class="flex flex-col innerbox">
-                                <h3 class="tm">指導單位</h3>
-                                {!! $events->event_dire !!}
-                            </div>
+                    <div id="tohidden">
+                        <div class="flex flex-col innerbox">
+                            <h3 class="tm">指導單位</h3>
+                            {!! $events->event_dire !!}
+                        </div>
+                        <span>
+                            {!! $events->event_proc !!}
+                        </span>
                             <div class="flex flex-col innerbox">
                                 <h3 class="tm">注意事項</h3>
                                 {!! $events->event_notice !!}

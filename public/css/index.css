@@ -1600,6 +1600,13 @@ details summary::-webkit-details-marker {
     fill: white;
 }
 
+* body .container .bottomimg .eventimg .eventcontent .hot svg {
+    margin-left: 7px;
+    width: 24px;
+    height: 24px;
+    fill: #d9a540;
+}
+
 * body .container .bottomimg .eventimg .gray {
     background-image: -webkit-gradient(linear, left bottom, left top, from(black), to(white));
     background-image: linear-gradient(to top, black, white);

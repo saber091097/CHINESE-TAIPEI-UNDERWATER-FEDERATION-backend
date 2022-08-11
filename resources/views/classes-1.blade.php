@@ -168,7 +168,7 @@
                                         <div class="select-box flex flex-col w-full">
                                             <label class="ts" for="class-select">選擇課程</label>
                                             <select id="class-select5-rwd" class="selectClass"
-                                                onchange="changeclass_rwd(this)" style="padding: 9px 13px;border-radius:6px;">
+                                                onchange="savingchangeclass_rwd(this)" style="padding: 9px 13px;border-radius:6px;">
                                                 <option value="0">請選擇課程</option>
                                                 @foreach ($saving as $item)
                                                     @if ($item->closedate > Carbon\Carbon::now())
@@ -180,8 +180,10 @@
                                         <div class="price-box">
                                             <span class="ts">含保險、器材、救生衣</span>
                                         </div>
-                                        <a id="changelink1" target="_blank" href="#"
-                                            class="w-full singUp-btn flex justify-center items-center">線上報名</a>
+                                        <div id="saving-viewphone-rwd">
+                                            <a id="changelink" href="#"
+                                                class="w-full singUp-btn flex justify-center items-center">線上報名</a>
+                                        </div>
                                         <span class="phone">電洽報名 04-22312698</span>
                                     </div>
                                     <div class="tab w-full">
@@ -201,8 +203,8 @@
                                                         border-x-0 border-t-0 border-b-2 border-transparent
                                                         focus:border-transparent
                                                     "
-                                                    id="s1-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-1"
-                                                    role="tab" aria-controls="s1-tabs-1" aria-selected="true"
+                                                    id="saving-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#saving-tabs-1"
+                                                    role="tab" aria-controls="saving-tabs-1" aria-selected="true"
                                                     tabindex="1">
                                                     <span class="tab-span tab-span1">活動介紹</span>
                                                 </a>
@@ -220,8 +222,8 @@
                                                         border-x-0 border-t-0 border-b-2 border-transparent
                                                         focus:border-transparent
                                                     "
-                                                    id="s1-tabs-2-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-2"
-                                                    role="tab" aria-controls="s1-tabs-2" aria-selected="false">
+                                                    id="saving-tabs-2-tab" data-bs-toggle="pill" data-bs-target="#saving-tabs-2"
+                                                    role="tab" aria-controls="saving-tabs-2" aria-selected="false">
                                                     <span class="tab-span tab-span2">課程流程</span>
                                                 </a>
                                             </li>
@@ -238,8 +240,8 @@
                                                         border-x-0 border-t-0 border-b-2 border-transparent
                                                         focus:border-transparent
                                                     "
-                                                    id="s1-tabs-3-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-3"
-                                                    role="tab" aria-controls="s1-tabs-3" aria-selected="false">
+                                                    id="saving-tabs-3-tab" data-bs-toggle="pill" data-bs-target="#saving-tabs-3"
+                                                    role="tab" aria-controls="saving-tabs-3" aria-selected="false">
                                                     <span class="tab-span tab-span3">指導單位</span>
                                                 </a>
                                             </li>
@@ -256,28 +258,28 @@
                                                         border-x-0 border-t-0 border-b-2 border-transparent
                                                         focus:border-transparent
                                                     "
-                                                    id="s1-tabs-4-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-4"
-                                                    role="tab" aria-controls="s1-tabs-4" aria-selected="false">
+                                                    id="saving-tabs-4-tab" data-bs-toggle="pill" data-bs-target="#saving-tabs-4"
+                                                    role="tab" aria-controls="saving-tabs-4" aria-selected="false">
                                                     <span class="tab-span tab-span4">注意事項</span>
                                                 </a>
                                             </li>
                                         </ul>
                                         <div class="tab-content" id="s1-tabs-tabContent">
-                                            <div class="tabs-1 tab-pane fade show active flex flex-col" id="s1-tabs-1"
-                                                role="tabpanel" aria-labelledby="s1-tabs-1-tab">
+                                            <div class="tabs-1 tab-pane fade show active flex flex-col" id="saving-tabs-1"
+                                                role="tabpanel" aria-labelledby="saving-tabs-1-tab">
                                                 請選擇課程
                                             </div>
-                                            <div class="tabs-2 tab-pane fade flex flex-col" id="s1-tabs-2" role="tabpanel"
-                                                aria-labelledby="s1-tabs-2-tab">
+                                            <div class="tabs-2 tab-pane fade flex flex-col" id="saving-tabs-2" role="tabpanel"
+                                                aria-labelledby="saving-tabs-2-tab">
                                                 請選擇課程
                                             </div>
-                                            <div class="tabs-3 tab-pane fade flex flex-col" id="s1-tabs-3" role="tabpanel"
-                                                aria-labelledby="s1-tabs-3-tab">
+                                            <div class="tabs-3 tab-pane fade flex flex-col" id="saving-tabs-3" role="tabpanel"
+                                                aria-labelledby="saving-tabs-3-tab">
                                                 請選擇課程
 
                                             </div>
-                                            <div class="tabs-4 tab-pane fade flex flex-col" id="s1-tabs-4" role="tabpanel"
-                                                aria-labelledby="s1-tabs-4-tab">
+                                            <div class="tabs-4 tab-pane fade flex flex-col" id="saving-tabs-4" role="tabpanel"
+                                                aria-labelledby="saving-tabs-4-tab">
                                                 請選擇課程
                                             </div>
                                         </div>
@@ -288,7 +290,7 @@
                                         <div class="select-box flex flex-col w-full">
                                             <div class="select-box flex flex-col w-full">
                                                 <label class="ts" for="class-select5">選擇課程</label>
-                                                <select id="class-select5" class="selectClass" onchange="changeclass(this)"
+                                                <select id="class-select5" class="selectClass" onchange="savingchangeclass(this)"
                                                     style="padding: 9px 13px;border-radius:6px;">
                                                     <option value="0">請選擇課程</option>
                                                     @foreach ($saving as $item)
@@ -302,8 +304,10 @@
                                         <div class="price-box w-full">
                                             <span class="ts">含保險、器材、救生衣</span>
                                         </div>
-                                        <a id="changelink" target="_blank" href="#"
-                                            class="w-full singUp-btn flex justify-center items-center">線上報名</a>
+                                        <div id="saving-viewphone">
+                                            <a id="changelink" href="#"
+                                                class="w-full singUp-btn flex justify-center items-center">線上報名</a>
+                                        </div>
                                         <span class="phone w-full">電洽報名 04-22312698</span>
                                     </div>
                                 </div>
@@ -402,7 +406,7 @@
                                         <div class="select-box flex flex-col w-full">
                                             <label class="ts" for="class-select">選擇課程</label>
                                             <select id="class-select5-rwd" class="selectClass"
-                                                onchange="changeclass_rwd(this)" style="padding: 9px 13px;border-radius:6px;">
+                                                onchange="swimmingchangeclass_rwd(this)" style="padding: 9px 13px;border-radius:6px;">
                                                 <option value="0">請選擇課程</option>
                                                 @foreach ($swimming as $item)
                                                     @if ($item->closedate > Carbon\Carbon::now())
@@ -414,8 +418,10 @@
                                         <div class="price-box">
                                             <span class="ts">含保險、器材、救生衣</span>
                                         </div>
-                                        <a id="changelink" target="_blank" href="#"
-                                            class="w-full singUp-btn flex justify-center items-center">線上報名</a>
+                                        <div id="swimming-viewphone-rwd">
+                                            <a id="changelink" href="#"
+                                                class="w-full singUp-btn flex justify-center items-center">線上報名</a>
+                                        </div>
                                         <span class="phone">電洽報名 04-22312698</span>
                                     </div>
                                     <div class="tab w-full">
@@ -435,8 +441,8 @@
                                                         border-x-0 border-t-0 border-b-2 border-transparent
                                                         focus:border-transparent
                                                     "
-                                                    id="s1-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-1"
-                                                    role="tab" aria-controls="s1-tabs-1" aria-selected="true"
+                                                    id="swimming-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#swimming-tabs-1"
+                                                    role="tab" aria-controls="swimming-tabs-1" aria-selected="true"
                                                     tabindex="1">
                                                     <span class="tab-span tab-span1">活動介紹</span>
                                                 </a>
@@ -454,8 +460,8 @@
                                                         border-x-0 border-t-0 border-b-2 border-transparent
                                                         focus:border-transparent
                                                     "
-                                                    id="s1-tabs-2-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-2"
-                                                    role="tab" aria-controls="s1-tabs-2" aria-selected="false">
+                                                    id="swimming-tabs-2-tab" data-bs-toggle="pill" data-bs-target="#swimming-tabs-2"
+                                                    role="tab" aria-controls="swimming-tabs-2" aria-selected="false">
                                                     <span class="tab-span tab-span2">課程流程</span>
                                                 </a>
                                             </li>
@@ -472,8 +478,8 @@
                                                         border-x-0 border-t-0 border-b-2 border-transparent
                                                         focus:border-transparent
                                                     "
-                                                    id="s1-tabs-3-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-3"
-                                                    role="tab" aria-controls="s1-tabs-3" aria-selected="false">
+                                                    id="swimming-tabs-3-tab" data-bs-toggle="pill" data-bs-target="#swimming-tabs-3"
+                                                    role="tab" aria-controls="swimming-tabs-3" aria-selected="false">
                                                     <span class="tab-span tab-span3">指導單位</span>
                                                 </a>
                                             </li>
@@ -490,39 +496,30 @@
                                                         border-x-0 border-t-0 border-b-2 border-transparent
                                                         focus:border-transparent
                                                     "
-                                                    id="s1-tabs-4-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-4"
-                                                    role="tab" aria-controls="s1-tabs-4" aria-selected="false">
+                                                    id="swimming-tabs-4-tab" data-bs-toggle="pill" data-bs-target="#swimming-tabs-4"
+                                                    role="tab" aria-controls="swimming-tabs-4" aria-selected="false">
                                                     <span class="tab-span tab-span4">注意事項</span>
                                                 </a>
                                             </li>
                                         </ul>
-                                        {{-- @foreach ($data as $item) --}}
                                         <div class="tab-content" id="s1-tabs-tabContent">
-                                            <div class="tabs-1 tab-pane fade show active flex flex-col" id="s1-tabs-1"
-                                                role="tabpanel" aria-labelledby="s1-tabs-1-tab">
-                                                {{-- {!! $data->event_intr !!} --}}
+                                            <div class="tabs-1 tab-pane fade show active flex flex-col" id="swimming-tabs-1"
+                                                role="tabpanel" aria-labelledby="swimming-tabs-1-tab">
                                                 請選擇課程
                                             </div>
-                                            <div class="tabs-2 tab-pane fade flex flex-col" id="s1-tabs-2" role="tabpanel"
-                                                aria-labelledby="s1-tabs-2-tab">
-                                                {{-- {!! $data->event_proc !!} --}}
+                                            <div class="tabs-2 tab-pane fade flex flex-col" id="swimming-tabs-2" role="tabpanel"
+                                                aria-labelledby="swimming-tabs-2-tab">
                                                 請選擇課程
-
                                             </div>
-                                            <div class="tabs-3 tab-pane fade flex flex-col" id="s1-tabs-3" role="tabpanel"
-                                                aria-labelledby="s1-tabs-3-tab">
-                                                {{-- {!! $data->event_dire !!} --}}
+                                            <div class="tabs-3 tab-pane fade flex flex-col" id="swimming-tabs-3" role="tabpanel"
+                                                aria-labelledby="swimming-tabs-3-tab">
                                                 請選擇課程
-
                                             </div>
-                                            <div class="tabs-4 tab-pane fade flex flex-col" id="s1-tabs-4" role="tabpanel"
-                                                aria-labelledby="s1-tabs-4-tab">
-                                                {{-- {!! $data->event_notice !!} --}}
+                                            <div class="tabs-4 tab-pane fade flex flex-col" id="swimming-tabs-4" role="tabpanel"
+                                                aria-labelledby="swimming-tabs-4-tab">
                                                 請選擇課程
-
                                             </div>
                                         </div>
-                                        {{-- @endforeach --}}
                                     </div>
                                 </div>
                                 <div class="in-in-innerbox-left w-4/12 flex justify-end">
@@ -530,7 +527,7 @@
                                         <div class="select-box flex flex-col w-full">
                                             <div class="select-box flex flex-col w-full">
                                                 <label class="ts" for="class-select5">選擇課程</label>
-                                                <select id="class-select5" class="selectClass" onchange="changeclass(this)"
+                                                <select id="class-select5" class="selectClass" onchange="swimmingchangeclass(this)"
                                                     style="padding: 9px 13px;border-radius:6px;">
                                                     <option value="0">請選擇課程</option>
                                                     @foreach ($swimming as $item)
@@ -543,8 +540,10 @@
                                             <div class="price-box">
                                                 <span class="ts">含保險、器材、救生衣</span>
                                             </div>
-                                            <a id="changelink" href="#" target="_blank"
-                                                class="w-full singUp-btn flex justify-center items-center">線上報名</a>
+                                            <div id="swimming-viewphone">
+                                                <a id="changelink" href="#"
+                                                    class="w-full singUp-btn flex justify-center items-center">線上報名</a>
+                                            </div>
                                             <span class="phone">電洽報名 04-22312698</span>
                                         </div>
                                     </div>
@@ -580,13 +579,13 @@
                                                     d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
                                             </svg>
                                         </li>
-                                        <li id="" class="s4Bread inpage"></li>
+                                        <li id="" class="s3Bread inpage"></li>
                                     </ul>
                                 </div>
                             </div>
                             <div id="class_title1" class="class-title flex flex-col">
-                                <h5 id="" class="s4En h5"></h5>
-                                <h2 id="" class="s4Title h2m"></h2>
+                                <h5 id="" class="s3En h5"></h5>
+                                <h2 id="" class="s3Title h2m"></h2>
                             </div>
                             <div class="class-content w-full flex flex-row">
                                 <div class="in-in-innerbox-right w-8/12 ">
@@ -615,7 +614,7 @@
                                         <div class="select-box flex flex-col w-full">
                                             <label class="ts" for="class-select">選擇課程</label>
                                             <select id="class-select5-rwd" class="selectClass"
-                                                onchange="changeclass_rwd(this)" style="padding: 9px 13px;border-radius:6px;">
+                                                onchange="supchangeclass_rwd(this)" style="padding: 9px 13px;border-radius:6px;">
                                                 <option value="0">請選擇課程</option>
                                                 @foreach ($sup as $item)
                                                     @if ($item->closedate > Carbon\Carbon::now())
@@ -627,15 +626,17 @@
                                         <div class="price-box">
                                             <span class="ts">含保險、器材、救生衣</span>
                                         </div>
-                                        <a id="changelink" target="_blank" href="#"
-                                            class="w-full singUp-btn flex justify-center items-cente">線上報名</a>
+                                        <div id="sup-viewphone-rwd">
+                                            <a id="changelink" href="#"
+                                                class="w-full singUp-btn flex justify-center items-center">線上報名</a>
+                                        </div>
                                         <span class="phone">電洽報名 04-22312698</span>
                                     </div>
                                     <div class="tab w-full">
                                         <ul class="nav nav-tabs flex flex-row flex-wrap list-none border-b-0 items-center"
                                             id="s1-tabs-tab" role="tablist">
                                             <li class="nav-item">
-                                                <a href="#s1-tabs-1"
+                                                <a href="#sup-tabs-1"
                                                     class="
                                                         active
                                                         nav-link
@@ -648,8 +649,8 @@
                                                         border-x-0 border-t-0 border-b-2 border-transparent
                                                         focus:border-transparent
                                                     "
-                                                    id="s1-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-1"
-                                                    role="tab" aria-controls="s1-tabs-1" aria-selected="true"
+                                                    id="sup-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#sup-tabs-1"
+                                                    role="tab" aria-controls="sup-tabs-1" aria-selected="true"
                                                     tabindex="1">
                                                     <span class="tab-span tab-span1">活動介紹</span>
                                                 </a>
@@ -667,8 +668,8 @@
                                                         border-x-0 border-t-0 border-b-2 border-transparent
                                                         focus:border-transparent
                                                     "
-                                                    id="s1-tabs-2-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-2"
-                                                    role="tab" aria-controls="s1-tabs-2" aria-selected="false">
+                                                    id="sup-tabs-2-tab" data-bs-toggle="pill" data-bs-target="#sup-tabs-2"
+                                                    role="tab" aria-controls="sup-tabs-2" aria-selected="false">
                                                     <span class="tab-span tab-span2">課程流程</span>
                                                 </a>
                                             </li>
@@ -685,8 +686,8 @@
                                                         border-x-0 border-t-0 border-b-2 border-transparent
                                                         focus:border-transparent
                                                     "
-                                                    id="s1-tabs-3-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-3"
-                                                    role="tab" aria-controls="s1-tabs-3" aria-selected="false">
+                                                    id="sup-tabs-3-tab" data-bs-toggle="pill" data-bs-target="#sup-tabs-3"
+                                                    role="tab" aria-controls="sup-tabs-3" aria-selected="false">
                                                     <span class="tab-span tab-span3">指導單位</span>
                                                 </a>
                                             </li>
@@ -703,39 +704,31 @@
                                                         border-x-0 border-t-0 border-b-2 border-transparent
                                                         focus:border-transparent
                                                     "
-                                                    id="s1-tabs-4-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-4"
-                                                    role="tab" aria-controls="s1-tabs-4" aria-selected="false">
+                                                    id="sup-tabs-4-tab" data-bs-toggle="pill" data-bs-target="#sup-tabs-4"
+                                                    role="tab" aria-controls="sup-tabs-4" aria-selected="false">
                                                     <span class="tab-span tab-span4">注意事項</span>
                                                 </a>
                                             </li>
                                         </ul>
                                         {{-- @foreach ($data as $item) --}}
                                         <div class="tab-content" id="s1-tabs-tabContent">
-                                            <div class="tabs-1 tab-pane fade show active flex flex-col" id="s1-tabs-1"
-                                                role="tabpanel" aria-labelledby="s1-tabs-1-tab">
-                                                {{-- {!! $data->event_intr !!} --}}
+                                            <div class="tabs-1 tab-pane fade show active flex flex-col" id="sup-tabs-1"
+                                                role="tabpanel" aria-labelledby="sup-tabs-1-tab">
                                                 請選擇課程
                                             </div>
-                                            <div class="tabs-2 tab-pane fade flex flex-col" id="s1-tabs-2" role="tabpanel"
-                                                aria-labelledby="s1-tabs-2-tab">
-                                                {{-- {!! $data->event_proc !!} --}}
+                                            <div class="tabs-2 tab-pane fade flex flex-col" id="sup-tabs-2" role="tabpanel"
+                                                aria-labelledby="sup-tabs-2-tab">
                                                 請選擇課程
-
                                             </div>
-                                            <div class="tabs-3 tab-pane fade flex flex-col" id="s1-tabs-3" role="tabpanel"
-                                                aria-labelledby="s1-tabs-3-tab">
-                                                {{-- {!! $data->event_dire !!} --}}
+                                            <div class="tabs-3 tab-pane fade flex flex-col" id="sup-tabs-3" role="tabpanel"
+                                                aria-labelledby="sup-tabs-3-tab">
                                                 請選擇課程
-
                                             </div>
-                                            <div class="tabs-4 tab-pane fade flex flex-col" id="s1-tabs-4" role="tabpanel"
-                                                aria-labelledby="s1-tabs-4-tab">
-                                                {{-- {!! $data->event_notice !!} --}}
+                                            <div class="tabs-4 tab-pane fade flex flex-col" id="sup-tabs-4" role="tabpanel"
+                                                aria-labelledby="sup-tabs-4-tab">
                                                 請選擇課程
-
                                             </div>
                                         </div>
-                                        {{-- @endforeach --}}
                                     </div>
                                 </div>
                                 <div class="in-in-innerbox-left w-4/12 flex justify-end">
@@ -743,7 +736,7 @@
                                         <div class="select-box flex flex-col w-full">
                                             <div class="select-box flex flex-col w-full">
                                                 <label class="ts" for="class-select5">選擇課程</label>
-                                                <select id="class-select5" class="selectClass" onchange="changeclass(this)"
+                                                <select id="class-select5" class="selectClass" onchange="supchangeclass(this)"
                                                     style="padding: 9px 13px;border-radius:6px;">
                                                     <option value="0">請選擇課程</option>
                                                     @foreach ($sup as $item)
@@ -753,13 +746,15 @@
                                                     @endforeach
                                                 </select>
                                             </div>
-                                            <div class="price-box">
-                                                <span class="ts">含保險、器材、救生衣</span>
-                                            </div>
-                                            <a id="changelink" target="_blank" href="#"
-                                                class="w-full singUp-btn flex justify-center items-center">線上報名</a>
-                                            <span class="phone">電洽報名 04-22312698</span>
                                         </div>
+                                        <div class="price-box">
+                                            <span class="ts">含保險、器材、救生衣</span>
+                                        </div>
+                                        <div id="sup-viewphone">
+                                            <a id="changelink" href="#"
+                                                class="w-full singUp-btn flex justify-center items-center">線上報名</a>
+                                        </div>
+                                        <span class="phone">電洽報名 04-22312698</span>
                                     </div>
                                 </div>
                             </div>
@@ -867,7 +862,7 @@
                                         <div class="select-box flex flex-col w-full">
                                             <label class="ts" for="class-select">選擇課程</label>
                                             <select id="class-select5-rwd" class="selectClass"
-                                                onchange="changeclass_rwd(this)" style="padding: 9px 13px;border-radius:6px;">
+                                                onchange="windsurfchangeclass_rwd(this)" style="padding: 9px 13px;border-radius:6px;">
                                                 <option value="0">請選擇課程</option>
                                                 @foreach ($windsurf as $item)
                                                     @if ($item->closedate > Carbon\Carbon::now())
@@ -879,8 +874,10 @@
                                         <div class="price-box">
                                             <span class="ts">含保險、器材、救生衣</span>
                                         </div>
-                                        <button disabled="true"
-                                            class="w-full singUp-btn flex justify-center items-center">洽詢本會</button>
+                                        <div id="windsurf-viewphone-rwd">
+                                            <a id="changelink" href="#"
+                                                class="w-full singUp-btn flex justify-center items-center">線上報名</a>
+                                        </div>
                                         <span class="phone">電洽報名 04-22312698</span>
                                     </div>
                                     <div class="tab w-full">
@@ -900,8 +897,8 @@
                                                         border-x-0 border-t-0 border-b-2 border-transparent
                                                         focus:border-transparent
                                                     "
-                                                    id="s1-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-1"
-                                                    role="tab" aria-controls="s1-tabs-1" aria-selected="true"
+                                                    id="windsurf-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#windsurf-tabs-1"
+                                                    role="tab" aria-controls="windsurf-tabs-1" aria-selected="true"
                                                     tabindex="1">
                                                     <span class="tab-span tab-span1">活動介紹</span>
                                                 </a>
@@ -919,8 +916,8 @@
                                                         border-x-0 border-t-0 border-b-2 border-transparent
                                                         focus:border-transparent
                                                     "
-                                                    id="s1-tabs-2-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-2"
-                                                    role="tab" aria-controls="s1-tabs-2" aria-selected="false">
+                                                    id="windsurf-tabs-2-tab" data-bs-toggle="pill" data-bs-target="#windsurf-tabs-2"
+                                                    role="tab" aria-controls="windsurf-tabs-2" aria-selected="false">
                                                     <span class="tab-span tab-span2">課程流程</span>
                                                 </a>
                                             </li>
@@ -937,8 +934,8 @@
                                                         border-x-0 border-t-0 border-b-2 border-transparent
                                                         focus:border-transparent
                                                     "
-                                                    id="s1-tabs-3-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-3"
-                                                    role="tab" aria-controls="s1-tabs-3" aria-selected="false">
+                                                    id="windsurf-tabs-3-tab" data-bs-toggle="pill" data-bs-target="#windsurf-tabs-3"
+                                                    role="tab" aria-controls="windsurf-tabs-3" aria-selected="false">
                                                     <span class="tab-span tab-span3">指導單位</span>
                                                 </a>
                                             </li>
@@ -955,39 +952,30 @@
                                                         border-x-0 border-t-0 border-b-2 border-transparent
                                                         focus:border-transparent
                                                     "
-                                                    id="s1-tabs-4-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-4"
-                                                    role="tab" aria-controls="s1-tabs-4" aria-selected="false">
+                                                    id="windsurf-tabs-4-tab" data-bs-toggle="pill" data-bs-target="#windsurf-tabs-4"
+                                                    role="tab" aria-controls="windsurf-tabs-4" aria-selected="false">
                                                     <span class="tab-span tab-span4">注意事項</span>
                                                 </a>
                                             </li>
                                         </ul>
-                                        {{-- @foreach ($data as $item) --}}
                                         <div class="tab-content" id="s1-tabs-tabContent">
-                                            <div class="tabs-1 tab-pane fade show active flex flex-col" id="s1-tabs-1"
-                                                role="tabpanel" aria-labelledby="s1-tabs-1-tab">
-                                                {{-- {!! $data->event_intr !!} --}}
+                                            <div class="tabs-1 tab-pane fade show active flex flex-col" id="windsurf-tabs-1"
+                                                role="tabpanel" aria-labelledby="windsurf-tabs-1-tab">
                                                 請選擇課程
                                             </div>
-                                            <div class="tabs-2 tab-pane fade flex flex-col" id="s1-tabs-2" role="tabpanel"
-                                                aria-labelledby="s1-tabs-2-tab">
-                                                {{-- {!! $data->event_proc !!} --}}
+                                            <div class="tabs-2 tab-pane fade flex flex-col" id="windsurf-tabs-2" role="tabpanel"
+                                                aria-labelledby="windsurf-tabs-2-tab">
                                                 請選擇課程
-
                                             </div>
-                                            <div class="tabs-3 tab-pane fade flex flex-col" id="s1-tabs-3" role="tabpanel"
-                                                aria-labelledby="s1-tabs-3-tab">
-                                                {{-- {!! $data->event_dire !!} --}}
+                                            <div class="tabs-3 tab-pane fade flex flex-col" id="windsurf-tabs-3" role="tabpanel"
+                                                aria-labelledby="windsurf-tabs-3-tab">
                                                 請選擇課程
-
                                             </div>
-                                            <div class="tabs-4 tab-pane fade flex flex-col" id="s1-tabs-4" role="tabpanel"
-                                                aria-labelledby="s1-tabs-4-tab">
-                                                {{-- {!! $data->event_notice !!} --}}
+                                            <div class="tabs-4 tab-pane fade flex flex-col" id="windsurf-tabs-4" role="tabpanel"
+                                                aria-labelledby="windsurf-tabs-4-tab">
                                                 請選擇課程
-
                                             </div>
                                         </div>
-                                        {{-- @endforeach --}}
                                     </div>
                                 </div>
                                 <div class="in-in-innerbox-left w-4/12 flex justify-end">
@@ -995,7 +983,7 @@
                                         <div class="select-box flex flex-col w-full">
                                             <div class="select-box flex flex-col w-full">
                                                 <label class="ts" for="class-select5">選擇課程</label>
-                                                <select id="class-select5" class="selectClass" onchange="changeclass(this)"
+                                                <select id="class-select5" class="selectClass" onchange="windsurfchangeclass(this)"
                                                     style="padding: 9px 13px;border-radius:6px;">
                                                     <option value="0">請選擇課程</option>
                                                     @foreach ($windsurf as $item)
@@ -1009,8 +997,10 @@
                                         <div class="price-box">
                                             <span class="ts">含保險、器材、救生衣</span>
                                         </div>
-                                        <button disabled="true"
-                                            class="w-full singUp-btn flex justify-center items-center">洽詢本會</button>
+                                        <div id="windsurf-viewphone">
+                                            <a id="changelink" href="#"
+                                                class="w-full singUp-btn flex justify-center items-center">線上報名</a>
+                                        </div>
                                         <span class="phone">電洽報名 04-22312698</span>
                                     </div>
                                 </div>
@@ -1114,7 +1104,7 @@
                                         <div class="select-box flex flex-col w-full">
                                             <label class="ts" for="class-select">選擇課程</label>
                                             <select id="class-select5-rwd" class="selectClass"
-                                                onchange="changeclass_rwd(this)" style="padding: 9px 13px;border-radius:6px;">
+                                                onchange="divingchangeclass_rwd(this)" style="padding: 9px 13px;border-radius:6px;">
                                                 <option value="0">請選擇課程</option>
                                                 @foreach ($diving as $item)
                                                     @if ($item->closedate > Carbon\Carbon::now())
@@ -1126,8 +1116,10 @@
                                         <div class="price-box">
                                             <span class="ts">含保險、器材、救生衣</span>
                                         </div>
-                                        <button disabled="true"
-                                            class="w-full singUp-btn flex justify-center items-center">洽詢本會</button>
+                                        <div id="diving-viewphone-rwd">
+                                            <a id="changelink" href="#"
+                                                class="w-full singUp-btn flex justify-center items-center">線上報名</a>
+                                        </div>
                                         <span class="phone">電洽報名 04-22312698</span>
                                     </div>
                                     <div class="tab w-full">
@@ -1147,8 +1139,8 @@
                                                     border-x-0 border-t-0 border-b-2 border-transparent
                                                     focus:border-transparent
                                                 "
-                                                    id="s1-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-1"
-                                                    role="tab" aria-controls="s1-tabs-1" aria-selected="true"
+                                                    id="diving-tabs-1-tab" data-bs-toggle="pill" data-bs-target="#diving-tabs-1"
+                                                    role="tab" aria-controls="diving-tabs-1" aria-selected="true"
                                                     tabindex="1">
                                                     <span class="tab-span tab-span1">活動介紹</span>
                                                 </a>
@@ -1166,8 +1158,8 @@
                                                     border-x-0 border-t-0 border-b-2 border-transparent
                                                     focus:border-transparent
                                                 "
-                                                    id="s1-tabs-2-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-2"
-                                                    role="tab" aria-controls="s1-tabs-2" aria-selected="false">
+                                                    id="diving-tabs-2-tab" data-bs-toggle="pill" data-bs-target="#diving-tabs-2"
+                                                    role="tab" aria-controls="diving-tabs-2" aria-selected="false">
                                                     <span class="tab-span tab-span2">課程流程</span>
                                                 </a>
                                             </li>
@@ -1184,8 +1176,8 @@
                                                     border-x-0 border-t-0 border-b-2 border-transparent
                                                     focus:border-transparent
                                                 "
-                                                    id="s1-tabs-3-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-3"
-                                                    role="tab" aria-controls="s1-tabs-3" aria-selected="false">
+                                                    id="diving-tabs-3-tab" data-bs-toggle="pill" data-bs-target="#diving-tabs-3"
+                                                    role="tab" aria-controls="diving-tabs-3" aria-selected="false">
                                                     <span class="tab-span tab-span3">指導單位</span>
                                                 </a>
                                             </li>
@@ -1202,39 +1194,30 @@
                                                     border-x-0 border-t-0 border-b-2 border-transparent
                                                     focus:border-transparent
                                                 "
-                                                    id="s1-tabs-4-tab" data-bs-toggle="pill" data-bs-target="#s1-tabs-4"
-                                                    role="tab" aria-controls="s1-tabs-4" aria-selected="false">
+                                                    id="diving-tabs-4-tab" data-bs-toggle="pill" data-bs-target="#diving-tabs-4"
+                                                    role="tab" aria-controls="diving-tabs-4" aria-selected="false">
                                                     <span class="tab-span tab-span4">注意事項</span>
                                                 </a>
                                             </li>
                                         </ul>
-                                        {{-- @foreach ($data as $item) --}}
                                         <div class="tab-content" id="s1-tabs-tabContent">
-                                            <div class="tabs-1 tab-pane fade show active flex flex-col" id="s1-tabs-1"
-                                                role="tabpanel" aria-labelledby="s1-tabs-1-tab">
-                                                {{-- {!! $data->event_intr !!} --}}
+                                            <div class="tabs-1 tab-pane fade show active flex flex-col" id="diving-tabs-1"
+                                                role="tabpanel" aria-labelledby="diving-tabs-1-tab">
                                                 請選擇課程
                                             </div>
-                                            <div class="tabs-2 tab-pane fade flex flex-col" id="s1-tabs-2" role="tabpanel"
-                                                aria-labelledby="s1-tabs-2-tab">
-                                                {{-- {!! $data->event_proc !!} --}}
+                                            <div class="tabs-2 tab-pane fade flex flex-col" id="diving-tabs-2" role="tabpanel"
+                                                aria-labelledby="diving-tabs-2-tab">
                                                 請選擇課程
-
                                             </div>
-                                            <div class="tabs-3 tab-pane fade flex flex-col" id="s1-tabs-3" role="tabpanel"
-                                                aria-labelledby="s1-tabs-3-tab">
-                                                {{-- {!! $data->event_dire !!} --}}
+                                            <div class="tabs-3 tab-pane fade flex flex-col" id="diving-tabs-3" role="tabpanel"
+                                                aria-labelledby="diving-tabs-3-tab">
                                                 請選擇課程
-
                                             </div>
-                                            <div class="tabs-4 tab-pane fade flex flex-col" id="s1-tabs-4" role="tabpanel"
-                                                aria-labelledby="s1-tabs-4-tab">
-                                                {{-- {!! $data->event_notice !!} --}}
+                                            <div class="tabs-4 tab-pane fade flex flex-col" id="diving-tabs-4" role="tabpanel"
+                                                aria-labelledby="diving-tabs-4-tab">
                                                 請選擇課程
-
                                             </div>
                                         </div>
-                                        {{-- @endforeach --}}
                                     </div>
                                 </div>
                                 <div class="in-in-innerbox-left w-4/12 flex justify-end">
@@ -1242,12 +1225,9 @@
                                         <div class="select-box flex flex-col w-full">
                                             <div class="select-box flex flex-col w-full">
                                                 <label class="ts" for="class-select5">選擇課程</label>
-                                                <select id="class-select5" class="selectClass" onchange="changeclass(this)"
+                                                <select id="class-select5" class="selectClass" onchange="divingchangeclass(this)"
                                                     style="padding: 9px 13px;border-radius:6px;">
                                                     <option value="0">請選擇課程</option>
-                                                    {{-- <option class="selectSup" value="1">立式划槳</option>
-                                                        <option class="selectSwim" value="2">游泳</option>
-                                                        <option class="selectSaving" value="3">水上救生</option> --}}
                                                     @foreach ($diving as $item)
                                                         @if ($item->closedate > Carbon\Carbon::now())
                                                             <option value="{{ $item->id }}">{{ $item->event }}</option>
@@ -1259,8 +1239,10 @@
                                         <div class="price-box">
                                             <span class="ts">含保險、器材、救生衣</span>
                                         </div>
-                                        <button disabled="true"
-                                            class="w-full singUp-btn flex justify-center items-center">洽詢本會</button>
+                                        <div id="diving-viewphone">
+                                            <a id="changelink" href="#"
+                                                class="w-full singUp-btn flex justify-center items-center">線上報名</a>
+                                        </div>
                                         <span class="phone">電洽報名 04-22312698</span>
                                     </div>
                                 </div>
@@ -1276,83 +1258,495 @@
     <script src="{{ asset('js/classes.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
     <script>
-        function changeclass(getId) {
-            var id = getId.value
-            let formData = new FormData();
-            formData.append('_method', 'POST');
-            formData.append('_token', '{{ csrf_token() }}');
-            if (id == 0) {
-                const sup_intr = document.querySelector('#s1-tabs-1')
-                const sup_proc = document.querySelector('#s1-tabs-2')
-                const sup_dire = document.querySelector('#s1-tabs-3')
-                const sup_notice = document.querySelector('#s1-tabs-4')
-                const formsup = document.querySelector('#supform')
-                sup_intr.innerHTML = "請選擇課程"
-                sup_proc.innerHTML = "請選擇課程"
-                sup_dire.innerHTML = "請選擇課程"
-                sup_notice.innerHTML = "請選擇課程"
-            } else {
-                fetch('/changeclasses/' + id, {
-                        method: 'POST',
-                        body: formData
-                    })
-                    .then(response => {
-                        return response.json();
-                    }).then(data => {
-                        const sup_intr = document.querySelector('#s1-tabs-1')
-                        const sup_proc = document.querySelector('#s1-tabs-2')
-                        const sup_dire = document.querySelector('#s1-tabs-3')
-                        const sup_notice = document.querySelector('#s1-tabs-4')
-                        const formsup = document.querySelector('#supform')
-                        const link = document.querySelector('#changelink')
-                        sup_intr.innerHTML = data.event_intr
-                        sup_proc.innerHTML = data.event_proc
-                        sup_dire.innerHTML = data.event_dire
-                        sup_notice.innerHTML = data.event_notice
-                        console.log(link);
-                        document.getElementById("changelink").href = data.link;
-                    })
-            }
-        }
+        // 潛水 modal 設定
 
-        function changeclass_rwd(getId) {
-            var id = getId.value
-            let formData = new FormData();
-            formData.append('_method', 'POST');
-            formData.append('_token', '{{ csrf_token() }}');
-            if (id == 0) {
-                const sup_intr = document.querySelector('#s1-tabs-1')
-                const sup_proc = document.querySelector('#s1-tabs-2')
-                const sup_dire = document.querySelector('#s1-tabs-3')
-                const sup_notice = document.querySelector('#s1-tabs-4')
-                const formsup = document.querySelector('#supform')
-                const sup_price = document.querySelector('#price')
-                sup_intr.innerHTML = "請選擇課程"
-                sup_proc.innerHTML = "請選擇課程"
-                sup_dire.innerHTML = "請選擇課程"
-                sup_notice.innerHTML = "請選擇課程"
-                sup_price.innerHTML = "NT"
-            } else {
-                fetch('/changeclasses/' + id, {
-                        method: 'POST',
-                        body: formData
-                    })
-                    .then(response => {
-                        return response.json();
-                    }).then(data => {
-                        const sup_intr = document.querySelector('#s1-tabs-1')
-                        const sup_proc = document.querySelector('#s1-tabs-2')
-                        const sup_dire = document.querySelector('#s1-tabs-3')
-                        const sup_notice = document.querySelector('#s1-tabs-4')
-                        const formsup_rwd = document.querySelector('#supform-rwd')
-                        const link = document.querySelector('#changelink1')
-                        sup_intr.innerHTML = data.event_intr
-                        sup_proc.innerHTML = data.event_proc
-                        sup_dire.innerHTML = data.event_dire
-                        sup_notice.innerHTML = data.event_notice
-                        document.getElementById("changelink1").href = data.link;
-                    })
-            }
-        }
+function divingchangeclass(getId) {
+    var id = getId.value
+    let formData = new FormData();
+    formData.append('_method', 'POST');
+    formData.append('_token', '{{ csrf_token() }}');
+    if (id == 0) {
+        const diving_intr = document.querySelector('#diving-tabs-1')
+        const diving_proc = document.querySelector('#diving-tabs-2')
+        const diving_dire = document.querySelector('#diving-tabs-3')
+        const diving_notice = document.querySelector('#diving-tabs-4')
+        const viewphone = document.querySelector('#diving-viewphone')
+        diving_intr.innerHTML = "請選擇課程"
+        diving_proc.innerHTML = "請選擇課程"
+        diving_dire.innerHTML = "請選擇課程"
+        diving_notice.innerHTML = "請選擇課程"
+        viewphone.innerHTML = `<a id="changelink" target="_blank" href="#"
+                                        class="w-full singUp-btn flex justify-center items-center">線上報名</a>`
+    } else {
+        fetch('/changeclasses/' + id, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                return response.json();
+            }).then(data => {
+                const diving_intr = document.querySelector('#diving-tabs-1')
+                const diving_proc = document.querySelector('#diving-tabs-2')
+                const diving_dire = document.querySelector('#diving-tabs-3')
+                const diving_notice = document.querySelector('#diving-tabs-4')
+                const viewphone = document.querySelector('#diving-viewphone')
+                diving_intr.innerHTML = data.event_intr
+                diving_proc.innerHTML = data.event_proc
+                diving_dire.innerHTML = data.event_dire
+                diving_notice.innerHTML = data.event_notice
+                if (data.link == null) {
+                    viewphone.innerHTML = `<div
+                                        class="w-full singUp-btn flex justify-center items-center"><span style="margin-right:10px;">報名請洽</span>
+                                        <div class="flex phone-content flex-col justify-center items-center">
+                                        <p>協會 連絡電話：04-22312698</p>
+                                        <p>總教練 詹寓崵：0930-975535</p></div></div>`
+                }else{
+                    viewphone.innerHTML = `<a id="changelink" target="_blank" href="${data.link}"
+                                        class="w-full singUp-btn flex justify-center items-center">線上報名</a>`
+                }
+            })
+    }
+}
+
+function divingchangeclass_rwd(getId) {
+    var id = getId.value
+    let formData = new FormData();
+    formData.append('_method', 'POST');
+    formData.append('_token', '{{ csrf_token() }}');
+    if (id == 0) {
+        const diving_intr = document.querySelector('#diving-tabs-1')
+        const diving_proc = document.querySelector('#diving-tabs-2')
+        const diving_dire = document.querySelector('#diving-tabs-3')
+        const diving_notice = document.querySelector('#diving-tabs-4')
+        const viewphone = document.querySelector('#diving-viewphone-rwd')
+        diving_intr.innerHTML = "請選擇課程"
+        diving_proc.innerHTML = "請選擇課程"
+        diving_dire.innerHTML = "請選擇課程"
+        diving_notice.innerHTML = "請選擇課程"
+        viewphone.innerHTML = `<a id="changelink" target="_blank" href="#"
+                                        class="w-full singUp-btn flex justify-center items-center">線上報名</a>`
+    } else {
+        fetch('/changeclasses/' + id, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                return response.json();
+            }).then(data => {
+                const diving_intr = document.querySelector('#diving-tabs-1')
+                const diving_proc = document.querySelector('#diving-tabs-2')
+                const diving_dire = document.querySelector('#diving-tabs-3')
+                const diving_notice = document.querySelector('#diving-tabs-4')
+                const viewphone = document.querySelector('#diving-viewphone-rwd')
+                diving_intr.innerHTML = data.event_intr
+                diving_proc.innerHTML = data.event_proc
+                diving_dire.innerHTML = data.event_dire
+                diving_notice.innerHTML = data.event_notice
+                if (data.link == null) {
+                    viewphone.innerHTML = `<div
+                                        class="w-full singUp-btn flex justify-center items-center"><span style="margin-right:10px;">報名請洽</span>
+                                        <div class="flex phone-content flex-col justify-center items-center">
+                                        <p>協會 連絡電話：04-22312698</p>
+                                        <p>總教練 詹寓崵：0930-975535</p></div></div>`
+                }else{
+                    viewphone.innerHTML = `<a id="changelink" target="_blank" href="${data.link}"
+                                        class="w-full singUp-btn flex justify-center items-center">線上報名</a>`
+                }
+            })
+    }
+}
+
+// 風浪板 modal 設定
+
+function windsurfchangeclass(getId) {
+    var id = getId.value
+    let formData = new FormData();
+    formData.append('_method', 'POST');
+    formData.append('_token', '{{ csrf_token() }}');
+    if (id == 0) {
+        const windsurf_intr = document.querySelector('#windsurf-tabs-1')
+        const windsurf_proc = document.querySelector('#windsurf-tabs-2')
+        const windsurf_dire = document.querySelector('#windsurf-tabs-3')
+        const windsurf_notice = document.querySelector('#windsurf-tabs-4')
+        const viewphone = document.querySelector('#windsurf-viewphone')
+        windsurf_intr.innerHTML = "請選擇課程"
+        windsurf_proc.innerHTML = "請選擇課程"
+        windsurf_dire.innerHTML = "請選擇課程"
+        windsurf_notice.innerHTML = "請選擇課程"
+        viewphone.innerHTML = `<a id="changelink" href="#"
+                                        class="w-full singUp-btn flex justify-center items-center">線上報名</a>`
+    } else {
+        fetch('/changeclasses/' + id, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                return response.json();
+            }).then(data => {
+                const windsurf_intr = document.querySelector('#windsurf-tabs-1')
+                const windsurf_proc = document.querySelector('#windsurf-tabs-2')
+                const windsurf_dire = document.querySelector('#windsurf-tabs-3')
+                const windsurf_notice = document.querySelector('#windsurf-tabs-4')
+                const viewphone = document.querySelector('#windsurf-viewphone')
+                windsurf_intr.innerHTML = data.event_intr
+                windsurf_proc.innerHTML = data.event_proc
+                windsurf_dire.innerHTML = data.event_dire
+                windsurf_notice.innerHTML = data.event_notice
+                console.log(data.link);
+                if (data.link == null) {
+                    viewphone.innerHTML = `<div
+                                        class="w-full singUp-btn flex justify-center items-center"><span style="margin-right:10px;">報名請洽</span>
+                                        <div class="flex phone-content flex-col justify-center items-center">
+                                        <p>協會 連絡電話：04-22312698</p>
+                                        <p>總教練 詹寓崵：0930-975535</p></div></div>`
+                }else{
+                    viewphone.innerHTML = `<a id="changelink" target="_blank" href="${data.link}"
+                                        class="w-full singUp-btn flex justify-center items-center">線上報名</a>`
+                }
+            })
+    }
+}
+
+function windsurfchangeclass_rwd(getId) {
+    var id = getId.value
+    let formData = new FormData();
+    formData.append('_method', 'POST');
+    formData.append('_token', '{{ csrf_token() }}');
+    if (id == 0) {
+        const windsurf_intr = document.querySelector('#windsurf-tabs-1')
+        const windsurf_proc = document.querySelector('#windsurf-tabs-2')
+        const windsurf_dire = document.querySelector('#windsurf-tabs-3')
+        const windsurf_notice = document.querySelector('#windsurf-tabs-4')
+        const viewphone = document.querySelector('#windsurf-viewphone-rwd')
+        windsurf_intr.innerHTML = "請選擇課程"
+        windsurf_proc.innerHTML = "請選擇課程"
+        windsurf_dire.innerHTML = "請選擇課程"
+        windsurf_notice.innerHTML = "請選擇課程"
+        viewphone.innerHTML = `<a id="changelink" href="#"
+                                        class="w-full singUp-btn flex justify-center items-center">線上報名</a>`
+    } else {
+        fetch('/changeclasses/' + id, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                return response.json();
+            }).then(data => {
+                const windsurf_intr = document.querySelector('#windsurf-tabs-1')
+                const windsurf_proc = document.querySelector('#windsurf-tabs-2')
+                const windsurf_dire = document.querySelector('#windsurf-tabs-3')
+                const windsurf_notice = document.querySelector('#windsurf-tabs-4')
+                const viewphone = document.querySelector('#windsurf-viewphone-rwd')
+                windsurf_intr.innerHTML = data.event_intr
+                windsurf_proc.innerHTML = data.event_proc
+                windsurf_dire.innerHTML = data.event_dire
+                windsurf_notice.innerHTML = data.event_notice
+                if (data.link == null) {
+                    viewphone.innerHTML = `<div
+                                        class="w-full singUp-btn flex justify-center items-center"><span style="margin-right:10px;">報名請洽</span>
+                                        <div class="flex phone-content flex-col justify-center items-center">
+                                        <p>協會 連絡電話：04-22312698</p>
+                                        <p>總教練 詹寓崵：0930-975535</p></div></div>`
+                }else{
+                    viewphone.innerHTML = `<a id="changelink" target="_blank" href="${data.link}"
+                                        class="w-full singUp-btn flex justify-center items-center">線上報名</a>`
+                }
+            })
+    }
+}
+
+// 游泳 modal 設定
+
+function swimmingchangeclass(getId) {
+    var id = getId.value
+    let formData = new FormData();
+    formData.append('_method', 'POST');
+    formData.append('_token', '{{ csrf_token() }}');
+    if (id == 0) {
+        const swimming_intr = document.querySelector('#swimming-tabs-1')
+        const swimming_proc = document.querySelector('#swimming-tabs-2')
+        const swimming_dire = document.querySelector('#swimming-tabs-3')
+        const swimming_notice = document.querySelector('#swimming-tabs-4')
+        const viewphone = document.querySelector('#swimming-viewphone')
+        swimming_intr.innerHTML = "請選擇課程"
+        swimming_proc.innerHTML = "請選擇課程"
+        swimming_dire.innerHTML = "請選擇課程"
+        swimming_notice.innerHTML = "請選擇課程"
+        viewphone.innerHTML = `<a id="changelink" target="_blank" href="#"
+                                        class="w-full singUp-btn flex justify-center items-center">線上報名</a>`
+    } else {
+        fetch('/changeclasses/' + id, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                return response.json();
+            }).then(data => {
+                const swimming_intr = document.querySelector('#swimming-tabs-1')
+                const swimming_proc = document.querySelector('#swimming-tabs-2')
+                const swimming_dire = document.querySelector('#swimming-tabs-3')
+                const swimming_notice = document.querySelector('#swimming-tabs-4')
+                const viewphone = document.querySelector('#swimming-viewphone')
+                swimming_intr.innerHTML = data.event_intr
+                swimming_proc.innerHTML = data.event_proc
+                swimming_dire.innerHTML = data.event_dire
+                swimming_notice.innerHTML = data.event_notice
+                if (data.link == null) {
+                    viewphone.innerHTML = `<div
+                                        class="w-full singUp-btn flex justify-center items-center"><span style="margin-right:10px;">報名請洽</span>
+                                        <div class="flex phone-content flex-col justify-center items-center">
+                                        <p>協會 連絡電話：04-22312698</p>
+                                        <p>總教練 詹寓崵：0930-975535</p></div></div>`
+                }else{
+                    viewphone.innerHTML = `<a id="changelink" target="_blank" href="${data.link}"
+                                        class="w-full singUp-btn flex justify-center items-center">線上報名</a>`
+                }
+            })
+    }
+}
+
+function swimmingchangeclass_rwd(getId) {
+    var id = getId.value
+    let formData = new FormData();
+    formData.append('_method', 'POST');
+    formData.append('_token', '{{ csrf_token() }}');
+    if (id == 0) {
+        const swimming_intr = document.querySelector('#swimming-tabs-1')
+        const swimming_proc = document.querySelector('#swimming-tabs-2')
+        const swimming_dire = document.querySelector('#swimming-tabs-3')
+        const swimming_notice = document.querySelector('#swimming-tabs-4')
+        const viewphone = document.querySelector('#swimming-viewphone-rwd')
+        swimming_intr.innerHTML = "請選擇課程"
+        swimming_proc.innerHTML = "請選擇課程"
+        swimming_dire.innerHTML = "請選擇課程"
+        swimming_notice.innerHTML = "請選擇課程"
+        viewphone.innerHTML = `<a id="changelink" target="_blank" href="#"
+                                        class="w-full singUp-btn flex justify-center items-center">線上報名</a>`
+    } else {
+        fetch('/changeclasses/' + id, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                return response.json();
+            }).then(data => {
+                const swimming_intr = document.querySelector('#swimming-tabs-1')
+                const swimming_proc = document.querySelector('#swimming-tabs-2')
+                const swimming_dire = document.querySelector('#swimming-tabs-3')
+                const swimming_notice = document.querySelector('#swimming-tabs-4')
+                const viewphone = document.querySelector('#swimming-viewphone-rwd')
+                swimming_intr.innerHTML = data.event_intr
+                swimming_proc.innerHTML = data.event_proc
+                swimming_dire.innerHTML = data.event_dire
+                swimming_notice.innerHTML = data.event_notice
+                if (data.link == null) {
+                    viewphone.innerHTML = `<div
+                                        class="w-full singUp-btn flex justify-center items-center"><span style="margin-right:10px;">報名請洽</span>
+                                        <div class="flex phone-content flex-col justify-center items-center">
+                                        <p>協會 連絡電話：04-22312698</p>
+                                        <p>總教練 詹寓崵：0930-975535</p></div></div>`
+                }else{
+                    viewphone.innerHTML = `<a id="changelink" target="_blank" href="${data.link}"
+                                        class="w-full singUp-btn flex justify-center items-center">線上報名</a>`
+                }
+            })
+    }
+}
+
+// 救生 modal 設定
+
+function savingchangeclass(getId) {
+    var id = getId.value
+    let formData = new FormData();
+    formData.append('_method', 'POST');
+    formData.append('_token', '{{ csrf_token() }}');
+    if (id == 0) {
+        const saving_intr = document.querySelector('#saving-tabs-1')
+        const saving_proc = document.querySelector('#saving-tabs-2')
+        const saving_dire = document.querySelector('#saving-tabs-3')
+        const saving_notice = document.querySelector('#saving-tabs-4')
+        const viewphone = document.querySelector('#saving-viewphone')
+        saving_intr.innerHTML = "請選擇課程"
+        saving_proc.innerHTML = "請選擇課程"
+        saving_dire.innerHTML = "請選擇課程"
+        saving_notice.innerHTML = "請選擇課程"
+        viewphone.innerHTML = `<a id="changelink" target="_blank" href="#"
+                                        class="w-full singUp-btn flex justify-center items-center">線上報名</a>`
+    } else {
+        fetch('/changeclasses/' + id, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                return response.json();
+            }).then(data => {
+                const saving_intr = document.querySelector('#saving-tabs-1')
+                const saving_proc = document.querySelector('#saving-tabs-2')
+                const saving_dire = document.querySelector('#saving-tabs-3')
+                const saving_notice = document.querySelector('#saving-tabs-4')
+                const viewphone = document.querySelector('#saving-viewphone')
+                saving_intr.innerHTML = data.event_intr
+                saving_proc.innerHTML = data.event_proc
+                saving_dire.innerHTML = data.event_dire
+                saving_notice.innerHTML = data.event_notice
+                if (data.link == null) {
+                    viewphone.innerHTML = `<div
+                                        class="w-full singUp-btn flex justify-center items-center"><span style="margin-right:10px;">報名請洽</span>
+                                        <div class="flex phone-content flex-col justify-center items-center">
+                                        <p>協會 連絡電話：04-22312698</p>
+                                        <p>總教練 詹寓崵：0930-975535</p></div></div>`
+                }else{
+                    viewphone.innerHTML = `<a id="changelink" target="_blank" href="${data.link}"
+                                        class="w-full singUp-btn flex justify-center items-center">線上報名</a>`
+                }
+            })
+    }
+}
+
+function savingchangeclass_rwd(getId) {
+    var id = getId.value
+    let formData = new FormData();
+    formData.append('_method', 'POST');
+    formData.append('_token', '{{ csrf_token() }}');
+    if (id == 0) {
+        const saving_intr = document.querySelector('#saving-tabs-1')
+        const saving_proc = document.querySelector('#saving-tabs-2')
+        const saving_dire = document.querySelector('#saving-tabs-3')
+        const saving_notice = document.querySelector('#saving-tabs-4')
+        const viewphone = document.querySelector('#saving-viewphone-rwd')
+        saving_intr.innerHTML = "請選擇課程"
+        saving_proc.innerHTML = "請選擇課程"
+        saving_dire.innerHTML = "請選擇課程"
+        saving_notice.innerHTML = "請選擇課程"
+        viewphone.innerHTML = `<a id="changelink" target="_blank" href="#"
+                                        class="w-full singUp-btn flex justify-center items-center">線上報名</a>`
+    } else {
+        fetch('/changeclasses/' + id, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                return response.json();
+            }).then(data => {
+                const saving_intr = document.querySelector('#saving-tabs-1')
+                const saving_proc = document.querySelector('#saving-tabs-2')
+                const saving_dire = document.querySelector('#saving-tabs-3')
+                const saving_notice = document.querySelector('#saving-tabs-4')
+                const viewphone = document.querySelector('#saving-viewphone-rwd')
+                saving_intr.innerHTML = data.event_intr
+                saving_proc.innerHTML = data.event_proc
+                saving_dire.innerHTML = data.event_dire
+                saving_notice.innerHTML = data.event_notice
+                if (data.link == null) {
+                    viewphone.innerHTML = `<div
+                                        class="w-full singUp-btn flex justify-center items-center"><span style="margin-right:10px;">報名請洽</span>
+                                        <div class="flex phone-content flex-col justify-center items-center">
+                                        <p>協會 連絡電話：04-22312698</p>
+                                        <p>總教練 詹寓崵：0930-975535</p></div></div>`
+                }else{
+                    viewphone.innerHTML = `<a id="changelink" target="_blank" href="${data.link}"
+                                        class="w-full singUp-btn flex justify-center items-center">線上報名</a>`
+                }
+            })
+    }
+}
+
+// sup modal 設定
+
+function supchangeclass(getId) {
+    var id = getId.value
+    let formData = new FormData();
+    formData.append('_method', 'POST');
+    formData.append('_token', '{{ csrf_token() }}');
+    if (id == 0) {
+        const sup_intr = document.querySelector('#sup-tabs-1')
+        const sup_proc = document.querySelector('#sup-tabs-2')
+        const sup_dire = document.querySelector('#sup-tabs-3')
+        const sup_notice = document.querySelector('#sup-tabs-4')
+        const viewphone = document.querySelector('#sup-viewphone')
+        sup_intr.innerHTML = "請選擇課程"
+        sup_proc.innerHTML = "請選擇課程"
+        sup_dire.innerHTML = "請選擇課程"
+        sup_notice.innerHTML = "請選擇課程"
+        viewphone.innerHTML = `<a id="changelink" target="_blank" href="#"
+                                        class="w-full singUp-btn flex justify-center items-center">線上報名</a>`
+    } else {
+        fetch('/changeclasses/' + id, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                return response.json();
+            }).then(data => {
+                const sup_intr = document.querySelector('#sup-tabs-1')
+                const sup_proc = document.querySelector('#sup-tabs-2')
+                const sup_dire = document.querySelector('#sup-tabs-3')
+                const sup_notice = document.querySelector('#sup-tabs-4')
+                const viewphone = document.querySelector('#sup-viewphone')
+                sup_intr.innerHTML = data.event_intr
+                sup_proc.innerHTML = data.event_proc
+                sup_dire.innerHTML = data.event_dire
+                sup_notice.innerHTML = data.event_notice
+                if (data.link == null) {
+                    viewphone.innerHTML = `<div
+                                        class="w-full singUp-btn flex justify-center items-center"><span style="margin-right:10px;">報名請洽</span>
+                                        <div class="flex phone-content flex-col justify-center items-center">
+                                        <p>協會 連絡電話：04-22312698</p>
+                                        <p>總教練 詹寓崵：0930-975535</p></div></div>`
+                }else{
+                    viewphone.innerHTML = `<a id="changelink" target="_blank" href="${data.link}"
+                                        class="w-full singUp-btn flex justify-center items-center">線上報名</a>`
+                }
+            })
+    }
+}
+
+function supchangeclass_rwd(getId) {
+    var id = getId.value
+    let formData = new FormData();
+    formData.append('_method', 'POST');
+    formData.append('_token', '{{ csrf_token() }}');
+    if (id == 0) {
+        const sup_intr = document.querySelector('#sup-tabs-1')
+        const sup_proc = document.querySelector('#sup-tabs-2')
+        const sup_dire = document.querySelector('#sup-tabs-3')
+        const sup_notice = document.querySelector('#sup-tabs-4')
+        const viewphone = document.querySelector('#sup-viewphone-rwd')
+        sup_intr.innerHTML = "請選擇課程"
+        sup_proc.innerHTML = "請選擇課程"
+        sup_dire.innerHTML = "請選擇課程"
+        sup_notice.innerHTML = "請選擇課程"
+        viewphone.innerHTML = `<a id="changelink" target="_blank" href="#"
+                                        class="w-full singUp-btn flex justify-center items-center">線上報名</a>`
+    } else {
+        fetch('/changeclasses/' + id, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                return response.json();
+            }).then(data => {
+                const sup_intr = document.querySelector('#sup-tabs-1')
+                const sup_proc = document.querySelector('#sup-tabs-2')
+                const sup_dire = document.querySelector('#sup-tabs-3')
+                const sup_notice = document.querySelector('#sup-tabs-4')
+                const viewphone = document.querySelector('#sup-viewphone-rwd')
+                sup_intr.innerHTML = data.event_intr
+                sup_proc.innerHTML = data.event_proc
+                sup_dire.innerHTML = data.event_dire
+                sup_notice.innerHTML = data.event_notice
+                if (data.link == null) {
+                    viewphone.innerHTML = `<div
+                                        class="w-full singUp-btn flex justify-center items-center"><span style="margin-right:10px;">報名請洽</span>
+                                        <div class="flex phone-content flex-col justify-center items-center">
+                                        <p>協會 連絡電話：04-22312698</p>
+                                        <p>總教練 詹寓崵：0930-975535</p></div></div>`
+                }else{
+                    viewphone.innerHTML = `<a id="changelink" target="_blank" href="${data.link}"
+                                        class="w-full singUp-btn flex justify-center items-center">線上報名</a>`
+                }
+            })
+    }
+}
     </script>
 @endsection

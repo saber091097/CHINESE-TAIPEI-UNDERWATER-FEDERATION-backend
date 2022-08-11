@@ -108,13 +108,13 @@
                         <textarea name="event_intr" id="event_intr" cols="65" rows="10" style="border-radius:5px;">{!! $data->event_intr !!}</textarea>
                     </div>
                     <div id="changetext" @if ($data->anno_type == 2) hidden @endif>
-                        <div class="event_proc flex">
-                            <div>課程流程：</div>
-                            <textarea name="event_proc" id="event_proc" cols="65" rows="10" style="border-radius:5px;">{!! $data->event_proc !!}</textarea>
-                        </div>
                         <div class="event_dire flex" style="margin: 10px 0;">
                             <div>指導單位：</div>
                             <textarea name="event_dire" id="event_dire" cols="65" rows="5" style="border-radius:5px;">{!! $data->event_dire !!}</textarea>
+                        </div>
+                        <div class="event_proc flex">
+                            <div>課程流程：</div>
+                            <textarea name="event_proc" id="event_proc" cols="65" rows="10" style="border-radius:5px;">{!! $data->event_proc !!}</textarea>
                         </div>
                         <div class="event_notice flex">
                             <div>注意事項：</div>

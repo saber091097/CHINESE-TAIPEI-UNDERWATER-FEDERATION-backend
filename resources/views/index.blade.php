@@ -53,7 +53,7 @@
                                 ，由德國、比利時、巴西、法國、希臘、義大利、摩納哥、葡萄牙、瑞士、美國、南斯拉夫 等11
                                 個國家，在比利時首都布魯塞爾，所共同成立的聯盟組織。CMAS是一個獨立的非營利組織，目前已分佈於一百多個國家，有超過千萬人數的會員，及實際參與的潛水員和無數的潛水中心、俱樂部加入，是世界各地認同的國際合格認證系統。
                             </p>
-                            <a href="https://www.cmas.org" class="flex">
+                            <a href="https://www.cmas.org" target="_blank" class="flex">
                                 了解更多
                                 <svg xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -97,7 +97,7 @@
                                 Instructor)的簡稱，成立於1966年，總部位於美國加州，為世界最大的潛水會員組織，同時也是世界領先的水肺潛水訓練機構。協會擁有數十年的管理經驗，已有超過2,500萬的會員數，提供24種教學語言同時也有PADI
                                 elearning網上教學，一般在4-7即可完成初級課程學習。 PADI協會更關注學員在取得潛水牌時會更注重海洋生態的環境保護。
                             </p>
-                            <a href="https://www.padi.com/zh-hant" class="flex">
+                            <a href="https://www.padi.com/zh-hant" target="_blank" class="flex">
                                 了解更多
                                 <svg xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -140,7 +140,7 @@
                                 以SUP立式划槳教練課程,選修風浪板、獨木舟三合一Windsupyak板，推動水上運動觀光及帶動地方觀光和繁榮提升SUP風浪板/獨木舟運動風氣及培訓專業教練人才。
                                 發展專利著作SUPTUF(中華民國立式划槳浪板訓練協會)教學系統認證。有品牌有信譽的標章SUPTUF已經榮獲中華民國經濟部智慧財產局註冊、認證。
                             </p>
-                            <a href="/about" class="flex">
+                            <a href="https://www.instagram.com/suptuf/" target="_blank" class="flex">
                                 了解更多
                                 <svg xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -404,24 +404,25 @@
                 </div>
 
             </a>
-            <a href="/classes" class="w-1/2 relative classesimg">
+            <div class="w-1/2 relative classesimg">
                 <div class="gray w-full h-full absolute top-0">
                 </div>
                 <div class="h-full">
                     <figure class="h-full"><img src="/img/Rectangle78.png" /></figure>
                 </div>
                 <div class="classescontent absolute flex flex-col">
-                    <div class="title">課程</div>
-                    <div class="link flex ">
-                        <span>了解更多</span>
+                    <div class="title">熱門連結</div>
+                    <div class="hot flex ">
+                        <a href="http://www.pennondive.com" class="flex" target="_blank">
+                         <span style="color: #d9a540;">鵬隆潛水</span>
                         <svg xmlns="http://www.w3.org/2000/svg">
                             <path
                             d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
-                        </svg>
+                        </svg></a>
                     </div>
                 </div>
 
-            </a>
+            </div>
         </div>
         @endsection
 

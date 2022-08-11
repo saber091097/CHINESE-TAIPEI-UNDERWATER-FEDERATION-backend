@@ -10,7 +10,7 @@ class HtmlController extends Controller
     //
 
     public function Pastpresidents(){
-        $data= NewLeader::get();
+        $data= NewLeader::orderBy('year','asc')->get();
         return view('about_us.Past-presidents',compact('data'));
     }
 

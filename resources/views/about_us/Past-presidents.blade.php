@@ -35,18 +35,18 @@
                 </div>
                 <table class="w-full ">
                     <thead >
-                        <tr class="flex">
-                            <td class="flex items-center">年份</td>
-                            <td class="flex items-center">姓名</td>
-                            <td class="flex items-center">職稱</td>
+                        <tr>
+                            <td class="">年份</td>
+                            <td class="">職稱</td>
+                            <td class="">姓名</td>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($data as $item)
-                        <tr class="flex" style="width:1000px">
-                            <td class="flex items-center year">{{$item->year}}</td>
-                            <td class="flex items-center">{{$item->name}}</td>
-                            <td class="flex items-center" style="width: 300px;">{{$item->position}}</td>
+                        <tr class="" style="width:1000px">
+                            <td class="year">{{$item->year}}</td>
+                            <td class="">{{$item->position}}</td>
+                            <td class="">{{$item->name}}</td>
                         </tr>
                         @endforeach
                     </tbody>
