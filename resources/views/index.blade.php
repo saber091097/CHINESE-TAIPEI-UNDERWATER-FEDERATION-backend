@@ -411,33 +411,37 @@
                     <figure class="h-full"><img src="/img/Rectangle78.png" /></figure>
                 </div>
                 <div class="classescontent absolute flex flex-col">
-                    <div class="title">熱門連結</div>
-                    <div class="hot flex">
-                        <a href="http://www.pennondive.com" class="flex justify-between w-full" target="_blank">
-                            <span class="flex">鵬隆潛水</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" >
-                                <path
-                                d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
-                            </svg>
-                        </a>
+                    <div class="title flex justify-center w-full">
+                        <span>熱門連結</span>
                     </div>
-                    <div class="hot flex" style="margin: 32px 0;">
-                        <a href="https://www.facebook.com/groups/275355242947" class="flex justify-between w-full" target="_blank">
-                            <span class="flex">facebook</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" >
-                                <path
-                                d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="hot flex">
-                        <a href="https://www.instagram.com/suptuf/" class="flex justify-between w-full" target="_blank">
-                            <span class="flex">instagram</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" >
-                                <path
-                                d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
-                            </svg>
-                        </a>
+                    <div class="link flex" style="width: auto;">
+                        <div class="hot flex">
+                            <a href="http://www.pennondive.com" class="flex justify-around w-full" target="_blank">
+                                <span>鵬隆潛水</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" >
+                                    <path
+                                    d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="hot flex" >
+                            <a href="https://www.facebook.com/groups/275355242947" class="flex justify-around w-full" target="_blank">
+                                <span>facebook</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" >
+                                    <path
+                                    d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="hot flex">
+                            <a href="https://www.instagram.com/suptuf/" class="flex justify-around w-full" target="_blank">
+                                <span>instagram</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" >
+                                    <path
+                                    d="M13.1727 12L8.22266 7.04999L9.63666 5.63599L16.0007 12L9.63666 18.364L8.22266 16.95L13.1727 12Z" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
 

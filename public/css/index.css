@@ -1594,17 +1594,15 @@ details summary::-webkit-details-marker {
 }
 
 * body .container .bottomimg .eventimg .eventcontent .link svg {
-    margin-left: 7px;
     width: 24px;
     height: 24px;
     fill: white;
 }
 
 * body .container .bottomimg .eventimg .eventcontent .hot svg {
-    margin-left: 7px;
     width: 24px;
     height: 24px;
-    fill: #d9a540;
+    fill: white;
 }
 
 * body .container .bottomimg .eventimg .gray {
@@ -1643,11 +1641,11 @@ details summary::-webkit-details-marker {
 }
 
 * body .container .bottomimg .classesimg .classescontent {
-    width: 112px;
+    width: auto;
     left: 50%;
-    top: 30%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
 }
 
 * body .container .bottomimg .classesimg .classescontent .title {
@@ -1658,13 +1656,16 @@ details summary::-webkit-details-marker {
     margin-top: 8px;
 }
 
+* body .container .bottomimg .classesimg .classescontent .hot{
+    width: 150px;
+}
+
 * body .container .bottomimg .classesimg .classescontent .hot span {
     color: white;
     height: 24px;
 }
 
 * body .container .bottomimg .classesimg .classescontent .hot svg {
-    margin-left: 7px;
     width: 24px;
     height: 24px;
     fill: white;
