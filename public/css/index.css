@@ -1645,7 +1645,7 @@ details summary::-webkit-details-marker {
 * body .container .bottomimg .classesimg .classescontent {
     width: 112px;
     left: 50%;
-    bottom: 64px;
+    top: 30%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
 }
@@ -1658,12 +1658,12 @@ details summary::-webkit-details-marker {
     margin-top: 8px;
 }
 
-* body .container .bottomimg .classesimg .classescontent .link span {
+* body .container .bottomimg .classesimg .classescontent .hot span {
     color: white;
     height: 24px;
 }
 
-* body .container .bottomimg .classesimg .classescontent .link svg {
+* body .container .bottomimg .classesimg .classescontent .hot svg {
     margin-left: 7px;
     width: 24px;
     height: 24px;

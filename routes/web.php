@@ -77,7 +77,7 @@ Route::prefix('/events')->group(function () {
 
     Route::get('/create', [EventController::class,'create']);
     Route::post('/store', [EventController::class,'store']);
-    
+
     Route::get('/copy/{id}', [EventController::class,'copy']);
 
     Route::get('/edit/{id}', [EventController::class,'edit']);
@@ -166,7 +166,7 @@ Route::get('/classes', [ClassesController::class,'classes']);
 Route::post('/changeclasses/{id}', [ClassesController::class,'changeclass']);
 
 
-Route::get('/createAccount', [ClientController::class,'createAccount']);
+// Route::get('/createAccount', [ClientController::class,'createAccount']);
 Route::post('/createAccount/store', [ClientController::class,'store']);
 Route::post('/account/login', [ClientController::class,'login']);
 

@@ -276,7 +276,7 @@
                                 <input type="password" name="password" id="password" placeholder="••••••••"
                                     class="text-gray-900 text-sm block w-full p-2.5">
                             </div>
-                            <div class="flex justify-between my-3">
+                            {{-- <div class="flex justify-between my-3">
                                 <div class="flex items-start">
                                     <div class="flex items-center h-5">
                                         <input id="remember" type="checkbox" value="" class="w-4 h-4"
@@ -287,16 +287,16 @@
                                 </div>
                                 <a href="{{ route('password.request') }}"
                                     class="text-sm text-blue-700 hover:underline ">忘記密碼</a>
-                            </div>
+                            </div> --}}
                             <button type="submit"
                                 class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300
-                                font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
+                                font-medium rounded-lg text-sm px-5 py-2.5 text-center " style="margin-top: 24px;">
                                 登入
                             </button>
-                            <div class="text-sm font-medium text-gray-500 ">
+                            {{-- <div class="text-sm font-medium text-gray-500 ">
                                 Not registered? <a href="createAccount" class="text-blue-700 hover:underline ">Create
                                     account</a>
-                            </div>
+                            </div> --}}
                         </form>
                     </div>
                 </div>
