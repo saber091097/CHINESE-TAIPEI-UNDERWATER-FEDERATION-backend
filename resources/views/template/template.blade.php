@@ -267,9 +267,9 @@
                             @csrf
                             <div>
                                 <label for="email"
-                                    class="block mb-2 text-sm font-medium text-gray-900 ">電子信箱</label>
+                                    class="block mb-2 text-sm font-medium text-gray-900 ">使用者登入</label>
                                 <input type="email" name="email" id="email"
-                                    class="text-gray-900 text-sm block w-full p-2.5" placeholder="name@company.com">
+                                    class="text-gray-900 text-sm block w-full p-2.5">
                             </div>
                             <div>
                                 <label for="password" class="block mb-2 text-sm font-medium text-gray-900 ">密碼</label>
