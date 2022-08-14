@@ -1606,8 +1606,7 @@ details summary::-webkit-details-marker {
 }
 
 * body .container .bottomimg .eventimg .gray {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(black), to(white));
-    background-image: linear-gradient(to top, black, white);
+    background-image: linear-gradient(to top, black 0%, black 60%, white);
     opacity: .3;
 }
 
@@ -1672,8 +1671,7 @@ details summary::-webkit-details-marker {
 }
 
 * body .container .bottomimg .classesimg .gray {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(black), to(white));
-    background-image: linear-gradient(to top, black, white);
+    background-image: linear-gradient(to top, black 0%, black 60%, white);
     opacity: .3;
 }
 
@@ -1681,8 +1679,6 @@ details summary::-webkit-details-marker {
 .news {
     width: 90%;
     margin: auto;
-    /* padding-top: 160px; */
-    /* padding-bottom: 160px; */
 }
 
 /* footer 開始

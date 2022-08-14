@@ -32,7 +32,7 @@
             background-color: #3B54F3;
         }
 
-        @keyframes moveToTop {
+        /* @keyframes moveToTop {
                     from {
                         transform: translateY(100%);
                     }
@@ -40,7 +40,7 @@
                     to {
                         transform: translateY(0%);
                     }
-                }
+                } */
 
         td {
             border: 1px solid black;
