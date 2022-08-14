@@ -56,15 +56,15 @@
                                 </div>
                             </td>
                             <td class="flex justify-center">
-                                @if ($item->power == 1)
-                                    權限不足編輯與刪除
+                                @if (Auth::user()->power == 1)
+                                    <button class="btn btn-success" style="margin-right: 5px;" onclick="location.href='/account/edit/{{$item->id}}'">編輯</button>
+                                    <button class="btn btn-danger" onclick="document.querySelector('#deleteForm{{$item->id}}').submit();">刪除</button>
+                                    <form action="/account/del/{{$item->id}}" method="post" hidden id="deleteForm{{$item->id}}">
+                                        @csrf
+                                        @method('DELETE')
+                                    </form>
                                 @else
-                                <button class="btn btn-success" style="margin-right: 5px;" onclick="location.href='/account/edit/{{$item->id}}'">編輯</button>
-                                <button class="btn btn-danger" onclick="document.querySelector('#deleteForm{{$item->id}}').submit();">刪除</button>
-                                <form action="/account/del/{{$item->id}}" method="post" hidden id="deleteForm{{$item->id}}">
-                                    @csrf
-                                    @method('DELETE')
-                                </form>
+                                    權限不足
                                 @endif
                             </td>
                         </tr>
